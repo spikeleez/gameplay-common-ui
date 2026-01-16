@@ -17,7 +17,7 @@
 		{
 			"Name": "GameplayCommonUI",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "PreDefault"
 		},
 		{
 			"Name": "GameplayCommonUIEditor",
@@ -27,7 +27,7 @@
 		{
 			"Name": "GameplayCommonSettings",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "PreDefault"
 		},
 		{
 			"Name": "GameplayCommonSettingsEditor",
