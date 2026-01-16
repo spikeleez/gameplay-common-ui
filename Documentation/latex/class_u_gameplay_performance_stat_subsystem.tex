@@ -1,0 +1,136 @@
+\doxysection{UGameplay\+Performance\+Stat\+Subsystem Class Reference}
+\hypertarget{class_u_gameplay_performance_stat_subsystem}{}\label{class_u_gameplay_performance_stat_subsystem}\index{UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}}
+
+
+Subsystem that provides access to performance stats for display purposes.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Performance\+Stat\+Subsystem.\+h$>$}
+
+Inheritance diagram for UGameplay\+Performance\+Stat\+Subsystem:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_performance_stat_subsystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_performance_stat_subsystem_ae46bc7cab4e6efc56a05e4d230a56d58}{UGameplay\+Performance\+Stat\+Subsystem}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_performance_stat_subsystem_a5c1bf8536fbeb71d067c3bbe134006ea}{Initialize}} (FSubsystem\+Collection\+Base \&Collection) override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_performance_stat_subsystem_a78b0778b4eb31015d479152bcae88767}{Deinitialize}} () override
+\item 
+double \doxymbox{\hyperlink{class_u_gameplay_performance_stat_subsystem_a2d379bdbb28122bb075aebcbe97920c0}{Get\+Cached\+Stat}} (\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplay\+Displayable\+Performance\+Stat}} Stat) const
+\begin{DoxyCompactList}\small\item\em Gets the most recent cached value for a performance stat. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplay\+Sampled\+Stat\+Cache}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_performance_stat_subsystem_a13d3a28a5bcc5b111c44ade65e8601c7}{Get\+Cached\+Stat\+Data}} (const \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplay\+Displayable\+Performance\+Stat}} Stat) const
+\begin{DoxyCompactList}\small\item\em Gets detailed cache data for a performance stat. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TShared\+Ptr$<$ \doxymbox{\hyperlink{struct_f_gameplay_performance_stat_cache}{FGameplay\+Performance\+Stat\+Cache}} $>$ \doxymbox{\hyperlink{class_u_gameplay_performance_stat_subsystem_a23b2cc67a9886524e79b9d9dc6afcc8d}{Tracker}}
+\begin{DoxyCompactList}\small\item\em The performance stat tracker and cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subsystem that provides access to performance stats for display purposes. 
+
+\doxylink{class_u_gameplay_performance_stat_subsystem}{UGameplay\+Performance\+Stat\+Subsystem} is a game instance subsystem that tracks and caches performance statistics such as FPS, frame time, and other metrics.
+
+This subsystem integrates with the engine\textquotesingle{}s performance charting system and provides a Blueprint-\/accessible interface for querying performance data.
+
+Use this subsystem to display performance metrics in your UI, create performance graphs, or implement dynamic quality adjustments based on current performance.
+
+\begin{DoxySeeAlso}{See also}
+UGame\+Instance\+Subsystem, \doxylink{struct_f_gameplay_performance_stat_cache}{FGameplay\+Performance\+Stat\+Cache} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_performance_stat_subsystem_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_performance_stat_subsystem_ae46bc7cab4e6efc56a05e4d230a56d58}\index{UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}!UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}}
+\index{UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}!UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}}
+\doxysubsubsection{\texorpdfstring{UGameplayPerformanceStatSubsystem()}{UGameplayPerformanceStatSubsystem()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_performance_stat_subsystem_ae46bc7cab4e6efc56a05e4d230a56d58} 
+UGameplay\+Performance\+Stat\+Subsystem::\+\+UGameplay\+Performance\+Stat\+Subsystem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_performance_stat_subsystem_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_performance_stat_subsystem_a78b0778b4eb31015d479152bcae88767}\index{UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}!Deinitialize@{Deinitialize}}
+\index{Deinitialize@{Deinitialize}!UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}}
+\doxysubsubsection{\texorpdfstring{Deinitialize()}{Deinitialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_performance_stat_subsystem_a78b0778b4eb31015d479152bcae88767} 
+void UGameplay\+Performance\+Stat\+Subsystem::\+\+Deinitialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_performance_stat_subsystem_a2d379bdbb28122bb075aebcbe97920c0}\index{UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}!GetCachedStat@{GetCachedStat}}
+\index{GetCachedStat@{GetCachedStat}!UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}}
+\doxysubsubsection{\texorpdfstring{GetCachedStat()}{GetCachedStat()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_performance_stat_subsystem_a2d379bdbb28122bb075aebcbe97920c0} 
+double UGameplay\+Performance\+Stat\+Subsystem::\+\+Get\+Cached\+Stat (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplay\+Displayable\+Performance\+Stat}}}]{Stat}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the most recent cached value for a performance stat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Stat} & The performance stat type to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current value of the specified stat 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_performance_stat_subsystem_a13d3a28a5bcc5b111c44ade65e8601c7}\index{UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}!GetCachedStatData@{GetCachedStatData}}
+\index{GetCachedStatData@{GetCachedStatData}!UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}}
+\doxysubsubsection{\texorpdfstring{GetCachedStatData()}{GetCachedStatData()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_performance_stat_subsystem_a13d3a28a5bcc5b111c44ade65e8601c7} 
+const \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplay\+Sampled\+Stat\+Cache}} \texorpdfstring{$\ast$}{*} UGameplay\+Performance\+Stat\+Subsystem::\+\+Get\+Cached\+Stat\+Data (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplay\+Displayable\+Performance\+Stat}}}]{Stat}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets detailed cache data for a performance stat. 
+
+Returns the full sampled cache which includes min/\+max/\+average calculations and access to historical samples.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Stat} & The performance stat type to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the sampled stat cache, or nullptr if not found 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_performance_stat_subsystem_a5c1bf8536fbeb71d067c3bbe134006ea}\index{UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_performance_stat_subsystem_a5c1bf8536fbeb71d067c3bbe134006ea} 
+void UGameplay\+Performance\+Stat\+Subsystem::\+\+Initialize (\begin{DoxyParamCaption}\item[{FSubsystem\+Collection\+Base \&}]{Collection}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_performance_stat_subsystem_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_performance_stat_subsystem_a23b2cc67a9886524e79b9d9dc6afcc8d}\index{UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}!Tracker@{Tracker}}
+\index{Tracker@{Tracker}!UGameplayPerformanceStatSubsystem@{UGameplayPerformanceStatSubsystem}}
+\doxysubsubsection{\texorpdfstring{Tracker}{Tracker}}
+{\footnotesize\ttfamily \label{class_u_gameplay_performance_stat_subsystem_a23b2cc67a9886524e79b9d9dc6afcc8d} 
+TShared\+Ptr$<$\doxymbox{\hyperlink{struct_f_gameplay_performance_stat_cache}{FGameplay\+Performance\+Stat\+Cache}}$>$ UGameplay\+Performance\+Stat\+Subsystem::\+\+Tracker\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The performance stat tracker and cache. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_performance_stat_subsystem_8h}{Gameplay\+Performance\+Stat\+Subsystem.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_performance_stat_subsystem_8cpp}{Gameplay\+Performance\+Stat\+Subsystem.\+cpp}}\end{DoxyCompactItemize}

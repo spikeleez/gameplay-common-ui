@@ -1,0 +1,121 @@
+\doxysection{Gameplay\+Subtitle\+Display.\+h}
+\hypertarget{_gameplay_subtitle_display_8h_source}{}\label{_gameplay_subtitle_display_8h_source}\index{GameplaySubtitleDisplay.h@{GameplaySubtitleDisplay.h}}
+\doxymbox{\hyperlink{_gameplay_subtitle_display_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Components/Widget.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_subtitles_types_8h}{Misc/GameplaySubtitlesTypes.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Styling/CoreStyle.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Styling/SlateTypes.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Styling/SlateWidgetStyleAsset.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Styling/SlateWidgetStyleContainerBase.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Widgets/SCompoundWidget.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Widgets/Accessibility/SlateWidgetAccessibleTypes.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Widgets/Layout/SBorder.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}GameplaySubtitleDisplay.generated.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options}{UGameplaySubtitleDisplayOptions}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }SRichTextBlock;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }FText;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }FSlateBrush;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_s_gameplay_subtitle_display}{SGameplaySubtitleDisplay}}\ :\ \textcolor{keyword}{public}\ SCompoundWidget}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{class_s_gameplay_subtitle_display_a9e3019c13c262c4ee4a3d272610ebc65}{SLATE\_BEGIN\_ARGS}}(\doxymbox{\hyperlink{class_s_gameplay_subtitle_display}{SGameplaySubtitleDisplay}})}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ :\ \_TextStyle(\&FCoreStyle::Get().GetWidgetStyle<FTextBlockStyle>(\textcolor{stringliteral}{"{}NormalText"{}}))}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ ,\ \_WrapTextAt(0.0f)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ ,\ \_ManualSubtitles(false)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ SLATE\_STYLE\_ARGUMENT(FTextBlockStyle,\ TextStyle)}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ SLATE\_ATTRIBUTE(\textcolor{keywordtype}{float},\ WrapTextAt)}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ SLATE\_ATTRIBUTE(\textcolor{keywordtype}{bool},\ ManualSubtitles)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ SLATE\_END\_ARGS()}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ virtual\ \string~\doxymbox{\hyperlink{class_s_gameplay_subtitle_display}{SGameplaySubtitleDisplay}}()\ override;}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ Construct(const\ FArguments\&\ InArgs);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ SetTextStyle(const\ FTextBlockStyle\&\ InTextStyle);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ SetBackgroundBrush(const\ FSlateBrush*\ InSlateBrush);}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ SetCurrentSubtitleText(const\ FText\&\ InSubtitleText);}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ HasSubtitles()\ const;}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ SetWrapTextAt(const\ TAttribute<\textcolor{keywordtype}{float}>\&\ InWrapTextAt);}
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00065\ private:}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleSubtitleChanged(const\ FText\&\ NewSubtitleText);}
+\DoxyCodeLine{00068\ \ \ \ \ }
+\DoxyCodeLine{00069\ private:}
+\DoxyCodeLine{00071\ \ \ \ \ TSharedPtr<SBorder>\ \doxymbox{\hyperlink{class_s_gameplay_subtitle_display_aa31c2041d2f669e51fe1e1c3e458011c}{Background}};}
+\DoxyCodeLine{00072\ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ TSharedPtr<SRichTextBlock>\ \doxymbox{\hyperlink{class_s_gameplay_subtitle_display_ac4acd5ae6c5a9bcc2e90dfe5457e65f9}{TextDisplay}};}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ UCLASS(BlueprintType,\ Blueprintable,\ meta=(DisableNativeTick))}
+\DoxyCodeLine{00085\ class\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a9c50489b99a69ef1970699863dc32153}{UGameplaySubtitleDisplay}}\ :\ public\ UWidget}
+\DoxyCodeLine{00086\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00090\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a9c50489b99a69ef1970699863dc32153}{UGameplaySubtitleDisplay}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00091\ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//\string~Begin\ UWidget}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_abd6e4c4010d6d8d94d64420c055b42f1}{SynchronizeProperties}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a9a5bca52c74be5dca5876db095e0b8f2}{ReleaseSlateResources}}(\textcolor{keywordtype}{bool}\ bReleaseChildren)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{virtual}\ TSharedRef<SWidget>\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a176aa32f990223fe15b487dd2cd83893}{RebuildWidget}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#if\ WITH\_EDITOR}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ValidateCompiledDefaults(\textcolor{keyword}{class}\ IWidgetCompilerLog\&\ CompileLog)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ UWidget}}
+\DoxyCodeLine{00100\ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category=\textcolor{stringliteral}{"{}Subtitles"{}},\ meta=(Tooltip\ =\ \textcolor{stringliteral}{"{}True\ if\ there\ are\ subtitles\ currently.\ \ False\ if\ the\ subtitle\ text\ is\ empty."{}}))}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a1659ddfc2383a7e2ac997bdeac896a88}{HasSubtitles}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00107\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Subtitle"{}})}
+\DoxyCodeLine{00108\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplaySubtitleFormat}}\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_ac1eb0013540b8d8ecfceb981c6e09c19}{SubtitleFormat}};}
+\DoxyCodeLine{00109\ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Subtitle"{}})}
+\DoxyCodeLine{00112\ \ \ \ \ TObjectPtr<\doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options}{UGameplaySubtitleDisplayOptions}}>\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a926e058ccce5c07d301a82d7c0d18b37}{SubtitleOptions}};}
+\DoxyCodeLine{00113\ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Subtitle"{}})}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_ac9b87aac021e47a5be109890c25563c8}{SubtitleWrapTextAt}};}
+\DoxyCodeLine{00117\ \ \ \ \ }
+\DoxyCodeLine{00119\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category=\textcolor{stringliteral}{"{}Subtitle|Preview"{}})}
+\DoxyCodeLine{00120\ \ \ \ \ uint8\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a8a3fbb7e2a2674c44c33dd19d321aad9}{bSubtitlePreviewMode}}\ :\ 1;}
+\DoxyCodeLine{00121\ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category=\textcolor{stringliteral}{"{}Subtitle|Preview"{}})}
+\DoxyCodeLine{00124\ \ \ \ \ FText\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_ae030f181e48ae3a940799613555264f5}{SubtitlePreviewText}};}
+\DoxyCodeLine{00125\ \ \ \ \ }
+\DoxyCodeLine{00126\ protected:}
+\DoxyCodeLine{00128\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a5f2ecfd7b861b38049c6ee780b1c2311}{HandleSubtitleDisplayFormatChanged}}(const\ \doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplaySubtitleFormat}}\&\ NewSubtitleFormat);}
+\DoxyCodeLine{00129\ \ \ \ \ }
+\DoxyCodeLine{00130\ private:}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_aff9565f5ba0aa8a44ca1a6614f6b3409}{RebuildStyle}}();}
+\DoxyCodeLine{00133\ \ \ \ \ }
+\DoxyCodeLine{00134\ private:}
+\DoxyCodeLine{00136\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00137\ \ \ \ \ FTextBlockStyle\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a365f2d2f20943afc4d6f4697b3517d4c}{GeneratedStyle}};}
+\DoxyCodeLine{00138\ \ \ \ \ }
+\DoxyCodeLine{00140\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00141\ \ \ \ \ FSlateBrush\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a3d21167a449a43cc9e8aef1eebe1bd09}{GeneratedBackgroundBrush}};}
+\DoxyCodeLine{00142\ \ \ \ \ }
+\DoxyCodeLine{00144\ \ \ \ \ TSharedPtr<\doxymbox{\hyperlink{class_s_gameplay_subtitle_display}{SGameplaySubtitleDisplay}}>\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a2df2d2492de6b4879c7c19b1eaccbab5}{SubtitleWidget}};}
+\DoxyCodeLine{00145\ \};}
+\DoxyCodeLine{00146\ }
+
+\end{DoxyCode}

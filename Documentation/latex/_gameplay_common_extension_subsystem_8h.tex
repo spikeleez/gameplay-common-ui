@@ -1,0 +1,120 @@
+\doxysection{Gameplay\+Common\+Extension\+Subsystem.\+h File Reference}
+\hypertarget{_gameplay_common_extension_subsystem_8h}{}\label{_gameplay_common_extension_subsystem_8h}\index{GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}}
+{\ttfamily \+\#include "{}Gameplay\+Tag\+Container.\+h"{}}\newline
+{\ttfamily \+\#include "{}Subsystems/\+\+World\+Subsystem.\+h"{}}\newline
+{\ttfamily \+\#include "{}Gameplay\+Common\+Extension\+Subsystem.\+generated.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension}{FGameplay\+UIExtension}}
+\begin{DoxyCompactList}\small\item\em Internal data structure representing a UI extension. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}}
+\begin{DoxyCompactList}\small\item\em A handle identifying a registered UI extension, used for unregistration. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_t_struct_ops_type_traits_3_01_f_gameplay_u_i_extension_handle_01_4}{TStruct\+Ops\+Type\+Traits$<$ FGameplay\+UIExtension\+Handle $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplay\+UIExtension\+Request}}
+\begin{DoxyCompactList}\small\item\em Data structure passed to extension point callbacks when an extension is added or removed. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point}{FGameplay\+UIExtension\+Point}}
+\begin{DoxyCompactList}\small\item\em Internal representation of a registered extension point (a place where UI can be extended). \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplay\+UIExtension\+Point\+Handle}}
+\begin{DoxyCompactList}\small\item\em A handle identifying a registered extension point. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_t_struct_ops_type_traits_3_01_f_gameplay_u_i_extension_point_handle_01_4}{TStruct\+Ops\+Type\+Traits$<$ FGameplay\+UIExtension\+Point\+Handle $>$}}
+\item 
+class \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem}{UGameplay\+Common\+Extension\+Subsystem}}
+\begin{DoxyCompactList}\small\item\em Subsystem for managing dynamic UI extensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplay\+UIExtension\+Action}} :\+ uint8 \{ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248daf29ddbfb905eb2593fdcdfb243f9af85}{Added}}
+, \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248da93f07b720ebf7d1246512569761a5804}{Removed}}
+ \}
+\begin{DoxyCompactList}\small\item\em Match rule for extension points. \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplay\+UIExtension\+Point\+Match}} :\+ uint8 \{ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50a9ba95bbc0af89aca6c6c6ac908cd4c27}{Exact\+Match}}
+, \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50a7db896d856c5b2ab3f16d7607fe95ea7}{Partial\+Match}}
+ \}
+\begin{DoxyCompactList}\small\item\em Rules for matching tags to extension points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_afc241a6592f0215f065e1cdd594cbdb8}{DECLARE\+\_\+\+DELEGATE\+\_\+\+Two\+Params}} (FGameplay\+Extend\+UIExtension\+Point\+Signature, \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplay\+UIExtension\+Action}} Extension\+Action, const \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplay\+UIExtension\+Request}} \&Extension\+Request)
+\begin{DoxyCompactList}\small\item\em Native delegate for extension point updates. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a03952a9c2cccdcba8ee1daeedab8bb35}{DECLARE\+\_\+\+DYNAMIC\+\_\+\+DELEGATE\+\_\+\+Two\+Params}} (FGameplay\+Extend\+UIExtension\+Point\+Dynamic\+Signature, \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplay\+UIExtension\+Action}}, Extension\+Action, const \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplay\+UIExtension\+Request}} \&, Extension\+Request)
+\begin{DoxyCompactList}\small\item\em Blueprint-\/friendly delegate for extension point updates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{_gameplay_common_extension_subsystem_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}\index{GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}!EGameplayUIExtensionAction@{EGameplayUIExtensionAction}}
+\index{EGameplayUIExtensionAction@{EGameplayUIExtensionAction}!GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}}
+\doxysubsubsection{\texorpdfstring{EGameplayUIExtensionAction}{EGameplayUIExtensionAction}}
+{\footnotesize\ttfamily \label{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d} 
+enum class \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplay\+UIExtension\+Action}} :\+ uint8\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Match rule for extension points. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Added@{Added}!GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}}
+\index{GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}!Added@{Added}}
+}\Hypertarget{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248daf29ddbfb905eb2593fdcdfb243f9af85}\label{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248daf29ddbfb905eb2593fdcdfb243f9af85} 
+Added&An extension has been added. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Removed@{Removed}!GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}}
+\index{GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}!Removed@{Removed}}
+}\Hypertarget{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248da93f07b720ebf7d1246512569761a5804}\label{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248da93f07b720ebf7d1246512569761a5804} 
+Removed&An extension has been removed. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}\index{GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}!EGameplayUIExtensionPointMatch@{EGameplayUIExtensionPointMatch}}
+\index{EGameplayUIExtensionPointMatch@{EGameplayUIExtensionPointMatch}!GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}}
+\doxysubsubsection{\texorpdfstring{EGameplayUIExtensionPointMatch}{EGameplayUIExtensionPointMatch}}
+{\footnotesize\ttfamily \label{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50} 
+enum class \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplay\+UIExtension\+Point\+Match}} :\+ uint8\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Rules for matching tags to extension points. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ExactMatch@{ExactMatch}!GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}}
+\index{GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}!ExactMatch@{ExactMatch}}
+}\Hypertarget{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50a9ba95bbc0af89aca6c6c6ac908cd4c27}\label{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50a9ba95bbc0af89aca6c6c6ac908cd4c27} 
+Exact\+Match&An exact match will only receive extensions with exactly the same point (e.\+g., "{}\+A.\+B"{} matches "{}\+A.\+B"{} only). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PartialMatch@{PartialMatch}!GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}}
+\index{GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}!PartialMatch@{PartialMatch}}
+}\Hypertarget{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50a7db896d856c5b2ab3f16d7607fe95ea7}\label{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50a7db896d856c5b2ab3f16d7607fe95ea7} 
+Partial\+Match&A partial match will receive any extensions rooted in the same point (e.\+g., "{}\+A.\+B"{} matches "{}\+A.\+B.\+C"{}). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{_gameplay_common_extension_subsystem_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_gameplay_common_extension_subsystem_8h_afc241a6592f0215f065e1cdd594cbdb8}\index{GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}!DECLARE\_DELEGATE\_TwoParams@{DECLARE\_DELEGATE\_TwoParams}}
+\index{DECLARE\_DELEGATE\_TwoParams@{DECLARE\_DELEGATE\_TwoParams}!GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DELEGATE\_TwoParams()}{DECLARE\_DELEGATE\_TwoParams()}}
+{\footnotesize\ttfamily \label{_gameplay_common_extension_subsystem_8h_afc241a6592f0215f065e1cdd594cbdb8} 
+DECLARE\+\_\+\+DELEGATE\+\_\+\+Two\+Params (\begin{DoxyParamCaption}\item[{FGameplay\+Extend\+UIExtension\+Point\+Signature}]{}{, }\item[{\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplay\+UIExtension\+Action}}}]{Extension\+Action}{, }\item[{const \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplay\+UIExtension\+Request}} \&}]{Extension\+Request}{}\end{DoxyParamCaption})}
+
+
+
+Native delegate for extension point updates. 
+
+\Hypertarget{_gameplay_common_extension_subsystem_8h_a03952a9c2cccdcba8ee1daeedab8bb35}\index{GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}!DECLARE\_DYNAMIC\_DELEGATE\_TwoParams@{DECLARE\_DYNAMIC\_DELEGATE\_TwoParams}}
+\index{DECLARE\_DYNAMIC\_DELEGATE\_TwoParams@{DECLARE\_DYNAMIC\_DELEGATE\_TwoParams}!GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DYNAMIC\_DELEGATE\_TwoParams()}{DECLARE\_DYNAMIC\_DELEGATE\_TwoParams()}}
+{\footnotesize\ttfamily \label{_gameplay_common_extension_subsystem_8h_a03952a9c2cccdcba8ee1daeedab8bb35} 
+DECLARE\+\_\+\+DYNAMIC\+\_\+\+DELEGATE\+\_\+\+Two\+Params (\begin{DoxyParamCaption}\item[{FGameplay\+Extend\+UIExtension\+Point\+Dynamic\+Signature}]{}{, }\item[{\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplay\+UIExtension\+Action}}}]{}{, }\item[{Extension\+Action}]{}{, }\item[{const \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplay\+UIExtension\+Request}} \&}]{}{, }\item[{Extension\+Request}]{}{}\end{DoxyParamCaption})}
+
+
+
+Blueprint-\/friendly delegate for extension point updates. 
+

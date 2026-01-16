@@ -1,0 +1,44 @@
+\doxysection{Gameplay\+Common\+UISettings.\+h}
+\hypertarget{_gameplay_common_u_i_settings_8h_source}{}\label{_gameplay_common_u_i_settings_8h_source}\index{GameplayCommonUISettings.h@{GameplayCommonUISettings.h}}
+\doxymbox{\hyperlink{_gameplay_common_u_i_settings_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Engine/DeveloperSettings.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayCommonUISettings.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog}{UGameplayConfirmationDialog}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }UCommonActivatableWidget;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy}{UGameplayCommonUIPolicy}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_confirmation_descriptor}{UGameplayConfirmationDescriptor}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ UCLASS(Config=\doxymbox{\hyperlink{_gameplay_common_types_8h_a1025122649dbd094f4a294fde094283ca63d72051e901c069f8aa1b32aa0c43bb}{Game}},\ DefaultConfig,\ DisplayName=\textcolor{stringliteral}{"{}Gameplay\ Common\ UI\ Settings"{}})}
+\DoxyCodeLine{00022\ class\ GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_settings_ae1469632ba2aa9e97b832f71cb58b9b0}{UGameplayCommonUISettings}}\ :\ public\ UDeveloperSettings}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_settings_ae1469632ba2aa9e97b832f71cb58b9b0}{UGameplayCommonUISettings}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ UPROPERTY(Config,\ EditAnywhere,\ Category=\textcolor{stringliteral}{"{}Common"{}},\ meta=(DisplayName\ =\ \textcolor{stringliteral}{"{}UI\ Policy\ Class"{}}))}
+\DoxyCodeLine{00032\ \ \ \ \ TSoftClassPtr<\doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy}{UGameplayCommonUIPolicy}}>\ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_settings_a74ec7d43b05c7f4121f91ec3986b3a72}{GameplayUIPolicyClass}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ UPROPERTY(Config,\ EditAnywhere,\ Category=\textcolor{stringliteral}{"{}Common"{}},\ meta=(ForceInlineRow,\ DisplayName=\textcolor{stringliteral}{"{}Registered\ Activatable\ Widgets"{}}))}
+\DoxyCodeLine{00036\ \ \ \ \ TMap<FGameplayTag,\ TSoftClassPtr<UCommonActivatableWidget>>\ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_settings_a7462e9b1c08cc676ea543c552ef5f910}{RegisteredActivatableWidgets}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \ \ \ UPROPERTY(Config,\ EditAnywhere,\ Category=\textcolor{stringliteral}{"{}Confirmation\ Dialog"{}},\ meta=(DisplayName=\textcolor{stringliteral}{"{}Confirmation\ Dialog\ Class"{}}))}
+\DoxyCodeLine{00040\ \ \ \ \ TSoftClassPtr<\doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog}{UGameplayConfirmationDialog}}>\ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_settings_a48b154754b86b935fea70cdb1a88d3aa}{ConfirmationDialogClass}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ UPROPERTY(Config,\ EditAnywhere,\ Category=\textcolor{stringliteral}{"{}Confirmation\ Dialog"{}},\ meta=(DisplayName=\textcolor{stringliteral}{"{}Error\ Dialog\ Class"{}}))}
+\DoxyCodeLine{00044\ \ \ \ \ TSoftClassPtr<\doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog}{UGameplayConfirmationDialog}}>\ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_settings_af2d39f16c52a9c1f83542134f43a0c22}{ErrorDialogClass}};}
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ UPROPERTY(Config,\ EditAnywhere,\ Category=\textcolor{stringliteral}{"{}Confirmation\ Dialog"{}},\ meta\ =\ (ForceInlineRow,\ DisplayName=\textcolor{stringliteral}{"{}Registered\ Dialog\ Descriptors"{}}))}
+\DoxyCodeLine{00048\ \ \ \ \ TMap<FGameplayTag,\ TSoftClassPtr<\doxymbox{\hyperlink{class_u_gameplay_confirmation_descriptor}{UGameplayConfirmationDescriptor}}>>\ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_settings_a4397b5a4fbe3cdfa82261e3e2d0717a0}{RegisteredDialogDescriptors}};}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+
+\end{DoxyCode}

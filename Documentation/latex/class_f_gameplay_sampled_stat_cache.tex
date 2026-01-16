@@ -1,0 +1,235 @@
+\doxysection{FGameplay\+Sampled\+Stat\+Cache Class Reference}
+\hypertarget{class_f_gameplay_sampled_stat_cache}{}\label{class_f_gameplay_sampled_stat_cache}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+
+
+Stores a buffer of performance stat samples and provides statistical analysis.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Performance\+Stat\+Subsystem.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_ab54bddb2ce9e4e33cd471debe762f846}{FGameplay\+Sampled\+Stat\+Cache}} (const int32 In\+Sample\+Size=125)
+\begin{DoxyCompactList}\small\item\em Constructs a sampled stat cache with the specified buffer size. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_af677507dac6fa57916278e8e06fe923e}{Record\+Sample}} (const double Sample)
+\begin{DoxyCompactList}\small\item\em Records a new sample in the buffer. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_a4cdef4ee24e039089aa6f629978c66e7}{Get\+Current\+Cached\+Stat}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current cached stat at the current index. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_a7b4ebad8a7ae58d642c304f556eac22b}{Get\+Last\+Cached\+Stat}} () const
+\begin{DoxyCompactList}\small\item\em Gets the most recently recorded stat. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_aeeddab7d1529680c0436a9d403cafca7}{For\+Each\+Current\+Sample}} (const TFunction\+Ref$<$ void(const double Stat)$>$ Func) const
+\begin{DoxyCompactList}\small\item\em Iterates through all samples, starting with the most recent. \end{DoxyCompactList}\item 
+int32 \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_a1688afffb2e078fa28632a6260e8f605}{Get\+Sample\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the total number of samples stored in the buffer. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_a117d7a55d6c63b7520e78cb7981ec1ae}{Get\+Average}} () const
+\begin{DoxyCompactList}\small\item\em Calculates the average of all samples in the buffer. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_ad86d2df8e7230b42ae72359e86e8c55d}{Get\+Min}} () const
+\begin{DoxyCompactList}\small\item\em Gets the minimum value among all samples. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_ae1ab8221975bc6ea06332b8f8c3d3872}{Get\+Max}} () const
+\begin{DoxyCompactList}\small\item\em Gets the maximum value among all samples. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int32 \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_a4d9896e5fe9fe155ad6471c66e06b737}{Sample\+Size}} = 125
+\begin{DoxyCompactList}\small\item\em The number of samples to store. \end{DoxyCompactList}\item 
+int32 \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_a5e9493246e4e768b796a5d50759a6c27}{Current\+Sample\+Index}} = 0
+\begin{DoxyCompactList}\small\item\em Current position in the ring buffer. \end{DoxyCompactList}\item 
+TArray$<$ double $>$ \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache_ab9de7c1ad7ca57f3dceefad232487754}{Samples}}
+\begin{DoxyCompactList}\small\item\em Array storing all sample values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores a buffer of performance stat samples and provides statistical analysis. 
+
+\doxylink{class_f_gameplay_sampled_stat_cache}{FGameplay\+Sampled\+Stat\+Cache} maintains a ring buffer of statistical samples and provides utilities to calculate minimum, maximum, and average values over the sample period.
+
+This class is useful for tracking performance metrics over time and generating charts or visualizations of performance data.
+
+\begin{DoxyNote}{Note}
+Uses a ring buffer for efficient memory usage 
+\end{DoxyNote}
+
+
+\label{doc-constructors}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_ab54bddb2ce9e4e33cd471debe762f846}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{FGameplaySampledStatCache()}{FGameplaySampledStatCache()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_ab54bddb2ce9e4e33cd471debe762f846} 
+FGameplay\+Sampled\+Stat\+Cache::\+\+FGameplay\+Sampled\+Stat\+Cache (\begin{DoxyParamCaption}\item[{const int32}]{In\+Sample\+Size}{ = {\ttfamily 125}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a sampled stat cache with the specified buffer size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Sample\+Size} & Number of samples to store in the buffer (default:\+ 125) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_aeeddab7d1529680c0436a9d403cafca7}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!ForEachCurrentSample@{ForEachCurrentSample}}
+\index{ForEachCurrentSample@{ForEachCurrentSample}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{ForEachCurrentSample()}{ForEachCurrentSample()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_aeeddab7d1529680c0436a9d403cafca7} 
+void FGameplay\+Sampled\+Stat\+Cache::\+\+For\+Each\+Current\+Sample (\begin{DoxyParamCaption}\item[{const TFunction\+Ref$<$ void(const double Stat)$>$}]{Func}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iterates through all samples, starting with the most recent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Func} & Function to call for each sample\\
+\hline
+\end{DoxyParams}
+Example usage:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Cache.ForEachCurrentSample([](\textcolor{keywordtype}{double}\ Stat)\ \{}
+\DoxyCodeLine{\ \ \ \ UE\_LOG(LogTemp,\ Log,\ TEXT(\textcolor{stringliteral}{"{}Sample:\ \%f"{}}),\ Stat);}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+ \Hypertarget{class_f_gameplay_sampled_stat_cache_a117d7a55d6c63b7520e78cb7981ec1ae}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!GetAverage@{GetAverage}}
+\index{GetAverage@{GetAverage}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{GetAverage()}{GetAverage()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_a117d7a55d6c63b7520e78cb7981ec1ae} 
+double FGameplay\+Sampled\+Stat\+Cache::\+\+Get\+Average (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the average of all samples in the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The average value across all samples 
+\end{DoxyReturn}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_a4cdef4ee24e039089aa6f629978c66e7}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!GetCurrentCachedStat@{GetCurrentCachedStat}}
+\index{GetCurrentCachedStat@{GetCurrentCachedStat}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{GetCurrentCachedStat()}{GetCurrentCachedStat()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_a4cdef4ee24e039089aa6f629978c66e7} 
+double FGameplay\+Sampled\+Stat\+Cache::\+\+Get\+Current\+Cached\+Stat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current cached stat at the current index. 
+
+\begin{DoxyReturn}{Returns}
+The stat value at the current sample index 
+\end{DoxyReturn}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_a7b4ebad8a7ae58d642c304f556eac22b}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!GetLastCachedStat@{GetLastCachedStat}}
+\index{GetLastCachedStat@{GetLastCachedStat}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{GetLastCachedStat()}{GetLastCachedStat()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_a7b4ebad8a7ae58d642c304f556eac22b} 
+double FGameplay\+Sampled\+Stat\+Cache::\+\+Get\+Last\+Cached\+Stat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the most recently recorded stat. 
+
+\begin{DoxyReturn}{Returns}
+The stat value from the previous sample 
+\end{DoxyReturn}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_ae1ab8221975bc6ea06332b8f8c3d3872}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!GetMax@{GetMax}}
+\index{GetMax@{GetMax}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{GetMax()}{GetMax()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_ae1ab8221975bc6ea06332b8f8c3d3872} 
+double FGameplay\+Sampled\+Stat\+Cache::\+\+Get\+Max (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the maximum value among all samples. 
+
+\begin{DoxyReturn}{Returns}
+The maximum sample value 
+\end{DoxyReturn}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_ad86d2df8e7230b42ae72359e86e8c55d}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!GetMin@{GetMin}}
+\index{GetMin@{GetMin}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{GetMin()}{GetMin()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_ad86d2df8e7230b42ae72359e86e8c55d} 
+double FGameplay\+Sampled\+Stat\+Cache::\+\+Get\+Min (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the minimum value among all samples. 
+
+\begin{DoxyReturn}{Returns}
+The minimum sample value 
+\end{DoxyReturn}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_a1688afffb2e078fa28632a6260e8f605}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!GetSampleSize@{GetSampleSize}}
+\index{GetSampleSize@{GetSampleSize}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{GetSampleSize()}{GetSampleSize()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_a1688afffb2e078fa28632a6260e8f605} 
+int32 FGameplay\+Sampled\+Stat\+Cache::\+\+Get\+Sample\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the total number of samples stored in the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The sample buffer size 
+\end{DoxyReturn}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_af677507dac6fa57916278e8e06fe923e}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!RecordSample@{RecordSample}}
+\index{RecordSample@{RecordSample}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{RecordSample()}{RecordSample()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_af677507dac6fa57916278e8e06fe923e} 
+void FGameplay\+Sampled\+Stat\+Cache::\+\+Record\+Sample (\begin{DoxyParamCaption}\item[{const double}]{Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Records a new sample in the buffer. 
+
+Adds a sample to the ring buffer at the current index position. Automatically wraps around when the buffer is full.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sample} & The value to record \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_f_gameplay_sampled_stat_cache_a5e9493246e4e768b796a5d50759a6c27}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!CurrentSampleIndex@{CurrentSampleIndex}}
+\index{CurrentSampleIndex@{CurrentSampleIndex}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{CurrentSampleIndex}{CurrentSampleIndex}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_a5e9493246e4e768b796a5d50759a6c27} 
+int32 FGameplay\+Sampled\+Stat\+Cache::\+\+Current\+Sample\+Index = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current position in the ring buffer. 
+
+\Hypertarget{class_f_gameplay_sampled_stat_cache_ab9de7c1ad7ca57f3dceefad232487754}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!Samples@{Samples}}
+\index{Samples@{Samples}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{Samples}{Samples}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_ab9de7c1ad7ca57f3dceefad232487754} 
+TArray$<$double$>$ FGameplay\+Sampled\+Stat\+Cache::\+\+Samples\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array storing all sample values. 
+
+\Hypertarget{class_f_gameplay_sampled_stat_cache_a4d9896e5fe9fe155ad6471c66e06b737}\index{FGameplaySampledStatCache@{FGameplaySampledStatCache}!SampleSize@{SampleSize}}
+\index{SampleSize@{SampleSize}!FGameplaySampledStatCache@{FGameplaySampledStatCache}}
+\doxysubsubsection{\texorpdfstring{SampleSize}{SampleSize}}
+{\footnotesize\ttfamily \label{class_f_gameplay_sampled_stat_cache_a4d9896e5fe9fe155ad6471c66e06b737} 
+const int32 FGameplay\+Sampled\+Stat\+Cache::\+\+Sample\+Size = 125\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of samples to store. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_performance_stat_subsystem_8h}{Gameplay\+Performance\+Stat\+Subsystem.\+h}}\end{DoxyCompactItemize}

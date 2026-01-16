@@ -1,0 +1,142 @@
+\doxysection{Gameplay\+Primary\+Layout.\+h}
+\hypertarget{_gameplay_primary_layout_8h_source}{}\label{_gameplay_primary_layout_8h_source}\index{GameplayPrimaryLayout.h@{GameplayPrimaryLayout.h}}
+\doxymbox{\hyperlink{_gameplay_primary_layout_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CommonActivatableWidget.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}CommonUserWidget.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Engine/StreamableManager.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_common_u_i_library_8h}{Library/GameplayCommonUILibrary.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_common_types_8h}{Misc/GameplayCommonTypes.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Widgets/CommonActivatableWidgetContainer.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Engine/AssetManager.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}GameplayPrimaryLayout.generated.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \doxymbox{\hyperlink{_gameplay_primary_layout_8h_ad7ca2096adce82b2709fae12d36fb9c3}{DECLARE\_LOG\_CATEGORY\_EXTERN}}(LogGameplayPrimaryLayout,\ Log,\ All);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00024\ UCLASS(Abstract,\ BlueprintType,\ meta\ =\ (DisableNativeTick))}
+\DoxyCodeLine{00025\ class\ GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_aa1f1d50de59e127b84a85a7dc1feac0f}{UGameplayPrimaryLayout}}\ :\ public\ UCommonUserWidget}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_aa1f1d50de59e127b84a85a7dc1feac0f}{UGameplayPrimaryLayout}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer\ =\ FObjectInitializer::Get());}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\string~Begin\ UUserWidget\ interface}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a5efbaadcb22683d4794c12d0eee8dbd8}{NativeOnInitialized}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ UUserWidget\ interface}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_aa1f1d50de59e127b84a85a7dc1feac0f}{UGameplayPrimaryLayout}}*\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_aa33a952186ae07b7d2f909ea01a31c9e}{GetPrimaryGameLayoutForPrimaryPlayer}}(\textcolor{keyword}{const}\ UObject*\ WorldContextObject);}
+\DoxyCodeLine{00038\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_aa1f1d50de59e127b84a85a7dc1feac0f}{UGameplayPrimaryLayout}}*\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a7e85f065a2d87b45559528064d2f2f4a}{GetPrimaryGameLayout}}(\textcolor{keyword}{const}\ APlayerController*\ PlayerController);}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_aa1f1d50de59e127b84a85a7dc1feac0f}{UGameplayPrimaryLayout}}*\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a7e85f065a2d87b45559528064d2f2f4a}{GetPrimaryGameLayout}}(\textcolor{keyword}{const}\ ULocalPlayer*\ LocalPlayer);}
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{const}\ TMap<FGameplayTag,\ UCommonActivatableWidgetContainerBase*>\&\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a87cc2634dacd00613c8b0286ab432fb3}{GetRegisteredLayers}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a36f8a6bf8b60905ced5567ddd6728e79}{RegisteredLayers}};\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ SetIsDormant(\textcolor{keywordtype}{bool}\ Dormant);}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a9d6d582bce2b709101582d46ad0535de}{IsDormant}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a49a8056e5c913ec4f5560120c86b8d33}{bIsDormant}};\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ ActivatableW\textcolor{keywordtype}{id}getT\ =\ UCommonActivatableW\textcolor{keywordtype}{id}get>}
+\DoxyCodeLine{00065\ \ \ \ \ TSharedPtr<FStreamableHandle>\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_ae31668afa1f528453cd0c5eee467b2f5}{PushWidgetToLayerStackAsync}}(FGameplayTag\ LayerTag,\ \textcolor{keywordtype}{bool}\ bSuspendInputUntilComplete,\ TSoftClassPtr<UCommonActivatableWidget>\ ActivatableWidgetClass)}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_ae31668afa1f528453cd0c5eee467b2f5}{PushWidgetToLayerStackAsync<ActivatableWidgetT>}}(LayerTag,\ bSuspendInputUntilComplete,\ ActivatableWidgetClass,\ [](\doxymbox{\hyperlink{_gameplay_common_types_8h_a047952fd8802acdf0715260d3a00b61e}{EGameplayWidgetLayerAsyncState}},\ ActivatableWidgetT*)\ \{\});}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ ActivatableW\textcolor{keywordtype}{id}getT\ =\ UCommonActivatableW\textcolor{keywordtype}{id}get>}
+\DoxyCodeLine{00079\ \ \ \ \ TSharedPtr<FStreamableHandle>\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_ae781f7643d3bbc0aea9b08552313c4a5}{PushWidgetToLayerStackAsync}}(FGameplayTag\ LayerTag,\ \textcolor{keywordtype}{bool}\ bSuspendInputUntilComplete,\ TSoftClassPtr<UCommonActivatableWidget>\ ActivatableWidgetClass,\ TFunction<\textcolor{keywordtype}{void}(\doxymbox{\hyperlink{_gameplay_common_types_8h_a047952fd8802acdf0715260d3a00b61e}{EGameplayWidgetLayerAsyncState}},\ ActivatableWidgetT*)>\ StateFunc)}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(TIsDerivedFrom<ActivatableWidgetT,\ UCommonActivatableWidget>::IsDerived,\ \textcolor{stringliteral}{"{}Only\ CommonActivatableWidgets\ can\ be\ used\ here"{}});}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ FName\ NAME\_PushingWidgetToLayer(\textcolor{stringliteral}{"{}PushingWidgetToLayer"{}});}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FName\ SuspendInputToken\ =\ bSuspendInputUntilComplete\ ?\ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_library_a528e320667adb99735191785b595f507}{UGameplayCommonUILibrary::SuspendInputForPlayer}}(GetOwningPlayer(),\ NAME\_PushingWidgetToLayer)\ :\ NAME\_None;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ FStreamableManager\&\ StreamableManager\ =\ UAssetManager::Get().GetStreamableManager();}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ TSharedPtr<FStreamableHandle>\ StreamingHandle\ =\ StreamableManager.RequestAsyncLoad(ActivatableWidgetClass.ToSoftObjectPath(),\ FStreamableDelegate::CreateWeakLambda(\textcolor{keyword}{this},}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ [\textcolor{keyword}{this},\ LayerTag,\ ActivatableWidgetClass,\ StateFunc,\ SuspendInputToken]()}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ UGameplayCommonUILibrary::ResumeInputForPlayer(GetOwningPlayer(),\ SuspendInputToken);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ ActivatableWidgetT*\ Widget\ =\ PushWidgetToLayerStack<ActivatableWidgetT>(LayerTag,\ ActivatableWidgetClass.Get(),\ [StateFunc](ActivatableWidgetT\&\ WidgetToInit)}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StateFunc(EGameplayWidgetLayerAsyncState::Initialize,\ \&WidgetToInit);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ StateFunc(\doxymbox{\hyperlink{_gameplay_common_types_8h_a047952fd8802acdf0715260d3a00b61ea577630fb295fd11305e19d44fe8f6f84}{EGameplayWidgetLayerAsyncState::AfterPush}},\ Widget);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ Widget-\/>SetFocus();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ up\ a\ cancel\ delegate\ so\ that\ we\ can\ resume\ input\ if\ this\ handler\ is\ canceled.}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ StreamingHandle-\/>BindCancelDelegate(FStreamableDelegate::CreateWeakLambda(\textcolor{keyword}{this},\ [\textcolor{keyword}{this},\ StateFunc,\ SuspendInputToken]()}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_library_a9301fa7f36c3c62a71d5abb7b65dab96}{UGameplayCommonUILibrary::ResumeInputForPlayer}}(GetOwningPlayer(),\ SuspendInputToken);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ StateFunc(\doxymbox{\hyperlink{_gameplay_common_types_8h_a047952fd8802acdf0715260d3a00b61ea0e22fe7d45f8e5632a4abf369b24e29c}{EGameplayWidgetLayerAsyncState::Canceled}},\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ StreamingHandle;}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ ActivatableW\textcolor{keywordtype}{id}getT\ =\ UCommonActivatableW\textcolor{keywordtype}{id}get>}
+\DoxyCodeLine{00113\ \ \ \ \ ActivatableWidgetT*\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a2d57875d1f9b402be2a5bb2252b9bad6}{PushWidgetToLayerStack}}(FGameplayTag\ LayerTag,\ UClass*\ ActivatableWidgetClass)}
+\DoxyCodeLine{00114\ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a2d57875d1f9b402be2a5bb2252b9bad6}{PushWidgetToLayerStack<ActivatableWidgetT>}}(LayerTag,\ ActivatableWidgetClass,\ [](ActivatableWidgetT\&)\ \{\});}
+\DoxyCodeLine{00116\ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ ActivatableW\textcolor{keywordtype}{id}getT\ =\ UCommonActivatableW\textcolor{keywordtype}{id}get>}
+\DoxyCodeLine{00120\ \ \ \ \ ActivatableWidgetT*\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_afc3e53049b72181bb007a830c954979f}{PushWidgetToLayerStack}}(FGameplayTag\ LayerTag,\ UClass*\ ActivatableWidgetClass,\ TFunctionRef<\textcolor{keywordtype}{void}(ActivatableWidgetT\&)>\ InitInstanceFunc)}
+\DoxyCodeLine{00121\ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(TIsDerivedFrom<ActivatableWidgetT,\ UCommonActivatableWidget>::IsDerived,\ \textcolor{stringliteral}{"{}Only\ CommonActivatableWidgets\ can\ be\ used\ here"{}});}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (UCommonActivatableWidgetContainerBase*\ Layer\ =\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a570f992bb33213548adbd42d8db97f22}{GetLayerStackContainer}}(LayerTag))}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ UE\_LOG(LogGameplayPrimaryLayout,\ Display,\ TEXT(\textcolor{stringliteral}{"{}Pushing\ Widget\ [\%s]\ to\ Layer\ [\%s]"{}}),\ *GetNameSafe(ActivatableWidgetClass),\ *LayerTag.ToString());}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Layer-\/>AddWidget<ActivatableWidgetT>(ActivatableWidgetClass,\ InitInstanceFunc);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ UE\_LOG(LogGameplayPrimaryLayout,\ Warning,\ TEXT(\textcolor{stringliteral}{"{}Failed\ to\ push\ widget\ [\%s]:\ Layer\ [\%s]\ not\ found!"{}}),\ *GetNameSafe(ActivatableWidgetClass),\ *LayerTag.ToString());}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00136\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category=\textcolor{stringliteral}{"{}Stack"{}})}
+\DoxyCodeLine{00137\ \ \ \ \ UCommonActivatableWidgetContainerBase*\ GetWidgetStackLayer(const\ FGameplayTag\&\ LayerTag)\ const;}
+\DoxyCodeLine{00138\ \ \ \ \ }
+\DoxyCodeLine{00140\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Stack"{}})}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ FindAndRemoveWidgetFromLayer(UCommonActivatableWidget*\ ActivatableWidget);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00144\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Stack"{}})}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ FindAndRemoveWidgetsFromLayer(FGameplayTag\ LayerTag);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00148\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Stack"{}})}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ ClearAllLayerStacks();}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00152\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Stack"{}})}
+\DoxyCodeLine{00153\ \ \ \ \ UCommonActivatableWidgetContainerBase*\ GetLayerStackContainer(FGameplayTag\ LayerTag);}
+\DoxyCodeLine{00154\ \ \ \ \ }
+\DoxyCodeLine{00156\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Stack"{}})}
+\DoxyCodeLine{00157\ \ \ \ \ FString\ GetLayerNameFromContainer(const\ UCommonActivatableWidgetContainerBase*\ Container)\ const;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ protected:}
+\DoxyCodeLine{00161\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category=\textcolor{stringliteral}{"{}Stack"{}})}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ RegisterLayerStack(UPARAM(meta=(GameplayTagFilter=\textcolor{stringliteral}{"{}GameplayCommonUI.Layer"{}}))\ FGameplayTag\ LayerTag,\ UCommonActivatableWidgetContainerBase*\ Stack);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00165\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ OnIsDormantChanged();}
+\DoxyCodeLine{00166\ \ \ \ \ }
+\DoxyCodeLine{00168\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ OnWidgetStackTransitioning(UCommonActivatableWidgetContainerBase*\ Widget,\ \textcolor{keywordtype}{bool}\ bIsTransitioning);}
+\DoxyCodeLine{00169\ \ \ \ \ }
+\DoxyCodeLine{00170\ private:}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a49a8056e5c913ec4f5560120c86b8d33}{bIsDormant}}\ =\ false;}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00175\ \ \ \ \ TArray<FName>\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a0ea14e61c5e847725da85939c2e8e5b3}{SuspendInputTokens}};}
+\DoxyCodeLine{00176\ \ \ \ \ }
+\DoxyCodeLine{00178\ \ \ \ \ UPROPERTY(Transient,\ meta=(GameplayTagFilter=\textcolor{stringliteral}{"{}GameplayCommonUI.Layer"{}}))}
+\DoxyCodeLine{00179\ \ \ \ \ TMap<FGameplayTag,\ UCommonActivatableWidgetContainerBase*>\ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a36f8a6bf8b60905ced5567ddd6728e79}{RegisteredLayers}};}
+\DoxyCodeLine{00180\ \};}
+\DoxyCodeLine{00181\ }
+
+\end{DoxyCode}

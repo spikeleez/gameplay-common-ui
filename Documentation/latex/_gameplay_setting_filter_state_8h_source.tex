@@ -1,0 +1,66 @@
+\doxysection{Gameplay\+Setting\+Filter\+State.\+h}
+\hypertarget{_gameplay_setting_filter_state_8h_source}{}\label{_gameplay_setting_filter_state_8h_source}\index{GameplaySettingFilterState.h@{GameplaySettingFilterState.h}}
+\doxymbox{\hyperlink{_gameplay_setting_filter_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Misc/TextFilterExpressionEvaluator.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplaySettingFilterState.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00022\ USTRUCT()}
+\DoxyCodeLine{00023\ struct\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a085e6bb6ca3b4824ce61a0fd4e822f50}{FGameplaySettingFilterState}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00030\ \ \ \ \ uint8\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a77aa52871f2e1084c14eb2461cd34431}{bIncludeDisabled}}:1;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00034\ \ \ \ \ uint8\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a8bd3adaccce4b1ac6bd751598c064d7e}{bIncludeHidden}}:1;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00038\ \ \ \ \ uint8\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_ad1f684096bafc6f98c50d66ac972d240}{bIncludeResetable}}:1;}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00042\ \ \ \ \ uint8\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a903cb0e2b912e6cbe1b2dc0bc43cb531}{bIncludeNestedPages}}:1;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ public:}
+\DoxyCodeLine{00045\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a085e6bb6ca3b4824ce61a0fd4e822f50}{FGameplaySettingFilterState}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a7e7a0a8ad7930d670a5bdc84d3c0e669}{SetSearchText}}(const\ FString\&\ InSearchText);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_adc3b40093b3549a8c84d7784f482282b}{DoesSettingPassFilter}}(const\ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}\&\ InSetting)\ const;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a8f9c306662542a9e8ff245da4f8782ab}{AddSettingToRootList}}(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting);}
+\DoxyCodeLine{00065\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a8a03b28eee824cda5a7ad19e2472916c}{AddSettingToAllowList}}(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_ae809178b1c7cad101ebe2215c0ad713c}{IsSettingInAllowList}}(const\ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00078\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_ac04e3ed9adc7869bc4d7db2facf4a405}{SettingAllowList}}.Contains(InSetting);}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{const}\ TArray<UGameplaySetting*>\&\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a6993444126d0ac53e614031139ded025}{GetSettingRootList}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ (\textcolor{keyword}{const}\ TArray<UGameplaySetting*>\&)\doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a002d91f9ba6079595059d379a8f3af40}{SettingRootList}};\ \}}
+\DoxyCodeLine{00084\ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a0817317b163f9c4713aecbb99548c847}{IsSettingInRootList}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00091\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a002d91f9ba6079595059d379a8f3af40}{SettingRootList}}.Contains(InSetting);}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00097\ \ \ \ \ FTextFilterExpressionEvaluator\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a996507dba3a2cabb776d35855fe13981}{SearchTextEvaluator}};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00100\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00101\ \ \ \ \ TArray<TObjectPtr<\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}>>\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_a002d91f9ba6079595059d379a8f3af40}{SettingRootList}};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00104\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00105\ \ \ \ \ TArray<TObjectPtr<\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}>>\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state_ac04e3ed9adc7869bc4d7db2facf4a405}{SettingAllowList}};}
+\DoxyCodeLine{00106\ \};}
+
+\end{DoxyCode}

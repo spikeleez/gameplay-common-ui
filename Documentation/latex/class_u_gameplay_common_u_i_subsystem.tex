@@ -1,0 +1,222 @@
+\doxysection{UGameplay\+Common\+UISubsystem Class Reference}
+\hypertarget{class_u_gameplay_common_u_i_subsystem}{}\label{class_u_gameplay_common_u_i_subsystem}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+
+
+Core Game\+Instance subsystem for managing the global UI lifecycle.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Common\+UISubsystem.\+h$>$}
+
+Inheritance diagram for UGameplay\+Common\+UISubsystem:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_common_u_i_subsystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a659f7a1bed3f14491a13a2db9e730320}{UGameplay\+Common\+UISubsystem}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a39c1ef8897928f86e2d107c738481554}{Initialize}} (FSubsystem\+Collection\+Base \&Collection) override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a9e5abd66edbbc855d3265a502272ae7b}{Deinitialize}} () override
+\item 
+virtual bool \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a2130d7e51b6063ab5ccfe5693e9ddbaf}{Should\+Create\+Subsystem}} (UObject \texorpdfstring{$\ast$}{*}Outer) const override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a35b0744f53f680b06ed3d7f154489eef}{Notify\+Player\+Added}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Notification for when a new local player is added to the game session. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a07c22e608894bdd2ac9a04372f2c76a4}{Notify\+Player\+Removed}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Notification for when a local player is removed (e.\+g., logout or split-\/screen stop). \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_ab884d2ddc9e29f9944ded64a1113c51c}{Notify\+Player\+Destroyed}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Notification for when a local player is being completely destroyed. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_af72810c378aa481ad2b3eb312bf75ed4}{Notify\+Button\+Description\+Text\+Changed}} (\doxymbox{\hyperlink{class_u_gameplay_button_base}{UGameplay\+Button\+Base}} \texorpdfstring{$\ast$}{*}Button, const FText \&New\+Description\+Text)
+\begin{DoxyCompactList}\small\item\em Forces a broadcast of the button description change event. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy}{UGameplay\+Common\+UIPolicy}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a88e5f28f7273127a189d6003caa7e283}{Get\+UIPolicy}} () const
+\begin{DoxyCompactList}\small\item\em Returns the currently active UI policy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem}{UGameplay\+Common\+UISubsystem}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a1988dca93dd71eaf2609a1d67b8cda07}{Get}} (const UObject \texorpdfstring{$\ast$}{*}World\+Context\+Object)
+\begin{DoxyCompactList}\small\item\em Static helper to retrieve the subsystem for a given world context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+FGameplay\+Primary\+Layout\+Set\+Signature \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_af8389d553a7baa4c55aae612911d03ec}{On\+Primary\+Layout\+Set}}
+\begin{DoxyCompactList}\small\item\em Native event fired when the primary layout is established. \end{DoxyCompactList}\item 
+FGameplay\+Button\+Description\+Changed\+Signature \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a9ec145732a8da0fb1be5a688717a4e30}{On\+Button\+Description\+Changed}}
+\begin{DoxyCompactList}\small\item\em Blueprint-\/assignable event for when button descriptions change globally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_ad04f8a5a4b4b7e31e2a48a6b1e517f10}{Switch\+To\+Policy}} (\doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy}{UGameplay\+Common\+UIPolicy}} \texorpdfstring{$\ast$}{*}New\+Policy)
+\begin{DoxyCompactList}\small\item\em Internal method to swap the current UI policy (used during initialization). \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a24ec61439ba7edf5334c40303f5d4752}{On\+Show\+Debug\+Info}} (AHUD \texorpdfstring{$\ast$}{*}HUD, UCanvas \texorpdfstring{$\ast$}{*}Canvas, const FDebug\+Display\+Info \&Display\+Info, float \&YL, float \&YPos)
+\begin{DoxyCompactList}\small\item\em Hook for rendering debug information to the screen via HUD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy}{UGameplay\+Common\+UIPolicy}} $>$ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem_a67e6bffb7540cbe81b9368db4a0bd0bb}{Current\+Policy}}
+\begin{DoxyCompactList}\small\item\em The instance of the active UI policy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Core Game\+Instance subsystem for managing the global UI lifecycle. 
+
+This subsystem acts as the central coordinator for the UI system. It initializes the configured UI policy, manages player connection/\+disconnection events, and provides global accessibility to the active UI policy. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a659f7a1bed3f14491a13a2db9e730320}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{UGameplayCommonUISubsystem()}{UGameplayCommonUISubsystem()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a659f7a1bed3f14491a13a2db9e730320} 
+UGameplay\+Common\+UISubsystem::\+\+UGameplay\+Common\+UISubsystem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a9e5abd66edbbc855d3265a502272ae7b}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!Deinitialize@{Deinitialize}}
+\index{Deinitialize@{Deinitialize}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{Deinitialize()}{Deinitialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a9e5abd66edbbc855d3265a502272ae7b} 
+void UGameplay\+Common\+UISubsystem::\+\+Deinitialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a1988dca93dd71eaf2609a1d67b8cda07}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!Get@{Get}}
+\index{Get@{Get}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a1988dca93dd71eaf2609a1d67b8cda07} 
+\doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem}{UGameplay\+Common\+UISubsystem}} \texorpdfstring{$\ast$}{*} UGameplay\+Common\+UISubsystem::\+\+Get (\begin{DoxyParamCaption}\item[{const UObject \texorpdfstring{$\ast$}{*}}]{World\+Context\+Object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static helper to retrieve the subsystem for a given world context. 
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a88e5f28f7273127a189d6003caa7e283}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!GetUIPolicy@{GetUIPolicy}}
+\index{GetUIPolicy@{GetUIPolicy}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{GetUIPolicy()}{GetUIPolicy()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a88e5f28f7273127a189d6003caa7e283} 
+\doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy}{UGameplay\+Common\+UIPolicy}} \texorpdfstring{$\ast$}{*} UGameplay\+Common\+UISubsystem::\+\+Get\+UIPolicy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the currently active UI policy. 
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a39c1ef8897928f86e2d107c738481554}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a39c1ef8897928f86e2d107c738481554} 
+void UGameplay\+Common\+UISubsystem::\+\+Initialize (\begin{DoxyParamCaption}\item[{FSubsystem\+Collection\+Base \&}]{Collection}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_af72810c378aa481ad2b3eb312bf75ed4}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!NotifyButtonDescriptionTextChanged@{NotifyButtonDescriptionTextChanged}}
+\index{NotifyButtonDescriptionTextChanged@{NotifyButtonDescriptionTextChanged}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{NotifyButtonDescriptionTextChanged()}{NotifyButtonDescriptionTextChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_af72810c378aa481ad2b3eb312bf75ed4} 
+void UGameplay\+Common\+UISubsystem::\+\+Notify\+Button\+Description\+Text\+Changed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_button_base}{UGameplay\+Button\+Base}} \texorpdfstring{$\ast$}{*}}]{Button}{, }\item[{const FText \&}]{New\+Description\+Text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Forces a broadcast of the button description change event. 
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a35b0744f53f680b06ed3d7f154489eef}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!NotifyPlayerAdded@{NotifyPlayerAdded}}
+\index{NotifyPlayerAdded@{NotifyPlayerAdded}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{NotifyPlayerAdded()}{NotifyPlayerAdded()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a35b0744f53f680b06ed3d7f154489eef} 
+void UGameplay\+Common\+UISubsystem::\+\+Notify\+Player\+Added (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Notification for when a new local player is added to the game session. 
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_ab884d2ddc9e29f9944ded64a1113c51c}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!NotifyPlayerDestroyed@{NotifyPlayerDestroyed}}
+\index{NotifyPlayerDestroyed@{NotifyPlayerDestroyed}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{NotifyPlayerDestroyed()}{NotifyPlayerDestroyed()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_ab884d2ddc9e29f9944ded64a1113c51c} 
+void UGameplay\+Common\+UISubsystem::\+\+Notify\+Player\+Destroyed (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Notification for when a local player is being completely destroyed. 
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a07c22e608894bdd2ac9a04372f2c76a4}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!NotifyPlayerRemoved@{NotifyPlayerRemoved}}
+\index{NotifyPlayerRemoved@{NotifyPlayerRemoved}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{NotifyPlayerRemoved()}{NotifyPlayerRemoved()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a07c22e608894bdd2ac9a04372f2c76a4} 
+void UGameplay\+Common\+UISubsystem::\+\+Notify\+Player\+Removed (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Notification for when a local player is removed (e.\+g., logout or split-\/screen stop). 
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a24ec61439ba7edf5334c40303f5d4752}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!OnShowDebugInfo@{OnShowDebugInfo}}
+\index{OnShowDebugInfo@{OnShowDebugInfo}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{OnShowDebugInfo()}{OnShowDebugInfo()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a24ec61439ba7edf5334c40303f5d4752} 
+void UGameplay\+Common\+UISubsystem::\+\+On\+Show\+Debug\+Info (\begin{DoxyParamCaption}\item[{AHUD \texorpdfstring{$\ast$}{*}}]{HUD}{, }\item[{UCanvas \texorpdfstring{$\ast$}{*}}]{Canvas}{, }\item[{const FDebug\+Display\+Info \&}]{Display\+Info}{, }\item[{float \&}]{YL}{, }\item[{float \&}]{YPos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Hook for rendering debug information to the screen via HUD. 
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a2130d7e51b6063ab5ccfe5693e9ddbaf}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!ShouldCreateSubsystem@{ShouldCreateSubsystem}}
+\index{ShouldCreateSubsystem@{ShouldCreateSubsystem}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{ShouldCreateSubsystem()}{ShouldCreateSubsystem()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a2130d7e51b6063ab5ccfe5693e9ddbaf} 
+bool UGameplay\+Common\+UISubsystem::\+\+Should\+Create\+Subsystem (\begin{DoxyParamCaption}\item[{UObject \texorpdfstring{$\ast$}{*}}]{Outer}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_ad04f8a5a4b4b7e31e2a48a6b1e517f10}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!SwitchToPolicy@{SwitchToPolicy}}
+\index{SwitchToPolicy@{SwitchToPolicy}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{SwitchToPolicy()}{SwitchToPolicy()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_ad04f8a5a4b4b7e31e2a48a6b1e517f10} 
+void UGameplay\+Common\+UISubsystem::\+\+Switch\+To\+Policy (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy}{UGameplay\+Common\+UIPolicy}} \texorpdfstring{$\ast$}{*}}]{New\+Policy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal method to swap the current UI policy (used during initialization). 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a67e6bffb7540cbe81b9368db4a0bd0bb}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!CurrentPolicy@{CurrentPolicy}}
+\index{CurrentPolicy@{CurrentPolicy}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{CurrentPolicy}{CurrentPolicy}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a67e6bffb7540cbe81b9368db4a0bd0bb} 
+TObject\+Ptr$<$\doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy}{UGameplay\+Common\+UIPolicy}}$>$ UGameplay\+Common\+UISubsystem::\+\+Current\+Policy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The instance of the active UI policy. 
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_a9ec145732a8da0fb1be5a688717a4e30}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!OnButtonDescriptionChanged@{OnButtonDescriptionChanged}}
+\index{OnButtonDescriptionChanged@{OnButtonDescriptionChanged}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{OnButtonDescriptionChanged}{OnButtonDescriptionChanged}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_a9ec145732a8da0fb1be5a688717a4e30} 
+FGameplay\+Button\+Description\+Changed\+Signature UGameplay\+Common\+UISubsystem::\+\+On\+Button\+Description\+Changed}
+
+
+
+Blueprint-\/assignable event for when button descriptions change globally. 
+
+\Hypertarget{class_u_gameplay_common_u_i_subsystem_af8389d553a7baa4c55aae612911d03ec}\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!OnPrimaryLayoutSet@{OnPrimaryLayoutSet}}
+\index{OnPrimaryLayoutSet@{OnPrimaryLayoutSet}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\doxysubsubsection{\texorpdfstring{OnPrimaryLayoutSet}{OnPrimaryLayoutSet}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_subsystem_af8389d553a7baa4c55aae612911d03ec} 
+FGameplay\+Primary\+Layout\+Set\+Signature UGameplay\+Common\+UISubsystem::\+\+On\+Primary\+Layout\+Set}
+
+
+
+Native event fired when the primary layout is established. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_u_i_subsystem_8h}{Gameplay\+Common\+UISubsystem.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_common_u_i_subsystem_8cpp}{Gameplay\+Common\+UISubsystem.\+cpp}}\end{DoxyCompactItemize}

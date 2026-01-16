@@ -1,0 +1,42 @@
+\doxysection{Gameplay\+Common\+Settings.\+h File Reference}
+\hypertarget{_gameplay_common_settings_8h}{}\label{_gameplay_common_settings_8h}\index{GameplayCommonSettings.h@{GameplayCommonSettings.h}}
+{\ttfamily \+\#include "{}Modules/\+\+Module\+Manager.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_f_gameplay_common_settings_module}{FGameplay\+Common\+Settings\+Module}}
+\begin{DoxyCompactList}\small\item\em Module implementation for the Gameplay Common Settings system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_gameplay_common_settings_8h_a4781de04791ec765ae53c0d2110c8a0b}{BELOW\+\_\+\+ENGINE\+\_\+\+VERSION}}(Major,  Minor)
+\item 
+\+\#define \doxymbox{\hyperlink{_gameplay_common_settings_8h_a34d518348bbf6d36076ca2aa3bacb212}{FROM\+\_\+\+ENGINE\+\_\+\+VERSION}}(Major,  Minor)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_gameplay_common_settings_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_gameplay_common_settings_8h_a4781de04791ec765ae53c0d2110c8a0b}\index{GameplayCommonSettings.h@{GameplayCommonSettings.h}!BELOW\_ENGINE\_VERSION@{BELOW\_ENGINE\_VERSION}}
+\index{BELOW\_ENGINE\_VERSION@{BELOW\_ENGINE\_VERSION}!GameplayCommonSettings.h@{GameplayCommonSettings.h}}
+\doxysubsubsection{\texorpdfstring{BELOW\_ENGINE\_VERSION}{BELOW\_ENGINE\_VERSION}}
+{\footnotesize\ttfamily \label{_gameplay_common_settings_8h_a4781de04791ec765ae53c0d2110c8a0b} 
+\+\#define BELOW\+\_\+\+ENGINE\+\_\+\+VERSION(\begin{DoxyParamCaption}\item[{}]{Major}{, }\item[{}]{Minor}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(ENGINE\_MAJOR\_VERSION\ <\ (Major)\ ||\ (ENGINE\_MAJOR\_VERSION\ ==\ (Major)\ \&\&\ ENGINE\_MINOR\_VERSION\ <\ (Minor)))}
+
+\end{DoxyCode}
+\Hypertarget{_gameplay_common_settings_8h_a34d518348bbf6d36076ca2aa3bacb212}\index{GameplayCommonSettings.h@{GameplayCommonSettings.h}!FROM\_ENGINE\_VERSION@{FROM\_ENGINE\_VERSION}}
+\index{FROM\_ENGINE\_VERSION@{FROM\_ENGINE\_VERSION}!GameplayCommonSettings.h@{GameplayCommonSettings.h}}
+\doxysubsubsection{\texorpdfstring{FROM\_ENGINE\_VERSION}{FROM\_ENGINE\_VERSION}}
+{\footnotesize\ttfamily \label{_gameplay_common_settings_8h_a34d518348bbf6d36076ca2aa3bacb212} 
+\+\#define FROM\+\_\+\+ENGINE\+\_\+\+VERSION(\begin{DoxyParamCaption}\item[{}]{Major}{, }\item[{}]{Minor}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{!\doxymbox{\hyperlink{_gameplay_common_settings_8h_a4781de04791ec765ae53c0d2110c8a0b}{BELOW\_ENGINE\_VERSION}}(Major,\ Minor)}
+
+\end{DoxyCode}

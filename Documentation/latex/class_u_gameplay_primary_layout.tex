@@ -1,0 +1,365 @@
+\doxysection{UGameplay\+Primary\+Layout Class Reference}
+\hypertarget{class_u_gameplay_primary_layout}{}\label{class_u_gameplay_primary_layout}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+
+
+The root UI layout for a single player.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Primary\+Layout.\+h$>$}
+
+Inheritance diagram for UGameplay\+Primary\+Layout:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_primary_layout}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_primary_layout_aa1f1d50de59e127b84a85a7dc1feac0f}{UGameplay\+Primary\+Layout}} (const FObject\+Initializer \&Object\+Initializer=FObject\+Initializer::\+\+Get())
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a5efbaadcb22683d4794c12d0eee8dbd8}{Native\+On\+Initialized}} () override
+\item 
+const TMap$<$ FGameplay\+Tag, UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*} $>$ \& \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a87cc2634dacd00613c8b0286ab432fb3}{Get\+Registered\+Layers}} () const
+\begin{DoxyCompactList}\small\item\em Returns the map of all registered layer containers by their tags. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a4e2dbd297b2cc03000730ecb8097cfaf}{Set\+Is\+Dormant}} (bool Dormant)
+\begin{DoxyCompactList}\small\item\em Sets whether this layout is dormant. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a9d6d582bce2b709101582d46ad0535de}{Is\+Dormant}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the layout is currently dormant. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Activatable\+WidgetT = UCommon\+Activatable\+Widget$>$ }\\TShared\+Ptr$<$ FStreamable\+Handle $>$ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_ae31668afa1f528453cd0c5eee467b2f5}{Push\+Widget\+To\+Layer\+Stack\+Async}} (FGameplay\+Tag Layer\+Tag, bool b\+Suspend\+Input\+Until\+Complete, TSoft\+Class\+Ptr$<$ UCommon\+Activatable\+Widget $>$ Activatable\+Widget\+Class)
+\begin{DoxyCompactList}\small\item\em Asynchronously loads and pushes a widget to a specific layer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Activatable\+WidgetT = UCommon\+Activatable\+Widget$>$ }\\TShared\+Ptr$<$ FStreamable\+Handle $>$ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_ae781f7643d3bbc0aea9b08552313c4a5}{Push\+Widget\+To\+Layer\+Stack\+Async}} (FGameplay\+Tag Layer\+Tag, bool b\+Suspend\+Input\+Until\+Complete, TSoft\+Class\+Ptr$<$ UCommon\+Activatable\+Widget $>$ Activatable\+Widget\+Class, TFunction$<$ void(\doxymbox{\hyperlink{_gameplay_common_types_8h_a047952fd8802acdf0715260d3a00b61e}{EGameplay\+Widget\+Layer\+Async\+State}}, Activatable\+WidgetT \texorpdfstring{$\ast$}{*})$>$ State\+Func)
+\begin{DoxyCompactList}\small\item\em Asynchronously loads and pushes a widget to a specific layer with state callbacks. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Activatable\+WidgetT = UCommon\+Activatable\+Widget$>$ }\\Activatable\+WidgetT \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a2d57875d1f9b402be2a5bb2252b9bad6}{Push\+Widget\+To\+Layer\+Stack}} (FGameplay\+Tag Layer\+Tag, UClass \texorpdfstring{$\ast$}{*}Activatable\+Widget\+Class)
+\begin{DoxyCompactList}\small\item\em Synchronously pushes a widget to a layer stack. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Activatable\+WidgetT = UCommon\+Activatable\+Widget$>$ }\\Activatable\+WidgetT \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_primary_layout_afc3e53049b72181bb007a830c954979f}{Push\+Widget\+To\+Layer\+Stack}} (FGameplay\+Tag Layer\+Tag, UClass \texorpdfstring{$\ast$}{*}Activatable\+Widget\+Class, TFunction\+Ref$<$ void(Activatable\+WidgetT \&)$>$ Init\+Instance\+Func)
+\begin{DoxyCompactList}\small\item\em Synchronously pushes and initializes a widget to a layer stack. \end{DoxyCompactList}\item 
+UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a4c72e87ab57c7ae2a050ebc76893ed67}{Get\+Widget\+Stack\+Layer}} (const FGameplay\+Tag \&Layer\+Tag) const
+\begin{DoxyCompactList}\small\item\em Returns the container widget for a given layer tag. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a60782a1646d0307c3011b2d9c15d0051}{Find\+And\+Remove\+Widget\+From\+Layer}} (UCommon\+Activatable\+Widget \texorpdfstring{$\ast$}{*}Activatable\+Widget)
+\begin{DoxyCompactList}\small\item\em Searches through all layers for a specific widget instance and removes it. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a6ba9787b872cf8c8561bc6ea35a3a016}{Find\+And\+Remove\+Widgets\+From\+Layer}} (FGameplay\+Tag Layer\+Tag)
+\begin{DoxyCompactList}\small\item\em Removes all widgets from a specific layer. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a5549004fc34904749f5672fd18adcd78}{Clear\+All\+Layer\+Stacks}} ()
+\begin{DoxyCompactList}\small\item\em Removes all widgets from every registered layer. \end{DoxyCompactList}\item 
+UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a570f992bb33213548adbd42d8db97f22}{Get\+Layer\+Stack\+Container}} (FGameplay\+Tag Layer\+Tag)
+\begin{DoxyCompactList}\small\item\em Gets the container for a specific layer tag. \end{DoxyCompactList}\item 
+FString \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a33b236d4876052f900dfabe48ff66cc9}{Get\+Layer\+Name\+From\+Container}} (const UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*}Container) const
+\begin{DoxyCompactList}\small\item\em Helper to retrieve the registration name of a layer container (for debugging). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_primary_layout_aa33a952186ae07b7d2f909ea01a31c9e}{Get\+Primary\+Game\+Layout\+For\+Primary\+Player}} (const UObject \texorpdfstring{$\ast$}{*}World\+Context\+Object)
+\begin{DoxyCompactList}\small\item\em Returns the primary layout for the first local player. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a7e85f065a2d87b45559528064d2f2f4a}{Get\+Primary\+Game\+Layout}} (const APlayer\+Controller \texorpdfstring{$\ast$}{*}Player\+Controller)
+\begin{DoxyCompactList}\small\item\em Returns the primary layout for a specific player controller. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a66eb83407eeeadd3748af9e25d369d01}{Get\+Primary\+Game\+Layout}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Returns the primary layout for a specific local player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a5c999742adc76a146843198017c1b520}{Register\+Layer\+Stack}} (FGameplay\+Tag Layer\+Tag, UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*}Stack)
+\begin{DoxyCompactList}\small\item\em Registers a layer container widget to a specific tag. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a302b570db5d492397bc1f7f7e3bdcd1c}{On\+Is\+Dormant\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the dormancy state changes. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a7e2e1e0b4c956b1756e77cecfbd297f3}{On\+Widget\+Stack\+Transitioning}} (UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*}Widget, bool b\+Is\+Transitioning)
+\begin{DoxyCompactList}\small\item\em Called when a layer container begins or ends a transition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a49a8056e5c913ec4f5560120c86b8d33}{b\+Is\+Dormant}} = false
+\begin{DoxyCompactList}\small\item\em Internal dormancy flag. \end{DoxyCompactList}\item 
+TArray$<$ FName $>$ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a0ea14e61c5e847725da85939c2e8e5b3}{Suspend\+Input\+Tokens}}
+\begin{DoxyCompactList}\small\item\em History of input tokens used to suspend input during async operations. \end{DoxyCompactList}\item 
+TMap$<$ FGameplay\+Tag, UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*} $>$ \doxymbox{\hyperlink{class_u_gameplay_primary_layout_a36f8a6bf8b60905ced5567ddd6728e79}{Registered\+Layers}}
+\begin{DoxyCompactList}\small\item\em Persistent map of layer tags to container widgets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The root UI layout for a single player. 
+
+This widget class acts as the container for all UI layers (HUD, Menus, Modals) for a specific player. It manages the registration of these layers and provides methods to push/\+pop activatable widgets onto specific stacks. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_primary_layout_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_primary_layout_aa1f1d50de59e127b84a85a7dc1feac0f}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{UGameplayPrimaryLayout()}{UGameplayPrimaryLayout()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_aa1f1d50de59e127b84a85a7dc1feac0f} 
+UGameplay\+Primary\+Layout::\+\+UGameplay\+Primary\+Layout (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{ = {\ttfamily FObjectInitializer:\+:\+Get()}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_primary_layout_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_primary_layout_a5549004fc34904749f5672fd18adcd78}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!ClearAllLayerStacks@{ClearAllLayerStacks}}
+\index{ClearAllLayerStacks@{ClearAllLayerStacks}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{ClearAllLayerStacks()}{ClearAllLayerStacks()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a5549004fc34904749f5672fd18adcd78} 
+void UGameplay\+Primary\+Layout::\+\+Clear\+All\+Layer\+Stacks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Removes all widgets from every registered layer. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a60782a1646d0307c3011b2d9c15d0051}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!FindAndRemoveWidgetFromLayer@{FindAndRemoveWidgetFromLayer}}
+\index{FindAndRemoveWidgetFromLayer@{FindAndRemoveWidgetFromLayer}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{FindAndRemoveWidgetFromLayer()}{FindAndRemoveWidgetFromLayer()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a60782a1646d0307c3011b2d9c15d0051} 
+void UGameplay\+Primary\+Layout::\+\+Find\+And\+Remove\+Widget\+From\+Layer (\begin{DoxyParamCaption}\item[{UCommon\+Activatable\+Widget \texorpdfstring{$\ast$}{*}}]{Activatable\+Widget}{}\end{DoxyParamCaption})}
+
+
+
+Searches through all layers for a specific widget instance and removes it. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a6ba9787b872cf8c8561bc6ea35a3a016}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!FindAndRemoveWidgetsFromLayer@{FindAndRemoveWidgetsFromLayer}}
+\index{FindAndRemoveWidgetsFromLayer@{FindAndRemoveWidgetsFromLayer}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{FindAndRemoveWidgetsFromLayer()}{FindAndRemoveWidgetsFromLayer()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a6ba9787b872cf8c8561bc6ea35a3a016} 
+void UGameplay\+Primary\+Layout::\+\+Find\+And\+Remove\+Widgets\+From\+Layer (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Layer\+Tag}{}\end{DoxyParamCaption})}
+
+
+
+Removes all widgets from a specific layer. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a33b236d4876052f900dfabe48ff66cc9}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!GetLayerNameFromContainer@{GetLayerNameFromContainer}}
+\index{GetLayerNameFromContainer@{GetLayerNameFromContainer}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{GetLayerNameFromContainer()}{GetLayerNameFromContainer()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a33b236d4876052f900dfabe48ff66cc9} 
+FString UGameplay\+Primary\+Layout::\+\+Get\+Layer\+Name\+From\+Container (\begin{DoxyParamCaption}\item[{const UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*}}]{Container}{}\end{DoxyParamCaption}) const}
+
+
+
+Helper to retrieve the registration name of a layer container (for debugging). 
+
+\Hypertarget{class_u_gameplay_primary_layout_a570f992bb33213548adbd42d8db97f22}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!GetLayerStackContainer@{GetLayerStackContainer}}
+\index{GetLayerStackContainer@{GetLayerStackContainer}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{GetLayerStackContainer()}{GetLayerStackContainer()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a570f992bb33213548adbd42d8db97f22} 
+UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*} UGameplay\+Primary\+Layout::\+\+Get\+Layer\+Stack\+Container (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Layer\+Tag}{}\end{DoxyParamCaption})}
+
+
+
+Gets the container for a specific layer tag. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a7e85f065a2d87b45559528064d2f2f4a}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!GetPrimaryGameLayout@{GetPrimaryGameLayout}}
+\index{GetPrimaryGameLayout@{GetPrimaryGameLayout}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{GetPrimaryGameLayout()}{GetPrimaryGameLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a7e85f065a2d87b45559528064d2f2f4a} 
+\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*} UGameplay\+Primary\+Layout::\+\+Get\+Primary\+Game\+Layout (\begin{DoxyParamCaption}\item[{const APlayer\+Controller \texorpdfstring{$\ast$}{*}}]{Player\+Controller}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the primary layout for a specific player controller. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a66eb83407eeeadd3748af9e25d369d01}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!GetPrimaryGameLayout@{GetPrimaryGameLayout}}
+\index{GetPrimaryGameLayout@{GetPrimaryGameLayout}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{GetPrimaryGameLayout()}{GetPrimaryGameLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a66eb83407eeeadd3748af9e25d369d01} 
+\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*} UGameplay\+Primary\+Layout::\+\+Get\+Primary\+Game\+Layout (\begin{DoxyParamCaption}\item[{const ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the primary layout for a specific local player. 
+
+\Hypertarget{class_u_gameplay_primary_layout_aa33a952186ae07b7d2f909ea01a31c9e}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!GetPrimaryGameLayoutForPrimaryPlayer@{GetPrimaryGameLayoutForPrimaryPlayer}}
+\index{GetPrimaryGameLayoutForPrimaryPlayer@{GetPrimaryGameLayoutForPrimaryPlayer}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{GetPrimaryGameLayoutForPrimaryPlayer()}{GetPrimaryGameLayoutForPrimaryPlayer()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_aa33a952186ae07b7d2f909ea01a31c9e} 
+\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*} UGameplay\+Primary\+Layout::\+\+Get\+Primary\+Game\+Layout\+For\+Primary\+Player (\begin{DoxyParamCaption}\item[{const UObject \texorpdfstring{$\ast$}{*}}]{World\+Context\+Object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the primary layout for the first local player. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a87cc2634dacd00613c8b0286ab432fb3}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!GetRegisteredLayers@{GetRegisteredLayers}}
+\index{GetRegisteredLayers@{GetRegisteredLayers}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{GetRegisteredLayers()}{GetRegisteredLayers()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a87cc2634dacd00613c8b0286ab432fb3} 
+const TMap$<$ FGameplay\+Tag, UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*} $>$ \& UGameplay\+Primary\+Layout::\+\+Get\+Registered\+Layers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the map of all registered layer containers by their tags. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a4c72e87ab57c7ae2a050ebc76893ed67}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!GetWidgetStackLayer@{GetWidgetStackLayer}}
+\index{GetWidgetStackLayer@{GetWidgetStackLayer}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{GetWidgetStackLayer()}{GetWidgetStackLayer()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a4c72e87ab57c7ae2a050ebc76893ed67} 
+UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*} UGameplay\+Primary\+Layout::\+\+Get\+Widget\+Stack\+Layer (\begin{DoxyParamCaption}\item[{const FGameplay\+Tag \&}]{Layer\+Tag}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the container widget for a given layer tag. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a9d6d582bce2b709101582d46ad0535de}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!IsDormant@{IsDormant}}
+\index{IsDormant@{IsDormant}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{IsDormant()}{IsDormant()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a9d6d582bce2b709101582d46ad0535de} 
+bool UGameplay\+Primary\+Layout::\+\+Is\+Dormant (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the layout is currently dormant. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a5efbaadcb22683d4794c12d0eee8dbd8}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!NativeOnInitialized@{NativeOnInitialized}}
+\index{NativeOnInitialized@{NativeOnInitialized}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{NativeOnInitialized()}{NativeOnInitialized()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a5efbaadcb22683d4794c12d0eee8dbd8} 
+void UGameplay\+Primary\+Layout::\+\+Native\+On\+Initialized (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_primary_layout_a302b570db5d492397bc1f7f7e3bdcd1c}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!OnIsDormantChanged@{OnIsDormantChanged}}
+\index{OnIsDormantChanged@{OnIsDormantChanged}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{OnIsDormantChanged()}{OnIsDormantChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a302b570db5d492397bc1f7f7e3bdcd1c} 
+void UGameplay\+Primary\+Layout::\+\+On\+Is\+Dormant\+Changed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the dormancy state changes. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a7e2e1e0b4c956b1756e77cecfbd297f3}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!OnWidgetStackTransitioning@{OnWidgetStackTransitioning}}
+\index{OnWidgetStackTransitioning@{OnWidgetStackTransitioning}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{OnWidgetStackTransitioning()}{OnWidgetStackTransitioning()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a7e2e1e0b4c956b1756e77cecfbd297f3} 
+void UGameplay\+Primary\+Layout::\+\+On\+Widget\+Stack\+Transitioning (\begin{DoxyParamCaption}\item[{UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*}}]{Widget}{, }\item[{bool}]{b\+Is\+Transitioning}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when a layer container begins or ends a transition. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a2d57875d1f9b402be2a5bb2252b9bad6}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!PushWidgetToLayerStack@{PushWidgetToLayerStack}}
+\index{PushWidgetToLayerStack@{PushWidgetToLayerStack}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{PushWidgetToLayerStack()}{PushWidgetToLayerStack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a2d57875d1f9b402be2a5bb2252b9bad6} 
+template$<$typename Activatable\+WidgetT = UCommon\+Activatable\+Widget$>$ \\
+Activatable\+WidgetT \texorpdfstring{$\ast$}{*} UGameplay\+Primary\+Layout::\+\+Push\+Widget\+To\+Layer\+Stack (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Layer\+Tag}{, }\item[{UClass \texorpdfstring{$\ast$}{*}}]{Activatable\+Widget\+Class}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Synchronously pushes a widget to a layer stack. 
+
+\Hypertarget{class_u_gameplay_primary_layout_afc3e53049b72181bb007a830c954979f}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!PushWidgetToLayerStack@{PushWidgetToLayerStack}}
+\index{PushWidgetToLayerStack@{PushWidgetToLayerStack}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{PushWidgetToLayerStack()}{PushWidgetToLayerStack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_afc3e53049b72181bb007a830c954979f} 
+template$<$typename Activatable\+WidgetT = UCommon\+Activatable\+Widget$>$ \\
+Activatable\+WidgetT \texorpdfstring{$\ast$}{*} UGameplay\+Primary\+Layout::\+\+Push\+Widget\+To\+Layer\+Stack (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Layer\+Tag}{, }\item[{UClass \texorpdfstring{$\ast$}{*}}]{Activatable\+Widget\+Class}{, }\item[{TFunction\+Ref$<$ void(Activatable\+WidgetT \&)$>$}]{Init\+Instance\+Func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Synchronously pushes and initializes a widget to a layer stack. 
+
+\Hypertarget{class_u_gameplay_primary_layout_ae31668afa1f528453cd0c5eee467b2f5}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!PushWidgetToLayerStackAsync@{PushWidgetToLayerStackAsync}}
+\index{PushWidgetToLayerStackAsync@{PushWidgetToLayerStackAsync}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{PushWidgetToLayerStackAsync()}{PushWidgetToLayerStackAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_ae31668afa1f528453cd0c5eee467b2f5} 
+template$<$typename Activatable\+WidgetT = UCommon\+Activatable\+Widget$>$ \\
+TShared\+Ptr$<$ FStreamable\+Handle $>$ UGameplay\+Primary\+Layout::\+\+Push\+Widget\+To\+Layer\+Stack\+Async (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Layer\+Tag}{, }\item[{bool}]{b\+Suspend\+Input\+Until\+Complete}{, }\item[{TSoft\+Class\+Ptr$<$ UCommon\+Activatable\+Widget $>$}]{Activatable\+Widget\+Class}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Asynchronously loads and pushes a widget to a specific layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Tag} & The tag of the layer to push to \\
+\hline
+{\em b\+Suspend\+Input\+Until\+Complete} & Whether to block player input during the load \\
+\hline
+{\em Activatable\+Widget\+Class} & Soft class pointer to the widget to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A handle to the streaming operation 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_primary_layout_ae781f7643d3bbc0aea9b08552313c4a5}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!PushWidgetToLayerStackAsync@{PushWidgetToLayerStackAsync}}
+\index{PushWidgetToLayerStackAsync@{PushWidgetToLayerStackAsync}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{PushWidgetToLayerStackAsync()}{PushWidgetToLayerStackAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_ae781f7643d3bbc0aea9b08552313c4a5} 
+template$<$typename Activatable\+WidgetT = UCommon\+Activatable\+Widget$>$ \\
+TShared\+Ptr$<$ FStreamable\+Handle $>$ UGameplay\+Primary\+Layout::\+\+Push\+Widget\+To\+Layer\+Stack\+Async (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Layer\+Tag}{, }\item[{bool}]{b\+Suspend\+Input\+Until\+Complete}{, }\item[{TSoft\+Class\+Ptr$<$ UCommon\+Activatable\+Widget $>$}]{Activatable\+Widget\+Class}{, }\item[{TFunction$<$ void(\doxymbox{\hyperlink{_gameplay_common_types_8h_a047952fd8802acdf0715260d3a00b61e}{EGameplay\+Widget\+Layer\+Async\+State}}, Activatable\+WidgetT \texorpdfstring{$\ast$}{*})$>$}]{State\+Func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Asynchronously loads and pushes a widget to a specific layer with state callbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Tag} & The tag of the layer to push to \\
+\hline
+{\em b\+Suspend\+Input\+Until\+Complete} & Whether to block player input during the load \\
+\hline
+{\em Activatable\+Widget\+Class} & Soft class pointer to the widget to load \\
+\hline
+{\em State\+Func} & Callback function triggered at different stages of the async lifecycle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A handle to the streaming operation 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_primary_layout_a5c999742adc76a146843198017c1b520}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!RegisterLayerStack@{RegisterLayerStack}}
+\index{RegisterLayerStack@{RegisterLayerStack}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{RegisterLayerStack()}{RegisterLayerStack()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a5c999742adc76a146843198017c1b520} 
+void UGameplay\+Primary\+Layout::\+\+Register\+Layer\+Stack (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Layer\+Tag}{, }\item[{UCommon\+Activatable\+Widget\+Container\+Base \texorpdfstring{$\ast$}{*}}]{Stack}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Registers a layer container widget to a specific tag. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a4e2dbd297b2cc03000730ecb8097cfaf}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!SetIsDormant@{SetIsDormant}}
+\index{SetIsDormant@{SetIsDormant}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{SetIsDormant()}{SetIsDormant()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a4e2dbd297b2cc03000730ecb8097cfaf} 
+void UGameplay\+Primary\+Layout::\+\+Set\+Is\+Dormant (\begin{DoxyParamCaption}\item[{bool}]{Dormant}{}\end{DoxyParamCaption})}
+
+
+
+Sets whether this layout is dormant. 
+
+A dormant layout is usually collapsed and only responds to persistent global actions. 
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_primary_layout_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_primary_layout_a49a8056e5c913ec4f5560120c86b8d33}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!bIsDormant@{bIsDormant}}
+\index{bIsDormant@{bIsDormant}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{bIsDormant}{bIsDormant}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a49a8056e5c913ec4f5560120c86b8d33} 
+bool UGameplay\+Primary\+Layout::\+b\+Is\+Dormant = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal dormancy flag. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a36f8a6bf8b60905ced5567ddd6728e79}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!RegisteredLayers@{RegisteredLayers}}
+\index{RegisteredLayers@{RegisteredLayers}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{RegisteredLayers}{RegisteredLayers}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a36f8a6bf8b60905ced5567ddd6728e79} 
+TMap$<$FGameplay\+Tag, UCommon\+Activatable\+Widget\+Container\+Base\texorpdfstring{$\ast$}{*}$>$ UGameplay\+Primary\+Layout::\+\+Registered\+Layers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Persistent map of layer tags to container widgets. 
+
+\Hypertarget{class_u_gameplay_primary_layout_a0ea14e61c5e847725da85939c2e8e5b3}\index{UGameplayPrimaryLayout@{UGameplayPrimaryLayout}!SuspendInputTokens@{SuspendInputTokens}}
+\index{SuspendInputTokens@{SuspendInputTokens}!UGameplayPrimaryLayout@{UGameplayPrimaryLayout}}
+\doxysubsubsection{\texorpdfstring{SuspendInputTokens}{SuspendInputTokens}}
+{\footnotesize\ttfamily \label{class_u_gameplay_primary_layout_a0ea14e61c5e847725da85939c2e8e5b3} 
+TArray$<$FName$>$ UGameplay\+Primary\+Layout::\+\+Suspend\+Input\+Tokens\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+History of input tokens used to suspend input during async operations. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_primary_layout_8h}{Gameplay\+Primary\+Layout.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_primary_layout_8cpp}{Gameplay\+Primary\+Layout.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,222 @@
+\doxysection{UGameplay\+Subtitle\+Display Class Reference}
+\hypertarget{class_u_gameplay_subtitle_display}{}\label{class_u_gameplay_subtitle_display}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+
+
+UWidget wrapper for displaying subtitles in UMG.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Subtitle\+Display.\+h$>$}
+
+Inheritance diagram for UGameplay\+Subtitle\+Display:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_subtitle_display}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a9c50489b99a69ef1970699863dc32153}{UGameplay\+Subtitle\+Display}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_abd6e4c4010d6d8d94d64420c055b42f1}{Synchronize\+Properties}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a9a5bca52c74be5dca5876db095e0b8f2}{Release\+Slate\+Resources}} (bool b\+Release\+Children) override
+\item 
+virtual TShared\+Ref$<$ SWidget $>$ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a176aa32f990223fe15b487dd2cd83893}{Rebuild\+Widget}} () override
+\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a1659ddfc2383a7e2ac997bdeac896a88}{Has\+Subtitles}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if there is currently subtitle text being displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_ac1eb0013540b8d8ecfceb981c6e09c19}{Subtitle\+Format}}
+\begin{DoxyCompactList}\small\item\em Specific formatting settings (size, color, border) for this display. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options}{UGameplay\+Subtitle\+Display\+Options}} $>$ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a926e058ccce5c07d301a82d7c0d18b37}{Subtitle\+Options}}
+\begin{DoxyCompactList}\small\item\em Data asset containing the mapping of format enums to actual visual parameters. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_ac9b87aac021e47a5be109890c25563c8}{Subtitle\+Wrap\+Text\+At}}
+\begin{DoxyCompactList}\small\item\em Maximum width before the text wraps to the next line. \end{DoxyCompactList}\item 
+uint8 \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a8a3fbb7e2a2674c44c33dd19d321aad9}{b\+Subtitle\+Preview\+Mode}}:\+ 1
+\begin{DoxyCompactList}\small\item\em If true, displays the Subtitle\+Preview\+Text in the editor even when no subtitles are active. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_ae030f181e48ae3a940799613555264f5}{Subtitle\+Preview\+Text}}
+\begin{DoxyCompactList}\small\item\em Text to show in the editor for layout purposes when preview mode is on. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a5f2ecfd7b861b38049c6ee780b1c2311}{Handle\+Subtitle\+Display\+Format\+Changed}} (const \doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} \&New\+Subtitle\+Format)
+\begin{DoxyCompactList}\small\item\em Internal handler for format property changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_aff9565f5ba0aa8a44ca1a6614f6b3409}{Rebuild\+Style}} ()
+\begin{DoxyCompactList}\small\item\em Recalculates the Generated\+Style and background brush based on current options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FText\+Block\+Style \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a365f2d2f20943afc4d6f4697b3517d4c}{Generated\+Style}}
+\begin{DoxyCompactList}\small\item\em Derived text style for the Slate widget. \end{DoxyCompactList}\item 
+FSlate\+Brush \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a3d21167a449a43cc9e8aef1eebe1bd09}{Generated\+Background\+Brush}}
+\begin{DoxyCompactList}\small\item\em Derived background brush for the Slate widget. \end{DoxyCompactList}\item 
+TShared\+Ptr$<$ \doxymbox{\hyperlink{class_s_gameplay_subtitle_display}{SGameplay\+Subtitle\+Display}} $>$ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_a2df2d2492de6b4879c7c19b1eaccbab5}{Subtitle\+Widget}}
+\begin{DoxyCompactList}\small\item\em Internal Slate widget instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+UWidget wrapper for displaying subtitles in UMG. 
+
+Synchronizes with the Gameplay\+Subtitles\+Subsystem to automatically display subtitle text. Supports dynamic styling via \doxylink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format} and \doxylink{class_u_gameplay_subtitle_display_options}{UGameplay\+Subtitle\+Display\+Options}. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_subtitle_display_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_subtitle_display_a9c50489b99a69ef1970699863dc32153}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{UGameplaySubtitleDisplay()}{UGameplaySubtitleDisplay()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_a9c50489b99a69ef1970699863dc32153} 
+UGameplay\+Subtitle\+Display::\+\+UGameplay\+Subtitle\+Display (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_subtitle_display_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_subtitle_display_a5f2ecfd7b861b38049c6ee780b1c2311}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!HandleSubtitleDisplayFormatChanged@{HandleSubtitleDisplayFormatChanged}}
+\index{HandleSubtitleDisplayFormatChanged@{HandleSubtitleDisplayFormatChanged}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{HandleSubtitleDisplayFormatChanged()}{HandleSubtitleDisplayFormatChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_a5f2ecfd7b861b38049c6ee780b1c2311} 
+void UGameplay\+Subtitle\+Display::\+\+Handle\+Subtitle\+Display\+Format\+Changed (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} \&}]{New\+Subtitle\+Format}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Internal handler for format property changes. 
+
+\Hypertarget{class_u_gameplay_subtitle_display_a1659ddfc2383a7e2ac997bdeac896a88}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!HasSubtitles@{HasSubtitles}}
+\index{HasSubtitles@{HasSubtitles}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{HasSubtitles()}{HasSubtitles()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_a1659ddfc2383a7e2ac997bdeac896a88} 
+bool UGameplay\+Subtitle\+Display::\+\+Has\+Subtitles (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns true if there is currently subtitle text being displayed. 
+
+\Hypertarget{class_u_gameplay_subtitle_display_aff9565f5ba0aa8a44ca1a6614f6b3409}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!RebuildStyle@{RebuildStyle}}
+\index{RebuildStyle@{RebuildStyle}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{RebuildStyle()}{RebuildStyle()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_aff9565f5ba0aa8a44ca1a6614f6b3409} 
+void UGameplay\+Subtitle\+Display::\+\+Rebuild\+Style (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Recalculates the Generated\+Style and background brush based on current options. 
+
+\Hypertarget{class_u_gameplay_subtitle_display_a176aa32f990223fe15b487dd2cd83893}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!RebuildWidget@{RebuildWidget}}
+\index{RebuildWidget@{RebuildWidget}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{RebuildWidget()}{RebuildWidget()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_a176aa32f990223fe15b487dd2cd83893} 
+TShared\+Ref$<$ SWidget $>$ UGameplay\+Subtitle\+Display::\+\+Rebuild\+Widget (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_subtitle_display_a9a5bca52c74be5dca5876db095e0b8f2}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!ReleaseSlateResources@{ReleaseSlateResources}}
+\index{ReleaseSlateResources@{ReleaseSlateResources}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{ReleaseSlateResources()}{ReleaseSlateResources()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_a9a5bca52c74be5dca5876db095e0b8f2} 
+void UGameplay\+Subtitle\+Display::\+\+Release\+Slate\+Resources (\begin{DoxyParamCaption}\item[{bool}]{b\+Release\+Children}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_subtitle_display_abd6e4c4010d6d8d94d64420c055b42f1}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!SynchronizeProperties@{SynchronizeProperties}}
+\index{SynchronizeProperties@{SynchronizeProperties}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{SynchronizeProperties()}{SynchronizeProperties()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_abd6e4c4010d6d8d94d64420c055b42f1} 
+void UGameplay\+Subtitle\+Display::\+\+Synchronize\+Properties (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_subtitle_display_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_subtitle_display_a8a3fbb7e2a2674c44c33dd19d321aad9}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!bSubtitlePreviewMode@{bSubtitlePreviewMode}}
+\index{bSubtitlePreviewMode@{bSubtitlePreviewMode}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{bSubtitlePreviewMode}{bSubtitlePreviewMode}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_a8a3fbb7e2a2674c44c33dd19d321aad9} 
+uint8 UGameplay\+Subtitle\+Display::\+b\+Subtitle\+Preview\+Mode}
+
+
+
+If true, displays the Subtitle\+Preview\+Text in the editor even when no subtitles are active. 
+
+\Hypertarget{class_u_gameplay_subtitle_display_a3d21167a449a43cc9e8aef1eebe1bd09}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!GeneratedBackgroundBrush@{GeneratedBackgroundBrush}}
+\index{GeneratedBackgroundBrush@{GeneratedBackgroundBrush}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{GeneratedBackgroundBrush}{GeneratedBackgroundBrush}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_a3d21167a449a43cc9e8aef1eebe1bd09} 
+FSlate\+Brush UGameplay\+Subtitle\+Display::\+\+Generated\+Background\+Brush\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Derived background brush for the Slate widget. 
+
+\Hypertarget{class_u_gameplay_subtitle_display_a365f2d2f20943afc4d6f4697b3517d4c}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!GeneratedStyle@{GeneratedStyle}}
+\index{GeneratedStyle@{GeneratedStyle}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{GeneratedStyle}{GeneratedStyle}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_a365f2d2f20943afc4d6f4697b3517d4c} 
+FText\+Block\+Style UGameplay\+Subtitle\+Display::\+\+Generated\+Style\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Derived text style for the Slate widget. 
+
+\Hypertarget{class_u_gameplay_subtitle_display_ac1eb0013540b8d8ecfceb981c6e09c19}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!SubtitleFormat@{SubtitleFormat}}
+\index{SubtitleFormat@{SubtitleFormat}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{SubtitleFormat}{SubtitleFormat}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_ac1eb0013540b8d8ecfceb981c6e09c19} 
+\doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} UGameplay\+Subtitle\+Display::\+\+Subtitle\+Format}
+
+
+
+Specific formatting settings (size, color, border) for this display. 
+
+\Hypertarget{class_u_gameplay_subtitle_display_a926e058ccce5c07d301a82d7c0d18b37}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!SubtitleOptions@{SubtitleOptions}}
+\index{SubtitleOptions@{SubtitleOptions}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{SubtitleOptions}{SubtitleOptions}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_a926e058ccce5c07d301a82d7c0d18b37} 
+TObject\+Ptr$<$\doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options}{UGameplay\+Subtitle\+Display\+Options}}$>$ UGameplay\+Subtitle\+Display::\+\+Subtitle\+Options}
+
+
+
+Data asset containing the mapping of format enums to actual visual parameters. 
+
+\Hypertarget{class_u_gameplay_subtitle_display_ae030f181e48ae3a940799613555264f5}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!SubtitlePreviewText@{SubtitlePreviewText}}
+\index{SubtitlePreviewText@{SubtitlePreviewText}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{SubtitlePreviewText}{SubtitlePreviewText}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_ae030f181e48ae3a940799613555264f5} 
+FText UGameplay\+Subtitle\+Display::\+\+Subtitle\+Preview\+Text}
+
+
+
+Text to show in the editor for layout purposes when preview mode is on. 
+
+\Hypertarget{class_u_gameplay_subtitle_display_a2df2d2492de6b4879c7c19b1eaccbab5}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!SubtitleWidget@{SubtitleWidget}}
+\index{SubtitleWidget@{SubtitleWidget}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{SubtitleWidget}{SubtitleWidget}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_a2df2d2492de6b4879c7c19b1eaccbab5} 
+TShared\+Ptr$<$\doxymbox{\hyperlink{class_s_gameplay_subtitle_display}{SGameplay\+Subtitle\+Display}}$>$ UGameplay\+Subtitle\+Display::\+\+Subtitle\+Widget\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal Slate widget instance. 
+
+\Hypertarget{class_u_gameplay_subtitle_display_ac9b87aac021e47a5be109890c25563c8}\index{UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}!SubtitleWrapTextAt@{SubtitleWrapTextAt}}
+\index{SubtitleWrapTextAt@{SubtitleWrapTextAt}!UGameplaySubtitleDisplay@{UGameplaySubtitleDisplay}}
+\doxysubsubsection{\texorpdfstring{SubtitleWrapTextAt}{SubtitleWrapTextAt}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitle_display_ac9b87aac021e47a5be109890c25563c8} 
+float UGameplay\+Subtitle\+Display::\+\+Subtitle\+Wrap\+Text\+At}
+
+
+
+Maximum width before the text wraps to the next line. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_subtitle_display_8h}{Gameplay\+Subtitle\+Display.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_subtitle_display_8cpp}{Gameplay\+Subtitle\+Display.\+cpp}}\end{DoxyCompactItemize}

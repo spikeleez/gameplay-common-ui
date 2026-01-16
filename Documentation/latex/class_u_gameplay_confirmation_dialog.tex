@@ -1,0 +1,195 @@
+\doxysection{UGameplay\+Confirmation\+Dialog Class Reference}
+\hypertarget{class_u_gameplay_confirmation_dialog}{}\label{class_u_gameplay_confirmation_dialog}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+
+
+Standard UI widget for modal confirmation and error dialogs.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Confirmation\+Dialog.\+h$>$}
+
+Inheritance diagram for UGameplay\+Confirmation\+Dialog:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_gameplay_confirmation_dialog}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog_a56bb059000a9c694711c1d85d27520f7}{UGameplay\+Confirmation\+Dialog}} (const FObject\+Initializer \&Object\+Initializer=FObject\+Initializer::\+\+Get())
+\item 
+virtual UWidget \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog_a1c8c77b560dda34754086efbb5686479}{Native\+Get\+Desired\+Focus\+Target}} () const override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog_a94ed5c379d8bf20faf6b1914ca974de0}{Setup\+Dialog}} (\doxymbox{\hyperlink{class_u_gameplay_confirmation_descriptor}{UGameplay\+Confirmation\+Descriptor}} \texorpdfstring{$\ast$}{*}Descriptor, FGameplay\+Confirmation\+Dialog\+Result\+Signature Result\+Callback)
+\begin{DoxyCompactList}\small\item\em Initializes the dialog with data and a completion callback. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog_ac55081b9c9fe677607eb1c2beb3e56ae}{Kill\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Forces the dialog to close without a specific button click (broadcasting \textquotesingle{}Killed\textquotesingle{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_gameplay_activatable_widget}{UGameplay\+Activatable\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a023bf6842453726e076b1e5d03cfa59e}{UGameplay\+Activatable\+Widget}} (const FObject\+Initializer \&Object\+Initializer=FObject\+Initializer::\+\+Get())
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ad17ff3c0acd789d45f90246aa4e938e5}{Native\+Destruct}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a2f323f4846af290927c4d35bf90422bc}{Native\+On\+Activated}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a9a334286488535fe8aa908280410c7e4}{Native\+On\+Deactivated}} () override
+\item 
+virtual TOptional$<$ FUIInput\+Config $>$ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ab57c70bd00c9275eff50c6c8239c6835}{Get\+Desired\+Input\+Config}} () const override
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ad9a734954029703ed3bd4530fb2c6e66}{Register\+Bound\+Action\+Binding}} (FData\+Table\+Row\+Handle Input\+Action, const FOn\+Input\+Action\+Executed\+Signature \&Callback, FUIAction\+Binding\+Handle \&Binding\+Handle)
+\begin{DoxyCompactList}\small\item\em Registers a standard UI action binding for this widget. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_afc936f88c6b7d84db597009ccd79691e}{Register\+Bound\+Enhanced\+Action\+Binding}} (UInput\+Action \texorpdfstring{$\ast$}{*}Input\+Action, const FOn\+Enhanced\+Input\+Action\+Executed\+Signature \&Callback, FUIAction\+Binding\+Handle \&Binding\+Handle)
+\begin{DoxyCompactList}\small\item\em Registers an Enhanced Input action binding for this widget. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a5557ba48b7d40950ae29522b1ee24ae7}{Unregister\+Bound\+Action\+Binding}} (FUIAction\+Binding\+Handle \&Binding\+Handle)
+\begin{DoxyCompactList}\small\item\em Manually unregisters a specific action binding. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a9cb56665546ea498c74c18dca3e1907a}{Unregister\+All\+Bound\+Action\+Bindings}} ()
+\begin{DoxyCompactList}\small\item\em Unregisters all currently active action bindings for this widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog_a5d9980f79b79ae2d1c43f956bbe0cb79}{Native\+On\+Confirmation\+Dialog\+Button\+Clicked}} (\doxymbox{\hyperlink{_gameplay_common_types_8h_ae12d5966da07d7cdbc7b01eb20b91002}{EGameplay\+Confirmation\+Result}} Result)
+\begin{DoxyCompactList}\small\item\em Internal handler for button click events. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog_a25216e632769741bb169307cccd02fc7}{BP\+\_\+\+On\+Confirmation\+Dialog\+Button\+Clicked}} (\doxymbox{\hyperlink{_gameplay_common_types_8h_ae12d5966da07d7cdbc7b01eb20b91002}{EGameplay\+Confirmation\+Result}} Result)
+\begin{DoxyCompactList}\small\item\em Blueprint hook for reacting to button clicks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ UCommon\+Rich\+Text\+Block $>$ \doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog_ab44ba365178ba65f4da0b0b7ad5c7bc1}{Common\+Rich\+Text\+\_\+\+Dialog\+Title}}
+\begin{DoxyCompactList}\small\item\em Title text widget. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ UCommon\+Rich\+Text\+Block $>$ \doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog_a904c15d5390f77c8dbf21db277126e91}{Common\+Rich\+Text\+\_\+\+Dialog\+Message}}
+\begin{DoxyCompactList}\small\item\em Message body text widget. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ UDynamic\+Entry\+Box $>$ \doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog_a892a91e9bd7a261547f9eb5f23dfe5af}{Entry\+Box\+\_\+\+Dialog\+Buttons}}
+\begin{DoxyCompactList}\small\item\em Dynamic container for the action buttons. \end{DoxyCompactList}\item 
+FGameplay\+Confirmation\+Dialog\+Result\+Signature \doxymbox{\hyperlink{class_u_gameplay_confirmation_dialog_ac31887add3deece9dc896fdfe3c86310}{On\+Result\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback to execute when the dialog is resolved. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_gameplay_activatable_widget}{UGameplay\+Activatable\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_types_8h_a1025122649dbd094f4a294fde094283c}{EGameplay\+Activatable\+Input\+Mode}} \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a85a7daafe70affb87f9bec77bfe54b31}{Input\+Mode}}
+\begin{DoxyCompactList}\small\item\em The input mode desired by this widget when activated. \end{DoxyCompactList}\item 
+EMouse\+Capture\+Mode \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a921df6987b1c0a7ab366cf9ed492a894}{Mouse\+Capture\+Mode}}
+\begin{DoxyCompactList}\small\item\em How the mouse should be captured when in a Game-\/related input mode. \end{DoxyCompactList}\item 
+uint8 \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a87674d4b50b95127a9c0a42c15ef688c}{b\+Hides\+Cursor\+During\+Viewport\+Capture}}:\+ 1
+\begin{DoxyCompactList}\small\item\em Whether to hide the mouse cursor while it\textquotesingle{}s captured in the viewport. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Standard UI widget for modal confirmation and error dialogs. 
+
+Works in tandem with \doxylink{class_u_gameplay_confirmation_descriptor}{UGameplay\+Confirmation\+Descriptor} to dynamically build buttons and display messages. Broadcasts the user\textquotesingle{}s choice via a callback when a button is clicked or the dialog is dismissed. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_confirmation_dialog_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_confirmation_dialog_a56bb059000a9c694711c1d85d27520f7}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\doxysubsubsection{\texorpdfstring{UGameplayConfirmationDialog()}{UGameplayConfirmationDialog()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_confirmation_dialog_a56bb059000a9c694711c1d85d27520f7} 
+UGameplay\+Confirmation\+Dialog::\+\+UGameplay\+Confirmation\+Dialog (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{ = {\ttfamily FObjectInitializer:\+:\+Get()}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_confirmation_dialog_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_confirmation_dialog_a25216e632769741bb169307cccd02fc7}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!BP\_OnConfirmationDialogButtonClicked@{BP\_OnConfirmationDialogButtonClicked}}
+\index{BP\_OnConfirmationDialogButtonClicked@{BP\_OnConfirmationDialogButtonClicked}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\doxysubsubsection{\texorpdfstring{BP\_OnConfirmationDialogButtonClicked()}{BP\_OnConfirmationDialogButtonClicked()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_confirmation_dialog_a25216e632769741bb169307cccd02fc7} 
+void UGameplay\+Confirmation\+Dialog::\+\+BP\+\_\+\+On\+Confirmation\+Dialog\+Button\+Clicked (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_gameplay_common_types_8h_ae12d5966da07d7cdbc7b01eb20b91002}{EGameplay\+Confirmation\+Result}}}]{Result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Blueprint hook for reacting to button clicks. 
+
+\Hypertarget{class_u_gameplay_confirmation_dialog_ac55081b9c9fe677607eb1c2beb3e56ae}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!KillDialog@{KillDialog}}
+\index{KillDialog@{KillDialog}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\doxysubsubsection{\texorpdfstring{KillDialog()}{KillDialog()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_confirmation_dialog_ac55081b9c9fe677607eb1c2beb3e56ae} 
+void UGameplay\+Confirmation\+Dialog::\+\+Kill\+Dialog (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Forces the dialog to close without a specific button click (broadcasting \textquotesingle{}Killed\textquotesingle{}). 
+
+\Hypertarget{class_u_gameplay_confirmation_dialog_a1c8c77b560dda34754086efbb5686479}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!NativeGetDesiredFocusTarget@{NativeGetDesiredFocusTarget}}
+\index{NativeGetDesiredFocusTarget@{NativeGetDesiredFocusTarget}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\doxysubsubsection{\texorpdfstring{NativeGetDesiredFocusTarget()}{NativeGetDesiredFocusTarget()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_confirmation_dialog_a1c8c77b560dda34754086efbb5686479} 
+UWidget \texorpdfstring{$\ast$}{*} UGameplay\+Confirmation\+Dialog::\+\+Native\+Get\+Desired\+Focus\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_confirmation_dialog_a5d9980f79b79ae2d1c43f956bbe0cb79}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!NativeOnConfirmationDialogButtonClicked@{NativeOnConfirmationDialogButtonClicked}}
+\index{NativeOnConfirmationDialogButtonClicked@{NativeOnConfirmationDialogButtonClicked}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\doxysubsubsection{\texorpdfstring{NativeOnConfirmationDialogButtonClicked()}{NativeOnConfirmationDialogButtonClicked()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_confirmation_dialog_a5d9980f79b79ae2d1c43f956bbe0cb79} 
+void UGameplay\+Confirmation\+Dialog::\+\+Native\+On\+Confirmation\+Dialog\+Button\+Clicked (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_gameplay_common_types_8h_ae12d5966da07d7cdbc7b01eb20b91002}{EGameplay\+Confirmation\+Result}}}]{Result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Internal handler for button click events. 
+
+\Hypertarget{class_u_gameplay_confirmation_dialog_a94ed5c379d8bf20faf6b1914ca974de0}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!SetupDialog@{SetupDialog}}
+\index{SetupDialog@{SetupDialog}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\doxysubsubsection{\texorpdfstring{SetupDialog()}{SetupDialog()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_confirmation_dialog_a94ed5c379d8bf20faf6b1914ca974de0} 
+void UGameplay\+Confirmation\+Dialog::\+\+Setup\+Dialog (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_confirmation_descriptor}{UGameplay\+Confirmation\+Descriptor}} \texorpdfstring{$\ast$}{*}}]{Descriptor}{, }\item[{FGameplay\+Confirmation\+Dialog\+Result\+Signature}]{Result\+Callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the dialog with data and a completion callback. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_confirmation_dialog_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_confirmation_dialog_a904c15d5390f77c8dbf21db277126e91}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!CommonRichText\_DialogMessage@{CommonRichText\_DialogMessage}}
+\index{CommonRichText\_DialogMessage@{CommonRichText\_DialogMessage}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\doxysubsubsection{\texorpdfstring{CommonRichText\_DialogMessage}{CommonRichText\_DialogMessage}}
+{\footnotesize\ttfamily \label{class_u_gameplay_confirmation_dialog_a904c15d5390f77c8dbf21db277126e91} 
+TObject\+Ptr$<$UCommon\+Rich\+Text\+Block$>$ UGameplay\+Confirmation\+Dialog::\+\+Common\+Rich\+Text\+\_\+\+Dialog\+Message\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Message body text widget. 
+
+\Hypertarget{class_u_gameplay_confirmation_dialog_ab44ba365178ba65f4da0b0b7ad5c7bc1}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!CommonRichText\_DialogTitle@{CommonRichText\_DialogTitle}}
+\index{CommonRichText\_DialogTitle@{CommonRichText\_DialogTitle}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\doxysubsubsection{\texorpdfstring{CommonRichText\_DialogTitle}{CommonRichText\_DialogTitle}}
+{\footnotesize\ttfamily \label{class_u_gameplay_confirmation_dialog_ab44ba365178ba65f4da0b0b7ad5c7bc1} 
+TObject\+Ptr$<$UCommon\+Rich\+Text\+Block$>$ UGameplay\+Confirmation\+Dialog::\+\+Common\+Rich\+Text\+\_\+\+Dialog\+Title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Title text widget. 
+
+\Hypertarget{class_u_gameplay_confirmation_dialog_a892a91e9bd7a261547f9eb5f23dfe5af}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!EntryBox\_DialogButtons@{EntryBox\_DialogButtons}}
+\index{EntryBox\_DialogButtons@{EntryBox\_DialogButtons}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\doxysubsubsection{\texorpdfstring{EntryBox\_DialogButtons}{EntryBox\_DialogButtons}}
+{\footnotesize\ttfamily \label{class_u_gameplay_confirmation_dialog_a892a91e9bd7a261547f9eb5f23dfe5af} 
+TObject\+Ptr$<$UDynamic\+Entry\+Box$>$ UGameplay\+Confirmation\+Dialog::\+\+Entry\+Box\+\_\+\+Dialog\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dynamic container for the action buttons. 
+
+\Hypertarget{class_u_gameplay_confirmation_dialog_ac31887add3deece9dc896fdfe3c86310}\index{UGameplayConfirmationDialog@{UGameplayConfirmationDialog}!OnResultCallback@{OnResultCallback}}
+\index{OnResultCallback@{OnResultCallback}!UGameplayConfirmationDialog@{UGameplayConfirmationDialog}}
+\doxysubsubsection{\texorpdfstring{OnResultCallback}{OnResultCallback}}
+{\footnotesize\ttfamily \label{class_u_gameplay_confirmation_dialog_ac31887add3deece9dc896fdfe3c86310} 
+FGameplay\+Confirmation\+Dialog\+Result\+Signature UGameplay\+Confirmation\+Dialog::\+\+On\+Result\+Callback\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Callback to execute when the dialog is resolved. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_confirmation_dialog_8h}{Gameplay\+Confirmation\+Dialog.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_confirmation_dialog_8cpp}{Gameplay\+Confirmation\+Dialog.\+cpp}}\end{DoxyCompactItemize}

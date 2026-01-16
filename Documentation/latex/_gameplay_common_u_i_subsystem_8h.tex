@@ -1,0 +1,43 @@
+\doxysection{Gameplay\+Common\+UISubsystem.\+h File Reference}
+\hypertarget{_gameplay_common_u_i_subsystem_8h}{}\label{_gameplay_common_u_i_subsystem_8h}\index{GameplayCommonUISubsystem.h@{GameplayCommonUISubsystem.h}}
+{\ttfamily \+\#include "{}Subsystems/\+\+Game\+Instance\+Subsystem.\+h"{}}\newline
+{\ttfamily \+\#include "{}Game\+Framework/\+\+HUD.\+h"{}}\newline
+{\ttfamily \+\#include "{}Engine/\+\+Canvas.\+h"{}}\newline
+{\ttfamily \+\#include "{}Gameplay\+Common\+UISubsystem.\+generated.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem}{UGameplay\+Common\+UISubsystem}}
+\begin{DoxyCompactList}\small\item\em Core Game\+Instance subsystem for managing the global UI lifecycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_u_i_subsystem_8h_ad8bc8a87566b627a9fc4a615d5eb10cf}{DECLARE\+\_\+\+MULTICAST\+\_\+\+DELEGATE\+\_\+\+One\+Param}} (FGameplay\+Primary\+Layout\+Set\+Signature, \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Broadcast when the global primary layout is set or changed. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_common_u_i_subsystem_8h_a374b0c3345536cb392e6305018379edc}{DECLARE\+\_\+\+DYNAMIC\+\_\+\+MULTICAST\+\_\+\+DELEGATE\+\_\+\+Two\+Params}} (FGameplay\+Button\+Description\+Changed\+Signature, \doxymbox{\hyperlink{class_u_gameplay_button_base}{UGameplay\+Button\+Base}} \texorpdfstring{$\ast$}{*}, Button, FText, New\+Description\+Text)
+\begin{DoxyCompactList}\small\item\em Broadcast when a button\textquotesingle{}s description text changes, allowing for dynamic UI updates (e.\+g., tooltips or legends). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_gameplay_common_u_i_subsystem_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_gameplay_common_u_i_subsystem_8h_a374b0c3345536cb392e6305018379edc}\index{GameplayCommonUISubsystem.h@{GameplayCommonUISubsystem.h}!DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams@{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams}}
+\index{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams@{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams}!GameplayCommonUISubsystem.h@{GameplayCommonUISubsystem.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams()}{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams()}}
+{\footnotesize\ttfamily \label{_gameplay_common_u_i_subsystem_8h_a374b0c3345536cb392e6305018379edc} 
+DECLARE\+\_\+\+DYNAMIC\+\_\+\+MULTICAST\+\_\+\+DELEGATE\+\_\+\+Two\+Params (\begin{DoxyParamCaption}\item[{FGameplay\+Button\+Description\+Changed\+Signature}]{}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_button_base}{UGameplay\+Button\+Base}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{Button}]{}{, }\item[{FText}]{}{, }\item[{New\+Description\+Text}]{}{}\end{DoxyParamCaption})}
+
+
+
+Broadcast when a button\textquotesingle{}s description text changes, allowing for dynamic UI updates (e.\+g., tooltips or legends). 
+
+\Hypertarget{_gameplay_common_u_i_subsystem_8h_ad8bc8a87566b627a9fc4a615d5eb10cf}\index{GameplayCommonUISubsystem.h@{GameplayCommonUISubsystem.h}!DECLARE\_MULTICAST\_DELEGATE\_OneParam@{DECLARE\_MULTICAST\_DELEGATE\_OneParam}}
+\index{DECLARE\_MULTICAST\_DELEGATE\_OneParam@{DECLARE\_MULTICAST\_DELEGATE\_OneParam}!GameplayCommonUISubsystem.h@{GameplayCommonUISubsystem.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_MULTICAST\_DELEGATE\_OneParam()}{DECLARE\_MULTICAST\_DELEGATE\_OneParam()}}
+{\footnotesize\ttfamily \label{_gameplay_common_u_i_subsystem_8h_ad8bc8a87566b627a9fc4a615d5eb10cf} 
+DECLARE\+\_\+\+MULTICAST\+\_\+\+DELEGATE\+\_\+\+One\+Param (\begin{DoxyParamCaption}\item[{FGameplay\+Primary\+Layout\+Set\+Signature}]{}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Broadcast when the global primary layout is set or changed. 
+

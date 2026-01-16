@@ -1,0 +1,53 @@
+\doxysection{IGameplay\+Common\+Settings\+Interface Class Reference}
+\hypertarget{class_i_gameplay_common_settings_interface}{}\label{class_i_gameplay_common_settings_interface}\index{IGameplayCommonSettingsInterface@{IGameplayCommonSettingsInterface}}
+
+
+Interface for objects that provide access to game settings.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Common\+Settings\+Interface.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_u_gameplay_settings_shared}{UGameplay\+Settings\+Shared}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_i_gameplay_common_settings_interface_a4ce545de69027a85041fe2f6cfce8cb8}{Get\+Shared\+Settings}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the shared (cross-\/platform) settings for this user. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_u_gameplay_settings_local}{UGameplay\+Settings\+Local}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_i_gameplay_common_settings_interface_a910d22e3740849f0b1544ab2e125e82b}{Get\+Local\+Settings}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the local (machine-\/specific) settings for this user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for objects that provide access to game settings. 
+
+Typically implemented by Local\+Players or similar high-\/level objects to provide a unified way to retrieve both shared and local settings. 
+
+\label{doc-func-members}
+\Hypertarget{class_i_gameplay_common_settings_interface_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_gameplay_common_settings_interface_a910d22e3740849f0b1544ab2e125e82b}\index{IGameplayCommonSettingsInterface@{IGameplayCommonSettingsInterface}!GetLocalSettings@{GetLocalSettings}}
+\index{GetLocalSettings@{GetLocalSettings}!IGameplayCommonSettingsInterface@{IGameplayCommonSettingsInterface}}
+\doxysubsubsection{\texorpdfstring{GetLocalSettings()}{GetLocalSettings()}}
+{\footnotesize\ttfamily \label{class_i_gameplay_common_settings_interface_a910d22e3740849f0b1544ab2e125e82b} 
+virtual \doxymbox{\hyperlink{class_u_gameplay_settings_local}{UGameplay\+Settings\+Local}} \texorpdfstring{$\ast$}{*} IGameplay\+Common\+Settings\+Interface::\+\+Get\+Local\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the local (machine-\/specific) settings for this user. 
+
+\Hypertarget{class_i_gameplay_common_settings_interface_a4ce545de69027a85041fe2f6cfce8cb8}\index{IGameplayCommonSettingsInterface@{IGameplayCommonSettingsInterface}!GetSharedSettings@{GetSharedSettings}}
+\index{GetSharedSettings@{GetSharedSettings}!IGameplayCommonSettingsInterface@{IGameplayCommonSettingsInterface}}
+\doxysubsubsection{\texorpdfstring{GetSharedSettings()}{GetSharedSettings()}}
+{\footnotesize\ttfamily \label{class_i_gameplay_common_settings_interface_a4ce545de69027a85041fe2f6cfce8cb8} 
+virtual \doxymbox{\hyperlink{class_u_gameplay_settings_shared}{UGameplay\+Settings\+Shared}} \texorpdfstring{$\ast$}{*} IGameplay\+Common\+Settings\+Interface::\+\+Get\+Shared\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the shared (cross-\/platform) settings for this user. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_settings_interface_8h}{Gameplay\+Common\+Settings\+Interface.\+h}}\end{DoxyCompactItemize}

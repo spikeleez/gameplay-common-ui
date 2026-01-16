@@ -1,0 +1,504 @@
+\doxysection{UGameplay\+Setting\+Registry Class Reference}
+\hypertarget{class_u_gameplay_setting_registry}{}\label{class_u_gameplay_setting_registry}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+
+
+Manages the registry of gameplay settings for a local player.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+Registry.\+h$>$}
+
+Inheritance diagram for UGameplay\+Setting\+Registry:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_setting_registry}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_registry_a9930327b015ed4a93fe63bcc8580fe9b}{DECLARE\+\_\+\+EVENT\+\_\+\+Two\+Params}} (\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}}, FGameplay\+On\+Game\+Setting\+Changed, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}})
+\begin{DoxyCompactList}\small\item\em Event broadcasted when a setting value changes. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_registry_a7ba7b4f6970c171eb8487a0cda9ae6cc}{DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param}} (\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}}, FGameplay\+On\+Edit\+Condition\+Changed, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Event broadcasted when a setting\textquotesingle{}s edit condition changes. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_registry_a75a0c20f6631d37014515496291421ae}{DECLARE\+\_\+\+EVENT\+\_\+\+Two\+Params}} (\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}}, FGameplay\+On\+Game\+Setting\+Named\+Action\+Event, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}, FGameplay\+Tag)
+\begin{DoxyCompactList}\small\item\em Event broadcasted when a named action is executed on a setting. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_registry_a800b2edbb1e696c32b38d634a5645217}{DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param}} (\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}}, FGameplay\+On\+Execute\+Navigation, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Event broadcasted when navigation is requested from a setting. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_registry_a6a8d745968a93bbea4b51508aede9ebf}{UGameplay\+Setting\+Registry}} (const FObject\+Initializer \&Object\+Initializer=FObject\+Initializer::\+\+Get())
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a4a81830a4e023f8061c7a50c0f70ab32}{Initialize}} (ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player)
+\begin{DoxyCompactList}\small\item\em Initializes the registry with a local player. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a255ca96255f32c96e0885783a3239a64}{Regenerate}} ()
+\begin{DoxyCompactList}\small\item\em Regenerates all settings in the registry, discarding existing objects. \end{DoxyCompactList}\item 
+virtual bool \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a409901b4c6690c6800ac3609407164bf}{Is\+Finished\+Initializing}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the registry has finished initializing all its settings. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a18562bbbaa956b127a766d75955d46e0}{Save\+Changes}} ()
+\begin{DoxyCompactList}\small\item\em Saves all pending changes for all registered settings to disk/\+persistent storage. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a9e1795bfdbf478feb26e6a0855774847}{Get\+Settings\+For\+Filter}} (const \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state}{FGameplay\+Setting\+Filter\+State}} \&In\+Filter\+State, TArray$<$ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*} $>$ \&In\+Out\+Settings)
+\begin{DoxyCompactList}\small\item\em Gets all settings that match the specified filter state. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a89ee0976240b98cb815eddb2a6214e4f}{Find\+Setting\+By\+Dev\+Name}} (const FName \&In\+Setting\+Dev\+Name)
+\begin{DoxyCompactList}\small\item\em Finds a setting by its internal developer name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T = UGameplay\+Setting$>$ }\\T \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a608e5f618dfc881567e61c8bf4663900}{Find\+Setting\+By\+Dev\+Name\+Checked}} (const FName \&In\+Setting\+Dev\+Name)
+\begin{DoxyCompactList}\small\item\em Finds a setting by its developer name with a type check. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Registry\+Class$>$ }\\static Registry\+Class \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_registry_acad8b5f770c6003846661d8daaf82fea}{Get\+Registry}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player)
+\begin{DoxyCompactList}\small\item\em Gets or creates a settings registry instance for a local player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+FGameplay\+On\+Game\+Setting\+Changed \doxymbox{\hyperlink{class_u_gameplay_setting_registry_aaa0f0d23ad1db7fe96d64e76c2830d8f}{On\+Setting\+Changed\+Event}}
+\begin{DoxyCompactList}\small\item\em Native event broadcast when any registered setting\textquotesingle{}s value is modified. \end{DoxyCompactList}\item 
+FGameplay\+On\+Edit\+Condition\+Changed \doxymbox{\hyperlink{class_u_gameplay_setting_registry_afcf686853a8cc251c4a28af701b179e4}{On\+Setting\+Edit\+Condition\+Changed\+Event}}
+\begin{DoxyCompactList}\small\item\em Native event broadcast when any registered setting\textquotesingle{}s visibility/\+editability state changes. \end{DoxyCompactList}\item 
+FGameplay\+On\+Game\+Setting\+Named\+Action\+Event \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a6b22f20d339251ad2a11ba14f15996f5}{On\+Setting\+Named\+Action\+Event}}
+\begin{DoxyCompactList}\small\item\em Native event broadcast when a setting action (e.\+g., "{}\+Reset"{}) is triggered. \end{DoxyCompactList}\item 
+FGameplay\+On\+Execute\+Navigation \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a564f6870b4d1e680404111848fe8364b}{On\+Execute\+Navigation\+Event}}
+\begin{DoxyCompactList}\small\item\em Native event broadcast when a navigation setting (sub-\/page) is triggered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a8530a0bf291fa8df2787eb01e63b4ddf}{On\+Initialize}} (ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player) PURE\+\_\+\+VIRTUAL(
+\begin{DoxyCompactList}\small\item\em Called when the registry is initialized -\/ override this to add your settings. \end{DoxyCompactList}\item 
+virtual void virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_afb66985068dc689a47a0f6abc80492a8}{On\+Setting\+Applied}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Called when a setting is applied. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a1924e328818489b5f9af95323ad857c0}{Register\+Setting}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Registers a top-\/level setting with the registry. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a5301215ad473965f7d79e41b8afa523c}{Register\+Inner\+Setting}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Registers a nested setting with the registry. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_ab16510c16c691fe3ca7d08cec99bb65b}{Handle\+Setting\+Changed}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}Setting, \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}} Reason)
+\begin{DoxyCompactList}\small\item\em Handles setting value change events and broadcasts them via the registry. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a2d867dccd8b29291823238b0e9f8bac5}{Handle\+Setting\+Applied}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}Setting)
+\begin{DoxyCompactList}\small\item\em Handles setting application events. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a3bc5994935357029d73929f7172f38b0}{Handle\+Setting\+Edit\+Conditions\+Changed}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}Setting)
+\begin{DoxyCompactList}\small\item\em Handles setting edit condition change events. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_ad0180a13355d7755d0b6ec964a09a421}{Handle\+Setting\+Named\+Action}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}Setting, FGameplay\+Tag Action\+Tag)
+\begin{DoxyCompactList}\small\item\em Handles named action execution events. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_registry_afe091cceff3dc5d64781737d697a1a82}{Handle\+Setting\+Navigation}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}Setting)
+\begin{DoxyCompactList}\small\item\em Handles navigation request events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} $>$ $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a0786db6f36abc2fc11fb7d9964433811}{Top\+Level\+Settings}}
+\begin{DoxyCompactList}\small\item\em Top-\/level settings in the registry hierarchy (usually collections/\+pages). \end{DoxyCompactList}\item 
+TArray$<$ TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} $>$ $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a5adf64385b0d9fd4d39c4d2c3f01a5b2}{Registered\+Settings}}
+\begin{DoxyCompactList}\small\item\em All registered settings (flattened list of everything in the registry). \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ ULocal\+Player $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a99494c776f716c8c9818177cca472b7c}{Owning\+Local\+Player}}
+\begin{DoxyCompactList}\small\item\em The local player that owns this registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the registry of gameplay settings for a local player. 
+
+This abstract class serves as the foundation for gameplay settings registries. It maintains a collection of settings, provides functionality for initialization, querying, and filtering settings, and handles setting-\/related events.
+
+The registry keeps track of both top-\/level settings and all registered settings, allowing for hierarchical organization of settings. It also manages the relationship between settings and the owning local player.
+
+\begin{DoxyNote}{Note}
+This is an abstract class that must be inherited by specific implementations. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_gameplay_setting}{UGameplay\+Setting} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_setting_registry_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_setting_registry_a6a8d745968a93bbea4b51508aede9ebf}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{UGameplaySettingRegistry()}{UGameplaySettingRegistry()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a6a8d745968a93bbea4b51508aede9ebf} 
+UGameplay\+Setting\+Registry::\+\+UGameplay\+Setting\+Registry (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{ = {\ttfamily FObjectInitializer:\+:\+Get()}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_setting_registry_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_setting_registry_a7ba7b4f6970c171eb8487a0cda9ae6cc}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!DECLARE\_EVENT\_OneParam@{DECLARE\_EVENT\_OneParam}}
+\index{DECLARE\_EVENT\_OneParam@{DECLARE\_EVENT\_OneParam}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_EVENT\_OneParam()}{DECLARE\_EVENT\_OneParam()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a7ba7b4f6970c171eb8487a0cda9ae6cc} 
+UGameplay\+Setting\+Registry::\+\+DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}}}]{}{, }\item[{FGameplay\+On\+Edit\+Condition\+Changed}]{}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Event broadcasted when a setting\textquotesingle{}s edit condition changes. 
+
+\Hypertarget{class_u_gameplay_setting_registry_a800b2edbb1e696c32b38d634a5645217}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!DECLARE\_EVENT\_OneParam@{DECLARE\_EVENT\_OneParam}}
+\index{DECLARE\_EVENT\_OneParam@{DECLARE\_EVENT\_OneParam}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_EVENT\_OneParam()}{DECLARE\_EVENT\_OneParam()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a800b2edbb1e696c32b38d634a5645217} 
+UGameplay\+Setting\+Registry::\+\+DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}}}]{}{, }\item[{FGameplay\+On\+Execute\+Navigation}]{}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Event broadcasted when navigation is requested from a setting. 
+
+\Hypertarget{class_u_gameplay_setting_registry_a9930327b015ed4a93fe63bcc8580fe9b}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!DECLARE\_EVENT\_TwoParams@{DECLARE\_EVENT\_TwoParams}}
+\index{DECLARE\_EVENT\_TwoParams@{DECLARE\_EVENT\_TwoParams}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_EVENT\_TwoParams()}{DECLARE\_EVENT\_TwoParams()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a9930327b015ed4a93fe63bcc8580fe9b} 
+UGameplay\+Setting\+Registry::\+\+DECLARE\+\_\+\+EVENT\+\_\+\+Two\+Params (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}}}]{}{, }\item[{FGameplay\+On\+Game\+Setting\+Changed}]{}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Event broadcasted when a setting value changes. 
+
+\Hypertarget{class_u_gameplay_setting_registry_a75a0c20f6631d37014515496291421ae}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!DECLARE\_EVENT\_TwoParams@{DECLARE\_EVENT\_TwoParams}}
+\index{DECLARE\_EVENT\_TwoParams@{DECLARE\_EVENT\_TwoParams}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_EVENT\_TwoParams()}{DECLARE\_EVENT\_TwoParams()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a75a0c20f6631d37014515496291421ae} 
+UGameplay\+Setting\+Registry::\+\+DECLARE\+\_\+\+EVENT\+\_\+\+Two\+Params (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}}}]{}{, }\item[{FGameplay\+On\+Game\+Setting\+Named\+Action\+Event}]{}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{FGameplay\+Tag}]{}{}\end{DoxyParamCaption})}
+
+
+
+Event broadcasted when a named action is executed on a setting. 
+
+\Hypertarget{class_u_gameplay_setting_registry_a89ee0976240b98cb815eddb2a6214e4f}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!FindSettingByDevName@{FindSettingByDevName}}
+\index{FindSettingByDevName@{FindSettingByDevName}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{FindSettingByDevName()}{FindSettingByDevName()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a89ee0976240b98cb815eddb2a6214e4f} 
+\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*} UGameplay\+Setting\+Registry::\+\+Find\+Setting\+By\+Dev\+Name (\begin{DoxyParamCaption}\item[{const FName \&}]{In\+Setting\+Dev\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Finds a setting by its internal developer name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Setting\+Dev\+Name} & The developer name to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the setting if found, nullptr otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_setting_registry_a608e5f618dfc881567e61c8bf4663900}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!FindSettingByDevNameChecked@{FindSettingByDevNameChecked}}
+\index{FindSettingByDevNameChecked@{FindSettingByDevNameChecked}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{FindSettingByDevNameChecked()}{FindSettingByDevNameChecked()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a608e5f618dfc881567e61c8bf4663900} 
+template$<$typename T = UGameplay\+Setting$>$ \\
+T \texorpdfstring{$\ast$}{*} UGameplay\+Setting\+Registry::\+\+Find\+Setting\+By\+Dev\+Name\+Checked (\begin{DoxyParamCaption}\item[{const FName \&}]{In\+Setting\+Dev\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds a setting by its developer name with a type check. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The expected type of the setting (must derive from \doxylink{class_u_gameplay_setting}{UGameplay\+Setting}) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Setting\+Dev\+Name} & The developer name to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the setting cast to type T
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function uses check() and will crash if the setting is not found or cannot be cast to T 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Only use this when you are certain the setting exists 
+\end{DoxyWarning}
+\Hypertarget{class_u_gameplay_setting_registry_acad8b5f770c6003846661d8daaf82fea}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!GetRegistry@{GetRegistry}}
+\index{GetRegistry@{GetRegistry}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{GetRegistry()}{GetRegistry()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_acad8b5f770c6003846661d8daaf82fea} 
+template$<$typename Registry\+Class$>$ \\
+Registry\+Class \texorpdfstring{$\ast$}{*} UGameplay\+Setting\+Registry::\+\+Get\+Registry (\begin{DoxyParamCaption}\item[{const ULocal\+Player \texorpdfstring{$\ast$}{*}}]{In\+Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets or creates a settings registry instance for a local player. 
+
+This template function retrieves an existing registry instance or creates a new one if it doesn\textquotesingle{}t exist. The registry is stored as a subobject of the local player.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Registry\+Class} & The type of registry to retrieve (must derive from \doxylink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Local\+Player} & The local player that owns or will own the registry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the registry instance, or nullptr if In\+Local\+Player is invalid
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The registry uses the class name as its unique identifier 
+
+If a new registry is created, \doxylink{class_u_gameplay_setting_registry_a4a81830a4e023f8061c7a50c0f70ab32}{Initialize()} is called automatically
+\end{DoxyNote}
+Example usage:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UCustomSettingRegistry*\ Registry\ =\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_acad8b5f770c6003846661d8daaf82fea}{UGameplaySettingRegistry::GetRegistry<UCustomSettingRegistry>}}(LocalPlayer);}
+
+\end{DoxyCode}
+ \Hypertarget{class_u_gameplay_setting_registry_a9e1795bfdbf478feb26e6a0855774847}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!GetSettingsForFilter@{GetSettingsForFilter}}
+\index{GetSettingsForFilter@{GetSettingsForFilter}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{GetSettingsForFilter()}{GetSettingsForFilter()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a9e1795bfdbf478feb26e6a0855774847} 
+void UGameplay\+Setting\+Registry::\+\+Get\+Settings\+For\+Filter (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state}{FGameplay\+Setting\+Filter\+State}} \&}]{In\+Filter\+State}{, }\item[{TArray$<$ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*} $>$ \&}]{In\+Out\+Settings}{}\end{DoxyParamCaption})}
+
+
+
+Gets all settings that match the specified filter state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Filter\+State} & The filter criteria to apply \\
+\hline
+{\em In\+Out\+Settings} & Array to populate with matching settings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_setting_registry_a2d867dccd8b29291823238b0e9f8bac5}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!HandleSettingApplied@{HandleSettingApplied}}
+\index{HandleSettingApplied@{HandleSettingApplied}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{HandleSettingApplied()}{HandleSettingApplied()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a2d867dccd8b29291823238b0e9f8bac5} 
+void UGameplay\+Setting\+Registry::\+\+Handle\+Setting\+Applied (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles setting application events. 
+
+\Hypertarget{class_u_gameplay_setting_registry_ab16510c16c691fe3ca7d08cec99bb65b}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!HandleSettingChanged@{HandleSettingChanged}}
+\index{HandleSettingChanged@{HandleSettingChanged}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{HandleSettingChanged()}{HandleSettingChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_ab16510c16c691fe3ca7d08cec99bb65b} 
+void UGameplay\+Setting\+Registry::\+\+Handle\+Setting\+Changed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{Setting}{, }\item[{\doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}}}]{Reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles setting value change events and broadcasts them via the registry. 
+
+\Hypertarget{class_u_gameplay_setting_registry_a3bc5994935357029d73929f7172f38b0}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!HandleSettingEditConditionsChanged@{HandleSettingEditConditionsChanged}}
+\index{HandleSettingEditConditionsChanged@{HandleSettingEditConditionsChanged}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{HandleSettingEditConditionsChanged()}{HandleSettingEditConditionsChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a3bc5994935357029d73929f7172f38b0} 
+void UGameplay\+Setting\+Registry::\+\+Handle\+Setting\+Edit\+Conditions\+Changed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles setting edit condition change events. 
+
+\Hypertarget{class_u_gameplay_setting_registry_ad0180a13355d7755d0b6ec964a09a421}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!HandleSettingNamedAction@{HandleSettingNamedAction}}
+\index{HandleSettingNamedAction@{HandleSettingNamedAction}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{HandleSettingNamedAction()}{HandleSettingNamedAction()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_ad0180a13355d7755d0b6ec964a09a421} 
+void UGameplay\+Setting\+Registry::\+\+Handle\+Setting\+Named\+Action (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{Setting}{, }\item[{FGameplay\+Tag}]{Action\+Tag}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles named action execution events. 
+
+\Hypertarget{class_u_gameplay_setting_registry_afe091cceff3dc5d64781737d697a1a82}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!HandleSettingNavigation@{HandleSettingNavigation}}
+\index{HandleSettingNavigation@{HandleSettingNavigation}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{HandleSettingNavigation()}{HandleSettingNavigation()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_afe091cceff3dc5d64781737d697a1a82} 
+void UGameplay\+Setting\+Registry::\+\+Handle\+Setting\+Navigation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles navigation request events. 
+
+\Hypertarget{class_u_gameplay_setting_registry_a4a81830a4e023f8061c7a50c0f70ab32}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a4a81830a4e023f8061c7a50c0f70ab32} 
+void UGameplay\+Setting\+Registry::\+\+Initialize (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{In\+Local\+Player}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the registry with a local player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Local\+Player} & The local player that owns this registry \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_setting_registry_a409901b4c6690c6800ac3609407164bf}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!IsFinishedInitializing@{IsFinishedInitializing}}
+\index{IsFinishedInitializing@{IsFinishedInitializing}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{IsFinishedInitializing()}{IsFinishedInitializing()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a409901b4c6690c6800ac3609407164bf} 
+bool UGameplay\+Setting\+Registry::\+\+Is\+Finished\+Initializing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the registry has finished initializing all its settings. 
+
+\begin{DoxyReturn}{Returns}
+True if initialization is complete and all settings are ready 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_setting_registry_a8530a0bf291fa8df2787eb01e63b4ddf}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!OnInitialize@{OnInitialize}}
+\index{OnInitialize@{OnInitialize}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{OnInitialize()}{OnInitialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a8530a0bf291fa8df2787eb01e63b4ddf} 
+virtual void UGameplay\+Setting\+Registry::\+\+On\+Initialize (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{In\+Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the registry is initialized -\/ override this to add your settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Local\+Player} & The local player initializing this registry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Must be implemented by derived classes 
+\end{DoxyNote}
+\Hypertarget{class_u_gameplay_setting_registry_afb66985068dc689a47a0f6abc80492a8}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!OnSettingApplied@{OnSettingApplied}}
+\index{OnSettingApplied@{OnSettingApplied}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{OnSettingApplied()}{OnSettingApplied()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_afb66985068dc689a47a0f6abc80492a8} 
+virtual void virtual void UGameplay\+Setting\+Registry::\+\+On\+Setting\+Applied (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when a setting is applied. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Setting} & The setting that was applied \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_setting_registry_a255ca96255f32c96e0885783a3239a64}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!Regenerate@{Regenerate}}
+\index{Regenerate@{Regenerate}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{Regenerate()}{Regenerate()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a255ca96255f32c96e0885783a3239a64} 
+void UGameplay\+Setting\+Registry::\+\+Regenerate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Regenerates all settings in the registry, discarding existing objects. 
+
+\Hypertarget{class_u_gameplay_setting_registry_a5301215ad473965f7d79e41b8afa523c}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!RegisterInnerSetting@{RegisterInnerSetting}}
+\index{RegisterInnerSetting@{RegisterInnerSetting}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{RegisterInnerSetting()}{RegisterInnerSetting()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a5301215ad473965f7d79e41b8afa523c} 
+void UGameplay\+Setting\+Registry::\+\+Register\+Inner\+Setting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Registers a nested setting with the registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Setting} & The setting to register \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_setting_registry_a1924e328818489b5f9af95323ad857c0}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!RegisterSetting@{RegisterSetting}}
+\index{RegisterSetting@{RegisterSetting}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{RegisterSetting()}{RegisterSetting()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a1924e328818489b5f9af95323ad857c0} 
+void UGameplay\+Setting\+Registry::\+\+Register\+Setting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Registers a top-\/level setting with the registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Setting} & The setting to register \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_setting_registry_a18562bbbaa956b127a766d75955d46e0}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!SaveChanges@{SaveChanges}}
+\index{SaveChanges@{SaveChanges}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{SaveChanges()}{SaveChanges()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a18562bbbaa956b127a766d75955d46e0} 
+void UGameplay\+Setting\+Registry::\+\+Save\+Changes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Saves all pending changes for all registered settings to disk/\+persistent storage. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_setting_registry_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_setting_registry_a564f6870b4d1e680404111848fe8364b}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!OnExecuteNavigationEvent@{OnExecuteNavigationEvent}}
+\index{OnExecuteNavigationEvent@{OnExecuteNavigationEvent}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{OnExecuteNavigationEvent}{OnExecuteNavigationEvent}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a564f6870b4d1e680404111848fe8364b} 
+FGameplay\+On\+Execute\+Navigation UGameplay\+Setting\+Registry::\+\+On\+Execute\+Navigation\+Event}
+
+
+
+Native event broadcast when a navigation setting (sub-\/page) is triggered. 
+
+\Hypertarget{class_u_gameplay_setting_registry_aaa0f0d23ad1db7fe96d64e76c2830d8f}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!OnSettingChangedEvent@{OnSettingChangedEvent}}
+\index{OnSettingChangedEvent@{OnSettingChangedEvent}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{OnSettingChangedEvent}{OnSettingChangedEvent}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_aaa0f0d23ad1db7fe96d64e76c2830d8f} 
+FGameplay\+On\+Game\+Setting\+Changed UGameplay\+Setting\+Registry::\+\+On\+Setting\+Changed\+Event}
+
+
+
+Native event broadcast when any registered setting\textquotesingle{}s value is modified. 
+
+\Hypertarget{class_u_gameplay_setting_registry_afcf686853a8cc251c4a28af701b179e4}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!OnSettingEditConditionChangedEvent@{OnSettingEditConditionChangedEvent}}
+\index{OnSettingEditConditionChangedEvent@{OnSettingEditConditionChangedEvent}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{OnSettingEditConditionChangedEvent}{OnSettingEditConditionChangedEvent}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_afcf686853a8cc251c4a28af701b179e4} 
+FGameplay\+On\+Edit\+Condition\+Changed UGameplay\+Setting\+Registry::\+\+On\+Setting\+Edit\+Condition\+Changed\+Event}
+
+
+
+Native event broadcast when any registered setting\textquotesingle{}s visibility/\+editability state changes. 
+
+\Hypertarget{class_u_gameplay_setting_registry_a6b22f20d339251ad2a11ba14f15996f5}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!OnSettingNamedActionEvent@{OnSettingNamedActionEvent}}
+\index{OnSettingNamedActionEvent@{OnSettingNamedActionEvent}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{OnSettingNamedActionEvent}{OnSettingNamedActionEvent}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a6b22f20d339251ad2a11ba14f15996f5} 
+FGameplay\+On\+Game\+Setting\+Named\+Action\+Event UGameplay\+Setting\+Registry::\+\+On\+Setting\+Named\+Action\+Event}
+
+
+
+Native event broadcast when a setting action (e.\+g., "{}\+Reset"{}) is triggered. 
+
+\Hypertarget{class_u_gameplay_setting_registry_a99494c776f716c8c9818177cca472b7c}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!OwningLocalPlayer@{OwningLocalPlayer}}
+\index{OwningLocalPlayer@{OwningLocalPlayer}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{OwningLocalPlayer}{OwningLocalPlayer}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a99494c776f716c8c9818177cca472b7c} 
+TObject\+Ptr$<$ULocal\+Player$>$ UGameplay\+Setting\+Registry::\+\+Owning\+Local\+Player\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The local player that owns this registry. 
+
+\Hypertarget{class_u_gameplay_setting_registry_a5adf64385b0d9fd4d39c4d2c3f01a5b2}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!RegisteredSettings@{RegisteredSettings}}
+\index{RegisteredSettings@{RegisteredSettings}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{RegisteredSettings}{RegisteredSettings}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a5adf64385b0d9fd4d39c4d2c3f01a5b2} 
+TArray$<$TObject\+Ptr$<$\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}$>$ $>$ UGameplay\+Setting\+Registry::\+\+Registered\+Settings\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+All registered settings (flattened list of everything in the registry). 
+
+\Hypertarget{class_u_gameplay_setting_registry_a0786db6f36abc2fc11fb7d9964433811}\index{UGameplaySettingRegistry@{UGameplaySettingRegistry}!TopLevelSettings@{TopLevelSettings}}
+\index{TopLevelSettings@{TopLevelSettings}!UGameplaySettingRegistry@{UGameplaySettingRegistry}}
+\doxysubsubsection{\texorpdfstring{TopLevelSettings}{TopLevelSettings}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_registry_a0786db6f36abc2fc11fb7d9964433811} 
+TArray$<$TObject\+Ptr$<$\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}$>$ $>$ UGameplay\+Setting\+Registry::\+\+Top\+Level\+Settings\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Top-\/level settings in the registry hierarchy (usually collections/\+pages). 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_registry_8h}{Gameplay\+Setting\+Registry.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_setting_registry_8cpp}{Gameplay\+Setting\+Registry.\+cpp}}\end{DoxyCompactItemize}

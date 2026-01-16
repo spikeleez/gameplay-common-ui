@@ -1,0 +1,133 @@
+\doxysection{Gameplay\+Setting\+Registry.\+h}
+\hypertarget{_gameplay_setting_registry_8h_source}{}\label{_gameplay_setting_registry_8h_source}\index{GameplaySettingRegistry.h@{GameplaySettingRegistry.h}}
+\doxymbox{\hyperlink{_gameplay_setting_registry_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_8h}{GameplaySetting.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}UObject/Object.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Misc/Paths.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Engine/LocalPlayer.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}GameplaySettingRegistry.generated.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplaySettingChangedReason}}\ :\ uint8;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }ULocalPlayer;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state}{FGameplaySettingFilterState}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ GET\_SETTINGS\_FUNCTION\_PATH(AccessClass,\ AccessFunction,\ SettingsClass,\ PropertyName)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ MakeShared<FGameplaySettingDataSourceDynamic>(TArray<FString>(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GET\_FUNCTION\_NAME\_STRING\_CHECKED(AccessClass,\ AccessFunction),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GET\_FUNCTION\_NAME\_STRING\_CHECKED(SettingsClass,\ PropertyName)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \ \}))}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\#define\ GET\_SHARED\_SETTINGS\_FUNCTION\_PATH(FunctionOrPropertyName)\ \(\backslash\)}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ \ \ \ GET\_SETTINGS\_FUNCTION\_PATH(ULocalPlayer,\ GetSharedSettings,\ USettingsShared,\ FunctionOrPropertyName)}}
+\DoxyCodeLine{00027\ \textcolor{comment}{}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\#define\ GET\_LOCAL\_SETTINGS\_FUNCTION\_PATH(FunctionOrPropertyName)\ \(\backslash\)}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \ \ \ \ GET\_LOCAL\_SETTINGS\_FUNCTION\_PATH(ULocalPlayer,\ GetLocalSettings,\ USettingsLocal,\ FunctionOrPropertyName)}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00046\ UCLASS(Abstract,\ BlueprintType)}
+\DoxyCodeLine{00047\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a6a8d745968a93bbea4b51508aede9ebf}{UGameplaySettingRegistry}}\ :\ public\ UObject}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a9930327b015ed4a93fe63bcc8580fe9b}{DECLARE\_EVENT\_TwoParams}}(\doxymbox{\hyperlink{class_u_gameplay_setting_registry_a6a8d745968a93bbea4b51508aede9ebf}{UGameplaySettingRegistry}},\ FGameplayOnGameSettingChanged,\ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*,\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplaySettingChangedReason}});}
+\DoxyCodeLine{00055\ \ \ \ \ FGameplayOnGameSettingChanged\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_aaa0f0d23ad1db7fe96d64e76c2830d8f}{OnSettingChangedEvent}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a7ba7b4f6970c171eb8487a0cda9ae6cc}{DECLARE\_EVENT\_OneParam}}(\doxymbox{\hyperlink{class_u_gameplay_setting_registry_a6a8d745968a93bbea4b51508aede9ebf}{UGameplaySettingRegistry}},\ FGameplayOnEditConditionChanged,\ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*);}
+\DoxyCodeLine{00060\ \ \ \ \ FGameplayOnEditConditionChanged\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_afcf686853a8cc251c4a28af701b179e4}{OnSettingEditConditionChangedEvent}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a75a0c20f6631d37014515496291421ae}{DECLARE\_EVENT\_TwoParams}}(\doxymbox{\hyperlink{class_u_gameplay_setting_registry_a6a8d745968a93bbea4b51508aede9ebf}{UGameplaySettingRegistry}},\ FGameplayOnGameSettingNamedActionEvent,\ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ ,\ FGameplayTag\ );}
+\DoxyCodeLine{00065\ \ \ \ \ FGameplayOnGameSettingNamedActionEvent\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a6b22f20d339251ad2a11ba14f15996f5}{OnSettingNamedActionEvent}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a800b2edbb1e696c32b38d634a5645217}{DECLARE\_EVENT\_OneParam}}(\doxymbox{\hyperlink{class_u_gameplay_setting_registry_a6a8d745968a93bbea4b51508aede9ebf}{UGameplaySettingRegistry}},\ FGameplayOnExecuteNavigation,\ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ );}
+\DoxyCodeLine{00070\ \ \ \ \ FGameplayOnExecuteNavigation\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a564f6870b4d1e680404111848fe8364b}{OnExecuteNavigationEvent}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a6a8d745968a93bbea4b51508aede9ebf}{UGameplaySettingRegistry}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer\ =\ FObjectInitializer::Get());}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ RegistryClass>}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{static}\ RegistryClass*\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_acad8b5f770c6003846661d8daaf82fea}{GetRegistry}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer)}
+\DoxyCodeLine{00095\ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!IsValid(InLocalPlayer))}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ use\ the\ Class\ Name\ as\ the\ unique\ name\ for\ this\ object\ instance.}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FName\ RegistryName\ =\ RegistryClass::StaticClass()-\/>GetFName();}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ RegistryClass*\ RegistryInstance\ =\ FindObject<RegistryClass>(InLocalPlayer,\ *RegistryName.ToString(),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!RegistryInstance)}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ RegistryInstance\ =\ NewObject<RegistryClass>(\textcolor{keyword}{const\_cast<}ULocalPlayer*\textcolor{keyword}{>}(InLocalPlayer),\ RegistryClass::StaticClass());}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (RegistryInstance)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RegistryInstance-\/>Initialize(\textcolor{keyword}{const\_cast<}ULocalPlayer*\textcolor{keyword}{>}(InLocalPlayer));}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RegistryInstance;}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_gameplay_common_types_8h_a047952fd8802acdf0715260d3a00b61ea223e06f5cb15fc701ea1e686f7934f4f}{Initialize}}(ULocalPlayer*\ InLocalPlayer);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Regenerate();}
+\DoxyCodeLine{00125\ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsFinishedInitializing()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00130\ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SaveChanges();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ GetSettingsForFilter(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state}{FGameplaySettingFilterState}}\&\ InFilterState,\ TArray<UGameplaySetting*>\&\ InOutSettings);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ FindSettingByDevName(\textcolor{keyword}{const}\ FName\&\ InSettingDevName);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T\ =\ UGameplaySetting>}
+\DoxyCodeLine{00159\ \ \ \ \ T*\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a608e5f618dfc881567e61c8bf4663900}{FindSettingByDevNameChecked}}(\textcolor{keyword}{const}\ FName\&\ InSettingDevName)}
+\DoxyCodeLine{00160\ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ T*\ Setting\ =\ Cast<T>(\doxymbox{\hyperlink{class_u_gameplay_setting_registry_a89ee0976240b98cb815eddb2a6214e4f}{FindSettingByDevName}}(InSettingDevName));}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ check(Setting);}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Setting;}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00168\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00169\ \ \ \ \ TArray<TObjectPtr<\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}>>\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a0786db6f36abc2fc11fb7d9964433811}{TopLevelSettings}};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00172\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00173\ \ \ \ \ TArray<TObjectPtr<\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}>>\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a5adf64385b0d9fd4d39c4d2c3f01a5b2}{RegisteredSettings}};}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00176\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00177\ \ \ \ \ TObjectPtr<ULocalPlayer>\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a99494c776f716c8c9818177cca472b7c}{OwningLocalPlayer}};}
+\DoxyCodeLine{00178\ \ \ \ \ }
+\DoxyCodeLine{00179\ protected:}
+\DoxyCodeLine{00185\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_a8530a0bf291fa8df2787eb01e63b4ddf}{OnInitialize}}(ULocalPlayer*\ InLocalPlayer)\ PURE\_VIRTUAL(,\ );}
+\DoxyCodeLine{00186\ \ \ \ \ }
+\DoxyCodeLine{00191\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_registry_afb66985068dc689a47a0f6abc80492a8}{OnSettingApplied}}(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting)\ \{\ \ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ RegisterSetting(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting);}
+\DoxyCodeLine{00198\ \ \ \ \ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ RegisterInnerSetting(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting);}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{comment}{//\ Internal\ event\ handlers}}
+\DoxyCodeLine{00206\ \ \ \ \ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleSettingChanged(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ Setting,\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplaySettingChangedReason}}\ Reason);}
+\DoxyCodeLine{00209\ \ \ \ \ }
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleSettingApplied(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ Setting);}
+\DoxyCodeLine{00212\ \ \ \ \ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleSettingEditConditionsChanged(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ Setting);}
+\DoxyCodeLine{00215\ \ \ \ \ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleSettingNamedAction(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ Setting,\ FGameplayTag\ ActionTag);}
+\DoxyCodeLine{00218\ \ \ \ \ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleSettingNavigation(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ Setting);}
+\DoxyCodeLine{00221\ \};}
+\DoxyCodeLine{00222\ }
+
+\end{DoxyCode}

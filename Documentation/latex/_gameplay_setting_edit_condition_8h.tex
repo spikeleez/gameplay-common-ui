@@ -1,0 +1,92 @@
+\doxysection{Gameplay\+Setting\+Edit\+Condition.\+h File Reference}
+\hypertarget{_gameplay_setting_edit_condition_8h}{}\label{_gameplay_setting_edit_condition_8h}\index{GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}}
+{\ttfamily \+\#include "{}Core\+Minimal.\+h"{}}\newline
+{\ttfamily \+\#include "{}Framework/\+\+Gameplay\+Setting.\+h"{}}\newline
+{\ttfamily \+\#include "{}Interfaces/\+\+Gameplay\+Common\+Settings\+Interface.\+h"{}}\newline
+{\ttfamily \+\#include "{}Framework/\+\+Gameplay\+Setting\+Performance\+Settings.\+h"{}}\newline
+{\ttfamily \+\#include "{}HAL/\+\+IConsole\+Manager.\+h"{}}\newline
+{\ttfamily \+\#include "{}RHI.\+h"{}}\newline
+{\ttfamily \+\#include "{}Framework/\+\+Gameplay\+Settings\+Local.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition}{FGameplay\+Setting\+Edit\+Condition}}
+\begin{DoxyCompactList}\small\item\em Base class for setting edit conditions. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode}{FGameplay\+Setting\+Edit\+Condition\+\_\+\+Frame\+Pacing\+Mode}}
+\begin{DoxyCompactList}\small\item\em Edit condition that checks the platform-\/specific frame pacing mode. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___video_quality}{FGameplay\+Setting\+Edit\+Condition\+\_\+\+Video\+Quality}}
+\begin{DoxyCompactList}\small\item\em Edit condition that checks if the platform supports granular video quality settings. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_supported}{FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Supported}}
+\begin{DoxyCompactList}\small\item\em Edit condition that checks if latency stats are supported on the current platform. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled}{FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled}}
+\begin{DoxyCompactList}\small\item\em Edit condition that checks if latency stats are currently enabled. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_markers_supported}{FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Markers\+Supported}}
+\begin{DoxyCompactList}\small\item\em Edit condition that checks if latency markers are supported on the platform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a0de3ae51f3a629a8e5d113f1b9390da7}{LOCTEXT\+\_\+\+NAMESPACE}}~"{}Setting\+Edit\+Condition"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1}{EGameplay\+Frame\+Pacing\+Edit\+Condition}} \{ \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1a02ba5ffaa3fdaf8d93d4b74390939e49}{Enable\+If}}
+, \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1a5c70a8861ee4e1b0f23ba8171938dbe0}{Disable\+If}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the matching behavior for frame pacing edit conditions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static TAuto\+Console\+Variable$<$ bool $>$ \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a27caeb9f044d56404942073dec0126fc}{CVar\+Latency\+Markers\+Require\+NVIDIA}} (TEXT("{}Gameplay\+Common\+Settings.\+Latency\+Markers\+Require\+NVIDIA"{}), true, TEXT("{}If true, then only allow latency markers to be enabled on NVIDIA hardware"{}), ECVF\+\_\+\+Default)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_gameplay_setting_edit_condition_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_gameplay_setting_edit_condition_8h_a0de3ae51f3a629a8e5d113f1b9390da7}\index{GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}!LOCTEXT\_NAMESPACE@{LOCTEXT\_NAMESPACE}}
+\index{LOCTEXT\_NAMESPACE@{LOCTEXT\_NAMESPACE}!GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}}
+\doxysubsubsection{\texorpdfstring{LOCTEXT\_NAMESPACE}{LOCTEXT\_NAMESPACE}}
+{\footnotesize\ttfamily \label{_gameplay_setting_edit_condition_8h_a0de3ae51f3a629a8e5d113f1b9390da7} 
+\+\#define LOCTEXT\+\_\+\+NAMESPACE~"{}Setting\+Edit\+Condition"{}}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{_gameplay_setting_edit_condition_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1}\index{GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}!EGameplayFramePacingEditCondition@{EGameplayFramePacingEditCondition}}
+\index{EGameplayFramePacingEditCondition@{EGameplayFramePacingEditCondition}!GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}}
+\doxysubsubsection{\texorpdfstring{EGameplayFramePacingEditCondition}{EGameplayFramePacingEditCondition}}
+{\footnotesize\ttfamily \label{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1} 
+enum class \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1}{EGameplay\+Frame\+Pacing\+Edit\+Condition}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Specifies the matching behavior for frame pacing edit conditions. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EnableIf@{EnableIf}!GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}}
+\index{GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}!EnableIf@{EnableIf}}
+}\Hypertarget{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1a02ba5ffaa3fdaf8d93d4b74390939e49}\label{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1a02ba5ffaa3fdaf8d93d4b74390939e49} 
+Enable\+If&Enable the setting if the condition matches. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DisableIf@{DisableIf}!GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}}
+\index{GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}!DisableIf@{DisableIf}}
+}\Hypertarget{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1a5c70a8861ee4e1b0f23ba8171938dbe0}\label{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1a5c70a8861ee4e1b0f23ba8171938dbe0} 
+Disable\+If&Disable the setting if the condition matches. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{_gameplay_setting_edit_condition_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_gameplay_setting_edit_condition_8h_a27caeb9f044d56404942073dec0126fc}\index{GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}!CVarLatencyMarkersRequireNVIDIA@{CVarLatencyMarkersRequireNVIDIA}}
+\index{CVarLatencyMarkersRequireNVIDIA@{CVarLatencyMarkersRequireNVIDIA}!GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}}
+\doxysubsubsection{\texorpdfstring{CVarLatencyMarkersRequireNVIDIA()}{CVarLatencyMarkersRequireNVIDIA()}}
+{\footnotesize\ttfamily \label{_gameplay_setting_edit_condition_8h_a27caeb9f044d56404942073dec0126fc} 
+TAuto\+Console\+Variable$<$ bool $>$ CVar\+Latency\+Markers\+Require\+NVIDIA (\begin{DoxyParamCaption}\item[{TEXT("{}Gameplay\+Common\+Settings.\+Latency\+Markers\+Require\+NVIDIA"{})}]{}{, }\item[{true}]{}{, }\item[{TEXT("{}If true, then only allow latency markers to be enabled on NVIDIA hardware"{})}]{}{, }\item[{ECVF\+\_\+\+Default}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+

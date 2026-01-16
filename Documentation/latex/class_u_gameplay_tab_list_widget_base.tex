@@ -1,0 +1,315 @@
+\doxysection{UGameplay\+Tab\+List\+Widget\+Base Class Reference}
+\hypertarget{class_u_gameplay_tab_list_widget_base}{}\label{class_u_gameplay_tab_list_widget_base}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+
+
+Extension of the common tab list with support for dynamic registration and visibility.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Tab\+List\+Widget\+Base.\+h$>$}
+
+Inheritance diagram for UGameplay\+Tab\+List\+Widget\+Base:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_tab_list_widget_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a5e729c205622e0dfbd40a225538cbddd}{DECLARE\+\_\+\+DYNAMIC\+\_\+\+MULTICAST\+\_\+\+DELEGATE\+\_\+\+Two\+Params}} (FOn\+Tab\+Content\+Created, FName, Tab\+Id, UCommon\+User\+Widget \texorpdfstring{$\ast$}{*}, Tab\+Widget)
+\begin{DoxyCompactList}\small\item\em Delegate broadcast when a new tab\textquotesingle{}s content widget has been instantiated. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_afab423b9cba284863400c3070c65a997}{DECLARE\+\_\+\+EVENT\+\_\+\+Two\+Params}} (\doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base}{UGameplay\+Tab\+List\+Widget\+Base}}, FOn\+Tab\+Content\+Created\+Native, FName, UCommon\+User\+Widget \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Native-\/only event broadcast when a new tab\textquotesingle{}s content widget has been instantiated. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a1d56b1bc47a7f9807e6fd587dbdbe47a}{UGameplay\+Tab\+List\+Widget\+Base}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_abf4e9040073f2544b157d8cdeb40059a}{Get\+Preregistered\+Tab\+Descriptor}} (const FName Tab\+Name\+Id, \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&Out\+Tab\+Info)
+\begin{DoxyCompactList}\small\item\em Retrieves a descriptor from the pre-\/registered list in the editor. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a72fd0f32e6ecade0a061f8450b093fed}{Get\+Tab\+Descriptor}} (const FName Tab\+Name\+Id, \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&Out\+Tab\+Info)
+\begin{DoxyCompactList}\small\item\em Retrieves a currently active tab descriptor by ID. \end{DoxyCompactList}\item 
+const TArray$<$ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} $>$ \& \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a788ea82280c5a97a162c4d0cf68243bf}{Get\+All\+Preregistered\+Tab\+Infos}} ()
+\begin{DoxyCompactList}\small\item\em Returns the complete array of editor-\/defined tab descriptors. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_ae98957cf52c63a4b1197ab94f75713e7}{Set\+Tab\+Hidden\+State}} (FName Tab\+Name\+Id, bool b\+Hidden)
+\begin{DoxyCompactList}\small\item\em Changes whether a tab is hidden from the UI (must be called before switcher link). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a98c610862b61437024c3d0ae397082d9}{Register\+Dynamic\+Tab}} (const \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&Tab\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Adds a new tab at runtime. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a3eae59e1ba65f99961c2eef3257ac12d}{Is\+First\+Tab\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the first available tab is currently active. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a1888f90f7016fcb2ba58e0d2fb6a0425}{Is\+Last\+Tab\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the last available tab is currently active. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_adc8c430676978a7bafbbab9b7b3e8b7e}{Is\+Tab\+Visible}} (FName Tab\+Id)
+\begin{DoxyCompactList}\small\item\em Checks if a specific tab is currently visible in the list. \end{DoxyCompactList}\item 
+int32 \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a7ed6bca8bbf2ab78a64cadfed0fb8c29}{Get\+Visible\+Tab\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the total number of non-\/hidden tabs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+FOn\+Tab\+Content\+Created \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_af5e2b3f874874c21408cb5c9311fdd47}{On\+Tab\+Content\+Created}}
+\begin{DoxyCompactList}\small\item\em Blueprint hook for tab creation events. \end{DoxyCompactList}\item 
+FOn\+Tab\+Content\+Created\+Native \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_ad4ac98303d09b85163f61f6c32de13d4}{On\+Tab\+Content\+Created\+Native}}
+\begin{DoxyCompactList}\small\item\em Native hook for tab creation events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_af76ac3ee5a1ab2ce9c13cebf8a76b5e5}{Native\+On\+Initialized}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a4aaf52250e9097b8f4c10e6e3f31ac8b}{Native\+Construct}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_aec51f6369eb0f1e5baa7216ff34cdc64}{Native\+Destruct}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a7e00254f3f6acb0466084cd99e9b8413}{Handle\+Pre\+Linked\+Switcher\+Changed}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a29e5db94c95fd7a167b918c7ca7386bf}{Handle\+Post\+Linked\+Switcher\+Changed}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_ad0ff900c224971cb293f394b2f5f1b69}{Handle\+Tab\+Creation\+\_\+\+Implementation}} (FName Tab\+Id, UCommon\+Button\+Base \texorpdfstring{$\ast$}{*}Tab\+Button) override
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a1b01861da6594cfcc6674c1c678b58a0}{Setup\+Tabs}} ()
+\begin{DoxyCompactList}\small\item\em Internal method to populate the tab list from defined descriptors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} $>$ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a26f55bbe2d9840523dd902c6dcfd4cb5}{Preregistered\+Tab\+Info\+Array}}
+\begin{DoxyCompactList}\small\item\em Editor-\/defined list of tabs for this widget. \end{DoxyCompactList}\item 
+TMap$<$ FName, \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} $>$ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a3ef2b962b4368dd8e982c4aa1f9fa46b}{Pending\+Tab\+Label\+Info\+Map}}
+\begin{DoxyCompactList}\small\item\em Internal buffer for tabs that are registered but whose buttons haven\textquotesingle{}t spawned yet. \end{DoxyCompactList}\item 
+TMap$<$ FName, \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} $>$ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a25afce384aaac8385029e3e02fc31269}{Registered\+Tab\+Descriptors}}
+\begin{DoxyCompactList}\small\item\em Complete mapping of IDs to descriptors for all currently registered tabs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extension of the common tab list with support for dynamic registration and visibility. 
+
+This widget manages a list of tabs, usually corresponding to pages in a switcher. It supports pre-\/registered tabs defined in the editor and dynamic tabs added at runtime. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_tab_list_widget_base_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a1d56b1bc47a7f9807e6fd587dbdbe47a}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{UGameplayTabListWidgetBase()}{UGameplayTabListWidgetBase()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a1d56b1bc47a7f9807e6fd587dbdbe47a} 
+UGameplay\+Tab\+List\+Widget\+Base::\+\+UGameplay\+Tab\+List\+Widget\+Base (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_tab_list_widget_base_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a5e729c205622e0dfbd40a225538cbddd}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams@{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams}}
+\index{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams@{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams()}{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a5e729c205622e0dfbd40a225538cbddd} 
+UGameplay\+Tab\+List\+Widget\+Base::\+\+DECLARE\+\_\+\+DYNAMIC\+\_\+\+MULTICAST\+\_\+\+DELEGATE\+\_\+\+Two\+Params (\begin{DoxyParamCaption}\item[{FOn\+Tab\+Content\+Created}]{}{, }\item[{FName}]{}{, }\item[{Tab\+Id}]{}{, }\item[{UCommon\+User\+Widget \texorpdfstring{$\ast$}{*}}]{}{, }\item[{Tab\+Widget}]{}{}\end{DoxyParamCaption})}
+
+
+
+Delegate broadcast when a new tab\textquotesingle{}s content widget has been instantiated. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_afab423b9cba284863400c3070c65a997}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!DECLARE\_EVENT\_TwoParams@{DECLARE\_EVENT\_TwoParams}}
+\index{DECLARE\_EVENT\_TwoParams@{DECLARE\_EVENT\_TwoParams}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_EVENT\_TwoParams()}{DECLARE\_EVENT\_TwoParams()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_afab423b9cba284863400c3070c65a997} 
+UGameplay\+Tab\+List\+Widget\+Base::\+\+DECLARE\+\_\+\+EVENT\+\_\+\+Two\+Params (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base}{UGameplay\+Tab\+List\+Widget\+Base}}}]{}{, }\item[{FOn\+Tab\+Content\+Created\+Native}]{}{, }\item[{FName}]{}{, }\item[{UCommon\+User\+Widget \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Native-\/only event broadcast when a new tab\textquotesingle{}s content widget has been instantiated. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a788ea82280c5a97a162c4d0cf68243bf}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!GetAllPreregisteredTabInfos@{GetAllPreregisteredTabInfos}}
+\index{GetAllPreregisteredTabInfos@{GetAllPreregisteredTabInfos}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{GetAllPreregisteredTabInfos()}{GetAllPreregisteredTabInfos()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a788ea82280c5a97a162c4d0cf68243bf} 
+const TArray$<$ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} $>$ \& UGameplay\+Tab\+List\+Widget\+Base::\+\+Get\+All\+Preregistered\+Tab\+Infos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the complete array of editor-\/defined tab descriptors. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_abf4e9040073f2544b157d8cdeb40059a}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!GetPreregisteredTabDescriptor@{GetPreregisteredTabDescriptor}}
+\index{GetPreregisteredTabDescriptor@{GetPreregisteredTabDescriptor}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{GetPreregisteredTabDescriptor()}{GetPreregisteredTabDescriptor()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_abf4e9040073f2544b157d8cdeb40059a} 
+bool UGameplay\+Tab\+List\+Widget\+Base::\+\+Get\+Preregistered\+Tab\+Descriptor (\begin{DoxyParamCaption}\item[{const FName}]{Tab\+Name\+Id}{, }\item[{\doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&}]{Out\+Tab\+Info}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a descriptor from the pre-\/registered list in the editor. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a72fd0f32e6ecade0a061f8450b093fed}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!GetTabDescriptor@{GetTabDescriptor}}
+\index{GetTabDescriptor@{GetTabDescriptor}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{GetTabDescriptor()}{GetTabDescriptor()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a72fd0f32e6ecade0a061f8450b093fed} 
+bool UGameplay\+Tab\+List\+Widget\+Base::\+\+Get\+Tab\+Descriptor (\begin{DoxyParamCaption}\item[{const FName}]{Tab\+Name\+Id}{, }\item[{\doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&}]{Out\+Tab\+Info}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a currently active tab descriptor by ID. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a7ed6bca8bbf2ab78a64cadfed0fb8c29}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!GetVisibleTabCount@{GetVisibleTabCount}}
+\index{GetVisibleTabCount@{GetVisibleTabCount}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{GetVisibleTabCount()}{GetVisibleTabCount()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a7ed6bca8bbf2ab78a64cadfed0fb8c29} 
+int32 UGameplay\+Tab\+List\+Widget\+Base::\+\+Get\+Visible\+Tab\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the total number of non-\/hidden tabs. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a29e5db94c95fd7a167b918c7ca7386bf}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!HandlePostLinkedSwitcherChanged@{HandlePostLinkedSwitcherChanged}}
+\index{HandlePostLinkedSwitcherChanged@{HandlePostLinkedSwitcherChanged}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{HandlePostLinkedSwitcherChanged()}{HandlePostLinkedSwitcherChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a29e5db94c95fd7a167b918c7ca7386bf} 
+void UGameplay\+Tab\+List\+Widget\+Base::\+\+Handle\+Post\+Linked\+Switcher\+Changed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a7e00254f3f6acb0466084cd99e9b8413}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!HandlePreLinkedSwitcherChanged@{HandlePreLinkedSwitcherChanged}}
+\index{HandlePreLinkedSwitcherChanged@{HandlePreLinkedSwitcherChanged}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{HandlePreLinkedSwitcherChanged()}{HandlePreLinkedSwitcherChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a7e00254f3f6acb0466084cd99e9b8413} 
+void UGameplay\+Tab\+List\+Widget\+Base::\+\+Handle\+Pre\+Linked\+Switcher\+Changed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_ad0ff900c224971cb293f394b2f5f1b69}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!HandleTabCreation\_Implementation@{HandleTabCreation\_Implementation}}
+\index{HandleTabCreation\_Implementation@{HandleTabCreation\_Implementation}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{HandleTabCreation\_Implementation()}{HandleTabCreation\_Implementation()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_ad0ff900c224971cb293f394b2f5f1b69} 
+void UGameplay\+Tab\+List\+Widget\+Base::\+\+Handle\+Tab\+Creation\+\_\+\+Implementation (\begin{DoxyParamCaption}\item[{FName}]{Tab\+Id}{, }\item[{UCommon\+Button\+Base \texorpdfstring{$\ast$}{*}}]{Tab\+Button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a3eae59e1ba65f99961c2eef3257ac12d}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!IsFirstTabActive@{IsFirstTabActive}}
+\index{IsFirstTabActive@{IsFirstTabActive}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{IsFirstTabActive()}{IsFirstTabActive()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a3eae59e1ba65f99961c2eef3257ac12d} 
+bool UGameplay\+Tab\+List\+Widget\+Base::\+\+Is\+First\+Tab\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the first available tab is currently active. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a1888f90f7016fcb2ba58e0d2fb6a0425}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!IsLastTabActive@{IsLastTabActive}}
+\index{IsLastTabActive@{IsLastTabActive}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{IsLastTabActive()}{IsLastTabActive()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a1888f90f7016fcb2ba58e0d2fb6a0425} 
+bool UGameplay\+Tab\+List\+Widget\+Base::\+\+Is\+Last\+Tab\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the last available tab is currently active. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_adc8c430676978a7bafbbab9b7b3e8b7e}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!IsTabVisible@{IsTabVisible}}
+\index{IsTabVisible@{IsTabVisible}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{IsTabVisible()}{IsTabVisible()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_adc8c430676978a7bafbbab9b7b3e8b7e} 
+bool UGameplay\+Tab\+List\+Widget\+Base::\+\+Is\+Tab\+Visible (\begin{DoxyParamCaption}\item[{FName}]{Tab\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a specific tab is currently visible in the list. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a4aaf52250e9097b8f4c10e6e3f31ac8b}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!NativeConstruct@{NativeConstruct}}
+\index{NativeConstruct@{NativeConstruct}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{NativeConstruct()}{NativeConstruct()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a4aaf52250e9097b8f4c10e6e3f31ac8b} 
+void UGameplay\+Tab\+List\+Widget\+Base::\+\+Native\+Construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_aec51f6369eb0f1e5baa7216ff34cdc64}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!NativeDestruct@{NativeDestruct}}
+\index{NativeDestruct@{NativeDestruct}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{NativeDestruct()}{NativeDestruct()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_aec51f6369eb0f1e5baa7216ff34cdc64} 
+void UGameplay\+Tab\+List\+Widget\+Base::\+\+Native\+Destruct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_af76ac3ee5a1ab2ce9c13cebf8a76b5e5}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!NativeOnInitialized@{NativeOnInitialized}}
+\index{NativeOnInitialized@{NativeOnInitialized}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{NativeOnInitialized()}{NativeOnInitialized()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_af76ac3ee5a1ab2ce9c13cebf8a76b5e5} 
+void UGameplay\+Tab\+List\+Widget\+Base::\+\+Native\+On\+Initialized (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a98c610862b61437024c3d0ae397082d9}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!RegisterDynamicTab@{RegisterDynamicTab}}
+\index{RegisterDynamicTab@{RegisterDynamicTab}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{RegisterDynamicTab()}{RegisterDynamicTab()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a98c610862b61437024c3d0ae397082d9} 
+bool UGameplay\+Tab\+List\+Widget\+Base::\+\+Register\+Dynamic\+Tab (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&}]{Tab\+Descriptor}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new tab at runtime. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_ae98957cf52c63a4b1197ab94f75713e7}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!SetTabHiddenState@{SetTabHiddenState}}
+\index{SetTabHiddenState@{SetTabHiddenState}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{SetTabHiddenState()}{SetTabHiddenState()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_ae98957cf52c63a4b1197ab94f75713e7} 
+void UGameplay\+Tab\+List\+Widget\+Base::\+\+Set\+Tab\+Hidden\+State (\begin{DoxyParamCaption}\item[{FName}]{Tab\+Name\+Id}{, }\item[{bool}]{b\+Hidden}{}\end{DoxyParamCaption})}
+
+
+
+Changes whether a tab is hidden from the UI (must be called before switcher link). 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a1b01861da6594cfcc6674c1c678b58a0}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!SetupTabs@{SetupTabs}}
+\index{SetupTabs@{SetupTabs}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{SetupTabs()}{SetupTabs()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a1b01861da6594cfcc6674c1c678b58a0} 
+void UGameplay\+Tab\+List\+Widget\+Base::\+\+Setup\+Tabs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal method to populate the tab list from defined descriptors. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_tab_list_widget_base_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_tab_list_widget_base_af5e2b3f874874c21408cb5c9311fdd47}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!OnTabContentCreated@{OnTabContentCreated}}
+\index{OnTabContentCreated@{OnTabContentCreated}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{OnTabContentCreated}{OnTabContentCreated}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_af5e2b3f874874c21408cb5c9311fdd47} 
+FOn\+Tab\+Content\+Created UGameplay\+Tab\+List\+Widget\+Base::\+\+On\+Tab\+Content\+Created}
+
+
+
+Blueprint hook for tab creation events. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_ad4ac98303d09b85163f61f6c32de13d4}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!OnTabContentCreatedNative@{OnTabContentCreatedNative}}
+\index{OnTabContentCreatedNative@{OnTabContentCreatedNative}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{OnTabContentCreatedNative}{OnTabContentCreatedNative}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_ad4ac98303d09b85163f61f6c32de13d4} 
+FOn\+Tab\+Content\+Created\+Native UGameplay\+Tab\+List\+Widget\+Base::\+\+On\+Tab\+Content\+Created\+Native}
+
+
+
+Native hook for tab creation events. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a3ef2b962b4368dd8e982c4aa1f9fa46b}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!PendingTabLabelInfoMap@{PendingTabLabelInfoMap}}
+\index{PendingTabLabelInfoMap@{PendingTabLabelInfoMap}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{PendingTabLabelInfoMap}{PendingTabLabelInfoMap}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a3ef2b962b4368dd8e982c4aa1f9fa46b} 
+TMap$<$FName, \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}}$>$ UGameplay\+Tab\+List\+Widget\+Base::\+\+Pending\+Tab\+Label\+Info\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal buffer for tabs that are registered but whose buttons haven\textquotesingle{}t spawned yet. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a26f55bbe2d9840523dd902c6dcfd4cb5}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!PreregisteredTabInfoArray@{PreregisteredTabInfoArray}}
+\index{PreregisteredTabInfoArray@{PreregisteredTabInfoArray}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{PreregisteredTabInfoArray}{PreregisteredTabInfoArray}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a26f55bbe2d9840523dd902c6dcfd4cb5} 
+TArray$<$\doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}}$>$ UGameplay\+Tab\+List\+Widget\+Base::\+\+Preregistered\+Tab\+Info\+Array\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Editor-\/defined list of tabs for this widget. 
+
+\Hypertarget{class_u_gameplay_tab_list_widget_base_a25afce384aaac8385029e3e02fc31269}\index{UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}!RegisteredTabDescriptors@{RegisteredTabDescriptors}}
+\index{RegisteredTabDescriptors@{RegisteredTabDescriptors}!UGameplayTabListWidgetBase@{UGameplayTabListWidgetBase}}
+\doxysubsubsection{\texorpdfstring{RegisteredTabDescriptors}{RegisteredTabDescriptors}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_list_widget_base_a25afce384aaac8385029e3e02fc31269} 
+TMap$<$FName, \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}}$>$ UGameplay\+Tab\+List\+Widget\+Base::\+\+Registered\+Tab\+Descriptors\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Complete mapping of IDs to descriptors for all currently registered tabs. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_tab_list_widget_base_8h}{Gameplay\+Tab\+List\+Widget\+Base.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_tab_list_widget_base_8cpp}{Gameplay\+Tab\+List\+Widget\+Base.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\doxysection{Gameplay\+Settings\+Local.\+cpp File Reference}
+\hypertarget{_gameplay_settings_local_8cpp}{}\label{_gameplay_settings_local_8cpp}\index{GameplaySettingsLocal.cpp@{GameplaySettingsLocal.cpp}}
+{\ttfamily \+\#include "{}Framework/\+\+Gameplay\+Settings\+Local.\+h"{}}\newline
+{\ttfamily \+\#include "{}Framework/\+\+Application/\+\+Slate\+Application.\+h"{}}\newline
+{\ttfamily \+\#include "{}Framework/\+\+Gameplay\+Setting\+Performance\+Settings.\+h"{}}\newline
+{\ttfamily \+\#include "{}ICommon\+UIModule.\+h"{}}\newline
+{\ttfamily \+\#include "{}Scalability.\+h"{}}\newline
+{\ttfamily \+\#include "{}Engine/\+\+Engine.\+h"{}}\newline
+{\ttfamily \+\#include "{}Gameplay\+Tag\+Container.\+h"{}}\newline
+{\ttfamily \+\#include "{}Common\+UISettings.\+h"{}}\newline
+{\ttfamily \+\#include "{}Misc/\+\+Gameplay\+Common\+Settings\+Tags.\+h"{}}\newline
+{\ttfamily \+\#include "{}Performance/\+\+Latency\+Marker\+Module.\+h"{}}\newline
+{\ttfamily \+\#include "{}Device\+Profiles/\+\+Device\+Profile\+Manager.\+h"{}}\newline
+{\ttfamily \+\#include "{}Common\+Input\+Subsystem.\+h"{}}\newline
+{\ttfamily \+\#include "{}Misc/\+\+App.\+h"{}}\newline
+{\ttfamily \+\#include "{}Engine/\+\+Local\+Player.\+h"{}}\newline
+{\ttfamily \+\#include "{}Runtime/\+\+Launch/\+\+Resources/\+\+Version.\+h"{}}\newline
+{\ttfamily \+\#include "{}Gameplay\+Common\+Settings.\+h"{}}\newline
+{\ttfamily \+\#include $<$UE\+\_\+\+INLINE\+\_\+\+GENERATED\+\_\+\+CPP\+\_\+\+BY\+\_\+\+NAME(\+Gameplay\+Settings\+Local)$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_gameplay_common_settings_helpers}{Gameplay\+Common\+Settings\+Helpers}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static TAuto\+Console\+Variable$<$ int32 $>$ \doxymbox{\hyperlink{_gameplay_settings_local_8cpp_ac1386a567f153939d0de8a69379b4a4e}{CVar\+Device\+Profile\+Driven\+Target\+Fps}} (TEXT("{}GCS.\+Device\+Profile.\+Console.\+Target\+FPS"{}), -\/1, TEXT("{}Target FPS when being driven by device profile"{}), ECVF\+\_\+\+Default\texorpdfstring{$\vert$}{|}ECVF\+\_\+\+Preview)
+\item 
+static TAuto\+Console\+Variable$<$ int32 $>$ \doxymbox{\hyperlink{_gameplay_settings_local_8cpp_aba658aeb42bb5480d00c215d5c5c75ba}{CVar\+Device\+Profile\+Driven\+Frame\+Sync\+Type}} (TEXT("{}GCS.\+Device\+Profile.\+Console.\+Frame\+Sync\+Type"{}), -\/1, TEXT("{}Sync type when being driven by device profile. Corresponds to r.\+GTSync\+Type"{}), ECVF\+\_\+\+Default\texorpdfstring{$\vert$}{|}ECVF\+\_\+\+Preview)
+\item 
+bool \doxymbox{\hyperlink{namespace_gameplay_common_settings_helpers_aaa96c2c3594b60c34d33cc3e04862fed}{Gameplay\+Common\+Settings\+Helpers::\+\+Has\+Platform\+Trait}} (FGameplay\+Tag Tag)
+\item 
+int32 \doxymbox{\hyperlink{namespace_gameplay_common_settings_helpers_ac30c6952bb5b5862e35ef0340f430b10}{Gameplay\+Common\+Settings\+Helpers::\+\+Get\+Highest\+Level\+Of\+Any\+Scalability\+Channel}} (const Scalability::\+\+FQuality\+Levels \&Scalability\+Quality)
+\item 
+void \doxymbox{\hyperlink{namespace_gameplay_common_settings_helpers_a2e54bad3629858ee626c38dcc7889363}{Gameplay\+Common\+Settings\+Helpers::\+\+Fill\+Scalability\+Settings\+From\+Device\+Profile}} (\doxymbox{\hyperlink{struct_f_gameplay_scalability_snapshot}{FGameplay\+Scalability\+Snapshot}} \&Mode, const FString \&Suffix=FString())
+\item 
+void \doxymbox{\hyperlink{namespace_gameplay_common_settings_helpers_aa924852db39dc2aefdf6d19160b36ac8}{Gameplay\+Common\+Settings\+Helpers::\+\+Override\+Quality\+Levels\+To\+Scalability\+Mode}} (const \doxymbox{\hyperlink{struct_f_gameplay_scalability_snapshot}{FGameplay\+Scalability\+Snapshot}} \&In\+Mode, Scalability::\+\+FQuality\+Levels \&In\+Out\+Levels)
+\item 
+float \doxymbox{\hyperlink{_gameplay_settings_local_8cpp_a13d80a623f647d023ee27533bb6cef79}{Combine\+Frame\+Rate\+Limits}} (float Limit1, float Limit2)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_gameplay_settings_local_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_gameplay_settings_local_8cpp_a13d80a623f647d023ee27533bb6cef79}\index{GameplaySettingsLocal.cpp@{GameplaySettingsLocal.cpp}!CombineFrameRateLimits@{CombineFrameRateLimits}}
+\index{CombineFrameRateLimits@{CombineFrameRateLimits}!GameplaySettingsLocal.cpp@{GameplaySettingsLocal.cpp}}
+\doxysubsubsection{\texorpdfstring{CombineFrameRateLimits()}{CombineFrameRateLimits()}}
+{\footnotesize\ttfamily \label{_gameplay_settings_local_8cpp_a13d80a623f647d023ee27533bb6cef79} 
+float Combine\+Frame\+Rate\+Limits (\begin{DoxyParamCaption}\item[{float}]{Limit1}{, }\item[{float}]{Limit2}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_gameplay_settings_local_8cpp_aba658aeb42bb5480d00c215d5c5c75ba}\index{GameplaySettingsLocal.cpp@{GameplaySettingsLocal.cpp}!CVarDeviceProfileDrivenFrameSyncType@{CVarDeviceProfileDrivenFrameSyncType}}
+\index{CVarDeviceProfileDrivenFrameSyncType@{CVarDeviceProfileDrivenFrameSyncType}!GameplaySettingsLocal.cpp@{GameplaySettingsLocal.cpp}}
+\doxysubsubsection{\texorpdfstring{CVarDeviceProfileDrivenFrameSyncType()}{CVarDeviceProfileDrivenFrameSyncType()}}
+{\footnotesize\ttfamily \label{_gameplay_settings_local_8cpp_aba658aeb42bb5480d00c215d5c5c75ba} 
+TAuto\+Console\+Variable$<$ int32 $>$ CVar\+Device\+Profile\+Driven\+Frame\+Sync\+Type (\begin{DoxyParamCaption}\item[{TEXT("{}GCS.\+Device\+Profile.\+Console.\+Frame\+Sync\+Type"{})}]{}{, }\item[{-\/}]{1}{, }\item[{TEXT("{}Sync type when being driven by device profile. Corresponds to r.\+GTSync\+Type"{})}]{}{, }\item[{ECVF\+\_\+\+Default\texorpdfstring{$\vert$}{|}}]{ECVF\+\_\+\+Preview}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_gameplay_settings_local_8cpp_ac1386a567f153939d0de8a69379b4a4e}\index{GameplaySettingsLocal.cpp@{GameplaySettingsLocal.cpp}!CVarDeviceProfileDrivenTargetFps@{CVarDeviceProfileDrivenTargetFps}}
+\index{CVarDeviceProfileDrivenTargetFps@{CVarDeviceProfileDrivenTargetFps}!GameplaySettingsLocal.cpp@{GameplaySettingsLocal.cpp}}
+\doxysubsubsection{\texorpdfstring{CVarDeviceProfileDrivenTargetFps()}{CVarDeviceProfileDrivenTargetFps()}}
+{\footnotesize\ttfamily \label{_gameplay_settings_local_8cpp_ac1386a567f153939d0de8a69379b4a4e} 
+TAuto\+Console\+Variable$<$ int32 $>$ CVar\+Device\+Profile\+Driven\+Target\+Fps (\begin{DoxyParamCaption}\item[{TEXT("{}GCS.\+Device\+Profile.\+Console.\+Target\+FPS"{})}]{}{, }\item[{-\/}]{1}{, }\item[{TEXT("{}Target FPS when being driven by device profile"{})}]{}{, }\item[{ECVF\+\_\+\+Default\texorpdfstring{$\vert$}{|}}]{ECVF\+\_\+\+Preview}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+

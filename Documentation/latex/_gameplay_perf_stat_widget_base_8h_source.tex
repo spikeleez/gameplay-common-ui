@@ -1,0 +1,157 @@
+\doxysection{Gameplay\+Perf\+Stat\+Widget\+Base.\+h}
+\hypertarget{_gameplay_perf_stat_widget_base_8h_source}{}\label{_gameplay_perf_stat_widget_base_8h_source}\index{GameplayPerfStatWidgetBase.h@{GameplayPerfStatWidgetBase.h}}
+\doxymbox{\hyperlink{_gameplay_perf_stat_widget_base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CommonUserWidget.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Widgets/SLeafWidget.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h}{Framework/GameplaySettingPerformanceSettings.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_performance_stat_subsystem_8h}{Subsystems/GameplayPerformanceStatSubsystem.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}GameplayPerfStatWidgetBase.generated.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_s_gameplay_latency_graph}{SGameplayLatencyGraph}}\ :\ \textcolor{keyword}{public}\ SLeafWidget}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_afd14cb72b6d75326c8a31b888f946b90}{SLATE\_BEGIN\_ARGS}}(\doxymbox{\hyperlink{class_s_gameplay_latency_graph}{SGameplayLatencyGraph}})}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ :\ \_DesiredSize(150,\ 50)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ ,\ \_MaxLatencyToGraph(33.0)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ ,\ \_LineColor(255,\ 255,\ 255,\ 255)}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ ,\ \_BackgroundColor(0,\ 0,\ 0,\ 128)}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \_Clipping\ =\ EWidgetClipping::ClipToBounds;}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ SLATE\_ARGUMENT(FVector2D,\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ab41f136f3210b2d5c5e82e9f56431a2c}{DesiredSize}})}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ SLATE\_ARGUMENT(\textcolor{keywordtype}{double},\ MaxLatencyToGraph)}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ SLATE\_ARGUMENT(FColor,\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_aae96d375fe8224db4a6ef8db4ea2fe82}{LineColor}})}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ SLATE\_ARGUMENT(FColor,\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ae76616443cc5bd9303e9751324297789}{BackgroundColor}})}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ SLATE\_END\_ARGS()}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ void\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a90b480c3bf7629ecabb0886d48094ec6}{Construct}}(const\ FArguments\&\ InArgs);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ virtual\ int32\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ac1b9e76c01aef73d160d56ad37543887}{OnPaint}}(const\ FPaintArgs\&\ Args,\ const\ FGeometry\&\ AllottedGeometry,\ const\ FSlateRect\&\ MyClippingRect,\ FSlateWindowElementList\&\ OutDrawElements,\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ int32\ LayerId,\ const\ FWidgetStyle\&\ InWidgetStyle,\ \textcolor{keywordtype}{bool}\ bParentEnabled)\ const\ override;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \ \ virtual\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a19b86a4047d11d3cdffa4d8b88275ba1}{ComputeVolatility}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ FVector2D\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a0b5c2894c72d8faa864fa1ed7c9b0ac1}{ComputeDesiredSize}}(\textcolor{keywordtype}{float}\ LayoutScaleMultiplier)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a47756689e60c811f3173be83931ac1dc}{SetLineColor}}(\textcolor{keyword}{const}\ FColor\&\ InColor)}
+\DoxyCodeLine{00060\ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_aae96d375fe8224db4a6ef8db4ea2fe82}{LineColor}}\ =\ InColor;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a60ff88d01746407e398c70f59f7d3b1a}{SetMaxYValue}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ InValue)}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a99f40da9728c3b6b61e8e6bf35fbfe90}{MaxYAxisOfGraph}}\ =\ InValue;}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a552a8638cf2682cf21b0be83b4245e54}{SetBackgroundColor}}(\textcolor{keyword}{const}\ FColor\&\ InColor)}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ae76616443cc5bd9303e9751324297789}{BackgroundColor}}\ =\ InColor;}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a7c1644101486786892f9bf751e985963}{UpdateGraphData}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplaySampledStatCache}}*\ StatData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ InScaleFactor)}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ad228cde0fef35aeb748dab0f2d6e1e97}{GraphData}}\ =\ StatData;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ab72c28afc8104111e0ac8767c3f87878}{ScaleFactor}}\ =\ InScaleFactor;}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a9646bcaed97347f075fa51f593f458ce}{DrawTotalLatency}}(\textcolor{keyword}{const}\ FGeometry\&\ AllottedGeometry,\ FSlateWindowElementList\&\ OutDrawElements,\ int32\ LayerId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ \ \ \ \ FVector2D\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ab41f136f3210b2d5c5e82e9f56431a2c}{DesiredSize}}\ =\ \{\ 150.0,\ 50.0\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a99f40da9728c3b6b61e8e6bf35fbfe90}{MaxYAxisOfGraph}}\ =\ 33.0;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ab72c28afc8104111e0ac8767c3f87878}{ScaleFactor}}\ =\ 1.0f;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00097\ \ \ \ \ FColor\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_aae96d375fe8224db4a6ef8db4ea2fe82}{LineColor}}\ =\ FColor(255,\ 255,\ 255,\ 255);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00100\ \ \ \ \ FColor\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ae76616443cc5bd9303e9751324297789}{BackgroundColor}}\ =\ FColor(0,\ 0,\ 0,\ 128);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplaySampledStatCache}}*\ \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ad228cde0fef35aeb748dab0f2d6e1e97}{GraphData}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00112\ UCLASS(Abstract,\ BlueprintType,\ Blueprintable,\ meta\ =\ (DisableNativeTick))}
+\DoxyCodeLine{00113\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_a2a1edf419b72ad50e51c74bc2ce40513}{UGameplayPerfStatGraph}}\ :\ public\ UUserWidget}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00116\ \ \ \ \ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00118\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_a2a1edf419b72ad50e51c74bc2ce40513}{UGameplayPerfStatGraph}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_a0d649c9fc321443a5efcb2957e85e729}{SetLineColor}}(\textcolor{keyword}{const}\ FColor\&\ InColor);}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_ae6f58cf24c5c1c0cf535f5e2b6cadc21}{SetMaxYValue}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ InValue);}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_abc91d85c50c9d1a9002aaedb61eb4664}{SetBackgroundColor}}(\textcolor{keyword}{const}\ FColor\&\ InValue);}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_a9f529ea3cffd015e1aede0f865fd43a5}{UpdateGraphData}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplaySampledStatCache}}*\ StatData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ ScaleFactor);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00131\ \ \ \ \ TSharedPtr<SGameplayLatencyGraph>\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_af60c852f60e23047e70cbe5d423d0598}{SlateLatencyGraph}};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UWidget\ interface}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{virtual}\ TSharedRef<SWidget>\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_a55c6aed2d5e1b1a59e91aa3a70226085}{RebuildWidget}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_aab008bc81770c31143f6e784cc868f03}{ReleaseSlateResources}}(\textcolor{keywordtype}{bool}\ bReleaseChildren)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UWidget\ interface}}
+\DoxyCodeLine{00138\ \};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00147\ UCLASS(Abstract,\ BlueprintType,\ Blueprintable,\ meta=(DisableNativeTick))}
+\DoxyCodeLine{00148\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_a00d033350037d2cd22be5cb633c27ec4}{UGameplayPerfStatWidgetBase}}\ :\ public\ UCommonUserWidget}
+\DoxyCodeLine{00149\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00153\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_a00d033350037d2cd22be5cb633c27ec4}{UGameplayPerfStatWidgetBase}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UUserWidget\ interface}}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_a92def34c40de885394d54fa976e0e977}{NativeConstruct}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UUserWidget\ interface}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00163\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Performance\ Stats"{}})}
+\DoxyCodeLine{00164\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplayDisplayablePerformanceStat}}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_a52b13abe077b50da31919a9551380110}{GetStatToDisplay}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00165\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_a23cb948c02841ab21aa1804c47836afd}{StatToDisplay}};}
+\DoxyCodeLine{00167\ \ \ \ \ \}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00173\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Performance\ Stats"{}})}
+\DoxyCodeLine{00174\ \ \ \ \ double\ FetchStatValue();}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00180\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Performance\ Stats"{}})}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateGraphData(const\ \textcolor{keywordtype}{float}\ ScaleFactor\ =\ 1.0f);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ protected:}
+\DoxyCodeLine{00185\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_performance_stat_subsystem}{UGameplayPerformanceStatSubsystem}}*\ GetStatSubsystem();}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ protected:}
+\DoxyCodeLine{00193\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ Category=\textcolor{stringliteral}{"{}Designer"{}},\ meta=(BindWidget,\ OptionalWidget=true))}
+\DoxyCodeLine{00194\ \ \ \ \ TObjectPtr<\doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph}{UGameplayPerfStatGraph}}>\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_a7ce1e210aaf0b0dd987724ec37c438a3}{PerfStatGraph}};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00197\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00198\ \ \ \ \ TObjectPtr<\doxymbox{\hyperlink{class_u_gameplay_performance_stat_subsystem}{UGameplayPerformanceStatSubsystem}}>\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_a0e2a807e82d464ce3d57e0ccf60697b7}{CachedStatSubsystem}};}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00201\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00202\ \ \ \ \ FColor\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_a42a56c9e98facb563c232e74a9b91da9}{GraphLineColor}}\ =\ FColor(255,\ 255,\ 255,\ 255);}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00205\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00206\ \ \ \ \ FColor\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_a27078aa804cbc82c99c50e7ebaac21af}{GraphBackgroundColor}}\ =\ FColor(0,\ 0,\ 0,\ 128);}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00211\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_ab4afbaf598df2d6130819e47c003fbad}{GraphMaxYValue}}\ =\ 33.0;}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00215\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00216\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplayDisplayablePerformanceStat}}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_widget_base_a23cb948c02841ab21aa1804c47836afd}{StatToDisplay}};}
+\DoxyCodeLine{00217\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,64 @@
+\doxysection{Gameplay\+Game\+Layout.\+h}
+\hypertarget{_gameplay_game_layout_8h_source}{}\label{_gameplay_game_layout_8h_source}\index{GameplayGameLayout.h@{GameplayGameLayout.h}}
+\doxymbox{\hyperlink{_gameplay_game_layout_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_activatable_widget_8h}{GameplayActivatableWidget.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayGameLayout.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_controller_disconnected_screen}{UGameplayControllerDisconnectedScreen}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ UCLASS(Abstract,\ BlueprintType,\ Blueprintable,\ meta\ =\ (DisableNativeTick))}
+\DoxyCodeLine{00019\ class\ GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_ad6f711152850e3afc186a1db0e70e268}{UGameplayGameLayout}}\ :\ public\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a023bf6842453726e076b1e5d03cfa59e}{UGameplayActivatableWidget}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_game_layout_ad6f711152850e3afc186a1db0e70e268}{UGameplayGameLayout}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\string~Begin\ UUserWidget\ Interface}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_a1d67d605cd0eba56c7fe55e452fb2b83}{NativeOnInitialized}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_a32b30d07e4b05e30f2454041a3a18b46}{NativeDestruct}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ UUserWidget\ Interface}}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_abd0187ce53d9f2da42308b07575f8d52}{HandleEscapeAction}}();}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_ae786f6c897894be1f11874edb370c7be}{HandleInputDeviceConnectionChanged}}(EInputDeviceConnectionState\ NewConnectionState,\ FPlatformUserId\ PlatformUserId,\ FInputDeviceId\ InputDeviceId);}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_ad25892dc445f9a3aeddb08f343487d45}{HandleInputDevicePairingChanged}}(FInputDeviceId\ InputDeviceId,\ FPlatformUserId\ NewUserPlatformId,\ FPlatformUserId\ OldUserPlatformId);}
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_a59a371015e5ff8be6d162da14c78ea06}{NotifyControllerStateChangeForDisconnectScreen}}();}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_aaf0c6964fc82f6ac79aa2ae85e23cd61}{ProcessControllerDevicesHavingChangedForDisconnectScreen}}();}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_a4e268cf636b951591cdf976943eb68a1}{ShouldPlatformDisplayControllerDisconnectScreen}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ UFUNCTION(BlueprintNativeEvent,\ Category\ =\ \textcolor{stringliteral}{"{}Controller\ Disconnect\ Menu"{}})}
+\DoxyCodeLine{00066\ \ \ \ \ void\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_ae423b10159e2a89e22fab893244e3416}{DisplayControllerDisconnectedMenu}}();}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ UFUNCTION(BlueprintNativeEvent,\ Category\ =\ \textcolor{stringliteral}{"{}Controller\ Disconnect\ Menu"{}})}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_aec3b4be0adfb7fde3a7673ccbea5a3c8}{HideControllerDisconnectedMenu}}();}
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00072\ protected:}
+\DoxyCodeLine{00074\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Screens"{}})}
+\DoxyCodeLine{00075\ \ \ \ \ TSoftClassPtr<UCommonActivatableWidget>\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_a74b460f65adc6970b3154e31b8ca330d}{EscapeMenuClass}};}
+\DoxyCodeLine{00076\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ Category=\textcolor{stringliteral}{"{}Screens"{}})}
+\DoxyCodeLine{00079\ \ \ \ \ \doxymbox{\hyperlink{class_t_subclass_of}{TSubclassOf}}<\doxymbox{\hyperlink{class_u_gameplay_controller_disconnected_screen}{UGameplayControllerDisconnectedScreen}}>\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_afaa1c9d4c4f79a17776e6f3c3b426c0f}{ControllerDisconnectedScreen}};}
+\DoxyCodeLine{00080\ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ Category=\textcolor{stringliteral}{"{}Platform"{}})}
+\DoxyCodeLine{00086\ \ \ \ \ FGameplayTagContainer\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_a143d21c68ebc2ee3a57391c61eb10807}{PlatformRequiresControllerDisconnectScreen}};}
+\DoxyCodeLine{00087\ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00090\ \ \ \ \ TObjectPtr<UCommonActivatableWidget>\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_a78b41a5ade4ab0e6dd859a300e976e74}{SpawnedControllerDisconnectedScreen}};}
+\DoxyCodeLine{00091\ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ FTSTicker::FDelegateHandle\ \doxymbox{\hyperlink{class_u_gameplay_game_layout_a1e1e297bf391ef0cfac0983c8cce2fa5}{RequestProcessControllerStateHandle}};}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+
+\end{DoxyCode}

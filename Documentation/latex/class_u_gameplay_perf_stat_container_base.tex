@@ -1,0 +1,97 @@
+\doxysection{UGameplay\+Perf\+Stat\+Container\+Base Class Reference}
+\hypertarget{class_u_gameplay_perf_stat_container_base}{}\label{class_u_gameplay_perf_stat_container_base}\index{UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}}
+
+
+Widget container that manages multiple performance statistic widgets.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Perf\+Stat\+Container\+Base.\+h$>$}
+
+Inheritance diagram for UGameplay\+Perf\+Stat\+Container\+Base:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_perf_stat_container_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_a2a02fbfdddd4c55d8072059198af07be}{UGameplay\+Perf\+Stat\+Container\+Base}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_ad64c1da0fe86c8d5d044182ba1cc7b27}{Native\+Construct}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_a98de08fb692c56020d7cdb3edbcf53e4}{Native\+Destruct}} () override
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_ab7ba3da7a42cd002685580c5dcf20298}{Update\+Visibility\+Of\+Children}} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the visibility of all child stat widgets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplay\+Performance\+Stat\+Display\+Mode}} \doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_a7c9938c3a179e4551081ac53cd97e10d}{Stat\+Display\+Mode\+Filter}} = \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92a1df1972859e19c2a517da33aba8d56aa}{EGameplay\+Performance\+Stat\+Display\+Mode::\+\+Text\+And\+Graph}}
+\begin{DoxyCompactList}\small\item\em Filter for which display modes this container handles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Widget container that manages multiple performance statistic widgets. 
+
+This panel is responsible for aggregating various performance stat widgets (like FPS, Ping, etc.) and controlling their visibility globally based on the user\textquotesingle{}s performance settings. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_perf_stat_container_base_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_perf_stat_container_base_a2a02fbfdddd4c55d8072059198af07be}\index{UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}!UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}}
+\index{UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}!UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}}
+\doxysubsubsection{\texorpdfstring{UGameplayPerfStatContainerBase()}{UGameplayPerfStatContainerBase()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_container_base_a2a02fbfdddd4c55d8072059198af07be} 
+UGameplay\+Perf\+Stat\+Container\+Base::\+\+UGameplay\+Perf\+Stat\+Container\+Base (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_perf_stat_container_base_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_perf_stat_container_base_ad64c1da0fe86c8d5d044182ba1cc7b27}\index{UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}!NativeConstruct@{NativeConstruct}}
+\index{NativeConstruct@{NativeConstruct}!UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}}
+\doxysubsubsection{\texorpdfstring{NativeConstruct()}{NativeConstruct()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_container_base_ad64c1da0fe86c8d5d044182ba1cc7b27} 
+void UGameplay\+Perf\+Stat\+Container\+Base::\+\+Native\+Construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_perf_stat_container_base_a98de08fb692c56020d7cdb3edbcf53e4}\index{UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}!NativeDestruct@{NativeDestruct}}
+\index{NativeDestruct@{NativeDestruct}!UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}}
+\doxysubsubsection{\texorpdfstring{NativeDestruct()}{NativeDestruct()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_container_base_a98de08fb692c56020d7cdb3edbcf53e4} 
+void UGameplay\+Perf\+Stat\+Container\+Base::\+\+Native\+Destruct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_perf_stat_container_base_ab7ba3da7a42cd002685580c5dcf20298}\index{UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}!UpdateVisibilityOfChildren@{UpdateVisibilityOfChildren}}
+\index{UpdateVisibilityOfChildren@{UpdateVisibilityOfChildren}!UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}}
+\doxysubsubsection{\texorpdfstring{UpdateVisibilityOfChildren()}{UpdateVisibilityOfChildren()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_container_base_ab7ba3da7a42cd002685580c5dcf20298} 
+void UGameplay\+Perf\+Stat\+Container\+Base::\+\+Update\+Visibility\+Of\+Children (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Refreshes the visibility of all child stat widgets. 
+
+Iterates through children and hides/\+shows them based on the current user preferences for performance stat display. 
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_perf_stat_container_base_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_perf_stat_container_base_a7c9938c3a179e4551081ac53cd97e10d}\index{UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}!StatDisplayModeFilter@{StatDisplayModeFilter}}
+\index{StatDisplayModeFilter@{StatDisplayModeFilter}!UGameplayPerfStatContainerBase@{UGameplayPerfStatContainerBase}}
+\doxysubsubsection{\texorpdfstring{StatDisplayModeFilter}{StatDisplayModeFilter}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_container_base_a7c9938c3a179e4551081ac53cd97e10d} 
+\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplay\+Performance\+Stat\+Display\+Mode}} UGameplay\+Perf\+Stat\+Container\+Base::\+\+Stat\+Display\+Mode\+Filter = \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92a1df1972859e19c2a517da33aba8d56aa}{EGameplay\+Performance\+Stat\+Display\+Mode::\+\+Text\+And\+Graph}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Filter for which display modes this container handles. 
+
+For example, one container might only display Text stats, while another displays Graph stats. 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_perf_stat_container_base_8h}{Gameplay\+Perf\+Stat\+Container\+Base.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_perf_stat_container_base_8cpp}{Gameplay\+Perf\+Stat\+Container\+Base.\+cpp}}\end{DoxyCompactItemize}

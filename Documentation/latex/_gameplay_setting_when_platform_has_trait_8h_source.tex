@@ -1,0 +1,39 @@
+\doxysection{Gameplay\+Setting\+When\+Platform\+Has\+Trait.\+h}
+\hypertarget{_gameplay_setting_when_platform_has_trait_8h_source}{}\label{_gameplay_setting_when_platform_has_trait_8h_source}\index{GameplaySettingWhenPlatformHasTrait.h@{GameplaySettingWhenPlatformHasTrait.h}}
+\doxymbox{\hyperlink{_gameplay_setting_when_platform_has_trait_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h}{GameplaySettingEditCondition.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_f_gameplay_setting_when_platform_has_trait_a5b8e9866a150471910a997db505198cc}{FGameplaySettingWhenPlatformHasTrait}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplaySettingEditCondition}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_when_platform_has_trait_a5b8e9866a150471910a997db505198cc}{FGameplaySettingWhenPlatformHasTrait}}();}
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ TSharedRef<FGameplaySettingWhenPlatformHasTrait>\ \doxymbox{\hyperlink{class_f_gameplay_setting_when_platform_has_trait_a4bc8c9c25e4b6b766fa75bf9fdb746f4}{KillIfMissing}}(FGameplayTag\ InVisibilityTag,\ \textcolor{keyword}{const}\ FString\&\ InKillReason);}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ TSharedRef<FGameplaySettingWhenPlatformHasTrait>\ \doxymbox{\hyperlink{class_f_gameplay_setting_when_platform_has_trait_ac75a01c391332c2d653225a96647a4e8}{DisableIfMissing}}(FGameplayTag\ InVisibilityTag,\ \textcolor{keyword}{const}\ FText\&\ InDisableReason);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ TSharedRef<FGameplaySettingWhenPlatformHasTrait>\ \doxymbox{\hyperlink{class_f_gameplay_setting_when_platform_has_trait_a9df280db8c4db1bdb11ccc7b188d3f9c}{KillIfPresent}}(FGameplayTag\ InVisibilityTag,\ \textcolor{keyword}{const}\ FString\&\ InKillReason);}
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{static}\ TSharedRef<FGameplaySettingWhenPlatformHasTrait>\ \doxymbox{\hyperlink{class_f_gameplay_setting_when_platform_has_trait_a1604238d6b1883ccc18683a47bbc37fb}{DisableIfPresent}}(FGameplayTag\ InVisibilityTag,\ \textcolor{keyword}{const}\ FText\&\ InDisableReason);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ FGameplaySettingEditCondition\ interface}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a6c0b6641aadf24fcea9639b820ed425f}{GatherEditState}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer,\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplaySettingEditableState}}\&\ InOutEditState)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ FGameplaySettingEditCondition\ interface}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ FGameplayTag\ \doxymbox{\hyperlink{class_f_gameplay_setting_when_platform_has_trait_aff5aea79722d66dd259aa966c747a5f7}{VisibilityTag}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_f_gameplay_setting_when_platform_has_trait_a537803a936495edd48cd57e7795f5eaa}{bTagDesired}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \ \ \ \ FString\ \doxymbox{\hyperlink{class_f_gameplay_setting_when_platform_has_trait_abd11039906a9add3c31bba6865315320}{KillReason}};}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ FText\ \doxymbox{\hyperlink{class_f_gameplay_setting_when_platform_has_trait_a23174763f24058541b98bd8caa8bd086}{DisableReason}};}
+\DoxyCodeLine{00070\ \};}
+
+\end{DoxyCode}

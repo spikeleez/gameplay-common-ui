@@ -1,0 +1,242 @@
+\doxysection{Gameplay\+Settings\+Local.\+h}
+\hypertarget{_gameplay_settings_local_8h_source}{}\label{_gameplay_settings_local_8h_source}\index{GameplaySettingsLocal.h@{GameplaySettingsLocal.h}}
+\doxymbox{\hyperlink{_gameplay_settings_local_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}GameFramework/GameUserSettings.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h}{GameplaySettingPerformanceSettings.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplaySettingsLocal.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ USTRUCT()}
+\DoxyCodeLine{00015\ struct\ \doxymbox{\hyperlink{struct_f_gameplay_scalability_snapshot_aae78ee5ef12e7e5104ad5dd0ff2ede63}{FGameplayScalabilitySnapshot}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_scalability_snapshot_aae78ee5ef12e7e5104ad5dd0ff2ede63}{FGameplayScalabilitySnapshot}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ Scalability::FQualityLevels\ \doxymbox{\hyperlink{struct_f_gameplay_scalability_snapshot_a11d1ea96fd8d0eb65b59af6d348e0717}{Qualities}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_scalability_snapshot_a1135049c0b1c49b14f8f5dea6540971f}{bActive}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_scalability_snapshot_a17dd31c8d9968505fbd8d98958ff3d10}{bHasOverrides}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00041\ UCLASS(Config\ =\ GameUserSettings)}
+\DoxyCodeLine{00042\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a1506bfab93b36dbc3552b56a4e275fde}{UGameplaySettingsLocal}}\ :\ public\ UGameUserSettings}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a1506bfab93b36dbc3552b56a4e275fde}{UGameplaySettingsLocal}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a1506bfab93b36dbc3552b56a4e275fde}{UGameplaySettingsLocal}}*\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a10371e140b5a69481c05b5f96af2688b}{Get}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UObject\ interface}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a94d6cdbc9a9671c777a3df101caadafd}{BeginDestroy}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UObject\ interface}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameUserSettings\ interface}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a4d84f459a54898a104d53f1790810d50}{SetToDefaults}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ab02d55647247c758a58eee0792ee2f72}{LoadSettings}}(\textcolor{keywordtype}{bool}\ bForceReload)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a19a167628882ab0c65ff404da89d3789}{ConfirmVideoMode}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_aa1e05372ff9f560529218301a5f89bbb}{GetEffectiveFrameRateLimit}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a1cfa0624659bb0b59c0dc40d1aa488e1}{ResetToCurrentSettings}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a6efdd0e52044d4ed27448e6107497080}{ApplyNonResolutionSettings}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ int32\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a4a740d25096edc742084ec35074c90f9}{GetOverallScalabilityLevel}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a0401b8a5439eaf1bff2877c1ab18a4fe}{SetOverallScalabilityLevel}}(int32\ Value)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameUserSettings\ interface}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ DISPLAY\ \&\ GRAPHICS}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00070\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00075\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Display"{}})}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_adf720a06e6d9d7dfd031087bba378ec6}{SetDisplayGamma}}(\textcolor{keywordtype}{float}\ InValue);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Display"{}})}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ac8dd0d7a965098fe4a9d24ed12bb851d}{GetDisplayGamma}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_af20962d66aaff2ad1fc14c2ca5f495ab}{ApplyDisplayGamma}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00091\ \ \ \ \ UPROPERTY(Config)\ }
+\DoxyCodeLine{00092\ \ \ \ \ float\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a41b20321a8bc61ddcaa23d773c1c64a6}{DisplayGamma}}\ =\ 2.2f;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\ SCALABILITY\ \&\ BENCHMARKING}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ public:}
+\DoxyCodeLine{00100\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_abe2213bf1e67c57e6ad40f9b913ac2c2}{ApplyScalabilitySettings}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Scalability"{}})}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a443979ba38711aabede483c6adaeed5d}{CanRunAutoBenchmark}}()\ const;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Scalability"{}})}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_add4cc8d7deda8c573e506a6eaaedc8a3}{ShouldRunAutoBenchmarkAtStartup}}()\ const;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Scalability"{}})}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_af2625b201256318d0f1ddb70f152fe1f}{RunAutoBenchmark}}(\textcolor{keywordtype}{bool}\ bSaveImmediately);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00124\ \ \ \ \ int32\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_aeaa09589a921590cbf3452a20fcdfe7a}{GetFirstFrameRateWithQualityLimit}}()\ const;}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00127\ \ \ \ \ int32\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a32ed87ef2ea4f991276210413e350e09}{GetLowestQualityWithFrameRateLimit}}()\ const;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00130\ \ \ \ \ int32\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ac34a19df54fb1ed1b04f085e1e1062c3}{GetMaxSupportedOverallQualityLevel}}()\ const;}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ private:}
+\DoxyCodeLine{00134\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_scalability_snapshot}{FGameplayScalabilitySnapshot}}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ae9ec9c36f57fff76befccc69921b5d71}{DeviceDefaultScalabilitySettings}};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_af55f265fff37d79a32a15d351deb3ec9}{bSettingOverallQualityGuard}}\ =\ false;}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ FRAME\ RATE\ LIMITS}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ public:}
+\DoxyCodeLine{00145\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Frame\ Rate"{}})}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a7641381c94b59417f4e012635aa910fb}{GetFrameRateLimit\_OnBattery}}()\ const;}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00149\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Frame\ Rate"{}})}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_aa44b9c159297db47efdd7464b95a43d1}{SetFrameRateLimit\_OnBattery}}(\textcolor{keywordtype}{float}\ NewLimitFPS);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00153\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Frame\ Rate"{}})}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_aed5234ff160c0a75e40b8c0607934714}{GetFrameRateLimit\_InMenu}}()\ const;}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00157\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Frame\ Rate"{}})}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ae3c9a297c0a28cb767f8e00bdb808a1e}{SetFrameRateLimit\_InMenu}}(\textcolor{keywordtype}{float}\ NewLimitFPS);}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00161\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Frame\ Rate"{}})}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a0da8b255151086a5b06d94b4f130e73d}{GetFrameRateLimit\_WhenBackgrounded}}()\ const;}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00165\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Frame\ Rate"{}})}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a87f825d81f5e55e903c5839e89f0f5e2}{SetFrameRateLimit\_WhenBackgrounded}}(\textcolor{keywordtype}{float}\ NewLimitFPS);}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00169\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Frame\ Rate"{}})}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ad10e3a75356f01546863146d2cb7d40b}{GetFrameRateLimit\_Always}}()\ const;}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00173\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Frame\ Rate"{}})}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a4450493f6899bf90f3a451d412ee47cb}{SetFrameRateLimit\_Always}}(\textcolor{keywordtype}{float}\ NewLimitFPS);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a255488342ceec44891a8155397f0bd40}{SetShouldUseFrontendPerformanceSettings}}(\textcolor{keywordtype}{bool}\ bInFrontEnd);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ protected:}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_add3be238ea44fbebcf81fd6699dd5982}{ShouldUseFrontendPerformanceSettings}}()\ const;}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a91b95d2310ddacbfba2c19559dab95e3}{UpdateEffectiveFrameRateLimit}}();}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a82a63229322c3484c32191e082562b01}{OnAppActivationStateChanged}}(\textcolor{keywordtype}{bool}\ bIsActive);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ private:}
+\DoxyCodeLine{00191\ \ \ \ \ UPROPERTY(Config)}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_aaf02e12d4c8c55f0cdf2cbb74cc4e09c}{FrameRateLimit\_OnBattery}};}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00195\ \ \ \ \ UPROPERTY(Config)}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a4ea5c756fe177a3130d28caedff351ea}{FrameRateLimit\_InMenu}};}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00199\ \ \ \ \ UPROPERTY(Config)}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_aeecc1c6ff0c022a4c4fcd09642586da2}{FrameRateLimit\_WhenBackgrounded}};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ae112e5ca390dc26ddf1d2334979fbf8f}{bInFrontEndForPerformancePurposes}}\ =\ false;}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00206\ \ \ \ \ FDelegateHandle\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_af092705b94d6e17742332701944f3856}{OnApplicationActivationStateChangedHandle}};}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{comment}{//\ PERFORMANCE\ STATS\ (HUD)}}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00211\ public:}
+\DoxyCodeLine{00213\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplayPerformanceStatDisplayMode}}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a7374da0e872026167857ca1c81bb2e16}{GetPerfStatDisplayState}}(\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplayDisplayablePerformanceStat}}\ Stat)\ const;}
+\DoxyCodeLine{00214\ \ \ \ \ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a2246055c2bfdfe7912218317021eb0cb}{SetPerfStatDisplayState}}(\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplayDisplayablePerformanceStat}}\ Stat,\ \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplayPerformanceStatDisplayMode}}\ DisplayMode);}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00219\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a0fd82bfdf1add5b668074c34c648cec4}{DECLARE\_EVENT}}(\doxymbox{\hyperlink{class_u_gameplay_settings_local_a1506bfab93b36dbc3552b56a4e275fde}{UGameplaySettingsLocal}},\ FPerfStatSettingsChanged);}
+\DoxyCodeLine{00221\ \ \ \ \ FPerfStatSettingsChanged\&\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ad413ab8238f83198d9e02a28d86e8fd1}{OnPerfStatDisplayStateChanged}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a646442fda0b409a5521f536ba4d68fd6}{PerfStatSettingsChangedEvent}};\ \}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00225\ \ \ \ \ UPROPERTY(Config)}
+\DoxyCodeLine{00226\ \ \ \ \ TMap<\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplayDisplayablePerformanceStat}},\ \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplayPerformanceStatDisplayMode}}>\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ab4ceb529dac76d27c8aa6f58f06471b9}{DisplayStatList}};}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00229\ \ \ \ \ FPerfStatSettingsChanged\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a646442fda0b409a5521f536ba4d68fd6}{PerfStatSettingsChangedEvent}};}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{comment}{//\ LATENCY\ (NVIDIA\ REFLEX\ /\ FLASH)}}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00234\ public:}
+\DoxyCodeLine{00236\ \ \ \ \ static\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a8c2f9d9244dbc66df895d4b934c7ad81}{DoesPlatformSupportLatencyMarkers}}();}
+\DoxyCodeLine{00237\ \ \ \ \ }
+\DoxyCodeLine{00239\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a2b3ec81cae9680cb21b5f5ff3af56bea}{SetEnableLatencyFlashIndicators}}(const\ \textcolor{keywordtype}{bool}\ bNewVal);}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00243\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_abd2e72d76e2f76eb8539dfc7137262ff}{GetEnableLatencyFlashIndicators}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a1650200b896f65c0c1b132b9e87c8611}{bEnableLatencyFlashIndicators}};\ \}}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00247\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_settings_local_af31fc3accb7cf5d68d6d90d2d1a87a36}{DECLARE\_EVENT}}(\doxymbox{\hyperlink{class_u_gameplay_settings_local_a1506bfab93b36dbc3552b56a4e275fde}{UGameplaySettingsLocal}},\ FLatencyFlashInidicatorSettingChanged);}
+\DoxyCodeLine{00249\ \ \ \ \ FLatencyFlashInidicatorSettingChanged\&\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a4d9b0829a3e460d93153cb15f418cc9a}{OnLatencyFlashIndicatorSettingsChangedEvent}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a3014fd543e6e54357e6b5c2c31aa2d65}{LatencyFlashIndicatorSettingsChangedEvent}};\ \}}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ DoesPlatformSupportLatencyTrackingStats();}
+\DoxyCodeLine{00253\ \ \ \ \ }
+\DoxyCodeLine{00255\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00256\ \ \ \ \ void\ SetEnableLatencyTrackingStats(const\ \textcolor{keywordtype}{bool}\ bNewVal);}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00259\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ad7cfcc3a1dd6ef641c674ccc0b51ffb9}{GetEnableLatencyTrackingStats}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ad541809e623c58bdff773217d17f006a}{bEnableLatencyTrackingStats}};\ \}}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00263\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a77349c0d403a38bd9c9ccba073959286}{DECLARE\_EVENT}}(\doxymbox{\hyperlink{class_u_gameplay_settings_local_a1506bfab93b36dbc3552b56a4e275fde}{UGameplaySettingsLocal}},\ FLatencyStatEnabledSettingChanged);}
+\DoxyCodeLine{00265\ \ \ \ \ FLatencyStatEnabledSettingChanged\&\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a57741a67f18c4456a5dffe0d05a09699}{OnLatencyStatIndicatorSettingsChangedEvent}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a97cd8e2f54a91b7fac85162304ed595d}{LatencyStatIndicatorSettingsChangedEvent}};\ \}}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{void}\ ApplyLatencyTrackingStatSetting();}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00273\ \ \ \ \ UPROPERTY(Config)}
+\DoxyCodeLine{00274\ \ \ \ \ bool\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a1650200b896f65c0c1b132b9e87c8611}{bEnableLatencyFlashIndicators}}\ =\ false;}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00277\ \ \ \ \ UPROPERTY(Config)}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ad541809e623c58bdff773217d17f006a}{bEnableLatencyTrackingStats}};}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00281\ \ \ \ \ FLatencyFlashInidicatorSettingChanged\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a3014fd543e6e54357e6b5c2c31aa2d65}{LatencyFlashIndicatorSettingsChangedEvent}};}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00284\ \ \ \ \ FLatencyStatEnabledSettingChanged\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a97cd8e2f54a91b7fac85162304ed595d}{LatencyStatIndicatorSettingsChangedEvent}};}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{comment}{//\ DEVICE\ PROFILES}}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00289\ protected:}
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_aa1c2febe1f5dd29f59bbc39dc7934543}{ReapplyThingsDueToPossibleDeviceProfileChange}}();}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ private:}
+\DoxyCodeLine{00295\ \ \ \ \ UPROPERTY(Config)}
+\DoxyCodeLine{00296\ \ \ \ \ FString\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_abc71fe77f21201638ff875897569c0ec}{UserChosenDeviceProfileSuffix}};}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00299\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00300\ \ \ \ \ FString\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_abe701c4e9cc2dd3f2cde29d3e242cdc4}{DesiredUserChosenDeviceProfileSuffix}};}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00303\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00304\ \ \ \ \ FString\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a01467b0557cd7eaa86ec8a32a415daf6}{CurrentAppliedDeviceProfileOverrideSuffix}};}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{comment}{//\ INPUT\ \&\ CONTROLLERS}}
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{comment}{//=============================================================================}}
+\DoxyCodeLine{00309\ public:}
+\DoxyCodeLine{00314\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Controller"{}})}
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_ad778c1e9cbf970c171c58c9c11837b29}{SetControllerPlatform}}(const\ FName\ InControllerPlatform);}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00321\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Settings|Controller"{}})}
+\DoxyCodeLine{00322\ \ \ \ \ FName\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a6195e63b551fa358b1f91507a7890932}{GetControllerPlatform}}()\ const;}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ private:}
+\DoxyCodeLine{00328\ \ \ \ \ UPROPERTY(Config)}
+\DoxyCodeLine{00329\ \ \ \ \ FName\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a51d163f11fc8cc1680e1677ffeeb83eb}{ControllerPlatform}};}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00332\ \ \ \ \ UPROPERTY(Config)}
+\DoxyCodeLine{00333\ \ \ \ \ FName\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a8b3af4db2cc287d718bf05a36ea051f9}{ControllerPreset}}\ =\ TEXT(\textcolor{stringliteral}{"{}Default"{}});}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00336\ \ \ \ \ UPROPERTY(Config)}
+\DoxyCodeLine{00337\ \ \ \ \ FName\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_af5e754ac324577f07a38d17c6db0ea18}{InputConfigName}}\ =\ TEXT(\textcolor{stringliteral}{"{}Default"{}});}
+\DoxyCodeLine{00338\ \};}
+
+\end{DoxyCode}

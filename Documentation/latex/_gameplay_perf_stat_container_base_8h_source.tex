@@ -1,0 +1,37 @@
+\doxysection{Gameplay\+Perf\+Stat\+Container\+Base.\+h}
+\hypertarget{_gameplay_perf_stat_container_base_8h_source}{}\label{_gameplay_perf_stat_container_base_8h_source}\index{GameplayPerfStatContainerBase.h@{GameplayPerfStatContainerBase.h}}
+\doxymbox{\hyperlink{_gameplay_perf_stat_container_base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CommonUserWidget.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h}{Framework/GameplaySettingPerformanceSettings.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayPerfStatContainerBase.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }UObject;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }FFrame;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00018\ UCLASS(Abstract,\ BlueprintType,\ Blueprintable,\ meta=(DisableNativeTick))}
+\DoxyCodeLine{00019\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_a2a02fbfdddd4c55d8072059198af07be}{UGameplayPerfStatContainerBase}}\ :\ public\ UCommonUserWidget}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_a2a02fbfdddd4c55d8072059198af07be}{UGameplayPerfStatContainerBase}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UUserWidget\ interface}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_ad64c1da0fe86c8d5d044182ba1cc7b27}{NativeConstruct}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_a98de08fb692c56020d7cdb3edbcf53e4}{NativeDestruct}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UUserWidget\ interface}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Performance\ Stats"{}})}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_ab7ba3da7a42cd002685580c5dcf20298}{UpdateVisibilityOfChildren}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00046\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplayPerformanceStatDisplayMode}}\ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_container_base_a7c9938c3a179e4551081ac53cd97e10d}{StatDisplayModeFilter}}\ =\ \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplayPerformanceStatDisplayMode}}::\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92a1df1972859e19c2a517da33aba8d56aa}{TextAndGraph}};}
+\DoxyCodeLine{00048\ \};}
+
+\end{DoxyCode}

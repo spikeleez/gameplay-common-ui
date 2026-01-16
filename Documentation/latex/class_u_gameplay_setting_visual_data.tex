@@ -1,0 +1,166 @@
+\doxysection{UGameplay\+Setting\+Visual\+Data Class Reference}
+\hypertarget{class_u_gameplay_setting_visual_data}{}\label{class_u_gameplay_setting_visual_data}\index{UGameplaySettingVisualData@{UGameplaySettingVisualData}}
+
+
+Data asset that maps settings to their visual representations in the UI.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+Visual\+Data.\+h$>$}
+
+Inheritance diagram for UGameplay\+Setting\+Visual\+Data:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_setting_visual_data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_visual_data_a215714cafeb551ec9c74e64c7b3f041b}{UGameplay\+Setting\+Visual\+Data}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_visual_data_a804c21945b1a8cebb04ebf2fffa3d7a6}{Get\+Entry\+For\+Setting}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Gets the widget class to use for displaying a setting in a list. \end{DoxyCompactList}\item 
+virtual TArray$<$ TSoft\+Class\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension}{UGameplay\+Setting\+Detail\+Extension}} $>$ $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_visual_data_a818e4969d2d33824c817fb95547976cf}{Gather\+Detail\+Extensions}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Gathers all detail extensions that should be displayed for a setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_visual_data_a374b570d100aeb41814bee1ee55eb9b7}{Get\+Custom\+Entry\+For\+Setting}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Extension point for project-\/specific custom entry lookup logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TMap$<$ \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} $>$, \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}} $>$ $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_visual_data_ad6c4b5100584c2ed2b7afc0987889d75}{Entry\+Widget\+For\+Class}}
+\begin{DoxyCompactList}\small\item\em Maps setting classes to their list entry widget types. \end{DoxyCompactList}\item 
+TMap$<$ FName, \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}} $>$ $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_visual_data_a978c964c434dab62a8db60e53ca67148}{Entry\+Widget\+For\+Name}}
+\begin{DoxyCompactList}\small\item\em Maps specific setting names to their list entry widget types (overrides class mapping). \end{DoxyCompactList}\item 
+TMap$<$ \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} $>$, \doxymbox{\hyperlink{struct_f_gameplay_game_setting_class_extensions}{FGameplay\+Game\+Setting\+Class\+Extensions}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_visual_data_a667e2363f6c5aa5cb64c8aca00e13d56}{Extensions\+For\+Classes}}
+\begin{DoxyCompactList}\small\item\em Maps setting classes to their default set of detail extensions. \end{DoxyCompactList}\item 
+TMap$<$ FName, \doxymbox{\hyperlink{struct_f_gameplay_game_setting_name_extensions}{FGameplay\+Game\+Setting\+Name\+Extensions}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_visual_data_a67d892568d058ef7eeb3e1c3e57723d5}{Extensions\+For\+Name}}
+\begin{DoxyCompactList}\small\item\em Maps specific setting names to additional detail extensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data asset that maps settings to their visual representations in the UI. 
+
+\doxylink{class_u_gameplay_setting_visual_data}{UGameplay\+Setting\+Visual\+Data} is used to decide:\+
+\begin{DoxyEnumerate}
+\item Which UUser\+Widget (List\+Entry) to use for a particular setting in a list.
+\item Which additional widgets (Detail\+Extensions) to show for a setting in the detail pane.
+\end{DoxyEnumerate}
+
+Mapping can be done by either the setting\textquotesingle{}s C++ class or its unique FName identifier. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_setting_visual_data_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_setting_visual_data_a215714cafeb551ec9c74e64c7b3f041b}\index{UGameplaySettingVisualData@{UGameplaySettingVisualData}!UGameplaySettingVisualData@{UGameplaySettingVisualData}}
+\index{UGameplaySettingVisualData@{UGameplaySettingVisualData}!UGameplaySettingVisualData@{UGameplaySettingVisualData}}
+\doxysubsubsection{\texorpdfstring{UGameplaySettingVisualData()}{UGameplaySettingVisualData()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_visual_data_a215714cafeb551ec9c74e64c7b3f041b} 
+UGameplay\+Setting\+Visual\+Data::\+\+UGameplay\+Setting\+Visual\+Data (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_setting_visual_data_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_setting_visual_data_a818e4969d2d33824c817fb95547976cf}\index{UGameplaySettingVisualData@{UGameplaySettingVisualData}!GatherDetailExtensions@{GatherDetailExtensions}}
+\index{GatherDetailExtensions@{GatherDetailExtensions}!UGameplaySettingVisualData@{UGameplaySettingVisualData}}
+\doxysubsubsection{\texorpdfstring{GatherDetailExtensions()}{GatherDetailExtensions()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_visual_data_a818e4969d2d33824c817fb95547976cf} 
+TArray$<$ TSoft\+Class\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension}{UGameplay\+Setting\+Detail\+Extension}} $>$ $>$ UGameplay\+Setting\+Visual\+Data::\+\+Gather\+Detail\+Extensions (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gathers all detail extensions that should be displayed for a setting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Setting} & The setting to look up \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of extension widget classes 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_setting_visual_data_a374b570d100aeb41814bee1ee55eb9b7}\index{UGameplaySettingVisualData@{UGameplaySettingVisualData}!GetCustomEntryForSetting@{GetCustomEntryForSetting}}
+\index{GetCustomEntryForSetting@{GetCustomEntryForSetting}!UGameplaySettingVisualData@{UGameplaySettingVisualData}}
+\doxysubsubsection{\texorpdfstring{GetCustomEntryForSetting()}{GetCustomEntryForSetting()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_visual_data_a374b570d100aeb41814bee1ee55eb9b7} 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}} $>$ UGameplay\+Setting\+Visual\+Data::\+\+Get\+Custom\+Entry\+For\+Setting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Extension point for project-\/specific custom entry lookup logic. 
+
+\Hypertarget{class_u_gameplay_setting_visual_data_a804c21945b1a8cebb04ebf2fffa3d7a6}\index{UGameplaySettingVisualData@{UGameplaySettingVisualData}!GetEntryForSetting@{GetEntryForSetting}}
+\index{GetEntryForSetting@{GetEntryForSetting}!UGameplaySettingVisualData@{UGameplaySettingVisualData}}
+\doxysubsubsection{\texorpdfstring{GetEntryForSetting()}{GetEntryForSetting()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_visual_data_a804c21945b1a8cebb04ebf2fffa3d7a6} 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}} $>$ UGameplay\+Setting\+Visual\+Data::\+\+Get\+Entry\+For\+Setting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})}
+
+
+
+Gets the widget class to use for displaying a setting in a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Setting} & The setting to look up \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The widget class, or null if no mapping found 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_setting_visual_data_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_setting_visual_data_ad6c4b5100584c2ed2b7afc0987889d75}\index{UGameplaySettingVisualData@{UGameplaySettingVisualData}!EntryWidgetForClass@{EntryWidgetForClass}}
+\index{EntryWidgetForClass@{EntryWidgetForClass}!UGameplaySettingVisualData@{UGameplaySettingVisualData}}
+\doxysubsubsection{\texorpdfstring{EntryWidgetForClass}{EntryWidgetForClass}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_visual_data_ad6c4b5100584c2ed2b7afc0987889d75} 
+TMap$<$\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}$>$, \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$\doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}}$>$ $>$ UGameplay\+Setting\+Visual\+Data::\+\+Entry\+Widget\+For\+Class\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maps setting classes to their list entry widget types. 
+
+\Hypertarget{class_u_gameplay_setting_visual_data_a978c964c434dab62a8db60e53ca67148}\index{UGameplaySettingVisualData@{UGameplaySettingVisualData}!EntryWidgetForName@{EntryWidgetForName}}
+\index{EntryWidgetForName@{EntryWidgetForName}!UGameplaySettingVisualData@{UGameplaySettingVisualData}}
+\doxysubsubsection{\texorpdfstring{EntryWidgetForName}{EntryWidgetForName}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_visual_data_a978c964c434dab62a8db60e53ca67148} 
+TMap$<$FName, \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$\doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}}$>$ $>$ UGameplay\+Setting\+Visual\+Data::\+\+Entry\+Widget\+For\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maps specific setting names to their list entry widget types (overrides class mapping). 
+
+\Hypertarget{class_u_gameplay_setting_visual_data_a667e2363f6c5aa5cb64c8aca00e13d56}\index{UGameplaySettingVisualData@{UGameplaySettingVisualData}!ExtensionsForClasses@{ExtensionsForClasses}}
+\index{ExtensionsForClasses@{ExtensionsForClasses}!UGameplaySettingVisualData@{UGameplaySettingVisualData}}
+\doxysubsubsection{\texorpdfstring{ExtensionsForClasses}{ExtensionsForClasses}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_visual_data_a667e2363f6c5aa5cb64c8aca00e13d56} 
+TMap$<$\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}$>$, \doxymbox{\hyperlink{struct_f_gameplay_game_setting_class_extensions}{FGameplay\+Game\+Setting\+Class\+Extensions}}$>$ UGameplay\+Setting\+Visual\+Data::\+\+Extensions\+For\+Classes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maps setting classes to their default set of detail extensions. 
+
+\Hypertarget{class_u_gameplay_setting_visual_data_a67d892568d058ef7eeb3e1c3e57723d5}\index{UGameplaySettingVisualData@{UGameplaySettingVisualData}!ExtensionsForName@{ExtensionsForName}}
+\index{ExtensionsForName@{ExtensionsForName}!UGameplaySettingVisualData@{UGameplaySettingVisualData}}
+\doxysubsubsection{\texorpdfstring{ExtensionsForName}{ExtensionsForName}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_visual_data_a67d892568d058ef7eeb3e1c3e57723d5} 
+TMap$<$FName, \doxymbox{\hyperlink{struct_f_gameplay_game_setting_name_extensions}{FGameplay\+Game\+Setting\+Name\+Extensions}}$>$ UGameplay\+Setting\+Visual\+Data::\+\+Extensions\+For\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maps specific setting names to additional detail extensions. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_visual_data_8h}{Gameplay\+Setting\+Visual\+Data.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_setting_visual_data_8cpp}{Gameplay\+Setting\+Visual\+Data.\+cpp}}\end{DoxyCompactItemize}

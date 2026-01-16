@@ -1,0 +1,35 @@
+\doxysection{Gameplay\+Common\+Extension\+Library.\+h}
+\hypertarget{_gameplay_common_extension_library_8h_source}{}\label{_gameplay_common_extension_library_8h_source}\index{GameplayCommonExtensionLibrary.h@{GameplayCommonExtensionLibrary.h}}
+\doxymbox{\hyperlink{_gameplay_common_extension_library_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Kismet/BlueprintFunctionLibrary.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h}{Subsystems/GameplayCommonExtensionSubsystem.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayCommonExtensionLibrary.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ UCLASS()}
+\DoxyCodeLine{00016\ class\ GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_library_aebe4c4efb4c6bccad8798f36f56ababd}{UGameplayCommonExtensionLibrary}}\ :\ public\ UBlueprintFunctionLibrary}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_common_extension_library_aebe4c4efb4c6bccad8798f36f56ababd}{UGameplayCommonExtensionLibrary}}()\ \{\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension\ Library"{}})}
+\DoxyCodeLine{00028\ \ \ \ \ static\ \textcolor{keywordtype}{void}\ UnregisterExtension(UPARAM(ref)\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\&\ Handle);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension\ Library"{}})}
+\DoxyCodeLine{00036\ \ \ \ \ static\ \textcolor{keywordtype}{bool}\ IsValidExtension(UPARAM(ref)\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\&\ Handle);}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension\ Library"{}})}
+\DoxyCodeLine{00043\ \ \ \ \ static\ \textcolor{keywordtype}{void}\ UnregisterExtensionPoint(UPARAM(ref)\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplayUIExtensionPointHandle}}\&\ Handle);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension\ Library"{}})}
+\DoxyCodeLine{00051\ \ \ \ \ static\ \textcolor{keywordtype}{bool}\ IsValidExtensionPoint(UPARAM(ref)\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplayUIExtensionPointHandle}}\&\ Handle);}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+
+\end{DoxyCode}

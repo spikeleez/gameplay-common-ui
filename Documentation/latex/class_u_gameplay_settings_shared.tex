@@ -1,0 +1,516 @@
+\doxysection{UGameplay\+Settings\+Shared Class Reference}
+\hypertarget{class_u_gameplay_settings_shared}{}\label{class_u_gameplay_settings_shared}\index{UGameplaySettingsShared@{UGameplaySettingsShared}}
+
+
+Represents settings that are shared across different platforms or machines for a single user.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Settings\+Shared.\+h$>$}
+
+Inheritance diagram for UGameplay\+Settings\+Shared:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_settings_shared}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_settings_shared_ac3960d8ee52959d3b5b6bc8a3c820270}{DECLARE\+\_\+\+DELEGATE\+\_\+\+One\+Param}} (FOn\+Settings\+Loaded\+Event, \doxymbox{\hyperlink{class_u_gameplay_settings_shared}{UGameplay\+Settings\+Shared}} \texorpdfstring{$\ast$}{*}Settings)
+\begin{DoxyCompactList}\small\item\em Delegate for when settings have finished loading asynchronously. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a3a0710175bd7176f91c3781fa1abda35}{Save\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Saves the settings to disk. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a101e84c679d31a01422fb160c5abe45f}{Apply\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Applies the current settings to the player/\+engine. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_settings_shared_af43e341bb7eb2b199130b1fb63c296a3}{Get\+Subtitles\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Gets whether subtitles are enabled. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a29a394ed532f98aff4c00594f42d41cc}{Set\+Subtitles\+Enabled}} (bool Value)
+\begin{DoxyCompactList}\small\item\em Sets whether subtitles are enabled. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aabf3837ffb08ea153e56670d86bd9ca8}{EGameplay\+Subtitle\+Display\+Text\+Size}} \doxymbox{\hyperlink{class_u_gameplay_settings_shared_afb8429f225764f4d70b66787a13d53d4}{Get\+Subtitles\+Text\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the preferred text size for subtitles. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_ab807b98fa65d54eb3a4142f54036da1d}{Set\+Subtitles\+Text\+Size}} (\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aabf3837ffb08ea153e56670d86bd9ca8}{EGameplay\+Subtitle\+Display\+Text\+Size}} Value)
+\begin{DoxyCompactList}\small\item\em Sets the preferred text size for subtitles. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aff2262eed2503cc41482e3a4d2e4dd7b}{EGameplay\+Subtitle\+Display\+Text\+Color}} \doxymbox{\hyperlink{class_u_gameplay_settings_shared_aeef6c3bb575ebda9910c3559715e487c}{Get\+Subtitles\+Text\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the preferred text color for subtitles. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a344077fe4d125a08eb6f09f80d6656eb}{Set\+Subtitles\+Text\+Color}} (\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aff2262eed2503cc41482e3a4d2e4dd7b}{EGameplay\+Subtitle\+Display\+Text\+Color}} Value)
+\begin{DoxyCompactList}\small\item\em Sets the preferred text color for subtitles. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_ad4ebe4965e93d81fa113df587dab6085}{EGameplay\+Subtitle\+Display\+Text\+Border}} \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a42914da36363c143f38f1405395bece3}{Get\+Subtitles\+Text\+Border}} () const
+\begin{DoxyCompactList}\small\item\em Gets the preferred text border style for subtitles. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a24fd5f4ffb2155fa198248ca2d84238b}{Set\+Subtitles\+Text\+Border}} (\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_ad4ebe4965e93d81fa113df587dab6085}{EGameplay\+Subtitle\+Display\+Text\+Border}} Value)
+\begin{DoxyCompactList}\small\item\em Sets the preferred text border style for subtitles. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_a5d3aaf9a59cf99861d47de38b0605a96}{EGameplay\+Subtitle\+Display\+Background\+Opacity}} \doxymbox{\hyperlink{class_u_gameplay_settings_shared_aaaebf14d68eb4919834e06ec7d5cff2a}{Get\+Subtitles\+Background\+Opacity}} () const
+\begin{DoxyCompactList}\small\item\em Gets the preferred background opacity for subtitles. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a247ed814e7b2f22bcc9be9330515bf9f}{Set\+Subtitles\+Background\+Opacity}} (\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_a5d3aaf9a59cf99861d47de38b0605a96}{EGameplay\+Subtitle\+Display\+Background\+Opacity}} Value)
+\begin{DoxyCompactList}\small\item\em Sets the preferred background opacity for subtitles. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_afdc3b92c5d98085006f7fc5bb51f994c}{Apply\+Subtitle\+Options}} ()
+\begin{DoxyCompactList}\small\item\em Applies current subtitle choices to the subtitle manager subsystem. \end{DoxyCompactList}\item 
+const FString \& \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a752c9d06eaccfd7897e3639dff8b0c70}{Get\+Pending\+Culture}} () const
+\begin{DoxyCompactList}\small\item\em Gets the pending culture that hasn\textquotesingle{}t been applied yet. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_ab605dcad9340979966c81d0666fae951}{Set\+Pending\+Culture}} (const FString \&New\+Culture)
+\begin{DoxyCompactList}\small\item\em Sets a new culture to be applied on the next application cycle. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_ac42287661fc23c3964a113becb7fa726}{On\+Culture\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Callback for when the system culture has changed. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a4ac486a2ce0e17e8d1a1eb37bbd8749f}{Clear\+Pending\+Culture}} ()
+\begin{DoxyCompactList}\small\item\em Discards the pending culture. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a45cad531efb527515f0377a9388d2d41}{Is\+Using\+Default\+Culture}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if no custom culture is currently selected. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a1d1f12e73f0d5a4b7aea96d75fb83516}{Reset\+To\+Default\+Culture}} ()
+\begin{DoxyCompactList}\small\item\em Resets the player\textquotesingle{}s language preference to the system default. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a37ff5bb22cf7fa62538c2fe910b6a342}{Should\+Reset\+To\+Default\+Culture}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if a reset to default culture is requested. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_ad9bac6585ba2e752e0f2b6a3c26e9a6e}{Apply\+Culture\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Applies the selected language/\+culture settings to the engine. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_settings_shared_af373c71d509ddfc3c03e4a66e7f23a10}{Reset\+Culture\+To\+Current\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Syncs the pending culture with the current engine culture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T$>$ }\\static T \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a9d0636d70d181f0800b259997e8218a6}{Create\+Temporary\+Settings\+Typed}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Creates a temporary, non-\/persisted settings object for a player. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\static T \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a532de91cb1f79a12dc71e3de770db02c}{Load\+Or\+Create\+Settings\+Typed}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Loads existing settings or creates new ones for a player. \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a1dab7948d4b48279dad8f5e1ef2a69b7}{Async\+Load\+Or\+Create\+Settings}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player, FOn\+Settings\+Loaded\+Event Delegate)
+\begin{DoxyCompactList}\small\item\em Asynchronously loads or creates settings for a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a76154cf91f5f766a1b9821f029a078ca}{Change\+Value\+And\+Dirty}} (T \&Current\+Value, const T \&New\+Value)
+\begin{DoxyCompactList}\small\item\em Internal helper to update a value and mark settings as dirty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a12e95eb8ae98092c1ed0d5bcbaff516c}{b\+Enable\+Subtitles}} = true
+\begin{DoxyCompactList}\small\item\em Internal flag for subtitle visibility. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aabf3837ffb08ea153e56670d86bd9ca8}{EGameplay\+Subtitle\+Display\+Text\+Size}} \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a1d0f2a83ada47e74cdb17906b0f02897}{Subtitle\+Text\+Size}} = \doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aabf3837ffb08ea153e56670d86bd9ca8a87f8a6ab85c9ced3702b4ea641ad4bb5}{EGameplay\+Subtitle\+Display\+Text\+Size::\+\+Medium}}
+\begin{DoxyCompactList}\small\item\em Internal choice for text size. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aff2262eed2503cc41482e3a4d2e4dd7b}{EGameplay\+Subtitle\+Display\+Text\+Color}} \doxymbox{\hyperlink{class_u_gameplay_settings_shared_aeaa8606d7e54e6b16c1a14f72e01810a}{Subtitle\+Text\+Color}} = \doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aff2262eed2503cc41482e3a4d2e4dd7ba25a81701fbfa4a1efdf660a950c1d006}{EGameplay\+Subtitle\+Display\+Text\+Color::\+\+White}}
+\begin{DoxyCompactList}\small\item\em Internal choice for text color. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_ad4ebe4965e93d81fa113df587dab6085}{EGameplay\+Subtitle\+Display\+Text\+Border}} \doxymbox{\hyperlink{class_u_gameplay_settings_shared_add27b2eb6a5bec3e58164a2148684edd}{Subtitle\+Text\+Border}} = \doxymbox{\hyperlink{_gameplay_subtitles_types_8h_ad4ebe4965e93d81fa113df587dab6085a6adf97f83acf6453d4a6a4b1070f3754}{EGameplay\+Subtitle\+Display\+Text\+Border::\+\+None}}
+\begin{DoxyCompactList}\small\item\em Internal choice for text border. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_a5d3aaf9a59cf99861d47de38b0605a96}{EGameplay\+Subtitle\+Display\+Background\+Opacity}} \doxymbox{\hyperlink{class_u_gameplay_settings_shared_ac2a4d98573f2c6f57cf4568198854da9}{Subtitle\+Background\+Opacity}} = \doxymbox{\hyperlink{_gameplay_subtitles_types_8h_a5d3aaf9a59cf99861d47de38b0605a96a87f8a6ab85c9ced3702b4ea641ad4bb5}{EGameplay\+Subtitle\+Display\+Background\+Opacity::\+\+Medium}}
+\begin{DoxyCompactList}\small\item\em Internal choice for background opacity. \end{DoxyCompactList}\item 
+FString \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a760cc8f33e15cb6df7343c6d241d7c65}{Pending\+Culture}}
+\begin{DoxyCompactList}\small\item\em The pending culture identifier (e.\+g., "{}en-\/\+US"{}) to apply. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_settings_shared_ad83a3d562ca8641e19e53c3a33e25b17}{b\+Reset\+To\+Default\+Culture}} = false
+\begin{DoxyCompactList}\small\item\em Transient flag indicating a revert to default culture is needed. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_settings_shared_a327b94c70ee637d20e8a793131922736}{b\+Is\+Dirty}} = false
+\begin{DoxyCompactList}\small\item\em Whether any settings have been modified and require saving. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents settings that are shared across different platforms or machines for a single user. 
+
+Unlike \doxylink{class_u_gameplay_settings_local}{UGameplay\+Settings\+Local} which stores machine-\/specific performance settings, \doxylink{class_u_gameplay_settings_shared}{UGameplay\+Settings\+Shared} is intended for gameplay-\/affecting preferences that would ideally travel with the user\textquotesingle{}s account (via Save\+Game).
+
+Examples:\+
+\begin{DoxyItemize}
+\item Subtitle preferences (Enabled, Text Size, Color, Opacity)
+\item Language/\+\+Culture preferences
+\item Accessibility settings 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_settings_shared_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_settings_shared_ad9bac6585ba2e752e0f2b6a3c26e9a6e}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!ApplyCultureSettings@{ApplyCultureSettings}}
+\index{ApplyCultureSettings@{ApplyCultureSettings}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{ApplyCultureSettings()}{ApplyCultureSettings()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_ad9bac6585ba2e752e0f2b6a3c26e9a6e} 
+void UGameplay\+Settings\+Shared::\+\+Apply\+Culture\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Applies the selected language/\+culture settings to the engine. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a101e84c679d31a01422fb160c5abe45f}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!ApplySettings@{ApplySettings}}
+\index{ApplySettings@{ApplySettings}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{ApplySettings()}{ApplySettings()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a101e84c679d31a01422fb160c5abe45f} 
+void UGameplay\+Settings\+Shared::\+\+Apply\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Applies the current settings to the player/\+engine. 
+
+\Hypertarget{class_u_gameplay_settings_shared_afdc3b92c5d98085006f7fc5bb51f994c}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!ApplySubtitleOptions@{ApplySubtitleOptions}}
+\index{ApplySubtitleOptions@{ApplySubtitleOptions}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{ApplySubtitleOptions()}{ApplySubtitleOptions()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_afdc3b92c5d98085006f7fc5bb51f994c} 
+void UGameplay\+Settings\+Shared::\+\+Apply\+Subtitle\+Options (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Applies current subtitle choices to the subtitle manager subsystem. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a1dab7948d4b48279dad8f5e1ef2a69b7}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!AsyncLoadOrCreateSettings@{AsyncLoadOrCreateSettings}}
+\index{AsyncLoadOrCreateSettings@{AsyncLoadOrCreateSettings}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{AsyncLoadOrCreateSettings()}{AsyncLoadOrCreateSettings()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a1dab7948d4b48279dad8f5e1ef2a69b7} 
+bool UGameplay\+Settings\+Shared::\+\+Async\+Load\+Or\+Create\+Settings (\begin{DoxyParamCaption}\item[{const ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{, }\item[{FOn\+Settings\+Loaded\+Event}]{Delegate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Asynchronously loads or creates settings for a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Local\+Player} & The local player context \\
+\hline
+{\em Delegate} & The callback to fire once loading is complete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the load process was successfully initiated 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_settings_shared_a76154cf91f5f766a1b9821f029a078ca}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!ChangeValueAndDirty@{ChangeValueAndDirty}}
+\index{ChangeValueAndDirty@{ChangeValueAndDirty}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{ChangeValueAndDirty()}{ChangeValueAndDirty()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a76154cf91f5f766a1b9821f029a078ca} 
+template$<$typename T$>$ \\
+bool UGameplay\+Settings\+Shared::\+\+Change\+Value\+And\+Dirty (\begin{DoxyParamCaption}\item[{T \&}]{Current\+Value}{, }\item[{const T \&}]{New\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Internal helper to update a value and mark settings as dirty. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a4ac486a2ce0e17e8d1a1eb37bbd8749f}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!ClearPendingCulture@{ClearPendingCulture}}
+\index{ClearPendingCulture@{ClearPendingCulture}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{ClearPendingCulture()}{ClearPendingCulture()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a4ac486a2ce0e17e8d1a1eb37bbd8749f} 
+void UGameplay\+Settings\+Shared::\+\+Clear\+Pending\+Culture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Discards the pending culture. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a9d0636d70d181f0800b259997e8218a6}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!CreateTemporarySettingsTyped@{CreateTemporarySettingsTyped}}
+\index{CreateTemporarySettingsTyped@{CreateTemporarySettingsTyped}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{CreateTemporarySettingsTyped()}{CreateTemporarySettingsTyped()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a9d0636d70d181f0800b259997e8218a6} 
+template$<$class T$>$ \\
+T \texorpdfstring{$\ast$}{*} UGameplay\+Settings\+Shared::\+\+Create\+Temporary\+Settings\+Typed (\begin{DoxyParamCaption}\item[{const ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates a temporary, non-\/persisted settings object for a player. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specific class type to create \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em Local\+Player} & The local player context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created settings object 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_settings_shared_ac3960d8ee52959d3b5b6bc8a3c820270}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!DECLARE\_DELEGATE\_OneParam@{DECLARE\_DELEGATE\_OneParam}}
+\index{DECLARE\_DELEGATE\_OneParam@{DECLARE\_DELEGATE\_OneParam}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DELEGATE\_OneParam()}{DECLARE\_DELEGATE\_OneParam()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_ac3960d8ee52959d3b5b6bc8a3c820270} 
+UGameplay\+Settings\+Shared::\+\+DECLARE\+\_\+\+DELEGATE\+\_\+\+One\+Param (\begin{DoxyParamCaption}\item[{FOn\+Settings\+Loaded\+Event}]{}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_settings_shared}{UGameplay\+Settings\+Shared}} \texorpdfstring{$\ast$}{*}}]{Settings}{}\end{DoxyParamCaption})}
+
+
+
+Delegate for when settings have finished loading asynchronously. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a752c9d06eaccfd7897e3639dff8b0c70}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!GetPendingCulture@{GetPendingCulture}}
+\index{GetPendingCulture@{GetPendingCulture}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{GetPendingCulture()}{GetPendingCulture()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a752c9d06eaccfd7897e3639dff8b0c70} 
+const FString \& UGameplay\+Settings\+Shared::\+\+Get\+Pending\+Culture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the pending culture that hasn\textquotesingle{}t been applied yet. 
+
+\Hypertarget{class_u_gameplay_settings_shared_aaaebf14d68eb4919834e06ec7d5cff2a}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!GetSubtitlesBackgroundOpacity@{GetSubtitlesBackgroundOpacity}}
+\index{GetSubtitlesBackgroundOpacity@{GetSubtitlesBackgroundOpacity}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{GetSubtitlesBackgroundOpacity()}{GetSubtitlesBackgroundOpacity()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_aaaebf14d68eb4919834e06ec7d5cff2a} 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_a5d3aaf9a59cf99861d47de38b0605a96}{EGameplay\+Subtitle\+Display\+Background\+Opacity}} UGameplay\+Settings\+Shared::\+\+Get\+Subtitles\+Background\+Opacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the preferred background opacity for subtitles. 
+
+\Hypertarget{class_u_gameplay_settings_shared_af43e341bb7eb2b199130b1fb63c296a3}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!GetSubtitlesEnabled@{GetSubtitlesEnabled}}
+\index{GetSubtitlesEnabled@{GetSubtitlesEnabled}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{GetSubtitlesEnabled()}{GetSubtitlesEnabled()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_af43e341bb7eb2b199130b1fb63c296a3} 
+bool UGameplay\+Settings\+Shared::\+\+Get\+Subtitles\+Enabled (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets whether subtitles are enabled. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a42914da36363c143f38f1405395bece3}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!GetSubtitlesTextBorder@{GetSubtitlesTextBorder}}
+\index{GetSubtitlesTextBorder@{GetSubtitlesTextBorder}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{GetSubtitlesTextBorder()}{GetSubtitlesTextBorder()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a42914da36363c143f38f1405395bece3} 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_ad4ebe4965e93d81fa113df587dab6085}{EGameplay\+Subtitle\+Display\+Text\+Border}} UGameplay\+Settings\+Shared::\+\+Get\+Subtitles\+Text\+Border (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the preferred text border style for subtitles. 
+
+\Hypertarget{class_u_gameplay_settings_shared_aeef6c3bb575ebda9910c3559715e487c}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!GetSubtitlesTextColor@{GetSubtitlesTextColor}}
+\index{GetSubtitlesTextColor@{GetSubtitlesTextColor}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{GetSubtitlesTextColor()}{GetSubtitlesTextColor()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_aeef6c3bb575ebda9910c3559715e487c} 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aff2262eed2503cc41482e3a4d2e4dd7b}{EGameplay\+Subtitle\+Display\+Text\+Color}} UGameplay\+Settings\+Shared::\+\+Get\+Subtitles\+Text\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the preferred text color for subtitles. 
+
+\Hypertarget{class_u_gameplay_settings_shared_afb8429f225764f4d70b66787a13d53d4}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!GetSubtitlesTextSize@{GetSubtitlesTextSize}}
+\index{GetSubtitlesTextSize@{GetSubtitlesTextSize}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{GetSubtitlesTextSize()}{GetSubtitlesTextSize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_afb8429f225764f4d70b66787a13d53d4} 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aabf3837ffb08ea153e56670d86bd9ca8}{EGameplay\+Subtitle\+Display\+Text\+Size}} UGameplay\+Settings\+Shared::\+\+Get\+Subtitles\+Text\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the preferred text size for subtitles. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a45cad531efb527515f0377a9388d2d41}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!IsUsingDefaultCulture@{IsUsingDefaultCulture}}
+\index{IsUsingDefaultCulture@{IsUsingDefaultCulture}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{IsUsingDefaultCulture()}{IsUsingDefaultCulture()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a45cad531efb527515f0377a9388d2d41} 
+bool UGameplay\+Settings\+Shared::\+\+Is\+Using\+Default\+Culture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns true if no custom culture is currently selected. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a532de91cb1f79a12dc71e3de770db02c}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!LoadOrCreateSettingsTyped@{LoadOrCreateSettingsTyped}}
+\index{LoadOrCreateSettingsTyped@{LoadOrCreateSettingsTyped}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{LoadOrCreateSettingsTyped()}{LoadOrCreateSettingsTyped()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a532de91cb1f79a12dc71e3de770db02c} 
+template$<$class T$>$ \\
+T \texorpdfstring{$\ast$}{*} UGameplay\+Settings\+Shared::\+\+Load\+Or\+Create\+Settings\+Typed (\begin{DoxyParamCaption}\item[{const ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Loads existing settings or creates new ones for a player. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specific class type to load \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em Local\+Player} & The local player context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded/\+created settings object 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_settings_shared_ac42287661fc23c3964a113becb7fa726}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!OnCultureChanged@{OnCultureChanged}}
+\index{OnCultureChanged@{OnCultureChanged}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{OnCultureChanged()}{OnCultureChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_ac42287661fc23c3964a113becb7fa726} 
+void UGameplay\+Settings\+Shared::\+\+On\+Culture\+Changed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback for when the system culture has changed. 
+
+\Hypertarget{class_u_gameplay_settings_shared_af373c71d509ddfc3c03e4a66e7f23a10}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!ResetCultureToCurrentSettings@{ResetCultureToCurrentSettings}}
+\index{ResetCultureToCurrentSettings@{ResetCultureToCurrentSettings}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{ResetCultureToCurrentSettings()}{ResetCultureToCurrentSettings()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_af373c71d509ddfc3c03e4a66e7f23a10} 
+void UGameplay\+Settings\+Shared::\+\+Reset\+Culture\+To\+Current\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Syncs the pending culture with the current engine culture. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a1d1f12e73f0d5a4b7aea96d75fb83516}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!ResetToDefaultCulture@{ResetToDefaultCulture}}
+\index{ResetToDefaultCulture@{ResetToDefaultCulture}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{ResetToDefaultCulture()}{ResetToDefaultCulture()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a1d1f12e73f0d5a4b7aea96d75fb83516} 
+void UGameplay\+Settings\+Shared::\+\+Reset\+To\+Default\+Culture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Resets the player\textquotesingle{}s language preference to the system default. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a3a0710175bd7176f91c3781fa1abda35}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SaveSettings@{SaveSettings}}
+\index{SaveSettings@{SaveSettings}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SaveSettings()}{SaveSettings()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a3a0710175bd7176f91c3781fa1abda35} 
+void UGameplay\+Settings\+Shared::\+\+Save\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Saves the settings to disk. 
+
+\Hypertarget{class_u_gameplay_settings_shared_ab605dcad9340979966c81d0666fae951}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SetPendingCulture@{SetPendingCulture}}
+\index{SetPendingCulture@{SetPendingCulture}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SetPendingCulture()}{SetPendingCulture()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_ab605dcad9340979966c81d0666fae951} 
+void UGameplay\+Settings\+Shared::\+\+Set\+Pending\+Culture (\begin{DoxyParamCaption}\item[{const FString \&}]{New\+Culture}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new culture to be applied on the next application cycle. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a247ed814e7b2f22bcc9be9330515bf9f}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SetSubtitlesBackgroundOpacity@{SetSubtitlesBackgroundOpacity}}
+\index{SetSubtitlesBackgroundOpacity@{SetSubtitlesBackgroundOpacity}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SetSubtitlesBackgroundOpacity()}{SetSubtitlesBackgroundOpacity()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a247ed814e7b2f22bcc9be9330515bf9f} 
+void UGameplay\+Settings\+Shared::\+\+Set\+Subtitles\+Background\+Opacity (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_a5d3aaf9a59cf99861d47de38b0605a96}{EGameplay\+Subtitle\+Display\+Background\+Opacity}}}]{Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the preferred background opacity for subtitles. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a29a394ed532f98aff4c00594f42d41cc}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SetSubtitlesEnabled@{SetSubtitlesEnabled}}
+\index{SetSubtitlesEnabled@{SetSubtitlesEnabled}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SetSubtitlesEnabled()}{SetSubtitlesEnabled()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a29a394ed532f98aff4c00594f42d41cc} 
+void UGameplay\+Settings\+Shared::\+\+Set\+Subtitles\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets whether subtitles are enabled. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a24fd5f4ffb2155fa198248ca2d84238b}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SetSubtitlesTextBorder@{SetSubtitlesTextBorder}}
+\index{SetSubtitlesTextBorder@{SetSubtitlesTextBorder}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SetSubtitlesTextBorder()}{SetSubtitlesTextBorder()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a24fd5f4ffb2155fa198248ca2d84238b} 
+void UGameplay\+Settings\+Shared::\+\+Set\+Subtitles\+Text\+Border (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_ad4ebe4965e93d81fa113df587dab6085}{EGameplay\+Subtitle\+Display\+Text\+Border}}}]{Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the preferred text border style for subtitles. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a344077fe4d125a08eb6f09f80d6656eb}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SetSubtitlesTextColor@{SetSubtitlesTextColor}}
+\index{SetSubtitlesTextColor@{SetSubtitlesTextColor}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SetSubtitlesTextColor()}{SetSubtitlesTextColor()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a344077fe4d125a08eb6f09f80d6656eb} 
+void UGameplay\+Settings\+Shared::\+\+Set\+Subtitles\+Text\+Color (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aff2262eed2503cc41482e3a4d2e4dd7b}{EGameplay\+Subtitle\+Display\+Text\+Color}}}]{Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the preferred text color for subtitles. 
+
+\Hypertarget{class_u_gameplay_settings_shared_ab807b98fa65d54eb3a4142f54036da1d}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SetSubtitlesTextSize@{SetSubtitlesTextSize}}
+\index{SetSubtitlesTextSize@{SetSubtitlesTextSize}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SetSubtitlesTextSize()}{SetSubtitlesTextSize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_ab807b98fa65d54eb3a4142f54036da1d} 
+void UGameplay\+Settings\+Shared::\+\+Set\+Subtitles\+Text\+Size (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aabf3837ffb08ea153e56670d86bd9ca8}{EGameplay\+Subtitle\+Display\+Text\+Size}}}]{Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the preferred text size for subtitles. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a37ff5bb22cf7fa62538c2fe910b6a342}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!ShouldResetToDefaultCulture@{ShouldResetToDefaultCulture}}
+\index{ShouldResetToDefaultCulture@{ShouldResetToDefaultCulture}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{ShouldResetToDefaultCulture()}{ShouldResetToDefaultCulture()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a37ff5bb22cf7fa62538c2fe910b6a342} 
+bool UGameplay\+Settings\+Shared::\+\+Should\+Reset\+To\+Default\+Culture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if a reset to default culture is requested. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_settings_shared_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_settings_shared_a12e95eb8ae98092c1ed0d5bcbaff516c}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!bEnableSubtitles@{bEnableSubtitles}}
+\index{bEnableSubtitles@{bEnableSubtitles}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{bEnableSubtitles}{bEnableSubtitles}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a12e95eb8ae98092c1ed0d5bcbaff516c} 
+bool UGameplay\+Settings\+Shared::\+b\+Enable\+Subtitles = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal flag for subtitle visibility. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a327b94c70ee637d20e8a793131922736}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!bIsDirty@{bIsDirty}}
+\index{bIsDirty@{bIsDirty}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{bIsDirty}{bIsDirty}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a327b94c70ee637d20e8a793131922736} 
+bool UGameplay\+Settings\+Shared::\+b\+Is\+Dirty = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Whether any settings have been modified and require saving. 
+
+\Hypertarget{class_u_gameplay_settings_shared_ad83a3d562ca8641e19e53c3a33e25b17}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!bResetToDefaultCulture@{bResetToDefaultCulture}}
+\index{bResetToDefaultCulture@{bResetToDefaultCulture}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{bResetToDefaultCulture}{bResetToDefaultCulture}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_ad83a3d562ca8641e19e53c3a33e25b17} 
+bool UGameplay\+Settings\+Shared::\+b\+Reset\+To\+Default\+Culture = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Transient flag indicating a revert to default culture is needed. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a760cc8f33e15cb6df7343c6d241d7c65}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!PendingCulture@{PendingCulture}}
+\index{PendingCulture@{PendingCulture}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{PendingCulture}{PendingCulture}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a760cc8f33e15cb6df7343c6d241d7c65} 
+FString UGameplay\+Settings\+Shared::\+\+Pending\+Culture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The pending culture identifier (e.\+g., "{}en-\/\+US"{}) to apply. 
+
+\Hypertarget{class_u_gameplay_settings_shared_ac2a4d98573f2c6f57cf4568198854da9}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SubtitleBackgroundOpacity@{SubtitleBackgroundOpacity}}
+\index{SubtitleBackgroundOpacity@{SubtitleBackgroundOpacity}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SubtitleBackgroundOpacity}{SubtitleBackgroundOpacity}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_ac2a4d98573f2c6f57cf4568198854da9} 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_a5d3aaf9a59cf99861d47de38b0605a96}{EGameplay\+Subtitle\+Display\+Background\+Opacity}} UGameplay\+Settings\+Shared::\+\+Subtitle\+Background\+Opacity = \doxymbox{\hyperlink{_gameplay_subtitles_types_8h_a5d3aaf9a59cf99861d47de38b0605a96a87f8a6ab85c9ced3702b4ea641ad4bb5}{EGameplay\+Subtitle\+Display\+Background\+Opacity::\+\+Medium}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal choice for background opacity. 
+
+\Hypertarget{class_u_gameplay_settings_shared_add27b2eb6a5bec3e58164a2148684edd}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SubtitleTextBorder@{SubtitleTextBorder}}
+\index{SubtitleTextBorder@{SubtitleTextBorder}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SubtitleTextBorder}{SubtitleTextBorder}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_add27b2eb6a5bec3e58164a2148684edd} 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_ad4ebe4965e93d81fa113df587dab6085}{EGameplay\+Subtitle\+Display\+Text\+Border}} UGameplay\+Settings\+Shared::\+\+Subtitle\+Text\+Border = \doxymbox{\hyperlink{_gameplay_subtitles_types_8h_ad4ebe4965e93d81fa113df587dab6085a6adf97f83acf6453d4a6a4b1070f3754}{EGameplay\+Subtitle\+Display\+Text\+Border::\+\+None}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal choice for text border. 
+
+\Hypertarget{class_u_gameplay_settings_shared_aeaa8606d7e54e6b16c1a14f72e01810a}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SubtitleTextColor@{SubtitleTextColor}}
+\index{SubtitleTextColor@{SubtitleTextColor}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SubtitleTextColor}{SubtitleTextColor}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_aeaa8606d7e54e6b16c1a14f72e01810a} 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aff2262eed2503cc41482e3a4d2e4dd7b}{EGameplay\+Subtitle\+Display\+Text\+Color}} UGameplay\+Settings\+Shared::\+\+Subtitle\+Text\+Color = \doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aff2262eed2503cc41482e3a4d2e4dd7ba25a81701fbfa4a1efdf660a950c1d006}{EGameplay\+Subtitle\+Display\+Text\+Color::\+\+White}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal choice for text color. 
+
+\Hypertarget{class_u_gameplay_settings_shared_a1d0f2a83ada47e74cdb17906b0f02897}\index{UGameplaySettingsShared@{UGameplaySettingsShared}!SubtitleTextSize@{SubtitleTextSize}}
+\index{SubtitleTextSize@{SubtitleTextSize}!UGameplaySettingsShared@{UGameplaySettingsShared}}
+\doxysubsubsection{\texorpdfstring{SubtitleTextSize}{SubtitleTextSize}}
+{\footnotesize\ttfamily \label{class_u_gameplay_settings_shared_a1d0f2a83ada47e74cdb17906b0f02897} 
+\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aabf3837ffb08ea153e56670d86bd9ca8}{EGameplay\+Subtitle\+Display\+Text\+Size}} UGameplay\+Settings\+Shared::\+\+Subtitle\+Text\+Size = \doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aabf3837ffb08ea153e56670d86bd9ca8a87f8a6ab85c9ced3702b4ea641ad4bb5}{EGameplay\+Subtitle\+Display\+Text\+Size::\+\+Medium}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal choice for text size. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_settings_shared_8h}{Gameplay\+Settings\+Shared.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_settings_shared_8cpp}{Gameplay\+Settings\+Shared.\+cpp}}\end{DoxyCompactItemize}

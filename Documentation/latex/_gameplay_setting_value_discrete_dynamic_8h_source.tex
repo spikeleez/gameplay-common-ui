@@ -1,0 +1,248 @@
+\doxysection{Gameplay\+Setting\+Value\+Discrete\+Dynamic.\+h}
+\hypertarget{_gameplay_setting_value_discrete_dynamic_8h_source}{}\label{_gameplay_setting_value_discrete_dynamic_8h_source}\index{GameplaySettingValueDiscreteDynamic.h@{GameplaySettingValueDiscreteDynamic.h}}
+\doxymbox{\hyperlink{_gameplay_setting_value_discrete_dynamic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_value_discrete_8h}{GameplaySettingValueDiscrete.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_data_source_8h}{DataSource/GameplaySettingDataSource.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplaySettingValueDiscreteDynamic.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00017\ UCLASS()}
+\DoxyCodeLine{00018\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_af89839bcba0865dcda5ba33d40dc32e3}{UGameplaySettingValueDiscreteDynamic}}\ :\ public\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_a2f9481e77b7d274453cd687a369beeca}{UGameplaySettingValueDiscrete}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_af89839bcba0865dcda5ba33d40dc32e3}{UGameplaySettingValueDiscreteDynamic}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a09e890c4772c55bdc0e90b60bf9779bf}{Startup}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_aca77e75aa57b35a8eabae5cb68fb4a20}{StoreInitial}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edbacfae12276968ba2e1d510d33949e7478}{ResetToDefault}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edba2cf6ecbeab5dee3970a0562249dab19c}{RestoreToInitial}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameplaySettingValueDiscrete\ interface}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_afbec234d02dd47906c911a85ae275487}{SetDiscreteOptionByIndex}}(int32\ Index)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ int32\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a79311da592be49bc5bf10b63d63a5d3e}{GetDiscreteOptionIndex}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ int32\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a6b1bde4942bbcc63141ad8c74e4b55f3}{GetDiscreteOptionDefaultIndex}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ TArray<FText>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a81c1e9596e067640b0a2d6ce84060eaa}{GetDiscreteOptions}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameplaySettingValueDiscrete\ interface}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a23c3eed1e760937c03f18a5560867fc3}{SetDynamicGetter}}(\textcolor{keyword}{const}\ TSharedRef<FGameplaySettingDataSource>\&\ InGetter);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a631a9835aa53d7e0d831de13392426ed}{SetDynamicSetter}}(\textcolor{keyword}{const}\ TSharedRef<FGameplaySettingDataSource>\&\ InSetter);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a7c2290803adf0b81989854a11e97e326}{SetDefaultValueFromString}}(FString\ InOptionValue);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a079dd2788e146c4b794d5e4be357e356}{AddDynamicOption}}(FString\ InOptionValue,\ FText\ InOptionText);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_ae7f43b53a9199a6f4871ad08290329e4}{RemoveDynamicOption}}(FString\ InOptionValue);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_af82a89c628eea276248172174c27edeb}{HasDynamicOption}}(\textcolor{keyword}{const}\ FString\&\ InOptionValue);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ TArray<FString>\&\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_aadd8f353f3b3ec7e62aeea8adb6ed140}{GetDynamicOptions}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ \ \ \ \ FString\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a9575b4fc6d7260431ebb4c9285aed253}{GetValueAsString}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a19c5eeca4c47cf45d3eb8b1b70fe3651}{SetValueFromString}}(\textcolor{keyword}{const}\ FString\&\ InStringValue);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00068\ \ \ \ \ TSharedPtr<FGameplaySettingDataSource>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a14162772b60d6c52e8c7b7a6b5282a28}{Getter}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ \ \ \ \ TSharedPtr<FGameplaySettingDataSource>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a5827b60446749f98a61b7c09d0f75910}{Setter}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \ \ TOptional<FString>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_af23452492dca883bc4bcb721c04426ba}{DefaultValue}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ \ \ \ \ FString\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a87cfdb4d441347f9aba5cc217acb0e98}{InitialValue}};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00080\ \ \ \ \ TArray<FString>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a3eab2eba12a6db4cf79ec394beacc1b1}{OptionValues}};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \ \ \ \ TArray<FText>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a31112a5e235b26d6b618e4436bb23eb7}{OptionDisplayTexts}};}
+\DoxyCodeLine{00084\ \ \ \ \ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a19c5eeca4c47cf45d3eb8b1b70fe3651}{SetValueFromString}}(\textcolor{keyword}{const}\ FString\&\ InStringValue,\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplaySettingChangedReason}}\ Reason);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a6a47e938f44f40c7fd9083a89dc08e2d}{OnInitialized}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a4684ee31ced8feb72ce50d5ac4197d3b}{OnDataSourceReady}}();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a203573b47810426c05b1aad6cf381133}{AreOptionsEqual}}(\textcolor{keyword}{const}\ FString\&\ InOptionA,\ \textcolor{keyword}{const}\ FString\&\ InOptionB)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ UCLASS()}
+\DoxyCodeLine{00104\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___bool_af4180435d179cced1ef1b971d6223286}{UGameplaySettingValueDiscreteDynamic\_Bool}}\ final\ :\ public\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_af89839bcba0865dcda5ba33d40dc32e3}{UGameplaySettingValueDiscreteDynamic}}}
+\DoxyCodeLine{00105\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00109\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___bool_af4180435d179cced1ef1b971d6223286}{UGameplaySettingValueDiscreteDynamic\_Bool}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___bool_a6d2c0a38f8e2a89aa7e0b44bb5d60c99}{SetDefaultValue}}(\textcolor{keywordtype}{bool}\ Value);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___bool_a0dc902b7952c2239c96204e1d874fb24}{SetTrueText}}(\textcolor{keyword}{const}\ FText\&\ Value);}
+\DoxyCodeLine{00116\ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___bool_a5c022fe57b0e113904d4d07e58e7b24c}{SetFalseText}}(\textcolor{keyword}{const}\ FText\&\ Value);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___bool_a368f5410543282c5c836f312c9e113a0}{SetTrueText}}(\textcolor{keyword}{const}\ FString\&\ Value)\ \{\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___bool_a368f5410543282c5c836f312c9e113a0}{SetTrueText}}(FText::FromString(Value));\ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___bool_ae88840c29d81fd9dc11829f94f3303a3}{SetFalseText}}(\textcolor{keyword}{const}\ FString\&\ Value)\ \{\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___bool_ae88840c29d81fd9dc11829f94f3303a3}{SetFalseText}}(FText::FromString(Value));\ \}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00132\ UCLASS()}
+\DoxyCodeLine{00133\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___number_a12e350b720aa704a98a884c539c9281d}{UGameplaySettingValueDiscreteDynamic\_Number}}\ final\ :\ public\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_af89839bcba0865dcda5ba33d40dc32e3}{UGameplaySettingValueDiscreteDynamic}}}
+\DoxyCodeLine{00134\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00138\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___number_a12e350b720aa704a98a884c539c9281d}{UGameplaySettingValueDiscreteDynamic\_Number}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ NumberType>}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___number_aad143034c3a34065deaa5ba0d318083a}{SetDefaultValue}}(NumberType\ InValue)}
+\DoxyCodeLine{00143\ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a7c2290803adf0b81989854a11e97e326}{SetDefaultValueFromString}}(LexToString(InValue));}
+\DoxyCodeLine{00145\ \ \ \ \ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ NumberType>}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___number_ab2793e4fa70ba0177d0ced76781f2130}{AddOption}}(NumberType\ InValue,\ \textcolor{keyword}{const}\ FText\&\ InOptionText)}
+\DoxyCodeLine{00150\ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a079dd2788e146c4b794d5e4be357e356}{AddDynamicOption}}(LexToString(InValue),\ InOptionText);}
+\DoxyCodeLine{00152\ \ \ \ \ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ NumberType>}
+\DoxyCodeLine{00156\ \ \ \ \ NumberType\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___number_a97fe7ab1baa0f0a836784d6d5f7329b8}{GetValue}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00157\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FString\ ValueString\ =\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a9575b4fc6d7260431ebb4c9285aed253}{GetValueAsString}}();}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ NumberType\ OutValue;}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ LexFromString(OutValue,\ *ValueString);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OutValue;}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ NumberType>}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___number_a4502c4b63708403586fbe13a97cc24e8}{SetValue}}(NumberType\ InValue)}
+\DoxyCodeLine{00169\ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a19c5eeca4c47cf45d3eb8b1b70fe3651}{SetValueFromString}}(LexToString(InValue));}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ OnInitialized()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00177\ \};}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00182\ UCLASS()}
+\DoxyCodeLine{00183\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___enum_a05af609d975ed5bf9cabb8d58b8596a9}{UGameplaySettingValueDiscreteDynamic\_Enum}}\ final\ :\ public\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_af89839bcba0865dcda5ba33d40dc32e3}{UGameplaySettingValueDiscreteDynamic}}}
+\DoxyCodeLine{00184\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00188\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___enum_a05af609d975ed5bf9cabb8d58b8596a9}{UGameplaySettingValueDiscreteDynamic\_Enum}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EnumType>}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___enum_a1a284d18be2ae27df984ecde4b41400a}{SetDefaultValue}}(EnumType\ InEnumValue)}
+\DoxyCodeLine{00193\ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FString\ StringValue\ =\ StaticEnum<EnumType>()-\/>GetNameStringByValue((int64)InEnumValue);}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a7c2290803adf0b81989854a11e97e326}{SetDefaultValueFromString}}(StringValue);}
+\DoxyCodeLine{00196\ \ \ \ \ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EnumType>}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___enum_a6fd019b39e2cb4b11413985c72ff092e}{AddOption}}(EnumType\ InEnumValue,\ \textcolor{keyword}{const}\ FText\&\ InOptionText)}
+\DoxyCodeLine{00201\ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FString\ StringValue\ =\ StaticEnum<EnumType>()-\/>GetNameStringByValue((int64)InEnumValue);}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a079dd2788e146c4b794d5e4be357e356}{AddDynamicOption}}(StringValue,\ InOptionText);}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EnumType>}
+\DoxyCodeLine{00208\ \ \ \ \ EnumType\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___enum_abdfc42cebafdc8eeddf3ac55d22c5b3a}{GetValue}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00209\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FString\ Value\ =\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a9575b4fc6d7260431ebb4c9285aed253}{GetValueAsString}}();}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (EnumType)StaticEnum<EnumType>()-\/>GetValueByNameString(Value);}
+\DoxyCodeLine{00212\ \ \ \ \ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EnumType>}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___enum_a1a50ddb428344f437b40d667de238b8c}{SetValue}}(EnumType\ InEnumValue)}
+\DoxyCodeLine{00217\ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FString\ StringValue\ =\ StaticEnum<EnumType>()-\/>GetNameStringByValue((int64)InEnumValue);}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a19c5eeca4c47cf45d3eb8b1b70fe3651}{SetValueFromString}}(StringValue);}
+\DoxyCodeLine{00220\ \ \ \ \ \}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ OnInitialized()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00226\ \};}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00231\ UCLASS()}
+\DoxyCodeLine{00232\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___color_a015993bc0132673c6d8e572cc2d7b19a}{UGameplaySettingValueDiscreteDynamic\_Color}}\ final\ :\ public\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_af89839bcba0865dcda5ba33d40dc32e3}{UGameplaySettingValueDiscreteDynamic}}}
+\DoxyCodeLine{00233\ \{}
+\DoxyCodeLine{00234\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00237\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___color_a015993bc0132673c6d8e572cc2d7b19a}{UGameplaySettingValueDiscreteDynamic\_Color}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___color_aba8cb845ccbfe1a3f3d56ccc1686ee70}{SetDefaultValue}}(FLinearColor\ InColor)}
+\DoxyCodeLine{00241\ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a7c2290803adf0b81989854a11e97e326}{SetDefaultValueFromString}}(InColor.ToString());}
+\DoxyCodeLine{00243\ \ \ \ \ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___color_a857c569f477827c721c5165c84ffb864}{AddColorOption}}(FLinearColor\ InColor)}
+\DoxyCodeLine{00247\ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FColor\ SRGBColor\ =\ InColor.ToFColor(\textcolor{keyword}{true});}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a079dd2788e146c4b794d5e4be357e356}{AddDynamicOption}}(InColor.ToString(),\ FText::FromString(FString::Printf(TEXT(\textcolor{stringliteral}{"{}\#\%02X\%02X\%02X"{}}),\ SRGBColor.R,\ SRGBColor.G,\ SRGBColor.B)));}
+\DoxyCodeLine{00250\ \ \ \ \ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00253\ \ \ \ \ FLinearColor\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___color_ad9dff56c0334e5b81af7ba72ef9d13b2}{GetValue}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00254\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FString\ Value\ =\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a9575b4fc6d7260431ebb4c9285aed253}{GetValueAsString}}();}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ FLinearColor\ ColorValue;}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ bSuccess\ =\ ColorValue.InitFromString(Value);}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ ensure(bSuccess);}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ColorValue;}
+\DoxyCodeLine{00262\ \ \ \ \ \}}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___color_a81a771556f70a5cfd9fdf2395f1c1100}{SetValue}}(FLinearColor\ InColor)}
+\DoxyCodeLine{00266\ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a19c5eeca4c47cf45d3eb8b1b70fe3651}{SetValueFromString}}(InColor.ToString());}
+\DoxyCodeLine{00268\ \ \ \ \ \}}
+\DoxyCodeLine{00269\ \};}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00274\ UCLASS()}
+\DoxyCodeLine{00275\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___vector2_d_aaf6b09196ccc8a918bfea85ab2912db7}{UGameplaySettingValueDiscreteDynamic\_Vector2D}}\ final\ :\ public\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_af89839bcba0865dcda5ba33d40dc32e3}{UGameplaySettingValueDiscreteDynamic}}}
+\DoxyCodeLine{00276\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00280\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___vector2_d_aaf6b09196ccc8a918bfea85ab2912db7}{UGameplaySettingValueDiscreteDynamic\_Vector2D}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___vector2_d_aa304e55770e5958816a7ce8ca03603e7}{SetDefaultValue}}(\textcolor{keyword}{const}\ FVector2D\&\ Value)}
+\DoxyCodeLine{00284\ \ \ \ \ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a7c2290803adf0b81989854a11e97e326}{SetDefaultValueFromString}}(Value.ToString());}
+\DoxyCodeLine{00286\ \ \ \ \ \}}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00289\ \ \ \ \ FVector2D\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___vector2_d_a5a269fe886357cad6c7dadc14201c4f0}{GetValue}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00290\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ FVector2D\ ValueVector;}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ ValueVector.InitFromString(\doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a9575b4fc6d7260431ebb4c9285aed253}{GetValueAsString}}());}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ValueVector;}
+\DoxyCodeLine{00294\ \ \ \ \ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic___vector2_d_a287f8f5fb41d8eabe7f1eaca62813b03}{SetValue}}(\textcolor{keyword}{const}\ FVector2D\&\ Value)}
+\DoxyCodeLine{00298\ \ \ \ \ \{}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_dynamic_a19c5eeca4c47cf45d3eb8b1b70fe3651}{SetValueFromString}}(Value.ToString());}
+\DoxyCodeLine{00300\ \ \ \ \ \}}
+\DoxyCodeLine{00301\ \};}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ }
+
+\end{DoxyCode}

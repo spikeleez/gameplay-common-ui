@@ -1,0 +1,31 @@
+\doxysection{Gameplay\+Common\+Settings\+Interface.\+h}
+\hypertarget{_gameplay_common_settings_interface_8h_source}{}\label{_gameplay_common_settings_interface_8h_source}\index{GameplayCommonSettingsInterface.h@{GameplayCommonSettingsInterface.h}}
+\doxymbox{\hyperlink{_gameplay_common_settings_interface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}UObject/Interface.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplayCommonSettingsInterface.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_settings_local}{UGameplaySettingsLocal}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_settings_shared}{UGameplaySettingsShared}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ UINTERFACE(MinimalAPI,\ meta=(CannotImplementInterfaceInBlueprint))}
+\DoxyCodeLine{00015\ class\ \doxymbox{\hyperlink{class_u_gameplay_common_settings_interface}{UGameplayCommonSettingsInterface}}\ :\ public\ UInterface}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_i_gameplay_common_settings_interface}{IGameplayCommonSettingsInterface}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_u_gameplay_settings_shared}{UGameplaySettingsShared}}*\ \doxymbox{\hyperlink{class_i_gameplay_common_settings_interface_a4ce545de69027a85041fe2f6cfce8cb8}{GetSharedSettings}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local}{UGameplaySettingsLocal}}*\ \doxymbox{\hyperlink{class_i_gameplay_common_settings_interface_a910d22e3740849f0b1544ab2e125e82b}{GetLocalSettings}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00036\ \};}
+
+\end{DoxyCode}

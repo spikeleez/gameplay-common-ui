@@ -1,0 +1,147 @@
+\doxysection{UGameplay\+Subtitles\+Subsystem Class Reference}
+\hypertarget{class_u_gameplay_subtitles_subsystem}{}\label{class_u_gameplay_subtitles_subsystem}\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+
+
+Subsystem for managing global subtitle display settings.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Subtitles\+Subsystem.\+h$>$}
+
+Inheritance diagram for UGameplay\+Subtitles\+Subsystem:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_subtitles_subsystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem_aaebba3946a76455d0fa51171072a3579}{DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param}} (\doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem}{UGameplay\+Subtitles\+Subsystem}}, FGameplay\+Subtitle\+Display\+Format\+Changed\+Event, const \doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} \&)
+\begin{DoxyCompactList}\small\item\em Event fired when the subtitle display format (appearance) is modified. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem_aaa24b227a4bf310f1562ee0e991ac76a}{UGameplay\+Subtitles\+Subsystem}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem_a8d83e14d55f9e4f420307cff4cd36229}{Initialize}} (FSubsystem\+Collection\+Base \&Collection) override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem_a0bcc4b9b6cd4597531006996c5d95d73}{Deinitialize}} () override
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem_aaee8e928d91b5923e0fd2f8267272b77}{Set\+Subtitle\+Display\+Format}} (const \doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} \&In\+Format)
+\begin{DoxyCompactList}\small\item\em Updates the global subtitle display format and broadcasts the change event. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} \& \doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem_a51fff9e97f2900c9f2e329e7c2b31975}{Get\+Subtitle\+Display\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current global subtitle display format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem}{UGameplay\+Subtitles\+Subsystem}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem_a0f7e672501729f1e11966a1bc2d1f5a2}{Get}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Static helper to get the subtitle subsystem from a local player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+FGameplay\+Subtitle\+Display\+Format\+Changed\+Event \doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem_aa83aa1df96569b98b0f5068b6df1477f}{Subtitle\+Format\+Changed\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} \doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem_ad646ad676407c98dec8f27ab0b16d27e}{Subtitle\+Format}}
+\begin{DoxyCompactList}\small\item\em Cached subtitle formatting options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subsystem for managing global subtitle display settings. 
+
+This subsystem maintains the current formatting and display preferences for subtitles (size, color, background, etc.) across the game instance. It broadcasts events when these settings change so that subtitle widgets can update accordingly. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_subtitles_subsystem_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_subtitles_subsystem_aaa24b227a4bf310f1562ee0e991ac76a}\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}!UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}!UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+\doxysubsubsection{\texorpdfstring{UGameplaySubtitlesSubsystem()}{UGameplaySubtitlesSubsystem()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitles_subsystem_aaa24b227a4bf310f1562ee0e991ac76a} 
+UGameplay\+Subtitles\+Subsystem::\+\+UGameplay\+Subtitles\+Subsystem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_subtitles_subsystem_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_subtitles_subsystem_aaebba3946a76455d0fa51171072a3579}\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}!DECLARE\_EVENT\_OneParam@{DECLARE\_EVENT\_OneParam}}
+\index{DECLARE\_EVENT\_OneParam@{DECLARE\_EVENT\_OneParam}!UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_EVENT\_OneParam()}{DECLARE\_EVENT\_OneParam()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitles_subsystem_aaebba3946a76455d0fa51171072a3579} 
+UGameplay\+Subtitles\+Subsystem::\+\+DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem}{UGameplay\+Subtitles\+Subsystem}}}]{}{, }\item[{FGameplay\+Subtitle\+Display\+Format\+Changed\+Event}]{}{, }\item[{const \doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} \&}]{}{}\end{DoxyParamCaption})}
+
+
+
+Event fired when the subtitle display format (appearance) is modified. 
+
+\Hypertarget{class_u_gameplay_subtitles_subsystem_a0bcc4b9b6cd4597531006996c5d95d73}\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}!Deinitialize@{Deinitialize}}
+\index{Deinitialize@{Deinitialize}!UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+\doxysubsubsection{\texorpdfstring{Deinitialize()}{Deinitialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitles_subsystem_a0bcc4b9b6cd4597531006996c5d95d73} 
+void UGameplay\+Subtitles\+Subsystem::\+\+Deinitialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_subtitles_subsystem_a0f7e672501729f1e11966a1bc2d1f5a2}\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}!Get@{Get}}
+\index{Get@{Get}!UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitles_subsystem_a0f7e672501729f1e11966a1bc2d1f5a2} 
+\doxymbox{\hyperlink{class_u_gameplay_subtitles_subsystem}{UGameplay\+Subtitles\+Subsystem}} \texorpdfstring{$\ast$}{*} UGameplay\+Subtitles\+Subsystem::\+\+Get (\begin{DoxyParamCaption}\item[{const ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static helper to get the subtitle subsystem from a local player. 
+
+\Hypertarget{class_u_gameplay_subtitles_subsystem_a51fff9e97f2900c9f2e329e7c2b31975}\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}!GetSubtitleDisplayFormat@{GetSubtitleDisplayFormat}}
+\index{GetSubtitleDisplayFormat@{GetSubtitleDisplayFormat}!UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+\doxysubsubsection{\texorpdfstring{GetSubtitleDisplayFormat()}{GetSubtitleDisplayFormat()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitles_subsystem_a51fff9e97f2900c9f2e329e7c2b31975} 
+const \doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} \& UGameplay\+Subtitles\+Subsystem::\+\+Get\+Subtitle\+Display\+Format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current global subtitle display format. 
+
+\Hypertarget{class_u_gameplay_subtitles_subsystem_a8d83e14d55f9e4f420307cff4cd36229}\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitles_subsystem_a8d83e14d55f9e4f420307cff4cd36229} 
+void UGameplay\+Subtitles\+Subsystem::\+\+Initialize (\begin{DoxyParamCaption}\item[{FSubsystem\+Collection\+Base \&}]{Collection}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_subtitles_subsystem_aaee8e928d91b5923e0fd2f8267272b77}\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}!SetSubtitleDisplayFormat@{SetSubtitleDisplayFormat}}
+\index{SetSubtitleDisplayFormat@{SetSubtitleDisplayFormat}!UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetSubtitleDisplayFormat()}{SetSubtitleDisplayFormat()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitles_subsystem_aaee8e928d91b5923e0fd2f8267272b77} 
+void UGameplay\+Subtitles\+Subsystem::\+\+Set\+Subtitle\+Display\+Format (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} \&}]{In\+Format}{}\end{DoxyParamCaption})}
+
+
+
+Updates the global subtitle display format and broadcasts the change event. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_subtitles_subsystem_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_subtitles_subsystem_ad646ad676407c98dec8f27ab0b16d27e}\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}!SubtitleFormat@{SubtitleFormat}}
+\index{SubtitleFormat@{SubtitleFormat}!UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+\doxysubsubsection{\texorpdfstring{SubtitleFormat}{SubtitleFormat}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitles_subsystem_ad646ad676407c98dec8f27ab0b16d27e} 
+\doxymbox{\hyperlink{struct_f_gameplay_subtitle_format}{FGameplay\+Subtitle\+Format}} UGameplay\+Subtitles\+Subsystem::\+\+Subtitle\+Format\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cached subtitle formatting options. 
+
+\Hypertarget{class_u_gameplay_subtitles_subsystem_aa83aa1df96569b98b0f5068b6df1477f}\index{UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}!SubtitleFormatChangedEvent@{SubtitleFormatChangedEvent}}
+\index{SubtitleFormatChangedEvent@{SubtitleFormatChangedEvent}!UGameplaySubtitlesSubsystem@{UGameplaySubtitlesSubsystem}}
+\doxysubsubsection{\texorpdfstring{SubtitleFormatChangedEvent}{SubtitleFormatChangedEvent}}
+{\footnotesize\ttfamily \label{class_u_gameplay_subtitles_subsystem_aa83aa1df96569b98b0f5068b6df1477f} 
+FGameplay\+Subtitle\+Display\+Format\+Changed\+Event UGameplay\+Subtitles\+Subsystem::\+\+Subtitle\+Format\+Changed\+Event}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_subtitles_subsystem_8h}{Gameplay\+Subtitles\+Subsystem.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_subtitles_subsystem_8cpp}{Gameplay\+Subtitles\+Subsystem.\+cpp}}\end{DoxyCompactItemize}

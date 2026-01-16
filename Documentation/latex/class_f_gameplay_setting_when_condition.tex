@@ -1,0 +1,144 @@
+\doxysection{FGameplay\+Setting\+When\+Condition Class Reference}
+\hypertarget{class_f_gameplay_setting_when_condition}{}\label{class_f_gameplay_setting_when_condition}\index{FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}}
+
+
+An inline edit condition that uses a lambda function for evaluation.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+When\+Condition.\+h$>$}
+
+Inheritance diagram for FGameplay\+Setting\+When\+Condition:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_f_gameplay_setting_when_condition}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_f_gameplay_setting_when_condition_a1f3ca11b398d7e759d0569b847991279}{FGameplay\+Setting\+When\+Condition}} (TFunction$<$ void(const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player, \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \&)$>$ \&\&In\+Inline\+Edit\+Condition)
+\begin{DoxyCompactList}\small\item\em Constructs an inline edit condition. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_f_gameplay_setting_when_condition_a3bb8df6475d20798c4f80726ce62b72e}{Gather\+Edit\+State}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player, \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \&In\+Out\+Edit\+State) const override
+\begin{DoxyCompactList}\small\item\em Evaluates the edit state of a setting. \end{DoxyCompactList}\item 
+virtual FString \doxymbox{\hyperlink{class_f_gameplay_setting_when_condition_af10f67d44a85f25625a9d1475914e985}{To\+String}} () const override
+\begin{DoxyCompactList}\small\item\em Generates debugging text for this edit condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition}{FGameplay\+Setting\+Edit\+Condition}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplay\+Setting\+Edit\+Condition}} ()
+\item 
+virtual \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a1474ea70de77c6b96df915eb0851ac2c}{\texorpdfstring{$\sim$}{\string~}\+FGameplay\+Setting\+Edit\+Condition}} ()
+\item 
+\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a78d8dd6da3b64a0c65a6beb34ac4fba2}{DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param}} (\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition}{FGameplay\+Setting\+Edit\+Condition}}, FGameplay\+On\+Edit\+Condition\+Changed, bool)
+\begin{DoxyCompactList}\small\item\em Event broadcasted when the edit condition\textquotesingle{}s state might have changed. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a4eb4972f2cc9e257b88f07e49ddf3050}{Broadcast\+Edit\+Condition\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Broadcasts the On\+Edit\+Condition\+Changed event. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a2e17982d845643ef1901e5d9b32d4e3f}{Initialize}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player)
+\begin{DoxyCompactList}\small\item\em Called during the setting initialization. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a1ea8c8df2bfc99665e1a5ca1f6b6d388}{Setting\+Applied}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting) const
+\begin{DoxyCompactList}\small\item\em Called when the setting is \textquotesingle{}applied\textquotesingle{}. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ad7456237d3650d77688db2ebaf1d0fe5}{Setting\+Changed}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting, \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}} In\+Reason) const
+\begin{DoxyCompactList}\small\item\em Called when the setting is \textquotesingle{}changed\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TFunction$<$ void(const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player, \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \&In\+Out\+Edit\+State)$>$ \doxymbox{\hyperlink{class_f_gameplay_setting_when_condition_a52cc9af0575fb742e75dd4e7c0e7f838}{Inline\+Edit\+Condition}}
+\begin{DoxyCompactList}\small\item\em The stored lambda function for evaluation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Data Fields inherited from \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition}{FGameplay\+Setting\+Edit\+Condition}}}
+\begin{DoxyCompactItemize}
+\item 
+FGameplay\+On\+Edit\+Condition\+Changed \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ab78e049d6f2be4a534382f8ca1320e19}{On\+Edit\+Condition\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An inline edit condition that uses a lambda function for evaluation. 
+
+This class allows for quick creation of edit conditions without defining a new class. It stores a TFunction that is executed during the Gather\+Edit\+State phase. 
+
+\label{doc-constructors}
+\Hypertarget{class_f_gameplay_setting_when_condition_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_f_gameplay_setting_when_condition_a1f3ca11b398d7e759d0569b847991279}\index{FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}!FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}}
+\index{FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}!FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}}
+\doxysubsubsection{\texorpdfstring{FGameplaySettingWhenCondition()}{FGameplaySettingWhenCondition()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_setting_when_condition_a1f3ca11b398d7e759d0569b847991279} 
+FGameplay\+Setting\+When\+Condition::\+\+FGameplay\+Setting\+When\+Condition (\begin{DoxyParamCaption}\item[{TFunction$<$ void(const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player, \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \&)$>$ \&\&}]{In\+Inline\+Edit\+Condition}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an inline edit condition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Inline\+Edit\+Condition} & The lambda function to execute for evaluation \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_f_gameplay_setting_when_condition_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_gameplay_setting_when_condition_a3bb8df6475d20798c4f80726ce62b72e}\index{FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}!GatherEditState@{GatherEditState}}
+\index{GatherEditState@{GatherEditState}!FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}}
+\doxysubsubsection{\texorpdfstring{GatherEditState()}{GatherEditState()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_setting_when_condition_a3bb8df6475d20798c4f80726ce62b72e} 
+virtual void FGameplay\+Setting\+When\+Condition::\+\+Gather\+Edit\+State (\begin{DoxyParamCaption}\item[{const ULocal\+Player \texorpdfstring{$\ast$}{*}}]{In\+Local\+Player}{, }\item[{\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \&}]{In\+Out\+Edit\+State}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Evaluates the edit state of a setting. 
+
+Subclasses should implement this to modify In\+Out\+Edit\+State based on current game state or platform conditions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Local\+Player} & The local player context \\
+\hline
+{\em In\+Out\+Edit\+State} & The state to modify (can disable, hide, or kill the setting) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a6c0b6641aadf24fcea9639b820ed425f}{FGameplay\+Setting\+Edit\+Condition}}.
+
+\Hypertarget{class_f_gameplay_setting_when_condition_af10f67d44a85f25625a9d1475914e985}\index{FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}!ToString@{ToString}}
+\index{ToString@{ToString}!FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_setting_when_condition_af10f67d44a85f25625a9d1475914e985} 
+virtual FString FGameplay\+Setting\+When\+Condition::\+\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Generates debugging text for this edit condition. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the condition\textquotesingle{}s state for debugging 
+\end{DoxyReturn}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a1f29e0561594ed0b811675b8aa64a4e7}{FGameplay\+Setting\+Edit\+Condition}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_f_gameplay_setting_when_condition_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_f_gameplay_setting_when_condition_a52cc9af0575fb742e75dd4e7c0e7f838}\index{FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}!InlineEditCondition@{InlineEditCondition}}
+\index{InlineEditCondition@{InlineEditCondition}!FGameplaySettingWhenCondition@{FGameplaySettingWhenCondition}}
+\doxysubsubsection{\texorpdfstring{InlineEditCondition}{InlineEditCondition}}
+{\footnotesize\ttfamily \label{class_f_gameplay_setting_when_condition_a52cc9af0575fb742e75dd4e7c0e7f838} 
+TFunction$<$void(const ULocal\+Player\texorpdfstring{$\ast$}{*} In\+Local\+Player, \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}}\& In\+Out\+Edit\+State)$>$ FGameplay\+Setting\+When\+Condition::\+\+Inline\+Edit\+Condition\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The stored lambda function for evaluation. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_when_condition_8h}{Gameplay\+Setting\+When\+Condition.\+h}}\end{DoxyCompactItemize}

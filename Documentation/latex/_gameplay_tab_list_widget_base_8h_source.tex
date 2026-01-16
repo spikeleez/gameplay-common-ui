@@ -1,0 +1,100 @@
+\doxysection{Gameplay\+Tab\+List\+Widget\+Base.\+h}
+\hypertarget{_gameplay_tab_list_widget_base_8h_source}{}\label{_gameplay_tab_list_widget_base_8h_source}\index{GameplayTabListWidgetBase.h@{GameplayTabListWidgetBase.h}}
+\doxymbox{\hyperlink{_gameplay_tab_list_widget_base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CommonTabListWidgetBase.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_common_types_8h}{Misc/GameplayCommonTypes.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayTabListWidgetBase.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_button_base}{UGameplayButtonBase}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ UINTERFACE(BlueprintType)}
+\DoxyCodeLine{00015\ class\ \doxymbox{\hyperlink{class_u_gameplay_tab_button_interface}{UGameplayTabButtonInterface}}\ :\ public\ UInterface}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_i_gameplay_tab_button_interface}{IGameplayTabButtonInterface}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ UFUNCTION(BlueprintNativeEvent,\ Category\ =\ \textcolor{stringliteral}{"{}Tab"{}})}
+\DoxyCodeLine{00027\ \ \ \ \ void\ \doxymbox{\hyperlink{class_i_gameplay_tab_button_interface_a6c16b658e382dc8a803c9732a7cd9a63}{SetTabLabelInfo}}(const\ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplayTabDescriptor}}\&\ TabDescriptor);}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00037\ UCLASS(Abstract,\ Blueprintable,\ BlueprintType,\ meta\ =\ (DisableNativeTick))}
+\DoxyCodeLine{00038\ class\ GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a1d56b1bc47a7f9807e6fd587dbdbe47a}{UGameplayTabListWidgetBase}}\ :\ public\ UCommonTabListWidgetBase}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a5e729c205622e0dfbd40a225538cbddd}{DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_TwoParams}}(FOnTabContentCreated,\ FName,\ TabId,\ UCommonUserWidget*,\ TabWidget);}
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_afab423b9cba284863400c3070c65a997}{DECLARE\_EVENT\_TwoParams}}(\doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a1d56b1bc47a7f9807e6fd587dbdbe47a}{UGameplayTabListWidgetBase}},\ FOnTabContentCreatedNative,\ FName\ \textcolor{comment}{/*\ TabId\ */},\ UCommonUserWidget*\ \textcolor{comment}{/*\ TabWidget\ */});}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \ \ \ \ UPROPERTY(BlueprintAssignable,\ Category\ =\ \textcolor{stringliteral}{"{}TabList"{}})}
+\DoxyCodeLine{00051\ \ \ \ \ FOnTabContentCreated\ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_af5e2b3f874874c21408cb5c9311fdd47}{OnTabContentCreated}};}
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ FOnTabContentCreatedNative\ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_ad4ac98303d09b85163f61f6c32de13d4}{OnTabContentCreatedNative}};}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ public:}
+\DoxyCodeLine{00057\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a1d56b1bc47a7f9807e6fd587dbdbe47a}{UGameplayTabListWidgetBase}}(const\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}TabList"{}})}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_abf4e9040073f2544b157d8cdeb40059a}{GetPreregisteredTabDescriptor}}(const\ FName\ TabNameId,\ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplayTabDescriptor}}\&\ OutTabInfo);}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}TabList"{}})}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a72fd0f32e6ecade0a061f8450b093fed}{GetTabDescriptor}}(const\ FName\ TabNameId,\ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplayTabDescriptor}}\&\ OutTabInfo);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \ \ const\ TArray<\doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplayTabDescriptor}}>\&\ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a788ea82280c5a97a162c4d0cf68243bf}{GetAllPreregisteredTabInfos}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a26f55bbe2d9840523dd902c6dcfd4cb5}{PreregisteredTabInfoArray}};\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}TabList"{}})}
+\DoxyCodeLine{00072\ \ \ \ \ void\ SetTabHiddenState(FName\ TabNameId,\ \textcolor{keywordtype}{bool}\ bHidden);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}TabList"{}})}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ RegisterDynamicTab(const\ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplayTabDescriptor}}\&\ TabDescriptor);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00079\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}TabList"{}})}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsFirstTabActive()\ const;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}TabList"{}})}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsLastTabActive()\ const;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00087\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}TabList"{}})}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsTabVisible(FName\ TabId);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}TabList"{}})}
+\DoxyCodeLine{00092\ \ \ \ \ int32\ GetVisibleTabCount();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ protected:}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\string~Begin\ UUserWidget\ interface}}
+\DoxyCodeLine{00096\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ NativeOnInitialized()\ override;}
+\DoxyCodeLine{00097\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ NativeConstruct()\ override;}
+\DoxyCodeLine{00098\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ NativeDestruct()\ override;}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ UUserWidget\ interface}}
+\DoxyCodeLine{00100\ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//\string~Begin\ UCommonTabListWidgetBase\ interface}}
+\DoxyCodeLine{00102\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ HandlePreLinkedSwitcherChanged()\ override;}
+\DoxyCodeLine{00103\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ HandlePostLinkedSwitcherChanged()\ override;}
+\DoxyCodeLine{00104\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ HandleTabCreation\_Implementation(FName\ TabId,\ UCommonButtonBase*\ TabButton)\ override;}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ UCommonTabListWidgetBase\ interface}}
+\DoxyCodeLine{00106\ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ SetupTabs();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ private:}
+\DoxyCodeLine{00112\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category=\textcolor{stringliteral}{"{}TabList"{}},\ meta=(TitleProperty=\textcolor{stringliteral}{"{}TabId"{}}))}
+\DoxyCodeLine{00113\ \ \ \ \ TArray<\doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplayTabDescriptor}}>\ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a26f55bbe2d9840523dd902c6dcfd4cb5}{PreregisteredTabInfoArray}};}
+\DoxyCodeLine{00114\ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00117\ \ \ \ \ TMap<FName,\ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplayTabDescriptor}}>\ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a3ef2b962b4368dd8e982c4aa1f9fa46b}{PendingTabLabelInfoMap}};}
+\DoxyCodeLine{00118\ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00121\ \ \ \ \ TMap<FName,\ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplayTabDescriptor}}>\ \doxymbox{\hyperlink{class_u_gameplay_tab_list_widget_base_a25afce384aaac8385029e3e02fc31269}{RegisteredTabDescriptors}};}
+\DoxyCodeLine{00122\ \};}
+
+\end{DoxyCode}

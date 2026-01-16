@@ -1,0 +1,317 @@
+\doxysection{UGameplay\+Common\+Extension\+Subsystem Class Reference}
+\hypertarget{class_u_gameplay_common_extension_subsystem}{}\label{class_u_gameplay_common_extension_subsystem}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+
+
+Subsystem for managing dynamic UI extensions.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Common\+Extension\+Subsystem.\+h$>$}
+
+Inheritance diagram for UGameplay\+Common\+Extension\+Subsystem:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_common_extension_subsystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a1238275dcd38dc7ea96c5c7504ef4396}{UGameplay\+Common\+Extension\+Subsystem}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a9fb152cf30401f53197f1353284c487f}{Initialize}} (FSubsystem\+Collection\+Base \&Collection) override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_aabb4fb937a0e4cdb27389344e24e0d63}{Deinitialize}} () override
+\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplay\+UIExtension\+Point\+Handle}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a807274911a016d8479edd5c1dd89c32f}{Register\+Extension\+Point\+Internal}} (const FGameplay\+Tag \&Extension\+Point\+Tag, \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplay\+UIExtension\+Point\+Match}} Extension\+Point\+Tag\+Match\+Type, const TArray$<$ UClass \texorpdfstring{$\ast$}{*} $>$ \&Allowed\+Data\+Classes, const FGameplay\+Extend\+UIExtension\+Point\+Signature \&Extension\+Callback)
+\begin{DoxyCompactList}\small\item\em Native:\+ Registers a new extension point. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplay\+UIExtension\+Point\+Handle}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a66517b6db9d6aba4cf7b75d241e8702d}{Register\+Extension\+Point\+For\+Context\+Internal}} (const FGameplay\+Tag \&Extension\+Point\+Tag, UObject \texorpdfstring{$\ast$}{*}Context\+Object, \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplay\+UIExtension\+Point\+Match}} Extension\+Point\+Tag\+Match\+Type, const TArray$<$ UClass \texorpdfstring{$\ast$}{*} $>$ \&Allowed\+Data\+Classes, FGameplay\+Extend\+UIExtension\+Point\+Signature Extension\+Callback)
+\begin{DoxyCompactList}\small\item\em Native:\+ Registers a new extension point for a specific context object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a26eda7ad5a41d10a9530b28ed042d75c}{Register\+Extension\+As\+Widget\+Internal}} (const FGameplay\+Tag \&Extension\+Point\+Tag, \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UUser\+Widget $>$ Widget\+Class, int32 Priority)
+\begin{DoxyCompactList}\small\item\em Native:\+ Registers a widget class as an extension to a point. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a446a6f6dcde8bce5f2946b79977d2d04}{Register\+Extension\+As\+Widget\+For\+Context\+Internal}} (const FGameplay\+Tag \&Extension\+Point\+Tag, UObject \texorpdfstring{$\ast$}{*}Context\+Object, \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UUser\+Widget $>$ Widget\+Class, int32 Priority)
+\begin{DoxyCompactList}\small\item\em Native:\+ Registers a widget class for a specific context object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a62d6bdef91cb7a8dbad8b463c80a72e4}{Register\+Extension\+As\+Data\+Internal}} (const FGameplay\+Tag \&Extension\+Point\+Tag, UObject \texorpdfstring{$\ast$}{*}Context\+Object, UObject \texorpdfstring{$\ast$}{*}Data, int32 Priority)
+\begin{DoxyCompactList}\small\item\em Native:\+ Registers arbitrary data as an extension. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_abd466dec54753225ba66f2f43f887a17}{Unregister\+Extension}} (const \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} \&Extension\+Handle)
+\begin{DoxyCompactList}\small\item\em Unregisters a previously registered extension. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ad9e3cc8e5a872424fc423dd47e2eb841}{Unregister\+Extension\+Point}} (const \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplay\+UIExtension\+Point\+Handle}} \&Extension\+Point\+Handle)
+\begin{DoxyCompactList}\small\item\em Unregisters a previously registered extension point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a7937b1c0e4057af6ddbdfefaf45c824e}{Add\+Referenced\+Objects}} (UObject \texorpdfstring{$\ast$}{*}In\+This, FReference\+Collector \&Collector)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplay\+UIExtension\+Request}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_afbb7e4cdff62578591469cdf23751acf}{Create\+Extension\+Request}} (const TShared\+Ptr$<$ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension}{FGameplay\+UIExtension}} $>$ \&Extension)
+\begin{DoxyCompactList}\small\item\em Helper to convert internal extension data into a request structure for callbacks. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ae6f8d84988a2a0ffb092430d3cc23052}{Notify\+Extension\+Point\+Of\+Extensions}} (const TShared\+Ptr$<$ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point}{FGameplay\+UIExtension\+Point}} $>$ \&Extension\+Point)
+\begin{DoxyCompactList}\small\item\em Informs an extension point about all currently registered extensions that match its criteria. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a871b8b51e3755a2d2f1f9fe391f07571}{Notify\+Extension\+Points\+Of\+Extension}} (\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplay\+UIExtension\+Action}} Extension\+Action, const TShared\+Ptr$<$ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension}{FGameplay\+UIExtension}} $>$ \&Extension)
+\begin{DoxyCompactList}\small\item\em Informs all registered extension points about a new or removed extension. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplay\+UIExtension\+Point\+Handle}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a1d3fad7705991742736c2190fc8e7e92}{Register\+Extension\+Point}} (FGameplay\+Tag Extension\+Point\+Tag, \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplay\+UIExtension\+Point\+Match}} Extension\+Point\+Tag\+Match\+Type, const TArray$<$ UClass \texorpdfstring{$\ast$}{*} $>$ \&Allowed\+Data\+Classes, FGameplay\+Extend\+UIExtension\+Point\+Dynamic\+Signature Extension\+Callback)
+\begin{DoxyCompactList}\small\item\em Blueprint:\+ Registers a new extension point. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_af7cf302ec1e6fdc510efd7eb444337a7}{Register\+Extension\+As\+Widget}} (FGameplay\+Tag Extension\+Point\+Tag, \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UUser\+Widget $>$ Widget\+Class, int32 Priority=-\/1)
+\begin{DoxyCompactList}\small\item\em Blueprint:\+ Registers a widget class as an extension to a point. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ae3b43e71cb704d040bb98dad205390eb}{Register\+Extension\+As\+Widget\+For\+Context}} (FGameplay\+Tag Extension\+Point\+Tag, \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UUser\+Widget $>$ Widget\+Class, UObject \texorpdfstring{$\ast$}{*}Context\+Object, int32 Priority=-\/1)
+\begin{DoxyCompactList}\small\item\em Registers the widget (as data) for a specific player context. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_adefe99c87bfc5a51801e98e87c36bd17}{Register\+Extension\+As\+Data}} (FGameplay\+Tag Extension\+Point\+Tag, UObject \texorpdfstring{$\ast$}{*}Data, int32 Priority=-\/1)
+\begin{DoxyCompactList}\small\item\em Registers the extension as data for any extension point that can make use of it. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_aa47dcef2ca112318252d697f089cd2e7}{Register\+Extension\+As\+Data\+For\+Context}} (FGameplay\+Tag Extension\+Point\+Tag, UObject \texorpdfstring{$\ast$}{*}Context\+Object, UObject \texorpdfstring{$\ast$}{*}Data, int32 Priority=-\/1)
+\begin{DoxyCompactList}\small\item\em Registers the extension as data for a specific context object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef TArray$<$ TShared\+Ptr$<$ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point}{FGameplay\+UIExtension\+Point}} $>$ $>$ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ae4b315ac0230f2a49b118b947a559287}{FExtension\+Point\+List}}
+\item 
+typedef TArray$<$ TShared\+Ptr$<$ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension}{FGameplay\+UIExtension}} $>$ $>$ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a0b70811ac8bfc1a7ef5467c13eda5aa5}{FExtension\+List}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TMap$<$ FGameplay\+Tag, \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ae4b315ac0230f2a49b118b947a559287}{FExtension\+Point\+List}} $>$ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_af38eda0c981cc95c1a3236441cd5223f}{Extension\+Point\+Map}}
+\begin{DoxyCompactList}\small\item\em Map of tags to a list of registered points at that tag. \end{DoxyCompactList}\item 
+TMap$<$ FGameplay\+Tag, \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a0b70811ac8bfc1a7ef5467c13eda5aa5}{FExtension\+List}} $>$ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a5319347a87ecabb9cbae2dd134dc9df2}{Extension\+Map}}
+\begin{DoxyCompactList}\small\item\em Map of tags to a list of registered extensions at that tag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subsystem for managing dynamic UI extensions. 
+
+This subsystem allows widgets or other systems to register "{}\+Extension Points"{} identified by Gameplay Tags. Other parts of the game can then "{}extend"{} these points by providing widgets or data.
+
+For example:\+ A HUD might register an extension point "{}\+HUD.\+Bottom\+Left"{}. A gameplay ability system might then register a "{}\+Cooldown\+Widget"{} to that point without the HUD having to know anything about the ability system. 
+
+\label{doc-typedef-members}
+\Hypertarget{class_u_gameplay_common_extension_subsystem_doc-typedef-members}
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a0b70811ac8bfc1a7ef5467c13eda5aa5}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!FExtensionList@{FExtensionList}}
+\index{FExtensionList@{FExtensionList}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{FExtensionList}{FExtensionList}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a0b70811ac8bfc1a7ef5467c13eda5aa5} 
+typedef TArray$<$TShared\+Ptr$<$\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension}{FGameplay\+UIExtension}}$>$ $>$ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a0b70811ac8bfc1a7ef5467c13eda5aa5}{UGameplay\+Common\+Extension\+Subsystem::\+\+FExtension\+List}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_ae4b315ac0230f2a49b118b947a559287}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!FExtensionPointList@{FExtensionPointList}}
+\index{FExtensionPointList@{FExtensionPointList}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{FExtensionPointList}{FExtensionPointList}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_ae4b315ac0230f2a49b118b947a559287} 
+typedef TArray$<$TShared\+Ptr$<$\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point}{FGameplay\+UIExtension\+Point}}$>$ $>$ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ae4b315ac0230f2a49b118b947a559287}{UGameplay\+Common\+Extension\+Subsystem::\+\+FExtension\+Point\+List}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_common_extension_subsystem_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a1238275dcd38dc7ea96c5c7504ef4396}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{UGameplayCommonExtensionSubsystem()}{UGameplayCommonExtensionSubsystem()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a1238275dcd38dc7ea96c5c7504ef4396} 
+UGameplay\+Common\+Extension\+Subsystem::\+\+UGameplay\+Common\+Extension\+Subsystem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_common_extension_subsystem_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a7937b1c0e4057af6ddbdfefaf45c824e}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!AddReferencedObjects@{AddReferencedObjects}}
+\index{AddReferencedObjects@{AddReferencedObjects}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{AddReferencedObjects()}{AddReferencedObjects()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a7937b1c0e4057af6ddbdfefaf45c824e} 
+void UGameplay\+Common\+Extension\+Subsystem::\+\+Add\+Referenced\+Objects (\begin{DoxyParamCaption}\item[{UObject \texorpdfstring{$\ast$}{*}}]{In\+This}{, }\item[{FReference\+Collector \&}]{Collector}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_afbb7e4cdff62578591469cdf23751acf}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!CreateExtensionRequest@{CreateExtensionRequest}}
+\index{CreateExtensionRequest@{CreateExtensionRequest}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{CreateExtensionRequest()}{CreateExtensionRequest()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_afbb7e4cdff62578591469cdf23751acf} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplay\+UIExtension\+Request}} UGameplay\+Common\+Extension\+Subsystem::\+\+Create\+Extension\+Request (\begin{DoxyParamCaption}\item[{const TShared\+Ptr$<$ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension}{FGameplay\+UIExtension}} $>$ \&}]{Extension}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Helper to convert internal extension data into a request structure for callbacks. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_aabb4fb937a0e4cdb27389344e24e0d63}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!Deinitialize@{Deinitialize}}
+\index{Deinitialize@{Deinitialize}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{Deinitialize()}{Deinitialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_aabb4fb937a0e4cdb27389344e24e0d63} 
+void UGameplay\+Common\+Extension\+Subsystem::\+\+Deinitialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a9fb152cf30401f53197f1353284c487f}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a9fb152cf30401f53197f1353284c487f} 
+void UGameplay\+Common\+Extension\+Subsystem::\+\+Initialize (\begin{DoxyParamCaption}\item[{FSubsystem\+Collection\+Base \&}]{Collection}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_ae6f8d84988a2a0ffb092430d3cc23052}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!NotifyExtensionPointOfExtensions@{NotifyExtensionPointOfExtensions}}
+\index{NotifyExtensionPointOfExtensions@{NotifyExtensionPointOfExtensions}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{NotifyExtensionPointOfExtensions()}{NotifyExtensionPointOfExtensions()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_ae6f8d84988a2a0ffb092430d3cc23052} 
+void UGameplay\+Common\+Extension\+Subsystem::\+\+Notify\+Extension\+Point\+Of\+Extensions (\begin{DoxyParamCaption}\item[{const TShared\+Ptr$<$ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point}{FGameplay\+UIExtension\+Point}} $>$ \&}]{Extension\+Point}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Informs an extension point about all currently registered extensions that match its criteria. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a871b8b51e3755a2d2f1f9fe391f07571}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!NotifyExtensionPointsOfExtension@{NotifyExtensionPointsOfExtension}}
+\index{NotifyExtensionPointsOfExtension@{NotifyExtensionPointsOfExtension}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{NotifyExtensionPointsOfExtension()}{NotifyExtensionPointsOfExtension()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a871b8b51e3755a2d2f1f9fe391f07571} 
+void UGameplay\+Common\+Extension\+Subsystem::\+\+Notify\+Extension\+Points\+Of\+Extension (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplay\+UIExtension\+Action}}}]{Extension\+Action}{, }\item[{const TShared\+Ptr$<$ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension}{FGameplay\+UIExtension}} $>$ \&}]{Extension}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Informs all registered extension points about a new or removed extension. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_adefe99c87bfc5a51801e98e87c36bd17}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!RegisterExtensionAsData@{RegisterExtensionAsData}}
+\index{RegisterExtensionAsData@{RegisterExtensionAsData}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{RegisterExtensionAsData()}{RegisterExtensionAsData()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_adefe99c87bfc5a51801e98e87c36bd17} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} UGameplay\+Common\+Extension\+Subsystem::\+\+Register\+Extension\+As\+Data (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Extension\+Point\+Tag}{, }\item[{UObject \texorpdfstring{$\ast$}{*}}]{Data}{, }\item[{int32}]{Priority}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Registers the extension as data for any extension point that can make use of it. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_aa47dcef2ca112318252d697f089cd2e7}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!RegisterExtensionAsDataForContext@{RegisterExtensionAsDataForContext}}
+\index{RegisterExtensionAsDataForContext@{RegisterExtensionAsDataForContext}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{RegisterExtensionAsDataForContext()}{RegisterExtensionAsDataForContext()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_aa47dcef2ca112318252d697f089cd2e7} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} UGameplay\+Common\+Extension\+Subsystem::\+\+Register\+Extension\+As\+Data\+For\+Context (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Extension\+Point\+Tag}{, }\item[{UObject \texorpdfstring{$\ast$}{*}}]{Context\+Object}{, }\item[{UObject \texorpdfstring{$\ast$}{*}}]{Data}{, }\item[{int32}]{Priority}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Registers the extension as data for a specific context object. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a62d6bdef91cb7a8dbad8b463c80a72e4}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!RegisterExtensionAsDataInternal@{RegisterExtensionAsDataInternal}}
+\index{RegisterExtensionAsDataInternal@{RegisterExtensionAsDataInternal}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{RegisterExtensionAsDataInternal()}{RegisterExtensionAsDataInternal()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a62d6bdef91cb7a8dbad8b463c80a72e4} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} UGameplay\+Common\+Extension\+Subsystem::\+\+Register\+Extension\+As\+Data\+Internal (\begin{DoxyParamCaption}\item[{const FGameplay\+Tag \&}]{Extension\+Point\+Tag}{, }\item[{UObject \texorpdfstring{$\ast$}{*}}]{Context\+Object}{, }\item[{UObject \texorpdfstring{$\ast$}{*}}]{Data}{, }\item[{int32}]{Priority}{}\end{DoxyParamCaption})}
+
+
+
+Native:\+ Registers arbitrary data as an extension. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_af7cf302ec1e6fdc510efd7eb444337a7}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!RegisterExtensionAsWidget@{RegisterExtensionAsWidget}}
+\index{RegisterExtensionAsWidget@{RegisterExtensionAsWidget}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{RegisterExtensionAsWidget()}{RegisterExtensionAsWidget()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_af7cf302ec1e6fdc510efd7eb444337a7} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} UGameplay\+Common\+Extension\+Subsystem::\+\+Register\+Extension\+As\+Widget (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Extension\+Point\+Tag}{, }\item[{\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UUser\+Widget $>$}]{Widget\+Class}{, }\item[{int32}]{Priority}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Blueprint:\+ Registers a widget class as an extension to a point. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_ae3b43e71cb704d040bb98dad205390eb}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!RegisterExtensionAsWidgetForContext@{RegisterExtensionAsWidgetForContext}}
+\index{RegisterExtensionAsWidgetForContext@{RegisterExtensionAsWidgetForContext}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{RegisterExtensionAsWidgetForContext()}{RegisterExtensionAsWidgetForContext()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_ae3b43e71cb704d040bb98dad205390eb} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} UGameplay\+Common\+Extension\+Subsystem::\+\+Register\+Extension\+As\+Widget\+For\+Context (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Extension\+Point\+Tag}{, }\item[{\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UUser\+Widget $>$}]{Widget\+Class}{, }\item[{UObject \texorpdfstring{$\ast$}{*}}]{Context\+Object}{, }\item[{int32}]{Priority}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Registers the widget (as data) for a specific player context. 
+
+This means the extension points will receive a UIExtension\+For\+Player data object that they can look at to determine if it\textquotesingle{}s for whatever they consider their player. \Hypertarget{class_u_gameplay_common_extension_subsystem_a446a6f6dcde8bce5f2946b79977d2d04}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!RegisterExtensionAsWidgetForContextInternal@{RegisterExtensionAsWidgetForContextInternal}}
+\index{RegisterExtensionAsWidgetForContextInternal@{RegisterExtensionAsWidgetForContextInternal}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{RegisterExtensionAsWidgetForContextInternal()}{RegisterExtensionAsWidgetForContextInternal()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a446a6f6dcde8bce5f2946b79977d2d04} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} UGameplay\+Common\+Extension\+Subsystem::\+\+Register\+Extension\+As\+Widget\+For\+Context\+Internal (\begin{DoxyParamCaption}\item[{const FGameplay\+Tag \&}]{Extension\+Point\+Tag}{, }\item[{UObject \texorpdfstring{$\ast$}{*}}]{Context\+Object}{, }\item[{\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UUser\+Widget $>$}]{Widget\+Class}{, }\item[{int32}]{Priority}{}\end{DoxyParamCaption})}
+
+
+
+Native:\+ Registers a widget class for a specific context object. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a26eda7ad5a41d10a9530b28ed042d75c}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!RegisterExtensionAsWidgetInternal@{RegisterExtensionAsWidgetInternal}}
+\index{RegisterExtensionAsWidgetInternal@{RegisterExtensionAsWidgetInternal}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{RegisterExtensionAsWidgetInternal()}{RegisterExtensionAsWidgetInternal()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a26eda7ad5a41d10a9530b28ed042d75c} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} UGameplay\+Common\+Extension\+Subsystem::\+\+Register\+Extension\+As\+Widget\+Internal (\begin{DoxyParamCaption}\item[{const FGameplay\+Tag \&}]{Extension\+Point\+Tag}{, }\item[{\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UUser\+Widget $>$}]{Widget\+Class}{, }\item[{int32}]{Priority}{}\end{DoxyParamCaption})}
+
+
+
+Native:\+ Registers a widget class as an extension to a point. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a1d3fad7705991742736c2190fc8e7e92}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!RegisterExtensionPoint@{RegisterExtensionPoint}}
+\index{RegisterExtensionPoint@{RegisterExtensionPoint}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{RegisterExtensionPoint()}{RegisterExtensionPoint()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a1d3fad7705991742736c2190fc8e7e92} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplay\+UIExtension\+Point\+Handle}} UGameplay\+Common\+Extension\+Subsystem::\+\+Register\+Extension\+Point (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Extension\+Point\+Tag}{, }\item[{\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplay\+UIExtension\+Point\+Match}}}]{Extension\+Point\+Tag\+Match\+Type}{, }\item[{const TArray$<$ UClass \texorpdfstring{$\ast$}{*} $>$ \&}]{Allowed\+Data\+Classes}{, }\item[{FGameplay\+Extend\+UIExtension\+Point\+Dynamic\+Signature}]{Extension\+Callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Blueprint:\+ Registers a new extension point. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a66517b6db9d6aba4cf7b75d241e8702d}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!RegisterExtensionPointForContextInternal@{RegisterExtensionPointForContextInternal}}
+\index{RegisterExtensionPointForContextInternal@{RegisterExtensionPointForContextInternal}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{RegisterExtensionPointForContextInternal()}{RegisterExtensionPointForContextInternal()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a66517b6db9d6aba4cf7b75d241e8702d} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplay\+UIExtension\+Point\+Handle}} UGameplay\+Common\+Extension\+Subsystem::\+\+Register\+Extension\+Point\+For\+Context\+Internal (\begin{DoxyParamCaption}\item[{const FGameplay\+Tag \&}]{Extension\+Point\+Tag}{, }\item[{UObject \texorpdfstring{$\ast$}{*}}]{Context\+Object}{, }\item[{\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplay\+UIExtension\+Point\+Match}}}]{Extension\+Point\+Tag\+Match\+Type}{, }\item[{const TArray$<$ UClass \texorpdfstring{$\ast$}{*} $>$ \&}]{Allowed\+Data\+Classes}{, }\item[{FGameplay\+Extend\+UIExtension\+Point\+Signature}]{Extension\+Callback}{}\end{DoxyParamCaption})}
+
+
+
+Native:\+ Registers a new extension point for a specific context object. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a807274911a016d8479edd5c1dd89c32f}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!RegisterExtensionPointInternal@{RegisterExtensionPointInternal}}
+\index{RegisterExtensionPointInternal@{RegisterExtensionPointInternal}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{RegisterExtensionPointInternal()}{RegisterExtensionPointInternal()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a807274911a016d8479edd5c1dd89c32f} 
+\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplay\+UIExtension\+Point\+Handle}} UGameplay\+Common\+Extension\+Subsystem::\+\+Register\+Extension\+Point\+Internal (\begin{DoxyParamCaption}\item[{const FGameplay\+Tag \&}]{Extension\+Point\+Tag}{, }\item[{\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplay\+UIExtension\+Point\+Match}}}]{Extension\+Point\+Tag\+Match\+Type}{, }\item[{const TArray$<$ UClass \texorpdfstring{$\ast$}{*} $>$ \&}]{Allowed\+Data\+Classes}{, }\item[{const FGameplay\+Extend\+UIExtension\+Point\+Signature \&}]{Extension\+Callback}{}\end{DoxyParamCaption})}
+
+
+
+Native:\+ Registers a new extension point. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_abd466dec54753225ba66f2f43f887a17}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!UnregisterExtension@{UnregisterExtension}}
+\index{UnregisterExtension@{UnregisterExtension}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{UnregisterExtension()}{UnregisterExtension()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_abd466dec54753225ba66f2f43f887a17} 
+void UGameplay\+Common\+Extension\+Subsystem::\+\+Unregister\+Extension (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplay\+UIExtension\+Handle}} \&}]{Extension\+Handle}{}\end{DoxyParamCaption})}
+
+
+
+Unregisters a previously registered extension. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_ad9e3cc8e5a872424fc423dd47e2eb841}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!UnregisterExtensionPoint@{UnregisterExtensionPoint}}
+\index{UnregisterExtensionPoint@{UnregisterExtensionPoint}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{UnregisterExtensionPoint()}{UnregisterExtensionPoint()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_ad9e3cc8e5a872424fc423dd47e2eb841} 
+void UGameplay\+Common\+Extension\+Subsystem::\+\+Unregister\+Extension\+Point (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplay\+UIExtension\+Point\+Handle}} \&}]{Extension\+Point\+Handle}{}\end{DoxyParamCaption})}
+
+
+
+Unregisters a previously registered extension point. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_common_extension_subsystem_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_common_extension_subsystem_a5319347a87ecabb9cbae2dd134dc9df2}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!ExtensionMap@{ExtensionMap}}
+\index{ExtensionMap@{ExtensionMap}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{ExtensionMap}{ExtensionMap}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_a5319347a87ecabb9cbae2dd134dc9df2} 
+TMap$<$FGameplay\+Tag, \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a0b70811ac8bfc1a7ef5467c13eda5aa5}{FExtension\+List}}$>$ UGameplay\+Common\+Extension\+Subsystem::\+\+Extension\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map of tags to a list of registered extensions at that tag. 
+
+\Hypertarget{class_u_gameplay_common_extension_subsystem_af38eda0c981cc95c1a3236441cd5223f}\index{UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}!ExtensionPointMap@{ExtensionPointMap}}
+\index{ExtensionPointMap@{ExtensionPointMap}!UGameplayCommonExtensionSubsystem@{UGameplayCommonExtensionSubsystem}}
+\doxysubsubsection{\texorpdfstring{ExtensionPointMap}{ExtensionPointMap}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_extension_subsystem_af38eda0c981cc95c1a3236441cd5223f} 
+TMap$<$FGameplay\+Tag, \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ae4b315ac0230f2a49b118b947a559287}{FExtension\+Point\+List}}$>$ UGameplay\+Common\+Extension\+Subsystem::\+\+Extension\+Point\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map of tags to a list of registered points at that tag. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h}{Gameplay\+Common\+Extension\+Subsystem.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8cpp}{Gameplay\+Common\+Extension\+Subsystem.\+cpp}}\end{DoxyCompactItemize}

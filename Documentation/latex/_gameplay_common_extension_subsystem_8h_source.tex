@@ -1,0 +1,225 @@
+\doxysection{Gameplay\+Common\+Extension\+Subsystem.\+h}
+\hypertarget{_gameplay_common_extension_subsystem_8h_source}{}\label{_gameplay_common_extension_subsystem_8h_source}\index{GameplayCommonExtensionSubsystem.h@{GameplayCommonExtensionSubsystem.h}}
+\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Subsystems/WorldSubsystem.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayCommonExtensionSubsystem.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem}{UGameplayCommonExtensionSubsystem}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplayUIExtensionRequest}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00013\ UENUM(BlueprintType)}
+\DoxyCodeLine{00014\ enum\ class\ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplayUIExtensionAction}}\ :\ uint8}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248daf29ddbfb905eb2593fdcdfb243f9af85}{Added}},}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248da93f07b720ebf7d1246512569761a5804}{Removed}}}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_afc241a6592f0215f065e1cdd594cbdb8}{DECLARE\_DELEGATE\_TwoParams}}(FGameplayExtendUIExtensionPointSignature,\ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplayUIExtensionAction}}\ ExtensionAction,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplayUIExtensionRequest}}\&\ ExtensionRequest);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension}{FGameplayUIExtension}}\ :\ TSharedFromThis<FGameplayUIExtension>}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ FGameplayTag\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_af2731389066b2198bd606dab55bf7fe2}{ExtensionPointTag}};}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ int32\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_a877a464683e78a7edb23fd33c88861db}{Priority}}\ =\ INDEX\_NONE;}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ TWeakObjectPtr<UObject>\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_a581d0da81fde821254b206b30ee4664e}{ContextObject}};}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ TObjectPtr<UObject>\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_a89f167077b9564426c0513ddf3d3af4b}{Data}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ USTRUCT(BlueprintType)}
+\DoxyCodeLine{00050\ struct\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_acffba7a6833423d597edad9e5f2ccf79}{FGameplayUIExtensionHandle}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_acffba7a6833423d597edad9e5f2ccf79}{FGameplayUIExtensionHandle}}()\ }
+\DoxyCodeLine{00055\ \ \ \ \ \{\}}
+\DoxyCodeLine{00056\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a59a7482390660b40acd1db7ee4532bde}{FGameplayUIExtensionHandle}}(\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_abbfaaadf9bb547dbe7a5adeebb4d451e}{UGameplayCommonExtensionSubsystem}}*\ InExtensionSource,\ \textcolor{keyword}{const}\ TSharedPtr<FGameplayUIExtension>\&\ InDataPtr)\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a6b80aef07b4f6b513aa9392deffa0da7}{ExtensionSource}}(InExtensionSource)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a2e32acac1ba6118ab9376daa7ffe5ab1}{DataPtr}}(InDataPtr)\ }
+\DoxyCodeLine{00059\ \ \ \ \ \{\}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ Unregister();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ FORCEINLINE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_aa0b2506d04b4824249942aa8c1fb3e9f}{IsValid}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a2e32acac1ba6118ab9376daa7ffe5ab1}{DataPtr}}.IsValid();\ \}}
+\DoxyCodeLine{00066\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a603034b382631b84fc87a0fe327b84d0}{operator==}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_acffba7a6833423d597edad9e5f2ccf79}{FGameplayUIExtensionHandle}}\&\ Other)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a2e32acac1ba6118ab9376daa7ffe5ab1}{DataPtr}}\ ==\ Other.\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a2e32acac1ba6118ab9376daa7ffe5ab1}{DataPtr}};\ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_afc01b9d3b0ab0d0570b83abd6b62914e}{operator!=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_acffba7a6833423d597edad9e5f2ccf79}{FGameplayUIExtensionHandle}}\&\ Other)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ !\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a603034b382631b84fc87a0fe327b84d0}{operator==}}(Other);\ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{friend}\ FORCEINLINE\ uint32\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a5e5712e0130f46ffd0fa09aa94e2f2f5}{GetTypeHash}}(\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_acffba7a6833423d597edad9e5f2ccf79}{FGameplayUIExtensionHandle}}\ Handle)\ \{\ \textcolor{keywordflow}{return}\ PointerHash(Handle.\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a2e32acac1ba6118ab9376daa7ffe5ab1}{DataPtr}}.Get());\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ TWeakObjectPtr<UGameplayCommonExtensionSubsystem>\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a6b80aef07b4f6b513aa9392deffa0da7}{ExtensionSource}};}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ TSharedPtr<FGameplayUIExtension>\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_a2e32acac1ba6118ab9376daa7ffe5ab1}{DataPtr}};}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{friend}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle_abbfaaadf9bb547dbe7a5adeebb4d451e}{UGameplayCommonExtensionSubsystem}};}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00082\ \textcolor{keyword}{struct\ }TStructOpsTypeTraits<\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}>\ :\ TStructOpsTypeTraitsBase2<FGameplayUIExtensionHandle>}
+\DoxyCodeLine{00083\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_t_struct_ops_type_traits_3_01_f_gameplay_u_i_extension_handle_01_4_ab8109d5b2c6b53e1f832e4b0ad7e93d8a8a25c635bf02e0767076f46972c3c813}{WithCopy}}\ =\ \textcolor{keyword}{true},\ \ \textcolor{comment}{//\ This\ ensures\ the\ opaque\ type\ is\ copied\ correctly\ in\ BPs}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_t_struct_ops_type_traits_3_01_f_gameplay_u_i_extension_handle_01_4_ab8109d5b2c6b53e1f832e4b0ad7e93d8afb44ac39ceef2ffed2ff5bd918643eb5}{WithIdenticalViaEquality}}\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00088\ \ \ \ \ \};}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00092\ USTRUCT(BlueprintType)}
+\DoxyCodeLine{00093\ struct\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplayUIExtensionRequest}}}
+\DoxyCodeLine{00094\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00099\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Extension"{}})}
+\DoxyCodeLine{00100\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request_a5454c13796aa8691bf848fc374bb2411}{ExtensionHandle}};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00103\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Extension"{}})}
+\DoxyCodeLine{00104\ \ \ \ \ FGameplayTag\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request_ace33a351252e086436e39cc684c87c93}{ExtensionPointTag}};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00107\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Extension"{}})}
+\DoxyCodeLine{00108\ \ \ \ \ int32\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request_afe9bfd2ffdac945f322f438a19b28a05}{Priority}}\ =\ INDEX\_NONE;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00111\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Extension"{}})}
+\DoxyCodeLine{00112\ \ \ \ \ TObjectPtr<UObject>\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request_a83ac178f6b97157e07f523b05b41665d}{Data}}\ =\ \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00115\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Extension"{}})}
+\DoxyCodeLine{00116\ \ \ \ \ TObjectPtr<UObject>\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request_a8de4453929adf2cf3b5999b264c490a8}{ContextObject}}\ =\ \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00117\ \};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00120\ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a03952a9c2cccdcba8ee1daeedab8bb35}{DECLARE\_DYNAMIC\_DELEGATE\_TwoParams}}(FGameplayExtendUIExtensionPointDynamicSignature,\ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplayUIExtensionAction}},\ ExtensionAction,\ const\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplayUIExtensionRequest}}\&,\ ExtensionRequest);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00123\ UENUM(BlueprintType)}
+\DoxyCodeLine{00124\ enum\ class\ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplayUIExtensionPointMatch}}\ :\ uint8}
+\DoxyCodeLine{00125\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50a9ba95bbc0af89aca6c6c6ac908cd4c27}{ExactMatch}},}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00130\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50a7db896d856c5b2ab3f16d7607fe95ea7}{PartialMatch}}}
+\DoxyCodeLine{00131\ \};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00134\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point}{FGameplayUIExtensionPoint}}\ :\ TSharedFromThis<FGameplayUIExtensionPoint>}
+\DoxyCodeLine{00135\ \{}
+\DoxyCodeLine{00136\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00138\ \ \ \ \ FGameplayTag\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_ac468018c82d55c402d38f6e4a1b5798e}{ExtensionPointTag}};}
+\DoxyCodeLine{00139\ \ \ \ \ }
+\DoxyCodeLine{00141\ \ \ \ \ TWeakObjectPtr<UObject>\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_a79fd9318cca3ee81e2e377e0c4219a7e}{ContextObject}};}
+\DoxyCodeLine{00142\ \ \ \ \ }
+\DoxyCodeLine{00144\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplayUIExtensionPointMatch}}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_a50d7f8e761cc3ffb5ad0523f554899f1}{ExtensionPointTagMatchType}}\ =\ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50a9ba95bbc0af89aca6c6c6ac908cd4c27}{EGameplayUIExtensionPointMatch::ExactMatch}};}
+\DoxyCodeLine{00145\ \ \ \ \ }
+\DoxyCodeLine{00147\ \ \ \ \ TArray<TObjectPtr<UClass>>\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_a486d984be554f9cad9c08a678b862c13}{AllowedDataClasses}};}
+\DoxyCodeLine{00148\ \ \ \ \ }
+\DoxyCodeLine{00150\ \ \ \ \ FGameplayExtendUIExtensionPointSignature\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_ac60388bea168a96bdaf0bb2344a495c9}{Callback}};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_a1a4a3e07ba20adbcf188a21ddb4bfc7a}{DoesExtensionPassContract}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension}{FGameplayUIExtension}}*\ Extension)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00154\ \};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00157\ USTRUCT(BlueprintType)}
+\DoxyCodeLine{00158\ struct\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a3832ad6027af744db9d851c8f0358f99}{FGameplayUIExtensionPointHandle}}}
+\DoxyCodeLine{00159\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00163\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a3832ad6027af744db9d851c8f0358f99}{FGameplayUIExtensionPointHandle}}()\ }
+\DoxyCodeLine{00164\ \ \ \ \ \{\}}
+\DoxyCodeLine{00165\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a376d7fb30dc2dd6a8c921840f8e90499}{FGameplayUIExtensionPointHandle}}(\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a36885f500c467d194c1a3cf035d0521b}{UGameplayCommonExtensionSubsystem}}*\ InExtensionSource,\ \textcolor{keyword}{const}\ TSharedPtr<FGameplayUIExtensionPoint>\&\ InDataPtr)\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a11a4023e380bb82db436305a952a7346}{ExtensionSource}}(InExtensionSource)}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a7db439d0be4626f49eb467a05012de40}{DataPtr}}(InDataPtr)\ }
+\DoxyCodeLine{00168\ \ \ \ \ \{\}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ Unregister();}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00174\ \ \ \ \ FORCEINLINE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a10bc7f4f7522b3b5bdd2e5c7b61d7d20}{IsValid}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a7db439d0be4626f49eb467a05012de40}{DataPtr}}.IsValid();\ \}}
+\DoxyCodeLine{00175\ \ \ \ \ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a8488f98948d11f42e20d3bf53629bec9}{operator==}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a3832ad6027af744db9d851c8f0358f99}{FGameplayUIExtensionPointHandle}}\&\ Other)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a7db439d0be4626f49eb467a05012de40}{DataPtr}}\ ==\ Other.\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a7db439d0be4626f49eb467a05012de40}{DataPtr}};\ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_ab18b24598894b90c594654199955d0dd}{operator!=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a3832ad6027af744db9d851c8f0358f99}{FGameplayUIExtensionPointHandle}}\&\ Other)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ !\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a8488f98948d11f42e20d3bf53629bec9}{operator==}}(Other);\ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keyword}{friend}\ uint32\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a4b8a5c0e7b973fd7b537900c3b2b452a}{GetTypeHash}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a3832ad6027af744db9d851c8f0358f99}{FGameplayUIExtensionPointHandle}}\&\ Handle)\ \{\ \textcolor{keywordflow}{return}\ PointerHash(Handle.\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a7db439d0be4626f49eb467a05012de40}{DataPtr}}.Get());\ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00182\ \ \ \ \ TWeakObjectPtr<UGameplayCommonExtensionSubsystem>\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a11a4023e380bb82db436305a952a7346}{ExtensionSource}};}
+\DoxyCodeLine{00183\ \ \ \ \ }
+\DoxyCodeLine{00185\ \ \ \ \ TSharedPtr<FGameplayUIExtensionPoint>\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a7db439d0be4626f49eb467a05012de40}{DataPtr}};}
+\DoxyCodeLine{00186\ \ \ \ \ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keyword}{friend}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle_a36885f500c467d194c1a3cf035d0521b}{UGameplayCommonExtensionSubsystem}};}
+\DoxyCodeLine{00188\ \};}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00191\ \textcolor{keyword}{struct\ }TStructOpsTypeTraits<\doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplayUIExtensionPointHandle}}>\ :\ TStructOpsTypeTraitsBase2<FGameplayUIExtensionPointHandle>}
+\DoxyCodeLine{00192\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00194\ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_t_struct_ops_type_traits_3_01_f_gameplay_u_i_extension_point_handle_01_4_a5b951507c80175d1ab56086b696d4c2da2ee549196e085cdb947cf21bde037103}{WithCopy}}\ =\ \textcolor{keyword}{true},\ \ \textcolor{comment}{//\ This\ ensures\ the\ opaque\ type\ is\ copied\ correctly\ in\ BPs}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_t_struct_ops_type_traits_3_01_f_gameplay_u_i_extension_point_handle_01_4_a5b951507c80175d1ab56086b696d4c2daf4a40c7a051cdfa7e4ac695972d0d5d8}{WithIdenticalViaEquality}}\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00197\ \ \ \ \ \};}
+\DoxyCodeLine{00198\ \};}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00211\ UCLASS(meta=(DisplayName=\textcolor{stringliteral}{"{}Gameplay\ Common\ Extension\ Subsystem"{}}))}
+\DoxyCodeLine{00212\ class\ GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a1238275dcd38dc7ea96c5c7504ef4396}{UGameplayCommonExtensionSubsystem}}\ :\ public\ UWorldSubsystem}
+\DoxyCodeLine{00213\ \{}
+\DoxyCodeLine{00214\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00215\ \ \ \ \ }
+\DoxyCodeLine{00216\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00217\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a1238275dcd38dc7ea96c5c7504ef4396}{UGameplayCommonExtensionSubsystem}}();}
+\DoxyCodeLine{00218\ \ \ \ \ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{comment}{//\string~Begin\ USubsystem}}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_gameplay_common_types_8h_a047952fd8802acdf0715260d3a00b61ea223e06f5cb15fc701ea1e686f7934f4f}{Initialize}}(FSubsystemCollectionBase\&\ Collection)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_aabb4fb937a0e4cdb27389344e24e0d63}{Deinitialize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ USubsystem}}
+\DoxyCodeLine{00223\ \ \ \ \ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a7937b1c0e4057af6ddbdfefaf45c824e}{AddReferencedObjects}}(UObject*\ InThis,\ FReferenceCollector\&\ Collector);}
+\DoxyCodeLine{00225\ \ \ \ \ }
+\DoxyCodeLine{00227\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplayUIExtensionPointHandle}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a807274911a016d8479edd5c1dd89c32f}{RegisterExtensionPointInternal}}(\textcolor{keyword}{const}\ FGameplayTag\&\ ExtensionPointTag,\ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplayUIExtensionPointMatch}}\ ExtensionPointTagMatchType,\ \textcolor{keyword}{const}\ TArray<UClass*>\&\ AllowedDataClasses,\ \textcolor{keyword}{const}\ FGameplayExtendUIExtensionPointSignature\&\ ExtensionCallback);}
+\DoxyCodeLine{00228\ \ \ \ \ }
+\DoxyCodeLine{00230\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplayUIExtensionPointHandle}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a66517b6db9d6aba4cf7b75d241e8702d}{RegisterExtensionPointForContextInternal}}(\textcolor{keyword}{const}\ FGameplayTag\&\ ExtensionPointTag,\ UObject*\ ContextObject,\ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplayUIExtensionPointMatch}}\ ExtensionPointTagMatchType,\ \textcolor{keyword}{const}\ TArray<UClass*>\&\ AllowedDataClasses,\ FGameplayExtendUIExtensionPointSignature\ ExtensionCallback);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00233\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a26eda7ad5a41d10a9530b28ed042d75c}{RegisterExtensionAsWidgetInternal}}(\textcolor{keyword}{const}\ FGameplayTag\&\ ExtensionPointTag,\ \doxymbox{\hyperlink{class_t_subclass_of}{TSubclassOf<UUserWidget>}}\ WidgetClass,\ int32\ Priority);}
+\DoxyCodeLine{00234\ \ \ \ \ }
+\DoxyCodeLine{00236\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a446a6f6dcde8bce5f2946b79977d2d04}{RegisterExtensionAsWidgetForContextInternal}}(\textcolor{keyword}{const}\ FGameplayTag\&\ ExtensionPointTag,\ UObject*\ ContextObject,\ \doxymbox{\hyperlink{class_t_subclass_of}{TSubclassOf<UUserWidget>}}\ WidgetClass,\ int32\ Priority);}
+\DoxyCodeLine{00237\ \ \ \ \ }
+\DoxyCodeLine{00239\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a62d6bdef91cb7a8dbad8b463c80a72e4}{RegisterExtensionAsDataInternal}}(\textcolor{keyword}{const}\ FGameplayTag\&\ ExtensionPointTag,\ UObject*\ ContextObject,\ UObject*\ Data,\ int32\ Priority);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00242\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension"{}})}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_abd466dec54753225ba66f2f43f887a17}{UnregisterExtension}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\&\ ExtensionHandle);}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00246\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension"{}})}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ad9e3cc8e5a872424fc423dd47e2eb841}{UnregisterExtensionPoint}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplayUIExtensionPointHandle}}\&\ ExtensionPointHandle);}
+\DoxyCodeLine{00248\ \ \ \ \ }
+\DoxyCodeLine{00249\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00251\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_request}{FGameplayUIExtensionRequest}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_afbb7e4cdff62578591469cdf23751acf}{CreateExtensionRequest}}(\textcolor{keyword}{const}\ TSharedPtr<FGameplayUIExtension>\&\ Extension);}
+\DoxyCodeLine{00252\ \ \ \ \ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ae6f8d84988a2a0ffb092430d3cc23052}{NotifyExtensionPointOfExtensions}}(\textcolor{keyword}{const}\ TSharedPtr<FGameplayUIExtensionPoint>\&\ ExtensionPoint);}
+\DoxyCodeLine{00255\ \ \ \ \ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a871b8b51e3755a2d2f1f9fe391f07571}{NotifyExtensionPointsOfExtension}}(\doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_ab71caabbe6e38ebb98b8529e81b8248d}{EGameplayUIExtensionAction}}\ ExtensionAction,\ \textcolor{keyword}{const}\ TSharedPtr<FGameplayUIExtension>\&\ Extension);}
+\DoxyCodeLine{00258\ \ \ \ \ }
+\DoxyCodeLine{00260\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension"{}},\ meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}Register\ Extension\ Point"{}}))}
+\DoxyCodeLine{00261\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_point_handle}{FGameplayUIExtensionPointHandle}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a1d3fad7705991742736c2190fc8e7e92}{RegisterExtensionPoint}}(FGameplayTag\ ExtensionPointTag,\ \doxymbox{\hyperlink{_gameplay_common_extension_subsystem_8h_a53288a0f9ff7503240cfd1d164057d50}{EGameplayUIExtensionPointMatch}}\ ExtensionPointTagMatchType,\ \textcolor{keyword}{const}\ TArray<UClass*>\&\ AllowedDataClasses,\ FGameplayExtendUIExtensionPointDynamicSignature\ ExtensionCallback);}
+\DoxyCodeLine{00262\ \ \ \ \ }
+\DoxyCodeLine{00264\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension"{}},\ meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}Register\ Extension\ (Widget)"{}}))}
+\DoxyCodeLine{00265\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_af7cf302ec1e6fdc510efd7eb444337a7}{RegisterExtensionAsWidget}}(FGameplayTag\ ExtensionPointTag,\ \doxymbox{\hyperlink{class_t_subclass_of}{TSubclassOf<UUserWidget>}}\ WidgetClass,\ int32\ Priority\ =\ -\/1);}
+\DoxyCodeLine{00266\ \ \ \ \ }
+\DoxyCodeLine{00271\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension"{}},\ meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}Register\ Extension\ (Widget\ For\ Context)"{}}))}
+\DoxyCodeLine{00272\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ae3b43e71cb704d040bb98dad205390eb}{RegisterExtensionAsWidgetForContext}}(FGameplayTag\ ExtensionPointTag,\ \doxymbox{\hyperlink{class_t_subclass_of}{TSubclassOf<UUserWidget>}}\ WidgetClass,\ UObject*\ ContextObject,\ int32\ Priority\ =\ -\/1);}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00277\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension"{}},\ meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}Register\ Extension\ (Data)"{}}))}
+\DoxyCodeLine{00278\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_adefe99c87bfc5a51801e98e87c36bd17}{RegisterExtensionAsData}}(FGameplayTag\ ExtensionPointTag,\ UObject*\ Data,\ int32\ Priority\ =\ -\/1);}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00283\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category\ =\ \textcolor{stringliteral}{"{}Gameplay\ UI\ Extension"{}},\ meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}Register\ Extension\ (Data\ For\ Context)"{}}))}
+\DoxyCodeLine{00284\ \ \ \ \ \doxymbox{\hyperlink{struct_f_gameplay_u_i_extension_handle}{FGameplayUIExtensionHandle}}\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_aa47dcef2ca112318252d697f089cd2e7}{RegisterExtensionAsDataForContext}}(FGameplayTag\ ExtensionPointTag,\ UObject*\ ContextObject,\ UObject*\ Data,\ int32\ Priority\ =\ -\/1);}
+\DoxyCodeLine{00285\ \ \ \ \ }
+\DoxyCodeLine{00286\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keyword}{typedef}\ TArray<TSharedPtr<FGameplayUIExtensionPoint>>\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_ae4b315ac0230f2a49b118b947a559287}{FExtensionPointList}};}
+\DoxyCodeLine{00289\ \ \ \ \ TMap<FGameplayTag,\ FExtensionPointList>\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_af38eda0c981cc95c1a3236441cd5223f}{ExtensionPointMap}};}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keyword}{typedef}\ TArray<TSharedPtr<FGameplayUIExtension>>\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a0b70811ac8bfc1a7ef5467c13eda5aa5}{FExtensionList}};}
+\DoxyCodeLine{00293\ \ \ \ \ TMap<FGameplayTag,\ FExtensionList>\ \doxymbox{\hyperlink{class_u_gameplay_common_extension_subsystem_a5319347a87ecabb9cbae2dd134dc9df2}{ExtensionMap}};}
+\DoxyCodeLine{00294\ \};}
+\DoxyCodeLine{00295\ }
+
+\end{DoxyCode}

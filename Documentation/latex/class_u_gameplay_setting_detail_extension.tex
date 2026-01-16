@@ -1,0 +1,119 @@
+\doxysection{UGameplay\+Setting\+Detail\+Extension Class Reference}
+\hypertarget{class_u_gameplay_setting_detail_extension}{}\label{class_u_gameplay_setting_detail_extension}\index{UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}}
+
+
+Base class for widgets that extend the functionality of a setting\textquotesingle{}s detail view.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+Detail\+Extension.\+h$>$}
+
+Inheritance diagram for UGameplay\+Setting\+Detail\+Extension:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_setting_detail_extension}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_a51d1143b62dde9840b919253d10c2a8c}{Set\+Setting}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Assigns the setting that this extension should represent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_a8938c40fec8a95041057c63672fbf916}{Native\+Setting\+Assigned}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Called natively when a new setting is assigned to this extension. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_a10a0f22ed292c293d23975cf3cd61918}{Native\+Setting\+Value\+Changed}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting, \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}} Reason)
+\begin{DoxyCompactList}\small\item\em Called natively when the value of the assigned setting changes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_ad91fc01d0c495a3472201b4b4077b368}{BP\+\_\+\+On\+Setting\+Assigned}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Blueprint event fired when a setting is assigned. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_a13c6abb433c25562613ea6a6c61b39f5}{BP\+\_\+\+On\+Setting\+Value\+Changed}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Blueprint event fired when the assigned setting\textquotesingle{}s value changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_ad9ba5dae529aea867b6d2c1d32055ad1}{Setting}}
+\begin{DoxyCompactList}\small\item\em The setting currently associated with this extension. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for widgets that extend the functionality of a setting\textquotesingle{}s detail view. 
+
+Extensions are auxiliary widgets that provide additional UI elements or information for a specific setting (e.\+g., a "{}\+Restore Default"{} button, a descriptive image, or a specialized control). 
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_setting_detail_extension_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_setting_detail_extension_ad91fc01d0c495a3472201b4b4077b368}\index{UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}!BP\_OnSettingAssigned@{BP\_OnSettingAssigned}}
+\index{BP\_OnSettingAssigned@{BP\_OnSettingAssigned}!UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}}
+\doxysubsubsection{\texorpdfstring{BP\_OnSettingAssigned()}{BP\_OnSettingAssigned()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_detail_extension_ad91fc01d0c495a3472201b4b4077b368} 
+void UGameplay\+Setting\+Detail\+Extension::\+\+BP\+\_\+\+On\+Setting\+Assigned (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Blueprint event fired when a setting is assigned. 
+
+\Hypertarget{class_u_gameplay_setting_detail_extension_a13c6abb433c25562613ea6a6c61b39f5}\index{UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}!BP\_OnSettingValueChanged@{BP\_OnSettingValueChanged}}
+\index{BP\_OnSettingValueChanged@{BP\_OnSettingValueChanged}!UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}}
+\doxysubsubsection{\texorpdfstring{BP\_OnSettingValueChanged()}{BP\_OnSettingValueChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_detail_extension_a13c6abb433c25562613ea6a6c61b39f5} 
+void UGameplay\+Setting\+Detail\+Extension::\+\+BP\+\_\+\+On\+Setting\+Value\+Changed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Blueprint event fired when the assigned setting\textquotesingle{}s value changes. 
+
+\Hypertarget{class_u_gameplay_setting_detail_extension_a8938c40fec8a95041057c63672fbf916}\index{UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}!NativeSettingAssigned@{NativeSettingAssigned}}
+\index{NativeSettingAssigned@{NativeSettingAssigned}!UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}}
+\doxysubsubsection{\texorpdfstring{NativeSettingAssigned()}{NativeSettingAssigned()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_detail_extension_a8938c40fec8a95041057c63672fbf916} 
+void UGameplay\+Setting\+Detail\+Extension::\+\+Native\+Setting\+Assigned (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called natively when a new setting is assigned to this extension. 
+
+\Hypertarget{class_u_gameplay_setting_detail_extension_a10a0f22ed292c293d23975cf3cd61918}\index{UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}!NativeSettingValueChanged@{NativeSettingValueChanged}}
+\index{NativeSettingValueChanged@{NativeSettingValueChanged}!UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}}
+\doxysubsubsection{\texorpdfstring{NativeSettingValueChanged()}{NativeSettingValueChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_detail_extension_a10a0f22ed292c293d23975cf3cd61918} 
+void UGameplay\+Setting\+Detail\+Extension::\+\+Native\+Setting\+Value\+Changed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{, }\item[{\doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}}}]{Reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called natively when the value of the assigned setting changes. 
+
+\Hypertarget{class_u_gameplay_setting_detail_extension_a51d1143b62dde9840b919253d10c2a8c}\index{UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}!SetSetting@{SetSetting}}
+\index{SetSetting@{SetSetting}!UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}}
+\doxysubsubsection{\texorpdfstring{SetSetting()}{SetSetting()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_detail_extension_a51d1143b62dde9840b919253d10c2a8c} 
+void UGameplay\+Setting\+Detail\+Extension::\+\+Set\+Setting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})}
+
+
+
+Assigns the setting that this extension should represent. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_setting_detail_extension_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_setting_detail_extension_ad9ba5dae529aea867b6d2c1d32055ad1}\index{UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}!Setting@{Setting}}
+\index{Setting@{Setting}!UGameplaySettingDetailExtension@{UGameplaySettingDetailExtension}}
+\doxysubsubsection{\texorpdfstring{Setting}{Setting}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_detail_extension_ad9ba5dae529aea867b6d2c1d32055ad1} 
+TObject\+Ptr$<$\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}$>$ UGameplay\+Setting\+Detail\+Extension::\+\+Setting\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The setting currently associated with this extension. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_detail_extension_8h}{Gameplay\+Setting\+Detail\+Extension.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_setting_detail_extension_8cpp}{Gameplay\+Setting\+Detail\+Extension.\+cpp}}\end{DoxyCompactItemize}

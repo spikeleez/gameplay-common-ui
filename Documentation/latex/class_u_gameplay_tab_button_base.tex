@@ -1,0 +1,109 @@
+\doxysection{UGameplay\+Tab\+Button\+Base Class Reference}
+\hypertarget{class_u_gameplay_tab_button_base}{}\label{class_u_gameplay_tab_button_base}\index{UGameplayTabButtonBase@{UGameplayTabButtonBase}}
+
+
+Base class for buttons used within a \doxylink{class_u_gameplay_tab_list_widget_base}{UGameplay\+Tab\+List\+Widget\+Base}.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Tab\+Button\+Base.\+h$>$}
+
+Inheritance diagram for UGameplay\+Tab\+Button\+Base:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_gameplay_tab_button_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_tab_button_base_a294e2ed6b3c524f3f190cc6991db88cc}{Set\+Tab\+Label\+Info\+\_\+\+Implementation}} (const \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&Tab\+Label\+Info) override
+\begin{DoxyCompactList}\small\item\em Updates the button\textquotesingle{}s visuals based on the provided tab descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_gameplay_button_base}{UGameplay\+Button\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_button_base_ab3c7fa869213db06f7fc80fd690a7817}{UGameplay\+Button\+Base}} (const FObject\+Initializer \&Object\+Initializer=FObject\+Initializer::\+\+Get())
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_button_base_ab262c18d7ebe0a84aa1cf33813893b61}{Native\+Pre\+Construct}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_button_base_af9485a47e039a0794f4b0090d7e0b334}{Native\+Construct}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_button_base_a5f86189c92a566aab7517645403c94e2}{Native\+On\+Hovered}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_button_base_aecd4de273f9abeef81fe6a4be1a6baef}{Native\+On\+Unhovered}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_button_base_a8154e3623af7da4bc7b5991ee4a80757}{On\+Input\+Method\+Changed}} (ECommon\+Input\+Type Current\+Input\+Type) override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_button_base_aa339c47fa35ae4a05120c10a1795587f}{Update\+Input\+Action\+Widget}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_button_base_a6a2a5232bac7853a66e743ae4028c008}{Native\+On\+Current\+Text\+Style\+Changed}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_button_base_a2a33007b9af33b360e421533c4a39935}{Refresh\+Button\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the internal text widget based on current Button\+Text and settings. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_button_base_a639f04e059ead55753f314db6f68bd10}{Set\+Button\+Text}} (FText New\+Text)
+\begin{DoxyCompactList}\small\item\em Sets and refreshes the main localized text shown on the button. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_button_base_a6d7d72557b7f058a9cdf2938f0252388}{Get\+Button\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Returns the currently set main localized text for the button. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_button_base_a8e1bc83d8a4fa6d7b94fa697befb856a}{Set\+Button\+Brush}} (const FSlate\+Brush \&New\+Brush)
+\begin{DoxyCompactList}\small\item\em Manually sets the brush for the button\textquotesingle{}s visual representation. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_button_base_ac692143a7408787f1b45bb7842686023}{Set\+Button\+Brush\+From\+Lazy\+Object}} (TSoft\+Object\+Ptr$<$ UObject $>$ Lazy\+Object)
+\begin{DoxyCompactList}\small\item\em Asynchronously loads and sets the button brush from a lazy-\/loadable object. \end{DoxyCompactList}\item 
+FSlate\+Brush \doxymbox{\hyperlink{class_u_gameplay_button_base_a5294f35acc02a37af3e39a874d2429a0}{Get\+Button\+Brush}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current visual brush of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_i_gameplay_tab_button_interface}{IGameplay\+Tab\+Button\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_i_gameplay_tab_button_interface_a6c16b658e382dc8a803c9732a7cd9a63}{Set\+Tab\+Label\+Info}} (const \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&Tab\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Sets the displayed data for the tab button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_u_gameplay_button_base}{UGameplay\+Button\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_button_base_a962e0f64c1af6668c45bb3fffbacc590}{Receive\+Update\+Button\+Style}} ()
+\begin{DoxyCompactList}\small\item\em Blueprint event to handle custom styling logic updates. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_button_base_aff20a2dbf9d7d5a280a0d3c8c519bdf4}{Receive\+Update\+Button\+Text}} (const FText \&In\+Text)
+\begin{DoxyCompactList}\small\item\em Blueprint event to handle custom text update logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_gameplay_button_base}{UGameplay\+Button\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ UCommon\+Border $>$ \doxymbox{\hyperlink{class_u_gameplay_button_base_a224d18d77fd8d657576bd705fee2ce28}{Border\+\_\+\+Button}}
+\begin{DoxyCompactList}\small\item\em Optional border widget defining the button background/\+frame. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ UCommon\+Text\+Block $>$ \doxymbox{\hyperlink{class_u_gameplay_button_base_ab5d190d042e3ccaa83fa5b063c78f713}{Text\+\_\+\+Button}}
+\begin{DoxyCompactList}\small\item\em Optional text widget for displaying the button label. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ UCommon\+Lazy\+Image $>$ \doxymbox{\hyperlink{class_u_gameplay_button_base_a75425e4b153c1cbc12c9020b56ce3d62}{Image\+\_\+\+Button}}
+\begin{DoxyCompactList}\small\item\em Optional lazy-\/loaded image widget for an icon or illustration. \end{DoxyCompactList}\item 
+uint8 \doxymbox{\hyperlink{class_u_gameplay_button_base_af27dde85c21fa6e57338ba451cabd1af}{b\+Show\+Input\+Display\+Text\+If\+Possible}}:\+ 1
+\begin{DoxyCompactList}\small\item\em If true, the button will attempt to display input prompt text (e.\+g., "{}\+[\+X]\+ Accept"{}). \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_button_base_aeee853ab9b2f7c2725579ccc8b144809}{Button\+Text}}
+\begin{DoxyCompactList}\small\item\em The primary localized label text for this button. \end{DoxyCompactList}\item 
+uint8 \doxymbox{\hyperlink{class_u_gameplay_button_base_a0c55d41aeb39f3c51cf0570e43dce222}{b\+Button\+Text\+Uppercase}}:\+ 1
+\begin{DoxyCompactList}\small\item\em If true, forces the displayed button text to be uppercase regardless of input source. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_button_base_ab6ef2fbcfac7e5ed665e876ad5eb964e}{Button\+Description\+Text}}
+\begin{DoxyCompactList}\small\item\em Secondary descriptive text, often broadcast to subsystems for tooltip display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for buttons used within a \doxylink{class_u_gameplay_tab_list_widget_base}{UGameplay\+Tab\+List\+Widget\+Base}. 
+
+Implements \doxylink{class_i_gameplay_tab_button_interface}{IGameplay\+Tab\+Button\+Interface} to automatically receive and display information from a \doxylink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor} (such as icons and localized names). 
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_tab_button_base_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_tab_button_base_a294e2ed6b3c524f3f190cc6991db88cc}\index{UGameplayTabButtonBase@{UGameplayTabButtonBase}!SetTabLabelInfo\_Implementation@{SetTabLabelInfo\_Implementation}}
+\index{SetTabLabelInfo\_Implementation@{SetTabLabelInfo\_Implementation}!UGameplayTabButtonBase@{UGameplayTabButtonBase}}
+\doxysubsubsection{\texorpdfstring{SetTabLabelInfo\_Implementation()}{SetTabLabelInfo\_Implementation()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_tab_button_base_a294e2ed6b3c524f3f190cc6991db88cc} 
+void UGameplay\+Tab\+Button\+Base::\+\+Set\+Tab\+Label\+Info\+\_\+\+Implementation (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&}]{Tab\+Label\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the button\textquotesingle{}s visuals based on the provided tab descriptor. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_tab_button_base_8h}{Gameplay\+Tab\+Button\+Base.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_tab_button_base_8cpp}{Gameplay\+Tab\+Button\+Base.\+cpp}}\end{DoxyCompactItemize}

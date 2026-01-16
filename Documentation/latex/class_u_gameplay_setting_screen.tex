@@ -1,0 +1,456 @@
+\doxysection{UGameplay\+Setting\+Screen Class Reference}
+\hypertarget{class_u_gameplay_setting_screen}{}\label{class_u_gameplay_setting_screen}\index{UGameplaySettingScreen@{UGameplaySettingScreen}}
+
+
+Top-\/level activatable widget for a full settings menu screen.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+Screen.\+h$>$}
+
+Inheritance diagram for UGameplay\+Setting\+Screen:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_gameplay_setting_screen}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_screen_a9fb6816ef65ce72d742174da04ed9d54}{UGameplay\+Setting\+Screen}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a59cf737c7809e52e50f39109be2a78e1}{Native\+On\+Initialized}} () override
+\item 
+virtual UWidget \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_screen_afdfdf476175d76d61ff0435193e0748e}{Native\+Get\+Desired\+Focus\+Target}} () const override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a0a2e0217410a890bc05590f1162d1561}{Native\+On\+Activated}} () override
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a243328ed2da197c02c6910074c29beaa}{Navigate\+To\+Setting}} (FName Setting\+Dev\+Name)
+\begin{DoxyCompactList}\small\item\em Navigates the settings list to focus a specific setting. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a5f2e2f9bc5c01438fbeea7954935f5d7}{Navigate\+To\+Settings}} (const TArray$<$ FName $>$ \&Setting\+Dev\+Names)
+\begin{DoxyCompactList}\small\item\em Navigates to a filtered view of multiple settings. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_af7f064c159a1d0e5cbf811e7db16c3b6}{On\+Settings\+Dirty\+State\+Changed}} (bool b\+Settings\+Dirty)
+\begin{DoxyCompactList}\small\item\em Called when the dirty state of the settings registry changes. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_setting_screen_ae2dcb7085d11cd9a367bb245aeaf9b71}{Attempt\+To\+Pop\+Navigation}} ()
+\begin{DoxyCompactList}\small\item\em Attempts to pop the sub-\/page navigation stack. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_collection}{UGameplay\+Setting\+Collection}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_screen_ae17379ad503fcb47d7aed14e216f68a9}{Get\+Setting\+Collection}} (FName Setting\+Dev\+Name, bool \&Has\+Any\+Settings)
+\begin{DoxyCompactList}\small\item\em Retrieves a setting collection by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_gameplay_activatable_widget}{UGameplay\+Activatable\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a023bf6842453726e076b1e5d03cfa59e}{UGameplay\+Activatable\+Widget}} (const FObject\+Initializer \&Object\+Initializer=FObject\+Initializer::\+\+Get())
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ad17ff3c0acd789d45f90246aa4e938e5}{Native\+Destruct}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a9a334286488535fe8aa908280410c7e4}{Native\+On\+Deactivated}} () override
+\item 
+virtual TOptional$<$ FUIInput\+Config $>$ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ab57c70bd00c9275eff50c6c8239c6835}{Get\+Desired\+Input\+Config}} () const override
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ad9a734954029703ed3bd4530fb2c6e66}{Register\+Bound\+Action\+Binding}} (FData\+Table\+Row\+Handle Input\+Action, const FOn\+Input\+Action\+Executed\+Signature \&Callback, FUIAction\+Binding\+Handle \&Binding\+Handle)
+\begin{DoxyCompactList}\small\item\em Registers a standard UI action binding for this widget. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_afc936f88c6b7d84db597009ccd79691e}{Register\+Bound\+Enhanced\+Action\+Binding}} (UInput\+Action \texorpdfstring{$\ast$}{*}Input\+Action, const FOn\+Enhanced\+Input\+Action\+Executed\+Signature \&Callback, FUIAction\+Binding\+Handle \&Binding\+Handle)
+\begin{DoxyCompactList}\small\item\em Registers an Enhanced Input action binding for this widget. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a5557ba48b7d40950ae29522b1ee24ae7}{Unregister\+Bound\+Action\+Binding}} (FUIAction\+Binding\+Handle \&Binding\+Handle)
+\begin{DoxyCompactList}\small\item\em Manually unregisters a specific action binding. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a9cb56665546ea498c74c18dca3e1907a}{Unregister\+All\+Bound\+Action\+Bindings}} ()
+\begin{DoxyCompactList}\small\item\em Unregisters all currently active action bindings for this widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a6eb34280c3265c05d12bfcd98e8e30c6}{Registry\+Class}}
+\begin{DoxyCompactList}\small\item\em The class of registry to instantiate for this screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a4ec7366ff57258e05ade895081f3f0e0}{Create\+Registry}} ()
+\begin{DoxyCompactList}\small\item\em Overridable method to handle registry instantiation logic. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Game\+Setting\+RegistryT = UGameplay\+Setting\+Registry$>$ }\\Game\+Setting\+RegistryT \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a2998afb3f2cf77526eff3a1d604b6425}{Get\+Registry}} () const
+\begin{DoxyCompactList}\small\item\em Helper to get the registry casted to a specific type. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_ab2f7664eea289f23028872f8cfc6bc57}{Cancel\+Changes}} ()
+\begin{DoxyCompactList}\small\item\em Reverts all unapplied changes in the registry and tracker. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a959bd0e84c0ce122cae67ebee17c4bab}{Apply\+Changes}} ()
+\begin{DoxyCompactList}\small\item\em Saves all pending changes in the registry to disk/\+application. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_setting_screen_aca8d30e96eba8e0b98e2a04073febe1d}{Have\+Settings\+Been\+Changed}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if any setting has a pending modification. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a9bbe4e81600be31f02d8e4378635cc6b}{Handle\+Apply\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Action handler for the Apply input. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_aefe5f6af36c767790dbde873b0ff1863}{Handle\+Cancel\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Action handler for the Cancel input. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a9c30cf454757fd91bb2ab26e4659f4f0}{Handle\+Return\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Action handler for the Return/\+\+Back input. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a42212df9b2b313767c89de5c7614b194}{Clear\+Dirty\+State}} ()
+\begin{DoxyCompactList}\small\item\em Clears the internal dirty state tracking. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_screen_ab4b34dd0510245190eae2ee22af2f27d}{Handle\+Setting\+Changed}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}Setting, \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}} Reason)
+\begin{DoxyCompactList}\small\item\em Internal callback for registry change notifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_f_gameplay_setting_registry_change_tracker}{FGameplay\+Setting\+Registry\+Change\+Tracker}} \doxymbox{\hyperlink{class_u_gameplay_setting_screen_ac68c92517244e81ca4b59b1f275d3726}{Change\+Tracker}}
+\begin{DoxyCompactList}\small\item\em Internal tracker for auditing which settings have been modified. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_gameplay_activatable_widget}{UGameplay\+Activatable\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_types_8h_a1025122649dbd094f4a294fde094283c}{EGameplay\+Activatable\+Input\+Mode}} \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a85a7daafe70affb87f9bec77bfe54b31}{Input\+Mode}}
+\begin{DoxyCompactList}\small\item\em The input mode desired by this widget when activated. \end{DoxyCompactList}\item 
+EMouse\+Capture\+Mode \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a921df6987b1c0a7ab366cf9ed492a894}{Mouse\+Capture\+Mode}}
+\begin{DoxyCompactList}\small\item\em How the mouse should be captured when in a Game-\/related input mode. \end{DoxyCompactList}\item 
+uint8 \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a87674d4b50b95127a9c0a42c15ef688c}{b\+Hides\+Cursor\+During\+Viewport\+Capture}}:\+ 1
+\begin{DoxyCompactList}\small\item\em Whether to hide the mouse cursor while it\textquotesingle{}s captured in the viewport. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_screen_af8cb7b7efb8316c53ebdada8c4625257}{Get\+Or\+Create\+Registry}} ()
+\begin{DoxyCompactList}\small\item\em Lazy-\/loads or returns the existing registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ UGameplay\+Setting\+Panel $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a38f570211d1c8208db34df1714471195}{Settings\+\_\+\+Panel}}
+\begin{DoxyCompactList}\small\item\em The panel widget containing the actual settings list and details. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a176dd088aae9063b6d57fbacce678480}{Registry}}
+\begin{DoxyCompactList}\small\item\em The active settings registry. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ UInput\+Action $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a5ea67fa7055e56033225d7359a8a6bb5}{Apply\+Action}}
+\begin{DoxyCompactList}\small\item\em Input action for Applying changes. \end{DoxyCompactList}\item 
+FUIAction\+Binding\+Handle \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a41f33c4d243007a4499487d85cd7cd0a}{Apply\+Action\+Binding\+Handle}}
+\item 
+TObject\+Ptr$<$ UInput\+Action $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a08c6f2ea04851334ff11fe4be21fd37b}{Cancel\+Action}}
+\begin{DoxyCompactList}\small\item\em Input action for Canceling changes. \end{DoxyCompactList}\item 
+FUIAction\+Binding\+Handle \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a3c6a9aac9d69503d3a853047610fc509}{Cancel\+Action\+Binding\+Handle}}
+\item 
+TObject\+Ptr$<$ UInput\+Action $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a37e83df8e4e66d46d14a526d357a3c8f}{Return\+Action}}
+\begin{DoxyCompactList}\small\item\em Input action for Returning to previous page/\+screen. \end{DoxyCompactList}\item 
+FUIAction\+Binding\+Handle \doxymbox{\hyperlink{class_u_gameplay_setting_screen_af47817ec6beae598d89414f2227e4a3f}{Return\+Action\+Binding\+Handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Top-\/level activatable widget for a full settings menu screen. 
+
+\doxylink{class_u_gameplay_setting_screen}{UGameplay\+Setting\+Screen} provides the high-\/level orchestration for a settings menu, including:\+
+\begin{DoxyItemize}
+\item Creating and managing the \doxylink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}
+\item Tracking change state (dirty/\+applied) via \doxylink{class_f_gameplay_setting_registry_change_tracker}{FGameplay\+Setting\+Registry\+Change\+Tracker}
+\item Handling global actions like Apply, Cancel, and Reset
+\item Input action mapping for standard settings operations
+\item Managing the underlying UGameplay\+Setting\+Panel 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_setting_screen_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_setting_screen_a9fb6816ef65ce72d742174da04ed9d54}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\index{UGameplaySettingScreen@{UGameplaySettingScreen}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{UGameplaySettingScreen()}{UGameplaySettingScreen()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a9fb6816ef65ce72d742174da04ed9d54} 
+UGameplay\+Setting\+Screen::\+\+UGameplay\+Setting\+Screen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_setting_screen_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_setting_screen_a959bd0e84c0ce122cae67ebee17c4bab}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!ApplyChanges@{ApplyChanges}}
+\index{ApplyChanges@{ApplyChanges}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{ApplyChanges()}{ApplyChanges()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a959bd0e84c0ce122cae67ebee17c4bab} 
+void UGameplay\+Setting\+Screen::\+\+Apply\+Changes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Saves all pending changes in the registry to disk/\+application. 
+
+\Hypertarget{class_u_gameplay_setting_screen_ae2dcb7085d11cd9a367bb245aeaf9b71}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!AttemptToPopNavigation@{AttemptToPopNavigation}}
+\index{AttemptToPopNavigation@{AttemptToPopNavigation}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{AttemptToPopNavigation()}{AttemptToPopNavigation()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_ae2dcb7085d11cd9a367bb245aeaf9b71} 
+bool UGameplay\+Setting\+Screen::\+\+Attempt\+To\+Pop\+Navigation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to pop the sub-\/page navigation stack. 
+
+\begin{DoxyReturn}{Returns}
+True if a page was popped 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_setting_screen_ab2f7664eea289f23028872f8cfc6bc57}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!CancelChanges@{CancelChanges}}
+\index{CancelChanges@{CancelChanges}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{CancelChanges()}{CancelChanges()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_ab2f7664eea289f23028872f8cfc6bc57} 
+void UGameplay\+Setting\+Screen::\+\+Cancel\+Changes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reverts all unapplied changes in the registry and tracker. 
+
+\Hypertarget{class_u_gameplay_setting_screen_a42212df9b2b313767c89de5c7614b194}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!ClearDirtyState@{ClearDirtyState}}
+\index{ClearDirtyState@{ClearDirtyState}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{ClearDirtyState()}{ClearDirtyState()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a42212df9b2b313767c89de5c7614b194} 
+void UGameplay\+Setting\+Screen::\+\+Clear\+Dirty\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clears the internal dirty state tracking. 
+
+\Hypertarget{class_u_gameplay_setting_screen_a4ec7366ff57258e05ade895081f3f0e0}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!CreateRegistry@{CreateRegistry}}
+\index{CreateRegistry@{CreateRegistry}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{CreateRegistry()}{CreateRegistry()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a4ec7366ff57258e05ade895081f3f0e0} 
+\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}} \texorpdfstring{$\ast$}{*} UGameplay\+Setting\+Screen::\+\+Create\+Registry (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Overridable method to handle registry instantiation logic. 
+
+\Hypertarget{class_u_gameplay_setting_screen_af8cb7b7efb8316c53ebdada8c4625257}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!GetOrCreateRegistry@{GetOrCreateRegistry}}
+\index{GetOrCreateRegistry@{GetOrCreateRegistry}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{GetOrCreateRegistry()}{GetOrCreateRegistry()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_af8cb7b7efb8316c53ebdada8c4625257} 
+\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}} \texorpdfstring{$\ast$}{*} UGameplay\+Setting\+Screen::\+\+Get\+Or\+Create\+Registry (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lazy-\/loads or returns the existing registry. 
+
+\Hypertarget{class_u_gameplay_setting_screen_a2998afb3f2cf77526eff3a1d604b6425}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!GetRegistry@{GetRegistry}}
+\index{GetRegistry@{GetRegistry}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{GetRegistry()}{GetRegistry()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a2998afb3f2cf77526eff3a1d604b6425} 
+template$<$typename Game\+Setting\+RegistryT = UGameplay\+Setting\+Registry$>$ \\
+Game\+Setting\+RegistryT \texorpdfstring{$\ast$}{*} UGameplay\+Setting\+Screen::\+\+Get\+Registry (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Helper to get the registry casted to a specific type. 
+
+\Hypertarget{class_u_gameplay_setting_screen_ae17379ad503fcb47d7aed14e216f68a9}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!GetSettingCollection@{GetSettingCollection}}
+\index{GetSettingCollection@{GetSettingCollection}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{GetSettingCollection()}{GetSettingCollection()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_ae17379ad503fcb47d7aed14e216f68a9} 
+\doxymbox{\hyperlink{class_u_gameplay_setting_collection}{UGameplay\+Setting\+Collection}} \texorpdfstring{$\ast$}{*} UGameplay\+Setting\+Screen::\+\+Get\+Setting\+Collection (\begin{DoxyParamCaption}\item[{FName}]{Setting\+Dev\+Name}{, }\item[{bool \&}]{Has\+Any\+Settings}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a setting collection by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Setting\+Dev\+Name} & The name of the collection \\
+\hline
+{\em Has\+Any\+Settings} & \+[Out]\+ True if the collection contains any settings \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The collection object if found 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_setting_screen_a9bbe4e81600be31f02d8e4378635cc6b}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!HandleApplyAction@{HandleApplyAction}}
+\index{HandleApplyAction@{HandleApplyAction}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{HandleApplyAction()}{HandleApplyAction()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a9bbe4e81600be31f02d8e4378635cc6b} 
+void UGameplay\+Setting\+Screen::\+\+Handle\+Apply\+Action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Action handler for the Apply input. 
+
+\Hypertarget{class_u_gameplay_setting_screen_aefe5f6af36c767790dbde873b0ff1863}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!HandleCancelAction@{HandleCancelAction}}
+\index{HandleCancelAction@{HandleCancelAction}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{HandleCancelAction()}{HandleCancelAction()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_aefe5f6af36c767790dbde873b0ff1863} 
+void UGameplay\+Setting\+Screen::\+\+Handle\+Cancel\+Action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Action handler for the Cancel input. 
+
+\Hypertarget{class_u_gameplay_setting_screen_a9c30cf454757fd91bb2ab26e4659f4f0}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!HandleReturnAction@{HandleReturnAction}}
+\index{HandleReturnAction@{HandleReturnAction}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{HandleReturnAction()}{HandleReturnAction()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a9c30cf454757fd91bb2ab26e4659f4f0} 
+void UGameplay\+Setting\+Screen::\+\+Handle\+Return\+Action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Action handler for the Return/\+\+Back input. 
+
+\Hypertarget{class_u_gameplay_setting_screen_ab4b34dd0510245190eae2ee22af2f27d}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!HandleSettingChanged@{HandleSettingChanged}}
+\index{HandleSettingChanged@{HandleSettingChanged}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{HandleSettingChanged()}{HandleSettingChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_ab4b34dd0510245190eae2ee22af2f27d} 
+void UGameplay\+Setting\+Screen::\+\+Handle\+Setting\+Changed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{Setting}{, }\item[{\doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}}}]{Reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal callback for registry change notifications. 
+
+\Hypertarget{class_u_gameplay_setting_screen_aca8d30e96eba8e0b98e2a04073febe1d}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!HaveSettingsBeenChanged@{HaveSettingsBeenChanged}}
+\index{HaveSettingsBeenChanged@{HaveSettingsBeenChanged}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{HaveSettingsBeenChanged()}{HaveSettingsBeenChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_aca8d30e96eba8e0b98e2a04073febe1d} 
+bool UGameplay\+Setting\+Screen::\+\+Have\+Settings\+Been\+Changed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns true if any setting has a pending modification. 
+
+\Hypertarget{class_u_gameplay_setting_screen_afdfdf476175d76d61ff0435193e0748e}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!NativeGetDesiredFocusTarget@{NativeGetDesiredFocusTarget}}
+\index{NativeGetDesiredFocusTarget@{NativeGetDesiredFocusTarget}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{NativeGetDesiredFocusTarget()}{NativeGetDesiredFocusTarget()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_afdfdf476175d76d61ff0435193e0748e} 
+UWidget \texorpdfstring{$\ast$}{*} UGameplay\+Setting\+Screen::\+\+Native\+Get\+Desired\+Focus\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_setting_screen_a0a2e0217410a890bc05590f1162d1561}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!NativeOnActivated@{NativeOnActivated}}
+\index{NativeOnActivated@{NativeOnActivated}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{NativeOnActivated()}{NativeOnActivated()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a0a2e0217410a890bc05590f1162d1561} 
+void UGameplay\+Setting\+Screen::\+\+Native\+On\+Activated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a2f323f4846af290927c4d35bf90422bc}{UGameplay\+Activatable\+Widget}}.
+
+\Hypertarget{class_u_gameplay_setting_screen_a59cf737c7809e52e50f39109be2a78e1}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!NativeOnInitialized@{NativeOnInitialized}}
+\index{NativeOnInitialized@{NativeOnInitialized}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{NativeOnInitialized()}{NativeOnInitialized()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a59cf737c7809e52e50f39109be2a78e1} 
+void UGameplay\+Setting\+Screen::\+\+Native\+On\+Initialized (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_setting_screen_a243328ed2da197c02c6910074c29beaa}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!NavigateToSetting@{NavigateToSetting}}
+\index{NavigateToSetting@{NavigateToSetting}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{NavigateToSetting()}{NavigateToSetting()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a243328ed2da197c02c6910074c29beaa} 
+void UGameplay\+Setting\+Screen::\+\+Navigate\+To\+Setting (\begin{DoxyParamCaption}\item[{FName}]{Setting\+Dev\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Navigates the settings list to focus a specific setting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Setting\+Dev\+Name} & Developer name of the setting to find \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_setting_screen_a5f2e2f9bc5c01438fbeea7954935f5d7}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!NavigateToSettings@{NavigateToSettings}}
+\index{NavigateToSettings@{NavigateToSettings}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{NavigateToSettings()}{NavigateToSettings()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a5f2e2f9bc5c01438fbeea7954935f5d7} 
+void UGameplay\+Setting\+Screen::\+\+Navigate\+To\+Settings (\begin{DoxyParamCaption}\item[{const TArray$<$ FName $>$ \&}]{Setting\+Dev\+Names}{}\end{DoxyParamCaption})}
+
+
+
+Navigates to a filtered view of multiple settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Setting\+Dev\+Names} & List of developer names to include in the view \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_setting_screen_af7f064c159a1d0e5cbf811e7db16c3b6}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!OnSettingsDirtyStateChanged@{OnSettingsDirtyStateChanged}}
+\index{OnSettingsDirtyStateChanged@{OnSettingsDirtyStateChanged}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{OnSettingsDirtyStateChanged()}{OnSettingsDirtyStateChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_af7f064c159a1d0e5cbf811e7db16c3b6} 
+void UGameplay\+Setting\+Screen::\+\+On\+Settings\+Dirty\+State\+Changed (\begin{DoxyParamCaption}\item[{bool}]{b\+Settings\+Dirty}{}\end{DoxyParamCaption})}
+
+
+
+Called when the dirty state of the settings registry changes. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_setting_screen_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_setting_screen_a5ea67fa7055e56033225d7359a8a6bb5}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!ApplyAction@{ApplyAction}}
+\index{ApplyAction@{ApplyAction}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{ApplyAction}{ApplyAction}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a5ea67fa7055e56033225d7359a8a6bb5} 
+TObject\+Ptr$<$UInput\+Action$>$ UGameplay\+Setting\+Screen::\+\+Apply\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Input action for Applying changes. 
+
+\Hypertarget{class_u_gameplay_setting_screen_a41f33c4d243007a4499487d85cd7cd0a}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!ApplyActionBindingHandle@{ApplyActionBindingHandle}}
+\index{ApplyActionBindingHandle@{ApplyActionBindingHandle}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{ApplyActionBindingHandle}{ApplyActionBindingHandle}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a41f33c4d243007a4499487d85cd7cd0a} 
+FUIAction\+Binding\+Handle UGameplay\+Setting\+Screen::\+\+Apply\+Action\+Binding\+Handle\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_gameplay_setting_screen_a08c6f2ea04851334ff11fe4be21fd37b}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!CancelAction@{CancelAction}}
+\index{CancelAction@{CancelAction}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{CancelAction}{CancelAction}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a08c6f2ea04851334ff11fe4be21fd37b} 
+TObject\+Ptr$<$UInput\+Action$>$ UGameplay\+Setting\+Screen::\+\+Cancel\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Input action for Canceling changes. 
+
+\Hypertarget{class_u_gameplay_setting_screen_a3c6a9aac9d69503d3a853047610fc509}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!CancelActionBindingHandle@{CancelActionBindingHandle}}
+\index{CancelActionBindingHandle@{CancelActionBindingHandle}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{CancelActionBindingHandle}{CancelActionBindingHandle}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a3c6a9aac9d69503d3a853047610fc509} 
+FUIAction\+Binding\+Handle UGameplay\+Setting\+Screen::\+\+Cancel\+Action\+Binding\+Handle\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_gameplay_setting_screen_ac68c92517244e81ca4b59b1f275d3726}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!ChangeTracker@{ChangeTracker}}
+\index{ChangeTracker@{ChangeTracker}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{ChangeTracker}{ChangeTracker}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_ac68c92517244e81ca4b59b1f275d3726} 
+\doxymbox{\hyperlink{class_f_gameplay_setting_registry_change_tracker}{FGameplay\+Setting\+Registry\+Change\+Tracker}} UGameplay\+Setting\+Screen::\+\+Change\+Tracker\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal tracker for auditing which settings have been modified. 
+
+\Hypertarget{class_u_gameplay_setting_screen_a176dd088aae9063b6d57fbacce678480}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!Registry@{Registry}}
+\index{Registry@{Registry}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{Registry}{Registry}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a176dd088aae9063b6d57fbacce678480} 
+TObject\+Ptr$<$\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}}$>$ UGameplay\+Setting\+Screen::\+\+Registry\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The active settings registry. 
+
+\Hypertarget{class_u_gameplay_setting_screen_a6eb34280c3265c05d12bfcd98e8e30c6}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!RegistryClass@{RegistryClass}}
+\index{RegistryClass@{RegistryClass}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{RegistryClass}{RegistryClass}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a6eb34280c3265c05d12bfcd98e8e30c6} 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}}$>$ UGameplay\+Setting\+Screen::\+\+Registry\+Class}
+
+
+
+The class of registry to instantiate for this screen. 
+
+\Hypertarget{class_u_gameplay_setting_screen_a37e83df8e4e66d46d14a526d357a3c8f}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!ReturnAction@{ReturnAction}}
+\index{ReturnAction@{ReturnAction}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{ReturnAction}{ReturnAction}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a37e83df8e4e66d46d14a526d357a3c8f} 
+TObject\+Ptr$<$UInput\+Action$>$ UGameplay\+Setting\+Screen::\+\+Return\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Input action for Returning to previous page/\+screen. 
+
+\Hypertarget{class_u_gameplay_setting_screen_af47817ec6beae598d89414f2227e4a3f}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!ReturnActionBindingHandle@{ReturnActionBindingHandle}}
+\index{ReturnActionBindingHandle@{ReturnActionBindingHandle}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{ReturnActionBindingHandle}{ReturnActionBindingHandle}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_af47817ec6beae598d89414f2227e4a3f} 
+FUIAction\+Binding\+Handle UGameplay\+Setting\+Screen::\+\+Return\+Action\+Binding\+Handle\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_gameplay_setting_screen_a38f570211d1c8208db34df1714471195}\index{UGameplaySettingScreen@{UGameplaySettingScreen}!Settings\_Panel@{Settings\_Panel}}
+\index{Settings\_Panel@{Settings\_Panel}!UGameplaySettingScreen@{UGameplaySettingScreen}}
+\doxysubsubsection{\texorpdfstring{Settings\_Panel}{Settings\_Panel}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_screen_a38f570211d1c8208db34df1714471195} 
+TObject\+Ptr$<$UGameplay\+Setting\+Panel$>$ UGameplay\+Setting\+Screen::\+\+Settings\+\_\+\+Panel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The panel widget containing the actual settings list and details. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_screen_8h}{Gameplay\+Setting\+Screen.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_setting_screen_8cpp}{Gameplay\+Setting\+Screen.\+cpp}}\end{DoxyCompactItemize}

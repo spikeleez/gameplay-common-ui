@@ -1,0 +1,85 @@
+\doxysection{Gameplay\+Button\+Base.\+h}
+\hypertarget{_gameplay_button_base_8h_source}{}\label{_gameplay_button_base_8h_source}\index{GameplayButtonBase.h@{GameplayButtonBase.h}}
+\doxymbox{\hyperlink{_gameplay_button_base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CommonButtonBase.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplayButtonBase.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }UCommonBorder;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }UCommonLazyImage;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }UCommonTextBlock;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00019\ UCLASS(Abstract,\ BlueprintType,\ Blueprintable,\ meta=(DisableNativeTick))}
+\DoxyCodeLine{00020\ class\ GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_u_gameplay_button_base_ab3c7fa869213db06f7fc80fd690a7817}{UGameplayButtonBase}}\ :\ public\ UCommonButtonBase}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_button_base_ab3c7fa869213db06f7fc80fd690a7817}{UGameplayButtonBase}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer\ =\ FObjectInitializer::Get());}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\string~Begin\ UUserWidget\ interface}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_ab262c18d7ebe0a84aa1cf33813893b61}{NativePreConstruct}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_af9485a47e039a0794f4b0090d7e0b334}{NativeConstruct}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ UUserWidget\ interface}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\string~Begin\ UCommonButtonBase\ interface}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a5f86189c92a566aab7517645403c94e2}{NativeOnHovered}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_aecd4de273f9abeef81fe6a4be1a6baef}{NativeOnUnhovered}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a8154e3623af7da4bc7b5991ee4a80757}{OnInputMethodChanged}}(ECommonInputType\ CurrentInputType)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_aa339c47fa35ae4a05120c10a1795587f}{UpdateInputActionWidget}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a6a2a5232bac7853a66e743ae4028c008}{NativeOnCurrentTextStyleChanged}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ UCommonButtonBase\ interface}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a2a33007b9af33b360e421533c4a39935}{RefreshButtonText}}();}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category=\textcolor{stringliteral}{"{}Text"{}})}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a639f04e059ead55753f314db6f68bd10}{SetButtonText}}(FText\ NewText);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category=\textcolor{stringliteral}{"{}Text"{}})}
+\DoxyCodeLine{00049\ \ \ \ \ FText\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a6d7d72557b7f058a9cdf2938f0252388}{GetButtonText}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category=\textcolor{stringliteral}{"{}Style"{}})}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a8e1bc83d8a4fa6d7b94fa697befb856a}{SetButtonBrush}}(\textcolor{keyword}{const}\ FSlateBrush\&\ NewBrush);}
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category=\textcolor{stringliteral}{"{}Style"{}})}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_ac692143a7408787f1b45bb7842686023}{SetButtonBrushFromLazyObject}}(TSoftObjectPtr<UObject>\ LazyObject);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category=\textcolor{stringliteral}{"{}Style"{}})}
+\DoxyCodeLine{00061\ \ \ \ \ FSlateBrush\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a5294f35acc02a37af3e39a874d2429a0}{GetButtonBrush}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00065\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent,\ Category=\textcolor{stringliteral}{"{}Style"{}},\ meta=(DisplayName\ =\ \textcolor{stringliteral}{"{}Receive\ Update\ Button\ Style"{}}))}
+\DoxyCodeLine{00066\ \ \ \ \ void\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a962e0f64c1af6668c45bb3fffbacc590}{ReceiveUpdateButtonStyle}}();}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent,\ Category\ =\ \textcolor{stringliteral}{"{}Text"{}},\ meta=(DisplayName\ =\ \textcolor{stringliteral}{"{}Receive\ Update\ Button\ Text"{}}))}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_button_base_aff20a2dbf9d7d5a280a0d3c8c519bdf4}{ReceiveUpdateButtonText}}(const\ FText\&\ InText);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ protected:}
+\DoxyCodeLine{00074\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Designer"{}},\ meta=(BindWidgetOptional,\ AllowPrivateAccess\ =\ true))}
+\DoxyCodeLine{00075\ \ \ \ \ TObjectPtr<UCommonBorder>\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a224d18d77fd8d657576bd705fee2ce28}{Border\_Button}};}
+\DoxyCodeLine{00076\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Designer"{}},\ meta=(BindWidgetOptional,\ AllowPrivateAccess\ =\ true))}
+\DoxyCodeLine{00079\ \ \ \ \ TObjectPtr<UCommonTextBlock>\ \doxymbox{\hyperlink{class_u_gameplay_button_base_ab5d190d042e3ccaa83fa5b063c78f713}{Text\_Button}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00082\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Designer"{}},\ meta=(BindWidgetOptional,\ AllowPrivateAccess\ =\ true))}
+\DoxyCodeLine{00083\ \ \ \ \ TObjectPtr<UCommonLazyImage>\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a75425e4b153c1cbc12c9020b56ce3d62}{Image\_Button}};}
+\DoxyCodeLine{00084\ \ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category=\textcolor{stringliteral}{"{}Text"{}})}
+\DoxyCodeLine{00087\ \ \ \ \ uint8\ \doxymbox{\hyperlink{class_u_gameplay_button_base_af27dde85c21fa6e57338ba451cabd1af}{bShowInputDisplayTextIfPossible}}\ :\ 1;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00090\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category=\textcolor{stringliteral}{"{}Text"{}})}
+\DoxyCodeLine{00091\ \ \ \ \ FText\ \doxymbox{\hyperlink{class_u_gameplay_button_base_aeee853ab9b2f7c2725579ccc8b144809}{ButtonText}};}
+\DoxyCodeLine{00092\ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Text"{}})}
+\DoxyCodeLine{00095\ \ \ \ \ uint8\ \doxymbox{\hyperlink{class_u_gameplay_button_base_a0c55d41aeb39f3c51cf0570e43dce222}{bButtonTextUppercase}}\ :\ 1;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00098\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Text"{}})}
+\DoxyCodeLine{00099\ \ \ \ \ FText\ \doxymbox{\hyperlink{class_u_gameplay_button_base_ab6ef2fbcfac7e5ed665e876ad5eb964e}{ButtonDescriptionText}};}
+\DoxyCodeLine{00100\ \};}
+\DoxyCodeLine{00101\ }
+
+\end{DoxyCode}

@@ -1,0 +1,70 @@
+\doxysection{Gameplay\+Activatable\+Widget.\+h}
+\hypertarget{_gameplay_activatable_widget_8h_source}{}\label{_gameplay_activatable_widget_8h_source}\index{GameplayActivatableWidget.h@{GameplayActivatableWidget.h}}
+\doxymbox{\hyperlink{_gameplay_activatable_widget_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CommonActivatableWidget.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_common_types_8h}{Misc/GameplayCommonTypes.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayActivatableWidget.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }UInputAction;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }FUIInputConfig;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }FUIActionBindingHandle;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \doxymbox{\hyperlink{_gameplay_activatable_widget_8h_a29e4c65ab1d2f1d746e8c41480c8ec5f}{DECLARE\_DYNAMIC\_DELEGATE\_OneParam}}(FOnInputActionExecutedSignature,\ FName,\ ActionName);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \doxymbox{\hyperlink{_gameplay_activatable_widget_8h_a29e4c65ab1d2f1d746e8c41480c8ec5f}{DECLARE\_DYNAMIC\_DELEGATE\_OneParam}}(FOnEnhancedInputActionExecutedSignature,\ UInputAction*,\ InputAction);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ UCLASS(Abstract,\ BlueprintType,\ Blueprintable,\ meta=(DisableNativeTick))}
+\DoxyCodeLine{00026\ class\ GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a023bf6842453726e076b1e5d03cfa59e}{UGameplayActivatableWidget}}\ :\ public\ UCommonActivatableWidget}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a023bf6842453726e076b1e5d03cfa59e}{UGameplayActivatableWidget}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer\ =\ FObjectInitializer::Get());}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\string~Begin\ UUserWidget\ interface}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ad17ff3c0acd789d45f90246aa4e938e5}{NativeDestruct}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ UUserWidget\ interface}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\string~Begin\ UCommonActivatableWidget\ interface}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a2f323f4846af290927c4d35bf90422bc}{NativeOnActivated}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a9a334286488535fe8aa908280410c7e4}{NativeOnDeactivated}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ TOptional<FUIInputConfig>\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ab57c70bd00c9275eff50c6c8239c6835}{GetDesiredInputConfig}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ UCommonActivatableWidget\ interface}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#if\ WITH\_EDITOR}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ValidateCompiledWidgetTree(\textcolor{keyword}{const}\ UWidgetTree\&\ BlueprintWidgetTree,\ IWidgetCompilerLog\&\ CompileLog)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category=\textcolor{stringliteral}{"{}Bound\ Action"{}})}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ad9a734954029703ed3bd4530fb2c6e66}{RegisterBoundActionBinding}}(FDataTableRowHandle\ InputAction,\ \textcolor{keyword}{const}\ FOnInputActionExecutedSignature\&\ Callback,\ FUIActionBindingHandle\&\ BindingHandle);}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category=\textcolor{stringliteral}{"{}Bound\ Action"{}})}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_afc936f88c6b7d84db597009ccd79691e}{RegisterBoundEnhancedActionBinding}}(UInputAction*\ InputAction,\ \textcolor{keyword}{const}\ FOnEnhancedInputActionExecutedSignature\&\ Callback,\ FUIActionBindingHandle\&\ BindingHandle);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category=\textcolor{stringliteral}{"{}Bound\ Action"{}})}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a5557ba48b7d40950ae29522b1ee24ae7}{UnregisterBoundActionBinding}}(FUIActionBindingHandle\&\ BindingHandle);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category=\textcolor{stringliteral}{"{}Bound\ Action"{}})}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a9cb56665546ea498c74c18dca3e1907a}{UnregisterAllBoundActionBindings}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00075\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Input"{}})}
+\DoxyCodeLine{00076\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_common_types_8h_a1025122649dbd094f4a294fde094283c}{EGameplayActivatableInputMode}}\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a85a7daafe70affb87f9bec77bfe54b31}{InputMode}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00079\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Input"{}},\ meta=(EditCondition\ =\ \textcolor{stringliteral}{"{}InputMode\ !=\ EGameplayActivatableInputMode::Menu"{}},\ EditConditionHides))}
+\DoxyCodeLine{00080\ \ \ \ \ EMouseCaptureMode\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a921df6987b1c0a7ab366cf9ed492a894}{MouseCaptureMode}};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ Category=\textcolor{stringliteral}{"{}Input"{}},\ meta=(EditCondition\ =\ \textcolor{stringliteral}{"{}InputMode\ !=\ EGameplayActivatableInputMode::Menu"{}},\ EditConditionHides))}
+\DoxyCodeLine{00084\ \ \ \ \ uint8\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a87674d4b50b95127a9c0a42c15ef688c}{bHidesCursorDuringViewportCapture}}\ :\ 1;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ private:}
+\DoxyCodeLine{00088\ \ \ \ \ TArray<FUIActionBindingHandle>\ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a036d56a83f050e5ca2da41c703a1bf64}{BindingHandles}};}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+
+\end{DoxyCode}

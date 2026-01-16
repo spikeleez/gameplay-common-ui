@@ -1,0 +1,29 @@
+\doxysection{Gameplay\+Setting\+Data\+Source.\+h}
+\hypertarget{_gameplay_setting_data_source_8h_source}{}\label{_gameplay_setting_data_source_8h_source}\index{GameplaySettingDataSource.h@{GameplaySettingDataSource.h}}
+\doxymbox{\hyperlink{_gameplay_setting_data_source_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }ULocalPlayer;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_f_gameplay_setting_data_source}{FGameplaySettingDataSource}}\ :\ \textcolor{keyword}{public}\ TSharedFromThis<FGameplaySettingDataSource>}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_f_gameplay_setting_data_source_ac11ce82869d40d03a17d47715b491d15}{\string~FGameplaySettingDataSource}}()\ \{\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_data_source_aba62f39f3c3ef84f307323ba096b939f}{Startup}}(ULocalPlayer*\ InLocalPlayer,\ FSimpleDelegate\ StartupCompleteCallback)\ \{\ StartupCompleteCallback.ExecuteIfBound();\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_f_gameplay_setting_data_source_aa98ea131f5fb0fe809372aa9036b8b24}{Resolve}}(ULocalPlayer*\ InLocalPlayer)\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ FString\ \doxymbox{\hyperlink{class_f_gameplay_setting_data_source_ace9ced55fe7680575c447556dfa56f85}{GetValueAsString}}(ULocalPlayer*\ InLocalPlayer)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_data_source_a97c92b2b7ef66479a95a17fe05edaec6}{SetValue}}(ULocalPlayer*\ InLocalPlayer,\ \textcolor{keyword}{const}\ FString\&\ Value)\ =\ 0;}
+\DoxyCodeLine{00065\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ FString\ \doxymbox{\hyperlink{class_f_gameplay_setting_data_source_a2310758a35853bdda46e0c8ad8064ac0}{ToString}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00071\ \};}
+
+\end{DoxyCode}

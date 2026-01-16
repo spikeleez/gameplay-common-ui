@@ -1,0 +1,124 @@
+\doxysection{UGameplay\+Setting\+List\+View Class Reference}
+\hypertarget{class_u_gameplay_setting_list_view}{}\label{class_u_gameplay_setting_list_view}\index{UGameplaySettingListView@{UGameplaySettingListView}}
+
+
+A specialized List\+View for displaying and interacting with game settings.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+List\+View.\+h$>$}
+
+Inheritance diagram for UGameplay\+Setting\+List\+View:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_setting_list_view}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_list_view_a7e4529dd8f0e2b3fbd84c1297bd22977}{UGameplay\+Setting\+List\+View}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_a495f6bd6dd522f3bea5c0d0895df51be}{Add\+Name\+Override}} (const FName \&Dev\+Name, const FText \&Override\+Name)
+\begin{DoxyCompactList}\small\item\em Registers a display name override for a specific setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual UUser\+Widget \& \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_acf2e47983e47a7903ed69880c7405e14}{On\+Generate\+Entry\+Widget\+Internal}} (UObject \texorpdfstring{$\ast$}{*}Item, \doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UUser\+Widget $>$ Desired\+Entry\+Class, const TShared\+Ref$<$ STable\+View\+Base $>$ \&Owner\+Table) override
+\item 
+virtual bool \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_a32f0ce858e25990d4b97357553059c87}{On\+Is\+Selectable\+Or\+Navigable\+Internal}} (UObject \texorpdfstring{$\ast$}{*}First\+Selected\+Item) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_visual_data}{UGameplay\+Setting\+Visual\+Data}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_a6826526b57090b15edc87feda79e0bc8}{Visual\+Data}}
+\begin{DoxyCompactList}\small\item\em Data Asset mapping setting classes to their respective entry widget classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TMap$<$ FName, FText $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_aa09825ebf36f679271f2751b464656ce}{Name\+Overrides}}
+\begin{DoxyCompactList}\small\item\em Map of internal setting names to their localized display overrides. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A specialized List\+View for displaying and interacting with game settings. 
+
+This widget automates the creation of setting entries. It uses \doxylink{class_u_gameplay_setting_visual_data}{UGameplay\+Setting\+Visual\+Data} to determine which entry class (slider, rotator, etc.) to instantiate based on the type of setting object being displayed.
+
+Every entry widget managed by this list must inherit from \doxylink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_setting_list_view_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_setting_list_view_a7e4529dd8f0e2b3fbd84c1297bd22977}\index{UGameplaySettingListView@{UGameplaySettingListView}!UGameplaySettingListView@{UGameplaySettingListView}}
+\index{UGameplaySettingListView@{UGameplaySettingListView}!UGameplaySettingListView@{UGameplaySettingListView}}
+\doxysubsubsection{\texorpdfstring{UGameplaySettingListView()}{UGameplaySettingListView()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_view_a7e4529dd8f0e2b3fbd84c1297bd22977} 
+UGameplay\+Setting\+List\+View::\+\+UGameplay\+Setting\+List\+View (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_setting_list_view_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_setting_list_view_a495f6bd6dd522f3bea5c0d0895df51be}\index{UGameplaySettingListView@{UGameplaySettingListView}!AddNameOverride@{AddNameOverride}}
+\index{AddNameOverride@{AddNameOverride}!UGameplaySettingListView@{UGameplaySettingListView}}
+\doxysubsubsection{\texorpdfstring{AddNameOverride()}{AddNameOverride()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_view_a495f6bd6dd522f3bea5c0d0895df51be} 
+void UGameplay\+Setting\+List\+View::\+\+Add\+Name\+Override (\begin{DoxyParamCaption}\item[{const FName \&}]{Dev\+Name}{, }\item[{const FText \&}]{Override\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Registers a display name override for a specific setting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dev\+Name} & The developer name (internal ID) of the setting \\
+\hline
+{\em Override\+Name} & The customer-\/facing text to display instead \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_setting_list_view_acf2e47983e47a7903ed69880c7405e14}\index{UGameplaySettingListView@{UGameplaySettingListView}!OnGenerateEntryWidgetInternal@{OnGenerateEntryWidgetInternal}}
+\index{OnGenerateEntryWidgetInternal@{OnGenerateEntryWidgetInternal}!UGameplaySettingListView@{UGameplaySettingListView}}
+\doxysubsubsection{\texorpdfstring{OnGenerateEntryWidgetInternal()}{OnGenerateEntryWidgetInternal()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_view_acf2e47983e47a7903ed69880c7405e14} 
+UUser\+Widget \& UGameplay\+Setting\+List\+View::\+\+On\+Generate\+Entry\+Widget\+Internal (\begin{DoxyParamCaption}\item[{UObject \texorpdfstring{$\ast$}{*}}]{Item}{, }\item[{\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UUser\+Widget $>$}]{Desired\+Entry\+Class}{, }\item[{const TShared\+Ref$<$ STable\+View\+Base $>$ \&}]{Owner\+Table}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_setting_list_view_a32f0ce858e25990d4b97357553059c87}\index{UGameplaySettingListView@{UGameplaySettingListView}!OnIsSelectableOrNavigableInternal@{OnIsSelectableOrNavigableInternal}}
+\index{OnIsSelectableOrNavigableInternal@{OnIsSelectableOrNavigableInternal}!UGameplaySettingListView@{UGameplaySettingListView}}
+\doxysubsubsection{\texorpdfstring{OnIsSelectableOrNavigableInternal()}{OnIsSelectableOrNavigableInternal()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_view_a32f0ce858e25990d4b97357553059c87} 
+bool UGameplay\+Setting\+List\+View::\+\+On\+Is\+Selectable\+Or\+Navigable\+Internal (\begin{DoxyParamCaption}\item[{UObject \texorpdfstring{$\ast$}{*}}]{First\+Selected\+Item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_setting_list_view_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_setting_list_view_aa09825ebf36f679271f2751b464656ce}\index{UGameplaySettingListView@{UGameplaySettingListView}!NameOverrides@{NameOverrides}}
+\index{NameOverrides@{NameOverrides}!UGameplaySettingListView@{UGameplaySettingListView}}
+\doxysubsubsection{\texorpdfstring{NameOverrides}{NameOverrides}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_view_aa09825ebf36f679271f2751b464656ce} 
+TMap$<$FName, FText$>$ UGameplay\+Setting\+List\+View::\+\+Name\+Overrides\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map of internal setting names to their localized display overrides. 
+
+\Hypertarget{class_u_gameplay_setting_list_view_a6826526b57090b15edc87feda79e0bc8}\index{UGameplaySettingListView@{UGameplaySettingListView}!VisualData@{VisualData}}
+\index{VisualData@{VisualData}!UGameplaySettingListView@{UGameplaySettingListView}}
+\doxysubsubsection{\texorpdfstring{VisualData}{VisualData}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_view_a6826526b57090b15edc87feda79e0bc8} 
+TObject\+Ptr$<$\doxymbox{\hyperlink{class_u_gameplay_setting_visual_data}{UGameplay\+Setting\+Visual\+Data}}$>$ UGameplay\+Setting\+List\+View::\+\+Visual\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Data Asset mapping setting classes to their respective entry widget classes. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_list_view_8h}{Gameplay\+Setting\+List\+View.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_setting_list_view_8cpp}{Gameplay\+Setting\+List\+View.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,173 @@
+\doxysection{UGameplay\+Setting\+List\+Entry\+\_\+\+Setting\+Navigation Class Reference}
+\hypertarget{class_u_gameplay_setting_list_entry___setting_navigation}{}\label{class_u_gameplay_setting_list_entry___setting_navigation}\index{UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}}
+
+
+Entry for settings that navigate to another collection or sub-\/page.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+List\+Entry.\+h$>$}
+
+Inheritance diagram for UGameplay\+Setting\+List\+Entry\+\_\+\+Setting\+Navigation:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_u_gameplay_setting_list_entry___setting_navigation}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry___setting_navigation_a6f5c59d83d6f2299627c0440c5effd77}{Set\+Setting}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting) override
+\begin{DoxyCompactList}\small\item\em Assigns the setting object that this entry will represent. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry___setting_navigation_a4b877383c998b79f51c72b7013b17afa}{Refresh\+Editable\+State}} (const \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \&In\+Editable\+State) override
+\begin{DoxyCompactList}\small\item\em Updates the widget\textquotesingle{}s visual state (enabled/\+disabled/\+hidden) based on current edit conditions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base_add80fb93fc3bad451e20cf7f402c956c}{Set\+Display\+Name\+Override}} (const FText \&Override\+Name)
+\begin{DoxyCompactList}\small\item\em Overrides the default display name of the setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry___setting_navigation_a9dc6ae453d787bed01966b1e8ea536c7}{Native\+On\+Initialized}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry___setting_navigation_a714e40390c84efb9a8e14d826c9dcc73}{Native\+On\+Entry\+Released}} () override
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry___setting_navigation_a1752afc664f9179a060ec3c1c4bea22c}{Handle\+Navigation\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Triggers navigation to the target collection. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry___setting_navigation_a9b9fce3dba994bf19da390916a5552f0}{BP\+\_\+\+On\+Setting\+Assigned}} (const FText \&Action\+Text)
+\begin{DoxyCompactList}\small\item\em Blueprint callback when setting is first assigned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base_a123f1df256ac252b60f47f58e36bd1b4}{On\+Setting\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated setting\textquotesingle{}s value changes. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base_a661d0c21162bc4a0495d4ae04c6e6004}{Handle\+Edit\+Condition\+Changed}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Internal callback for when periodic edit condition re-\/evaluation is needed. \end{DoxyCompactList}\item 
+virtual FReply \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base_adf81d513f134187c81ac355a1aeb0407}{Native\+On\+Focus\+Received}} (const FGeometry \&In\+Geometry, const FFocus\+Event \&In\+Focus\+Event) override
+\item 
+UWidget \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base_a79b00de4e03dc1f0434ef7a3cd8a257d}{Get\+Primary\+Gamepad\+Focus\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Blueprint event to determine which sub-\/widget should receive focus when using a gamepad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page}{UGameplay\+Setting\+Collection\+Page}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry___setting_navigation_accec43264ce2899af35e2e17c1772f82}{Collection\+Setting}}
+\begin{DoxyCompactList}\small\item\em Casted pointer to the collection/\+page setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base}{UGameplay\+Setting\+List\+Entry\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base_acf3e6687e47fc264b3213b4345a4e52b}{b\+Suspend\+Change\+Updates}} = false
+\begin{DoxyCompactList}\small\item\em Flag to prevent recursive updates during value changes. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base_a12860630353de9b4efe0a863646cd96b}{Display\+Name\+Override}} = FText::\+\+Get\+Empty()
+\begin{DoxyCompactList}\small\item\em The custom display name to use if not empty. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base_ab0ab7a8baf8631a26913b529865e9bd7}{Setting}}
+\begin{DoxyCompactList}\small\item\em The setting object associated with this entry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ UCommon\+Button\+Base $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry___setting_navigation_aedb59aa09f5c23e61da1d3cded053c0b}{Button\+\_\+\+Navigate}}
+\begin{DoxyCompactList}\small\item\em The button that performs navigation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entry for settings that navigate to another collection or sub-\/page. 
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_setting_list_entry___setting_navigation_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_setting_list_entry___setting_navigation_a9b9fce3dba994bf19da390916a5552f0}\index{UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}!BP\_OnSettingAssigned@{BP\_OnSettingAssigned}}
+\index{BP\_OnSettingAssigned@{BP\_OnSettingAssigned}!UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}}
+\doxysubsubsection{\texorpdfstring{BP\_OnSettingAssigned()}{BP\_OnSettingAssigned()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_entry___setting_navigation_a9b9fce3dba994bf19da390916a5552f0} 
+void UGameplay\+Setting\+List\+Entry\+\_\+\+Setting\+Navigation::\+\+BP\+\_\+\+On\+Setting\+Assigned (\begin{DoxyParamCaption}\item[{const FText \&}]{Action\+Text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Blueprint callback when setting is first assigned. 
+
+\Hypertarget{class_u_gameplay_setting_list_entry___setting_navigation_a1752afc664f9179a060ec3c1c4bea22c}\index{UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}!HandleNavigationButtonClicked@{HandleNavigationButtonClicked}}
+\index{HandleNavigationButtonClicked@{HandleNavigationButtonClicked}!UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}}
+\doxysubsubsection{\texorpdfstring{HandleNavigationButtonClicked()}{HandleNavigationButtonClicked()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_entry___setting_navigation_a1752afc664f9179a060ec3c1c4bea22c} 
+void UGameplay\+Setting\+List\+Entry\+\_\+\+Setting\+Navigation::\+\+Handle\+Navigation\+Button\+Clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Triggers navigation to the target collection. 
+
+\Hypertarget{class_u_gameplay_setting_list_entry___setting_navigation_a714e40390c84efb9a8e14d826c9dcc73}\index{UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}!NativeOnEntryReleased@{NativeOnEntryReleased}}
+\index{NativeOnEntryReleased@{NativeOnEntryReleased}!UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}}
+\doxysubsubsection{\texorpdfstring{NativeOnEntryReleased()}{NativeOnEntryReleased()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_entry___setting_navigation_a714e40390c84efb9a8e14d826c9dcc73} 
+void UGameplay\+Setting\+List\+Entry\+\_\+\+Setting\+Navigation::\+\+Native\+On\+Entry\+Released (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry_base_a95ebc64c6ba99e7e728f2823bbfec143}{UGameplay\+Setting\+List\+Entry\+Base}}.
+
+\Hypertarget{class_u_gameplay_setting_list_entry___setting_navigation_a9dc6ae453d787bed01966b1e8ea536c7}\index{UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}!NativeOnInitialized@{NativeOnInitialized}}
+\index{NativeOnInitialized@{NativeOnInitialized}!UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}}
+\doxysubsubsection{\texorpdfstring{NativeOnInitialized()}{NativeOnInitialized()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_entry___setting_navigation_a9dc6ae453d787bed01966b1e8ea536c7} 
+void UGameplay\+Setting\+List\+Entry\+\_\+\+Setting\+Navigation::\+\+Native\+On\+Initialized (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_setting_list_entry___setting_navigation_a4b877383c998b79f51c72b7013b17afa}\index{UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}!RefreshEditableState@{RefreshEditableState}}
+\index{RefreshEditableState@{RefreshEditableState}!UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}}
+\doxysubsubsection{\texorpdfstring{RefreshEditableState()}{RefreshEditableState()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_entry___setting_navigation_a4b877383c998b79f51c72b7013b17afa} 
+void UGameplay\+Setting\+List\+Entry\+\_\+\+Setting\+Navigation::\+\+Refresh\+Editable\+State (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \&}]{In\+Editable\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the widget\textquotesingle{}s visual state (enabled/\+disabled/\+hidden) based on current edit conditions. 
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry___setting_a31bbd17a9ded49c1648e0efeed223b39}{UGameplay\+Setting\+List\+Entry\+\_\+\+Setting}}.
+
+\Hypertarget{class_u_gameplay_setting_list_entry___setting_navigation_a6f5c59d83d6f2299627c0440c5effd77}\index{UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}!SetSetting@{SetSetting}}
+\index{SetSetting@{SetSetting}!UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}}
+\doxysubsubsection{\texorpdfstring{SetSetting()}{SetSetting()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_entry___setting_navigation_a6f5c59d83d6f2299627c0440c5effd77} 
+void UGameplay\+Setting\+List\+Entry\+\_\+\+Setting\+Navigation::\+\+Set\+Setting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Assigns the setting object that this entry will represent. 
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_u_gameplay_setting_list_entry___setting_afea03538c5e9e7c75d40cfe58df775f3}{UGameplay\+Setting\+List\+Entry\+\_\+\+Setting}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_setting_list_entry___setting_navigation_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_setting_list_entry___setting_navigation_aedb59aa09f5c23e61da1d3cded053c0b}\index{UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}!Button\_Navigate@{Button\_Navigate}}
+\index{Button\_Navigate@{Button\_Navigate}!UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}}
+\doxysubsubsection{\texorpdfstring{Button\_Navigate}{Button\_Navigate}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_entry___setting_navigation_aedb59aa09f5c23e61da1d3cded053c0b} 
+TObject\+Ptr$<$UCommon\+Button\+Base$>$ UGameplay\+Setting\+List\+Entry\+\_\+\+Setting\+Navigation::\+\+Button\+\_\+\+Navigate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The button that performs navigation. 
+
+\Hypertarget{class_u_gameplay_setting_list_entry___setting_navigation_accec43264ce2899af35e2e17c1772f82}\index{UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}!CollectionSetting@{CollectionSetting}}
+\index{CollectionSetting@{CollectionSetting}!UGameplaySettingListEntry\_SettingNavigation@{UGameplaySettingListEntry\_SettingNavigation}}
+\doxysubsubsection{\texorpdfstring{CollectionSetting}{CollectionSetting}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_list_entry___setting_navigation_accec43264ce2899af35e2e17c1772f82} 
+TObject\+Ptr$<$\doxymbox{\hyperlink{class_u_gameplay_setting_collection_page}{UGameplay\+Setting\+Collection\+Page}}$>$ UGameplay\+Setting\+List\+Entry\+\_\+\+Setting\+Navigation::\+\+Collection\+Setting\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Casted pointer to the collection/\+page setting. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_list_entry_8h}{Gameplay\+Setting\+List\+Entry.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_setting_list_entry_8cpp}{Gameplay\+Setting\+List\+Entry.\+cpp}}\end{DoxyCompactItemize}

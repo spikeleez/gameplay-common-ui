@@ -1,0 +1,73 @@
+\doxysection{Gameplay\+Push\+Activatable\+Widget\+Async.\+h}
+\hypertarget{_gameplay_push_activatable_widget_async_8h_source}{}\label{_gameplay_push_activatable_widget_async_8h_source}\index{GameplayPushActivatableWidgetAsync.h@{GameplayPushActivatableWidgetAsync.h}}
+\doxymbox{\hyperlink{_gameplay_push_activatable_widget_async_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Engine/CancellableAsyncAction.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayPushActivatableWidgetAsync.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplayPrimaryLayout}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }APlayerController;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }UCommonActivatableWidget;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }UObject;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }FFrame;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }FStreamableHandle;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_OneParam(FGameplayAsyncPushActivatableWidgetSignature,\ UCommonActivatableWidget*,\ UserWidget);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ UCLASS(BlueprintType)}
+\DoxyCodeLine{00028\ class\ GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_ab57021406ef5cad2a7a282842381540c}{UGameplayPushActivatableWidgetAsync}}\ :\ public\ UCancellableAsyncAction}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ UPROPERTY(BlueprintAssignable)}
+\DoxyCodeLine{00035\ \ \ \ \ FGameplayAsyncPushActivatableWidgetSignature\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a533b627450b31716951fd67bce9ed274}{BeforePush}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ UPROPERTY(BlueprintAssignable)}
+\DoxyCodeLine{00039\ \ \ \ \ FGameplayAsyncPushActivatableWidgetSignature\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a32ca33c30a3be3cae6630b85b5a7ff79}{AfterPush}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ public:}
+\DoxyCodeLine{00042\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_ab57021406ef5cad2a7a282842381540c}{UGameplayPushActivatableWidgetAsync}}(const\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\string~Begin\ UCancellableAsyncAction\ interface}}
+\DoxyCodeLine{00045\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_ab6f0648bee384e98889413ddfa39a82d}{Activate}}()\ override;}
+\DoxyCodeLine{00046\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_ad1c555e365862078649f033c06a3ad2d}{Cancel}}()\ override;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\string~End\ of\ UCancellableAsyncAction\ interface}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00058\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category=\textcolor{stringliteral}{"{}GameplayTasks"{}},\ meta=(WorldContext=\textcolor{stringliteral}{"{}WorldContextObject"{}},\ BlueprintInternalUseOnly=\textcolor{stringliteral}{"{}true"{}},\ DisplayName=\textcolor{stringliteral}{"{}Push\ Activatable\ Widget\ for\ Class"{}}))}
+\DoxyCodeLine{00059\ \ \ \ \ static\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_ab57021406ef5cad2a7a282842381540c}{UGameplayPushActivatableWidgetAsync}}*\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a74f24eb18976f3e2a6818dd021a9aa27}{PushActivatableWidgetClassToLayer}}(APlayerController*\ OwningPlayer,\ UPARAM(meta\ =\ (AllowAbstract=false))\ TSoftClassPtr<UCommonActivatableWidget>\ WidgetClass,\ UPARAM(meta=(GameplayTagFilter=\textcolor{stringliteral}{"{}GameplayCommonUI.Layer"{}}))\ FGameplayTag\ LayerTag,\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a3e308438a0a0bf6137b5170a62e50ed9}{bSuspendInputUntilComplete}}\ =\ true);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00070\ \ \ \ \ UFUNCTION(BlueprintCallable,\ BlueprintCosmetic,\ Category=\textcolor{stringliteral}{"{}GameplayTasks"{}},\ meta=(WorldContext=\textcolor{stringliteral}{"{}WorldContextObject"{}},\ BlueprintInternalUseOnly=\textcolor{stringliteral}{"{}true"{}},\ DisplayName=\textcolor{stringliteral}{"{}Push\ Activatable\ Widget\ for\ Tag"{}}))}
+\DoxyCodeLine{00071\ \ \ \ \ static\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_ab57021406ef5cad2a7a282842381540c}{UGameplayPushActivatableWidgetAsync}}*\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a3e391318a9862a02f777659b12a89590}{PushActivatableWidgetTagToLayer}}(APlayerController*\ OwningPlayer,\ UPARAM(meta\ =\ (Categories\ =\ \textcolor{stringliteral}{"{}GameplayCommonUI.Widget"{}}))\ FGameplayTag\ WidgetTag,\ UPARAM(meta=(GameplayTagFilter=\textcolor{stringliteral}{"{}GameplayCommonUI.Layer"{}}))\ FGameplayTag\ LayerTag,\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a3e308438a0a0bf6137b5170a62e50ed9}{bSuspendInputUntilComplete}}\ =\ true);}
+\DoxyCodeLine{00072\ \ \ \ \ }
+\DoxyCodeLine{00073\ protected:}
+\DoxyCodeLine{00075\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a02c62192b8ea5cfbe3e8ce48ed68a83e}{OnPrimaryLayoutSet}}(\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplayPrimaryLayout}}*\ PrimaryLayout);}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ private:}
+\DoxyCodeLine{00080\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00081\ \ \ \ \ FGameplayTag\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a7ebf18d41782bd7c900248fccc0db861}{MyLayerTag}};}
+\DoxyCodeLine{00082\ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00085\ \ \ \ \ FGameplayTag\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a30d021c48435e2d8334cf0785d105cf9}{MyWidgetTag}};}
+\DoxyCodeLine{00086\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a3e308438a0a0bf6137b5170a62e50ed9}{bSuspendInputUntilComplete}};}
+\DoxyCodeLine{00090\ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00093\ \ \ \ \ TWeakObjectPtr<APlayerController>\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a4154d3edb3d4dac7b36dada80b90cd71}{OwningPlayerPtr}};}
+\DoxyCodeLine{00094\ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00097\ \ \ \ \ TSoftClassPtr<UCommonActivatableWidget>\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_a5018486de14f411eabc004a19101ef59}{MyWidgetClass}};}
+\DoxyCodeLine{00098\ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ TSharedPtr<FStreamableHandle>\ \doxymbox{\hyperlink{class_u_gameplay_push_activatable_widget_async_aa0cd29c78316e78c1e671900435d2ed5}{StreamingHandle}};}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+
+\end{DoxyCode}

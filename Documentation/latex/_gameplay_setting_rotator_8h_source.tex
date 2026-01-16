@@ -1,0 +1,27 @@
+\doxysection{Gameplay\+Setting\+Rotator.\+h}
+\hypertarget{_gameplay_setting_rotator_8h_source}{}\label{_gameplay_setting_rotator_8h_source}\index{GameplaySettingRotator.h@{GameplaySettingRotator.h}}
+\doxymbox{\hyperlink{_gameplay_setting_rotator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CommonRotator.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplaySettingRotator.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00014\ UCLASS(Abstract,\ BlueprintType,\ Blueprintable,\ meta=(DisableNativeTick))}
+\DoxyCodeLine{00015\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_rotator_ad8dd9952143c98f4a14259cb992cbcb0}{UGameplaySettingRotator}}\ :\ public\ UCommonRotator}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_rotator_ad8dd9952143c98f4a14259cb992cbcb0}{UGameplaySettingRotator}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_rotator_ae8bc5c59d14d5f811debbbff7ab4eab0}{SetDefaultOption}}(int32\ DefaultOptionIndex);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent,\ Category=\textcolor{stringliteral}{"{}Events"{}},\ meta=(DisplayName\ =\ \textcolor{stringliteral}{"{}On\ Default\ Option\ Specified"{}}))}
+\DoxyCodeLine{00028\ \ \ \ \ void\ \doxymbox{\hyperlink{class_u_gameplay_setting_rotator_aff5ab7bc88c15e87702da506151bab39}{BP\_OnDefaultOptionSpecified}}(int32\ DefaultOptionIndex);}
+\DoxyCodeLine{00029\ \};}
+
+\end{DoxyCode}

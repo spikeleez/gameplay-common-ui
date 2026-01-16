@@ -1,0 +1,148 @@
+\doxysection{FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled Class Reference}
+\hypertarget{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled}{}\label{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled}\index{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}
+
+
+Edit condition that checks if latency stats are currently enabled.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+Edit\+Condition.\+h$>$}
+
+Inheritance diagram for FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_af3005133cba250b21991134e784fa0cd}{FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled}} ()=default
+\item 
+virtual \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_ac7cf00aa1642c198b338124d07275068}{\texorpdfstring{$\sim$}{\string~}\+FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition}{FGameplay\+Setting\+Edit\+Condition}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplay\+Setting\+Edit\+Condition}} ()
+\item 
+virtual \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a1474ea70de77c6b96df915eb0851ac2c}{\texorpdfstring{$\sim$}{\string~}\+FGameplay\+Setting\+Edit\+Condition}} ()
+\item 
+\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a78d8dd6da3b64a0c65a6beb34ac4fba2}{DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param}} (\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition}{FGameplay\+Setting\+Edit\+Condition}}, FGameplay\+On\+Edit\+Condition\+Changed, bool)
+\begin{DoxyCompactList}\small\item\em Event broadcasted when the edit condition\textquotesingle{}s state might have changed. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a4eb4972f2cc9e257b88f07e49ddf3050}{Broadcast\+Edit\+Condition\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Broadcasts the On\+Edit\+Condition\+Changed event. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a1ea8c8df2bfc99665e1a5ca1f6b6d388}{Setting\+Applied}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting) const
+\begin{DoxyCompactList}\small\item\em Called when the setting is \textquotesingle{}applied\textquotesingle{}. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ad7456237d3650d77688db2ebaf1d0fe5}{Setting\+Changed}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting, \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}} In\+Reason) const
+\begin{DoxyCompactList}\small\item\em Called when the setting is \textquotesingle{}changed\textquotesingle{}. \end{DoxyCompactList}\item 
+virtual FString \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a1f29e0561594ed0b811675b8aa64a4e7}{To\+String}} () const
+\begin{DoxyCompactList}\small\item\em Generates debugging text for this edit condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_aade62d16cdb12694c1254eebfdfcde03}{Initialize}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player) override
+\begin{DoxyCompactList}\small\item\em Called during the setting initialization. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a7dd87910cf83a1ad2485f0ee2c5323f2}{Gather\+Edit\+State}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player, \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \&In\+Out\+Edit\+State) const override
+\begin{DoxyCompactList}\small\item\em Evaluates the edit state of a setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FDelegate\+Handle \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a993daa234d4b32b7c1bef62e8aec46df}{Setting\+Changed\+Delegate}}
+\begin{DoxyCompactList}\small\item\em Delegate handle for the settings change event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Data Fields inherited from \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition}{FGameplay\+Setting\+Edit\+Condition}}}
+\begin{DoxyCompactItemize}
+\item 
+FGameplay\+On\+Edit\+Condition\+Changed \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ab78e049d6f2be4a534382f8ca1320e19}{On\+Edit\+Condition\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Edit condition that checks if latency stats are currently enabled. 
+
+Listens for changes in the latency stat indicator settings and updates the setting state. 
+
+\label{doc-constructors}
+\Hypertarget{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_af3005133cba250b21991134e784fa0cd}\index{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}!FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}
+\index{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}!FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}
+\doxysubsubsection{\texorpdfstring{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled()}{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_af3005133cba250b21991134e784fa0cd} 
+FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled::\+\+FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_ac7cf00aa1642c198b338124d07275068}\index{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}!````~FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{\texorpdfstring{$\sim$}{\string~}FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}
+\index{````~FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{\texorpdfstring{$\sim$}{\string~}FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}!FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled()}{\string~FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_ac7cf00aa1642c198b338124d07275068} 
+virtual FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled::\+\texorpdfstring{$\sim$}{\string~}\+FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a7dd87910cf83a1ad2485f0ee2c5323f2}\index{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}!GatherEditState@{GatherEditState}}
+\index{GatherEditState@{GatherEditState}!FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}
+\doxysubsubsection{\texorpdfstring{GatherEditState()}{GatherEditState()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a7dd87910cf83a1ad2485f0ee2c5323f2} 
+virtual void FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled::\+\+Gather\+Edit\+State (\begin{DoxyParamCaption}\item[{const ULocal\+Player \texorpdfstring{$\ast$}{*}}]{In\+Local\+Player}{, }\item[{\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \&}]{In\+Out\+Edit\+State}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Evaluates the edit state of a setting. 
+
+Subclasses should implement this to modify In\+Out\+Edit\+State based on current game state or platform conditions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Local\+Player} & The local player context \\
+\hline
+{\em In\+Out\+Edit\+State} & The state to modify (can disable, hide, or kill the setting) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a6c0b6641aadf24fcea9639b820ed425f}{FGameplay\+Setting\+Edit\+Condition}}.
+
+\Hypertarget{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_aade62d16cdb12694c1254eebfdfcde03}\index{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_aade62d16cdb12694c1254eebfdfcde03} 
+virtual void FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled::\+\+Initialize (\begin{DoxyParamCaption}\item[{const ULocal\+Player \texorpdfstring{$\ast$}{*}}]{In\+Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Called during the setting initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Local\+Player} & The local player context \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a2e17982d845643ef1901e5d9b32d4e3f}{FGameplay\+Setting\+Edit\+Condition}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a993daa234d4b32b7c1bef62e8aec46df}\index{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}!SettingChangedDelegate@{SettingChangedDelegate}}
+\index{SettingChangedDelegate@{SettingChangedDelegate}!FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled@{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}
+\doxysubsubsection{\texorpdfstring{SettingChangedDelegate}{SettingChangedDelegate}}
+{\footnotesize\ttfamily \label{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a993daa234d4b32b7c1bef62e8aec46df} 
+FDelegate\+Handle FGameplay\+Setting\+Edit\+Condition\+\_\+\+Latency\+Stats\+Currently\+Enabled::\+\+Setting\+Changed\+Delegate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Delegate handle for the settings change event. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h}{Gameplay\+Setting\+Edit\+Condition.\+h}}\end{DoxyCompactItemize}

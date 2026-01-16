@@ -1,0 +1,201 @@
+\doxysection{Gameplay\+Setting\+Edit\+Condition.\+h}
+\hypertarget{_gameplay_setting_edit_condition_8h_source}{}\label{_gameplay_setting_edit_condition_8h_source}\index{GameplaySettingEditCondition.h@{GameplaySettingEditCondition.h}}
+\doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_8h}{Framework/GameplaySetting.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_common_settings_interface_8h}{Interfaces/GameplayCommonSettingsInterface.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h}{Framework/GameplaySettingPerformanceSettings.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}HAL/IConsoleManager.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}RHI.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_settings_local_8h}{Framework/GameplaySettingsLocal.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ LOCTEXT\_NAMESPACE\ "{}SettingEditCondition"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplaySettingEditableState}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{static}\ TAutoConsoleVariable<bool>\ \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a27caeb9f044d56404942073dec0126fc}{CVarLatencyMarkersRequireNVIDIA}}(TEXT(\textcolor{stringliteral}{"{}GameplayCommonSettings.LatencyMarkersRequireNVIDIA"{}}),}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{true},}
+\DoxyCodeLine{00020\ \ \ \ \ TEXT(\textcolor{stringliteral}{"{}If\ true,\ then\ only\ allow\ latency\ markers\ to\ be\ enabled\ on\ NVIDIA\ hardware"{}}),}
+\DoxyCodeLine{00021\ \ \ \ \ ECVF\_Default}
+\DoxyCodeLine{00022\ );}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1}{EGameplayFramePacingEditCondition}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1a02ba5ffaa3fdaf8d93d4b74390939e49}{EnableIf}},}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1a5c70a8861ee4e1b0f23ba8171938dbe0}{DisableIf}}}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplaySettingEditCondition}}\ :\ \textcolor{keyword}{public}\ TSharedFromThis<FGameplaySettingEditCondition>}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplaySettingEditCondition}}()\ \{\ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a1474ea70de77c6b96df915eb0851ac2c}{\string~FGameplaySettingEditCondition}}()\ \{\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a78d8dd6da3b64a0c65a6beb34ac4fba2}{DECLARE\_EVENT\_OneParam}}(\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplaySettingEditCondition}},\ FGameplayOnEditConditionChanged,\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00055\ \ \ \ \ FGameplayOnEditConditionChanged\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ab78e049d6f2be4a534382f8ca1320e19}{OnEditConditionChanged}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a4eb4972f2cc9e257b88f07e49ddf3050}{BroadcastEditConditionChanged}}()}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ab78e049d6f2be4a534382f8ca1320e19}{OnEditConditionChanged}}.Broadcast(\textcolor{keyword}{true});}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a2e17982d845643ef1901e5d9b32d4e3f}{Initialize}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer)}
+\DoxyCodeLine{00073\ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a1ea8c8df2bfc99665e1a5ca1f6b6d388}{SettingApplied}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer,\ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00082\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ad7456237d3650d77688db2ebaf1d0fe5}{SettingChanged}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer,\ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting,\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplaySettingChangedReason}}\ InReason)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00092\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a6c0b6641aadf24fcea9639b820ed425f}{GatherEditState}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer,\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplaySettingEditableState}}\&\ InOutEditState)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00105\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{virtual}\ FString\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a1f29e0561594ed0b811675b8aa64a4e7}{ToString}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ TEXT(\textcolor{stringliteral}{"{}"{}});\ \}}
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00118\ \textcolor{keyword}{class\ }GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode_a990d55e827d7fe8bb1f927fc05a31087}{FGameplaySettingEditCondition\_FramePacingMode}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplaySettingEditCondition}}}
+\DoxyCodeLine{00119\ \{}
+\DoxyCodeLine{00120\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00126\ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode_a990d55e827d7fe8bb1f927fc05a31087}{FGameplaySettingEditCondition\_FramePacingMode}}(\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_ad06fb1209e628be6f9505f99fa83f00d}{EGameplayFramePacingMode}}\ InDesiredMode,\ \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1}{EGameplayFramePacingEditCondition}}\ InMatchMode\ =\ \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1a02ba5ffaa3fdaf8d93d4b74390939e49}{EGameplayFramePacingEditCondition::EnableIf}})}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode_a3b602e0679874bf3e963f94807c63e34}{DesiredMode}}(InDesiredMode)}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode_a7cd0aa375a3018c30e841a0e2bbb0a9c}{MatchMode}}(InMatchMode)}
+\DoxyCodeLine{00129\ \ \ \ \ \{\}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode_a61807644da6b9c47d35d4ee780a090da}{GatherEditState}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer,\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplaySettingEditableState}}\&\ InOutEditState)\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00132\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_ad06fb1209e628be6f9505f99fa83f00d}{EGameplayFramePacingMode}}\ ActualMode\ =\ \doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_aec29b23110cbc30379874cb5fa42c309}{UGameplayPlatformSpecificRenderingSettings::Get}}()-\/>\doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_a3d2b64f043c3b64648e834b070f63fdf}{FramePacingMode}};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ bMatches\ =\ (ActualMode\ ==\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode_a3b602e0679874bf3e963f94807c63e34}{DesiredMode}});}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ bMatchesAreBad\ =\ (\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode_a7cd0aa375a3018c30e841a0e2bbb0a9c}{MatchMode}}\ ==\ \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1a5c70a8861ee4e1b0f23ba8171938dbe0}{EGameplayFramePacingEditCondition::DisableIf}});}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bMatches\ ==\ bMatchesAreBad)}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ InOutEditState.\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_ac147514f03de4eb696fc0be41fec7eb3}{Kill}}(FString::Printf(TEXT(\textcolor{stringliteral}{"{}Frame\ pacing\ mode\ \%d\ didn't\ match\ requirement\ \%d"{}}),\ (int32)ActualMode,\ (int32)\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode_a3b602e0679874bf3e963f94807c63e34}{DesiredMode}}));}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00145\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_ad06fb1209e628be6f9505f99fa83f00d}{EGameplayFramePacingMode}}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode_a3b602e0679874bf3e963f94807c63e34}{DesiredMode}};}
+\DoxyCodeLine{00147\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a12021fdfeda18f23bbe7964afc18efc1}{EGameplayFramePacingEditCondition}}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___frame_pacing_mode_a7cd0aa375a3018c30e841a0e2bbb0a9c}{MatchMode}};}
+\DoxyCodeLine{00148\ \};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00153\ \textcolor{keyword}{class\ }GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___video_quality_af8cd2c27b88923a4bb8258e42985d16e}{FGameplaySettingEditCondition\_VideoQuality}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplaySettingEditCondition}}}
+\DoxyCodeLine{00154\ \{}
+\DoxyCodeLine{00155\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00160\ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___video_quality_af8cd2c27b88923a4bb8258e42985d16e}{FGameplaySettingEditCondition\_VideoQuality}}(\textcolor{keyword}{const}\ FString\&\ InDisableString)}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___video_quality_a059842155c9d91d563ed7960322b1601}{DisableString}}(InDisableString)}
+\DoxyCodeLine{00162\ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___video_quality_a1ed3932419bdd00a401d606e4b0fd1da}{GatherEditState}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer,\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplaySettingEditableState}}\&\ InOutEditState)\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00166\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_aec29b23110cbc30379874cb5fa42c309}{UGameplayPlatformSpecificRenderingSettings::Get}}()-\/>bSupportsGranularVideoQualitySettings)}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ InOutEditState.\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_ac147514f03de4eb696fc0be41fec7eb3}{Kill}}(\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___video_quality_a059842155c9d91d563ed7960322b1601}{DisableString}});}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___video_quality_a15fdca7ffadfc717a78af82662b51220}{SettingChanged}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer,\ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting,\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplaySettingChangedReason}}\ InReason)\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00174\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_i_gameplay_common_settings_interface}{IGameplayCommonSettingsInterface}}*\ SettingsAccessor\ =\ Cast<IGameplayCommonSettingsInterface>(InLocalPlayer))}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_settings_local}{UGameplaySettingsLocal}}*\ LocalSettings\ =\ SettingsAccessor-\/>GetLocalSettings();}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (LocalSettings)}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalSettings-\/>\doxymbox{\hyperlink{class_u_gameplay_settings_local_abe2213bf1e67c57e6ad40f9b913ac2c2}{ApplyScalabilitySettings}}();}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00183\ \ \ \ \ \}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00187\ \ \ \ \ FString\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___video_quality_a059842155c9d91d563ed7960322b1601}{DisableString}};}
+\DoxyCodeLine{00188\ \};}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00193\ \textcolor{keyword}{class\ }GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_supported_a31fe1da27435a00fe9fcdc856bdf2444}{FGameplaySettingEditCondition\_LatencyStatsSupported}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplaySettingEditCondition}}}
+\DoxyCodeLine{00194\ \{}
+\DoxyCodeLine{00195\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00196\ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_supported_a31fe1da27435a00fe9fcdc856bdf2444}{FGameplaySettingEditCondition\_LatencyStatsSupported}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_supported_a11eda2ce9f8d7415a6f9876d9f7e7448}{GatherEditState}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer,\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplaySettingEditableState}}\&\ InOutEditState)\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00199\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_u_gameplay_settings_local_affa868bfdf2cf70941d22c77c67a2980}{UGameplaySettingsLocal::DoesPlatformSupportLatencyTrackingStats}}())}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ InOutEditState.\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a0ff5c3f2712c329a95f8a3d28ee2719a}{Disable}}(LOCTEXT(\textcolor{stringliteral}{"{}PlatformDoesNotSupportLatencyStates"{}},\ \textcolor{stringliteral}{"{}Latency\ performance\ stats\ are\ not\ supported\ on\ this\ device"{}}));}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
+\DoxyCodeLine{00205\ \};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00212\ \textcolor{keyword}{class\ }GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_af3005133cba250b21991134e784fa0cd}{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplaySettingEditCondition}}}
+\DoxyCodeLine{00213\ \{}
+\DoxyCodeLine{00214\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00215\ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_af3005133cba250b21991134e784fa0cd}{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_ac7cf00aa1642c198b338124d07275068}{\string~FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00218\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a993daa234d4b32b7c1bef62e8aec46df}{SettingChangedDelegate}}.IsValid())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_settings_local}{UGameplaySettingsLocal}}*\ Settings\ =\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a10371e140b5a69481c05b5f96af2688b}{UGameplaySettingsLocal::Get}}();}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Settings)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ Settings-\/>\doxymbox{\hyperlink{class_u_gameplay_settings_local_a57741a67f18c4456a5dffe0d05a09699}{OnLatencyStatIndicatorSettingsChangedEvent}}().Remove(\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a993daa234d4b32b7c1bef62e8aec46df}{SettingChangedDelegate}});}
+\DoxyCodeLine{00225\ \ \ \ \ \}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_aade62d16cdb12694c1254eebfdfcde03}{Initialize}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00229\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bind\ to\ an\ event\ for\ when\ the\ settings\ are\ updated\ so\ that\ we\ can\ broadcast\ that\ we\ need}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ to\ be\ re-\/evaluated}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_settings_local}{UGameplaySettingsLocal}}*\ Settings\ =\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a10371e140b5a69481c05b5f96af2688b}{UGameplaySettingsLocal::Get}}();}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Settings)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a993daa234d4b32b7c1bef62e8aec46df}{SettingChangedDelegate}}\ =\ Settings-\/>\doxymbox{\hyperlink{class_u_gameplay_settings_local_a57741a67f18c4456a5dffe0d05a09699}{OnLatencyStatIndicatorSettingsChangedEvent}}().AddSP(this-\/>AsShared(),\ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \&\doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_a4eb4972f2cc9e257b88f07e49ddf3050}{FGameplaySettingEditCondition\_LatencyStatsCurrentlyEnabled::BroadcastEditConditionChanged}});}
+\DoxyCodeLine{00237\ \ \ \ \ \}}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a7dd87910cf83a1ad2485f0ee2c5323f2}{GatherEditState}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer,\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplaySettingEditableState}}\&\ InOutEditState)\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00240\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_u_gameplay_settings_local}{UGameplaySettingsLocal}}*\ Settings\ =\ \doxymbox{\hyperlink{class_u_gameplay_settings_local_a10371e140b5a69481c05b5f96af2688b}{UGameplaySettingsLocal::Get}}();}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Settings\ \&\&\ !Settings-\/>\doxymbox{\hyperlink{class_u_gameplay_settings_local_ad7cfcc3a1dd6ef641c674ccc0b51ffb9}{GetEnableLatencyTrackingStats}}())}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ InOutEditState.\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a0ff5c3f2712c329a95f8a3d28ee2719a}{Disable}}(LOCTEXT(\textcolor{stringliteral}{"{}LatencyMarkerRequireStatsEnabled"{}},\ \textcolor{stringliteral}{"{}Latency\ Tracking\ Stats\ must\ be\ enabled\ to\ use\ this."{}}));}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \ \ \ \ \}}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00250\ \ \ \ \ FDelegateHandle\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_stats_currently_enabled_a993daa234d4b32b7c1bef62e8aec46df}{SettingChangedDelegate}};}
+\DoxyCodeLine{00251\ \};}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00258\ \textcolor{keyword}{class\ }GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_markers_supported_a094b14cf07b31893d9d5442a762ba96c}{FGameplaySettingEditCondition\_LatencyMarkersSupported}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition_ac81fb6db003db11e2323d51d08e48aae}{FGameplaySettingEditCondition}}}
+\DoxyCodeLine{00259\ \{}
+\DoxyCodeLine{00260\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00261\ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_markers_supported_a094b14cf07b31893d9d5442a762ba96c}{FGameplaySettingEditCondition\_LatencyMarkersSupported}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition___latency_markers_supported_ac49f30e3a471d7493efb27b83943ce5d}{GatherEditState}}(\textcolor{keyword}{const}\ ULocalPlayer*\ InLocalPlayer,\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplaySettingEditableState}}\&\ InOutEditState)\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00264\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_u_gameplay_settings_local_a8c2f9d9244dbc66df895d4b934c7ad81}{UGameplaySettingsLocal::DoesPlatformSupportLatencyMarkers}}())}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ InOutEditState.\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a0ff5c3f2712c329a95f8a3d28ee2719a}{Disable}}(LOCTEXT(\textcolor{stringliteral}{"{}PlatformDoesNotSupportLatencyMarkers"{}},\ \textcolor{stringliteral}{"{}Latency\ markers\ are\ not\ supported\ on\ this\ device"{}}));}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Only\ use\ Reflex/latency\ stats\ on\ NVIDIA\ devices\ if\ the\ cvar\ is\ set.}}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_gameplay_setting_edit_condition_8h_a27caeb9f044d56404942073dec0126fc}{CVarLatencyMarkersRequireNVIDIA}}.GetValueOnAnyThread()\ \&\&\ !IsRHIDeviceNVIDIA())}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ InOutEditState.\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a0ff5c3f2712c329a95f8a3d28ee2719a}{Disable}}(LOCTEXT(\textcolor{stringliteral}{"{}InputLatencyMarkersRequiresNVIDIA"{}},\ \textcolor{stringliteral}{"{}Latency\ markers\ only\ work\ on\ NVIDIA\ devices."{}}));}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00275\ \ \ \ \ \}}
+\DoxyCodeLine{00276\ \};}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\#undef\ LOCTEXT\_NAMESPACE}}
+
+\end{DoxyCode}

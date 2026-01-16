@@ -1,0 +1,3 @@
+﻿#include "GameplayCommonSettingsEditor.h"
+
+IMPLEMENT_MODULE(FGameplayCommonSettingsEditorModule, GameplayCommonSettingsEditor)

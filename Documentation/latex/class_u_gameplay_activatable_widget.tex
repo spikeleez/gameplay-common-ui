@@ -1,0 +1,214 @@
+\doxysection{UGameplay\+Activatable\+Widget Class Reference}
+\hypertarget{class_u_gameplay_activatable_widget}{}\label{class_u_gameplay_activatable_widget}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+
+
+Base class for widgets that can be activated and deactivated within the UI stack.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Activatable\+Widget.\+h$>$}
+
+Inheritance diagram for UGameplay\+Activatable\+Widget:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.931937cm]{class_u_gameplay_activatable_widget}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a023bf6842453726e076b1e5d03cfa59e}{UGameplay\+Activatable\+Widget}} (const FObject\+Initializer \&Object\+Initializer=FObject\+Initializer::\+\+Get())
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ad17ff3c0acd789d45f90246aa4e938e5}{Native\+Destruct}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a2f323f4846af290927c4d35bf90422bc}{Native\+On\+Activated}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a9a334286488535fe8aa908280410c7e4}{Native\+On\+Deactivated}} () override
+\item 
+virtual TOptional$<$ FUIInput\+Config $>$ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ab57c70bd00c9275eff50c6c8239c6835}{Get\+Desired\+Input\+Config}} () const override
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_ad9a734954029703ed3bd4530fb2c6e66}{Register\+Bound\+Action\+Binding}} (FData\+Table\+Row\+Handle Input\+Action, const FOn\+Input\+Action\+Executed\+Signature \&Callback, FUIAction\+Binding\+Handle \&Binding\+Handle)
+\begin{DoxyCompactList}\small\item\em Registers a standard UI action binding for this widget. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_afc936f88c6b7d84db597009ccd79691e}{Register\+Bound\+Enhanced\+Action\+Binding}} (UInput\+Action \texorpdfstring{$\ast$}{*}Input\+Action, const FOn\+Enhanced\+Input\+Action\+Executed\+Signature \&Callback, FUIAction\+Binding\+Handle \&Binding\+Handle)
+\begin{DoxyCompactList}\small\item\em Registers an Enhanced Input action binding for this widget. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a5557ba48b7d40950ae29522b1ee24ae7}{Unregister\+Bound\+Action\+Binding}} (FUIAction\+Binding\+Handle \&Binding\+Handle)
+\begin{DoxyCompactList}\small\item\em Manually unregisters a specific action binding. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a9cb56665546ea498c74c18dca3e1907a}{Unregister\+All\+Bound\+Action\+Bindings}} ()
+\begin{DoxyCompactList}\small\item\em Unregisters all currently active action bindings for this widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_types_8h_a1025122649dbd094f4a294fde094283c}{EGameplay\+Activatable\+Input\+Mode}} \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a85a7daafe70affb87f9bec77bfe54b31}{Input\+Mode}}
+\begin{DoxyCompactList}\small\item\em The input mode desired by this widget when activated. \end{DoxyCompactList}\item 
+EMouse\+Capture\+Mode \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a921df6987b1c0a7ab366cf9ed492a894}{Mouse\+Capture\+Mode}}
+\begin{DoxyCompactList}\small\item\em How the mouse should be captured when in a Game-\/related input mode. \end{DoxyCompactList}\item 
+uint8 \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a87674d4b50b95127a9c0a42c15ef688c}{b\+Hides\+Cursor\+During\+Viewport\+Capture}}:\+ 1
+\begin{DoxyCompactList}\small\item\em Whether to hide the mouse cursor while it\textquotesingle{}s captured in the viewport. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ FUIAction\+Binding\+Handle $>$ \doxymbox{\hyperlink{class_u_gameplay_activatable_widget_a036d56a83f050e5ca2da41c703a1bf64}{Binding\+Handles}}
+\begin{DoxyCompactList}\small\item\em Internal list of active action binding handles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for widgets that can be activated and deactivated within the UI stack. 
+
+Provides enhanced support for input configuration (Menu vs Game vs Both) and automated binding/\+unbinding of UI actions based on the widget\textquotesingle{}s lifecycle. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_activatable_widget_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_activatable_widget_a023bf6842453726e076b1e5d03cfa59e}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{UGameplayActivatableWidget()}{UGameplayActivatableWidget()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_a023bf6842453726e076b1e5d03cfa59e} 
+UGameplay\+Activatable\+Widget::\+\+UGameplay\+Activatable\+Widget (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{ = {\ttfamily FObjectInitializer:\+:\+Get()}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_activatable_widget_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_activatable_widget_ab57c70bd00c9275eff50c6c8239c6835}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!GetDesiredInputConfig@{GetDesiredInputConfig}}
+\index{GetDesiredInputConfig@{GetDesiredInputConfig}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{GetDesiredInputConfig()}{GetDesiredInputConfig()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_ab57c70bd00c9275eff50c6c8239c6835} 
+TOptional$<$ FUIInput\+Config $>$ UGameplay\+Activatable\+Widget::\+\+Get\+Desired\+Input\+Config (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_activatable_widget_ad17ff3c0acd789d45f90246aa4e938e5}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!NativeDestruct@{NativeDestruct}}
+\index{NativeDestruct@{NativeDestruct}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{NativeDestruct()}{NativeDestruct()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_ad17ff3c0acd789d45f90246aa4e938e5} 
+void UGameplay\+Activatable\+Widget::\+\+Native\+Destruct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_u_gameplay_game_layout_a32b30d07e4b05e30f2454041a3a18b46}{UGameplay\+Game\+Layout}}.
+
+\Hypertarget{class_u_gameplay_activatable_widget_a2f323f4846af290927c4d35bf90422bc}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!NativeOnActivated@{NativeOnActivated}}
+\index{NativeOnActivated@{NativeOnActivated}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{NativeOnActivated()}{NativeOnActivated()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_a2f323f4846af290927c4d35bf90422bc} 
+void UGameplay\+Activatable\+Widget::\+\+Native\+On\+Activated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_u_gameplay_setting_screen_a0a2e0217410a890bc05590f1162d1561}{UGameplay\+Setting\+Screen}}.
+
+\Hypertarget{class_u_gameplay_activatable_widget_a9a334286488535fe8aa908280410c7e4}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!NativeOnDeactivated@{NativeOnDeactivated}}
+\index{NativeOnDeactivated@{NativeOnDeactivated}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{NativeOnDeactivated()}{NativeOnDeactivated()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_a9a334286488535fe8aa908280410c7e4} 
+void UGameplay\+Activatable\+Widget::\+\+Native\+On\+Deactivated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_activatable_widget_ad9a734954029703ed3bd4530fb2c6e66}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!RegisterBoundActionBinding@{RegisterBoundActionBinding}}
+\index{RegisterBoundActionBinding@{RegisterBoundActionBinding}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{RegisterBoundActionBinding()}{RegisterBoundActionBinding()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_ad9a734954029703ed3bd4530fb2c6e66} 
+void UGameplay\+Activatable\+Widget::\+\+Register\+Bound\+Action\+Binding (\begin{DoxyParamCaption}\item[{FData\+Table\+Row\+Handle}]{Input\+Action}{, }\item[{const FOn\+Input\+Action\+Executed\+Signature \&}]{Callback}{, }\item[{FUIAction\+Binding\+Handle \&}]{Binding\+Handle}{}\end{DoxyParamCaption})}
+
+
+
+Registers a standard UI action binding for this widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input\+Action} & Row handle from the UI action data table \\
+\hline
+{\em Callback} & Function to call when the action is triggered \\
+\hline
+{\em Binding\+Handle} & \+[Out]\+ Handle identifying the registration for later removal \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_activatable_widget_afc936f88c6b7d84db597009ccd79691e}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!RegisterBoundEnhancedActionBinding@{RegisterBoundEnhancedActionBinding}}
+\index{RegisterBoundEnhancedActionBinding@{RegisterBoundEnhancedActionBinding}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{RegisterBoundEnhancedActionBinding()}{RegisterBoundEnhancedActionBinding()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_afc936f88c6b7d84db597009ccd79691e} 
+void UGameplay\+Activatable\+Widget::\+\+Register\+Bound\+Enhanced\+Action\+Binding (\begin{DoxyParamCaption}\item[{UInput\+Action \texorpdfstring{$\ast$}{*}}]{Input\+Action}{, }\item[{const FOn\+Enhanced\+Input\+Action\+Executed\+Signature \&}]{Callback}{, }\item[{FUIAction\+Binding\+Handle \&}]{Binding\+Handle}{}\end{DoxyParamCaption})}
+
+
+
+Registers an Enhanced Input action binding for this widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input\+Action} & The enhanced input action to listen for \\
+\hline
+{\em Callback} & Function to call when the action is triggered \\
+\hline
+{\em Binding\+Handle} & \+[Out]\+ Handle identifying the registration for later removal \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_activatable_widget_a9cb56665546ea498c74c18dca3e1907a}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!UnregisterAllBoundActionBindings@{UnregisterAllBoundActionBindings}}
+\index{UnregisterAllBoundActionBindings@{UnregisterAllBoundActionBindings}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{UnregisterAllBoundActionBindings()}{UnregisterAllBoundActionBindings()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_a9cb56665546ea498c74c18dca3e1907a} 
+void UGameplay\+Activatable\+Widget::\+\+Unregister\+All\+Bound\+Action\+Bindings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Unregisters all currently active action bindings for this widget. 
+
+\Hypertarget{class_u_gameplay_activatable_widget_a5557ba48b7d40950ae29522b1ee24ae7}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!UnregisterBoundActionBinding@{UnregisterBoundActionBinding}}
+\index{UnregisterBoundActionBinding@{UnregisterBoundActionBinding}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{UnregisterBoundActionBinding()}{UnregisterBoundActionBinding()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_a5557ba48b7d40950ae29522b1ee24ae7} 
+void UGameplay\+Activatable\+Widget::\+\+Unregister\+Bound\+Action\+Binding (\begin{DoxyParamCaption}\item[{FUIAction\+Binding\+Handle \&}]{Binding\+Handle}{}\end{DoxyParamCaption})}
+
+
+
+Manually unregisters a specific action binding. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_activatable_widget_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_activatable_widget_a87674d4b50b95127a9c0a42c15ef688c}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!bHidesCursorDuringViewportCapture@{bHidesCursorDuringViewportCapture}}
+\index{bHidesCursorDuringViewportCapture@{bHidesCursorDuringViewportCapture}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{bHidesCursorDuringViewportCapture}{bHidesCursorDuringViewportCapture}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_a87674d4b50b95127a9c0a42c15ef688c} 
+uint8 UGameplay\+Activatable\+Widget::\+b\+Hides\+Cursor\+During\+Viewport\+Capture\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Whether to hide the mouse cursor while it\textquotesingle{}s captured in the viewport. 
+
+\Hypertarget{class_u_gameplay_activatable_widget_a036d56a83f050e5ca2da41c703a1bf64}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!BindingHandles@{BindingHandles}}
+\index{BindingHandles@{BindingHandles}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{BindingHandles}{BindingHandles}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_a036d56a83f050e5ca2da41c703a1bf64} 
+TArray$<$FUIAction\+Binding\+Handle$>$ UGameplay\+Activatable\+Widget::\+\+Binding\+Handles\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal list of active action binding handles. 
+
+\Hypertarget{class_u_gameplay_activatable_widget_a85a7daafe70affb87f9bec77bfe54b31}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!InputMode@{InputMode}}
+\index{InputMode@{InputMode}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{InputMode}{InputMode}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_a85a7daafe70affb87f9bec77bfe54b31} 
+\doxymbox{\hyperlink{_gameplay_common_types_8h_a1025122649dbd094f4a294fde094283c}{EGameplay\+Activatable\+Input\+Mode}} UGameplay\+Activatable\+Widget::\+\+Input\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The input mode desired by this widget when activated. 
+
+\Hypertarget{class_u_gameplay_activatable_widget_a921df6987b1c0a7ab366cf9ed492a894}\index{UGameplayActivatableWidget@{UGameplayActivatableWidget}!MouseCaptureMode@{MouseCaptureMode}}
+\index{MouseCaptureMode@{MouseCaptureMode}!UGameplayActivatableWidget@{UGameplayActivatableWidget}}
+\doxysubsubsection{\texorpdfstring{MouseCaptureMode}{MouseCaptureMode}}
+{\footnotesize\ttfamily \label{class_u_gameplay_activatable_widget_a921df6987b1c0a7ab366cf9ed492a894} 
+EMouse\+Capture\+Mode UGameplay\+Activatable\+Widget::\+\+Mouse\+Capture\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+How the mouse should be captured when in a Game-\/related input mode. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_activatable_widget_8h}{Gameplay\+Activatable\+Widget.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_activatable_widget_8cpp}{Gameplay\+Activatable\+Widget.\+cpp}}\end{DoxyCompactItemize}

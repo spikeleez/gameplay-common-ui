@@ -1,0 +1,43 @@
+\doxysection{Gameplay\+Setting\+List\+View.\+h}
+\hypertarget{_gameplay_setting_list_view_8h_source}{}\label{_gameplay_setting_list_view_8h_source}\index{GameplaySettingListView.h@{GameplaySettingListView.h}}
+\doxymbox{\hyperlink{_gameplay_setting_list_view_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Components/ListView.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplaySettingListView.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_setting_visual_data}{UGameplaySettingVisualData}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00020\ UCLASS(meta=(EntryClass\ =\ GameplaySettingListEntryBase))}
+\DoxyCodeLine{00021\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_a7e4529dd8f0e2b3fbd84c1297bd22977}{UGameplaySettingListView}}\ :\ public\ UListView}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_a7e4529dd8f0e2b3fbd84c1297bd22977}{UGameplaySettingListView}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_a495f6bd6dd522f3bea5c0d0895df51be}{AddNameOverride}}(\textcolor{keyword}{const}\ FName\&\ DevName,\ \textcolor{keyword}{const}\ FText\&\ OverrideName);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#if\ WITH\_EDITOR}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ValidateCompiledDefaults(\textcolor{keyword}{class}\ IWidgetCompilerLog\&\ CompileLog)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00041\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category=\textcolor{stringliteral}{"{}Visual"{}})}
+\DoxyCodeLine{00042\ \ \ \ \ TObjectPtr<\doxymbox{\hyperlink{class_u_gameplay_setting_visual_data}{UGameplaySettingVisualData}}>\ \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_a6826526b57090b15edc87feda79e0bc8}{VisualData}};}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ protected:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UListView\ interface}}
+\DoxyCodeLine{00046\ \ \ \ \ virtual\ UUserWidget\&\ \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_acf2e47983e47a7903ed69880c7405e14}{OnGenerateEntryWidgetInternal}}(UObject*\ Item,\ \doxymbox{\hyperlink{class_t_subclass_of}{TSubclassOf}}<UUserWidget>\ DesiredEntryClass,\ const\ TSharedRef<STableViewBase>\&\ OwnerTable)\ override;}
+\DoxyCodeLine{00047\ \ \ \ \ virtual\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_a32f0ce858e25990d4b97357553059c87}{OnIsSelectableOrNavigableInternal}}(UObject*\ FirstSelectedItem)\ override;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UListView\ interface}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ private:}
+\DoxyCodeLine{00052\ \ \ \ \ TMap<FName,\ FText>\ \doxymbox{\hyperlink{class_u_gameplay_setting_list_view_aa09825ebf36f679271f2751b464656ce}{NameOverrides}};}
+\DoxyCodeLine{00053\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,40 @@
+\doxysection{Gameplay\+Setting\+Detail\+Extension.\+h}
+\hypertarget{_gameplay_setting_detail_extension_8h_source}{}\label{_gameplay_setting_detail_extension_8h_source}\index{GameplaySettingDetailExtension.h@{GameplaySettingDetailExtension.h}}
+\doxymbox{\hyperlink{_gameplay_setting_detail_extension_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}CommonUserWidget.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_registry_8h}{Framework/GameplaySettingRegistry.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}GameplaySettingDetailExtension.generated.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00019\ UCLASS(Abstract,\ BlueprintType,\ Blueprintable,\ meta=(DisableNativeTick))}
+\DoxyCodeLine{00020\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension}{UGameplaySettingDetailExtension}}\ :\ public\ UCommonUserWidget}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_a51d1143b62dde9840b919253d10c2a8c}{SetSetting}}(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00030\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00031\ \ \ \ \ TObjectPtr<\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}>\ \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_ad9ba5dae529aea867b6d2c1d32055ad1}{Setting}};}
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00033\ protected:}
+\DoxyCodeLine{00035\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_a8938c40fec8a95041057c63672fbf916}{NativeSettingAssigned}}(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting);}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_a10a0f22ed292c293d23975cf3cd61918}{NativeSettingValueChanged}}(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting,\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplaySettingChangedReason}}\ Reason);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent,\ Category=\textcolor{stringliteral}{"{}Events"{}},\ meta=(\doxymbox{\hyperlink{class_u_gameplay_setting_a2175e84b2e10debb791309cc781e988b}{DisplayName}}\ =\ \textcolor{stringliteral}{"{}On\ Setting\ Assigned"{}}))}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_ad91fc01d0c495a3472201b4b4077b368}{BP\_OnSettingAssigned}}(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent,\ Category=\textcolor{stringliteral}{"{}Events"{}},\ meta=(\doxymbox{\hyperlink{class_u_gameplay_setting_a2175e84b2e10debb791309cc781e988b}{DisplayName}}\ =\ \textcolor{stringliteral}{"{}On\ Setting\ Value\ Changed"{}}))}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_detail_extension_a13c6abb433c25562613ea6a6c61b39f5}{BP\_OnSettingValueChanged}}(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting);}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

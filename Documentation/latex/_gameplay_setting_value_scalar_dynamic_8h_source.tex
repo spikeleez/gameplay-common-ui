@@ -1,0 +1,106 @@
+\doxysection{Gameplay\+Setting\+Value\+Scalar\+Dynamic.\+h}
+\hypertarget{_gameplay_setting_value_scalar_dynamic_8h_source}{}\label{_gameplay_setting_value_scalar_dynamic_8h_source}\index{GameplaySettingValueScalarDynamic.h@{GameplaySettingValueScalarDynamic.h}}
+\doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_value_scalar_8h}{GameplaySettingValueScalar.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplaySettingValueScalarDynamic.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }FNumberFormattingOptions;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_f_gameplay_setting_data_source}{FGameplaySettingDataSource}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }UObject;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ TFunction<FText(\textcolor{keywordtype}{double}\ SourceValue,\ \textcolor{keywordtype}{double}\ NormalizedValue)>\ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00024\ UCLASS()}
+\DoxyCodeLine{00025\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_af07a03c3dc86c3609de50c12fe4a7334}{UGameplaySettingValueScalarDynamic}}\ :\ public\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_abab3e5ab7b0c9ee1e9926c387b915bb9}{UGameplaySettingValueScalar}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_aed45a682d236d3a72186986c5c78d8c9}{Raw}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a9c1d2ba74364902f3466dc5f07b0695b}{RawOneDecimal}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a5b01ad461e13c7d7da7d7d0fc40e4318}{RawTwoDecimals}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a1d05d08b88b59e06ecbd09d4595e7f6a}{ZeroToOnePercent}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a5573187bda1f9eb57845a2630d439713}{ZeroToOnePercent\_OneDecimal}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_acb48424af39c044c60dc4c4d27324579}{SourceAsPercent1}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_afc550be67d2c86077c79609a0e563e52}{SourceAsPercent100}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a229fdcea44fe4cd77dd4c879a7f22be5}{SourceAsInteger}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00055\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_af07a03c3dc86c3609de50c12fe4a7334}{UGameplaySettingValueScalarDynamic}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a9e4d8d80e87379817ee20ba23c63f47e}{Startup}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a4ef94f1aa1b8337d9faae49d5993c452}{StoreInitial}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edbacfae12276968ba2e1d510d33949e7478}{ResetToDefault}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edba2cf6ecbeab5dee3970a0562249dab19c}{RestoreToInitial}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameplaySettingValueScalar\ interface}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ TOptional<double>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a400de587225742b3de814a2ed0a42272}{GetDefaultValue}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_af22ea2061b674ca5558e3af38d8109d1}{SetValue}}(\textcolor{keywordtype}{double}\ Value,\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplaySettingChangedReason}}\ Reason\ =\ \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edbaf4ec5f57bd4d31b803312d873be40da9}{EGameplaySettingChangedReason::Change}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a69eee8ecc455c37b849683083c17545f}{GetValue}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ TRange<double>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_ae53f0f7dd2986fe7002db272cc2174cf}{GetSourceRange}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_acd8a2333ee4aef1456d6295b3abb9d72}{GetSourceStep}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ FText\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a81b58198aaccd2bda307a4fb00c3f81b}{GetFormattedText}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameplaySettingValueScalar\ interface}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a4ed40ab83eb0cc60a3bdb5c386f4d5c8}{SetDynamicGetter}}(\textcolor{keyword}{const}\ TSharedRef<FGameplaySettingDataSource>\&\ InGetter);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_ae984e0a0d38c996cf8c1b3a9a5c6425a}{SetDynamicSetter}}(\textcolor{keyword}{const}\ TSharedRef<FGameplaySettingDataSource>\&\ InSetter);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a6d51df022c5a6eed4ac67429d6954d49}{SetDefaultValue}}(\textcolor{keywordtype}{double}\ InValue);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a3ae3b66497d15f6de167a8c00efd49ee}{SetDisplayFormat}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}}\&\ InDisplayFormat);}
+\DoxyCodeLine{00084\ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_ab78c5cafa1d3331757ed53a1286527a5}{SetSourceRangeAndStep}}(\textcolor{keyword}{const}\ TRange<double>\&\ InRange,\ \textcolor{keywordtype}{double}\ InSourceStep);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_ad514919f8bc460fa255bf717c4fdf00c}{SetMinimumLimit}}(\textcolor{keyword}{const}\ TOptional<double>\&\ InMinimum);}
+\DoxyCodeLine{00100\ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_aa89160ba247e983a773e9cd458ddcb25}{SetMaximumLimit}}(\textcolor{keyword}{const}\ TOptional<double>\&\ InMaximum);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00112\ \ \ \ \ TSharedPtr<FGameplaySettingDataSource>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a294aa8c8fd876cc20a15841435ccc484}{Getter}};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00115\ \ \ \ \ TSharedPtr<FGameplaySettingDataSource>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a022fd81036a300b853f6d1944e8e718d}{Setter}};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00118\ \ \ \ \ TOptional<double>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a3a2f1f998d466002d7af384598b9b899}{DefaultValue}};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a8f049b4958868429792fb6e05aba03d8}{InitialValue}}\ =\ 0;}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00124\ \ \ \ \ TRange<double>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_afe69ef832e8d9e9d2a4819e0512eea37}{SourceRange}}\ =\ TRange<double>(0,\ 1);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_ad506c0f943d171068e087ad4b9c639bb}{SourceStep}}\ =\ 0.01;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00130\ \ \ \ \ TOptional<double>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a0bcee1b0c57333132f95a74c0996b935}{Minimum}};}
+\DoxyCodeLine{00131\ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ TOptional<double>\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a9ca9385319e1bd6a4aee174eaa91a59c}{Maximum}};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00136\ \ \ \ \ \doxymbox{\hyperlink{_gameplay_setting_value_scalar_dynamic_8h_a3f9a8d23c68ad7d74266b126c9973424}{FGameplayGameSettingValueScalarFormatFunction}}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a4e464cc90c3ab7d3f205430acdad6d08}{DisplayFormat}};}
+\DoxyCodeLine{00137\ \ \ \ \ }
+\DoxyCodeLine{00138\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a1e58d22bc0a79cc59d5e6b5007842ad3}{OnInitialized}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameplaySettingValue\ interface}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a7a05492722d0c4282981dc99e2f4f493}{OnDataSourcesReady}}();}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FNumberFormattingOptions\&\ \doxymbox{\hyperlink{class_u_gameplay_setting_value_scalar_dynamic_a47a8296c4cdcd6fbd1da3e9645ce663b}{GetOneDecimalFormattingOptions}}();}
+\DoxyCodeLine{00149\ \};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ }
+
+\end{DoxyCode}

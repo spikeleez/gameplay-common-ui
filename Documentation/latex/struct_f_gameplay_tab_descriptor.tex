@@ -1,0 +1,152 @@
+\doxysection{FGameplay\+Tab\+Descriptor Struct Reference}
+\hypertarget{struct_f_gameplay_tab_descriptor}{}\label{struct_f_gameplay_tab_descriptor}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+
+
+Configuration data for individual tabs within a tab list widget.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Common\+Types.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor_a81152b852d6864fb01266e368cd6eee6}{FGameplay\+Tab\+Descriptor}} ()
+\item 
+bool \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor_ab0c77e25faceeb43cebb06631f283a15}{operator==}} (const \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&Other) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+FName \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor_ae06b4918c3633b64406144c570bb010e}{Tab\+Id}}
+\begin{DoxyCompactList}\small\item\em Internal unique identifier for the tab. \end{DoxyCompactList}\item 
+FGameplay\+Tag\+Container \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor_aeb98d159050be1a9e5d82be7e536109d}{Tab\+Asset\+Tags}}
+\begin{DoxyCompactList}\small\item\em Metadata tags associated with the tab (useful for filtering or appearance mapping). \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor_a8d55e8488d8ded93e24a738ab391ec76}{Tab\+Display\+Name}}
+\begin{DoxyCompactList}\small\item\em Localized name shown on the tab button. \end{DoxyCompactList}\item 
+FSlate\+Brush \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor_aca6408b2a920c22921ba5ddca4a0354e}{Tab\+Icon}}
+\begin{DoxyCompactList}\small\item\em Visual icon for the tab. \end{DoxyCompactList}\item 
+uint8 \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor_aad8001e8d2bccb67fdecc77fe835ca54}{b\+Hidden}}:\+ 1
+\begin{DoxyCompactList}\small\item\em Whether this tab is currently hidden from the user. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UCommon\+Button\+Base $>$ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor_a6329b8ad700023321cad01156bfc8cb3}{Tab\+Button\+Type}}
+\begin{DoxyCompactList}\small\item\em The class of the button to use for this tab in the tab list. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ UCommon\+User\+Widget $>$ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor_a9556bf73ce3275b4993d7619fe84cea6}{Tab\+Content\+Type}}
+\begin{DoxyCompactList}\small\item\em The class of the content widget to display when this tab is active. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ UWidget $>$ \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor_a725a2b6582488ccdb4c0c80cadb2ff28}{Created\+Tab\+Content\+Widget}}
+\begin{DoxyCompactList}\small\item\em Reference to the content widget instance (if already created). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Configuration data for individual tabs within a tab list widget. 
+
+\label{doc-constructors}
+\Hypertarget{struct_f_gameplay_tab_descriptor_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_f_gameplay_tab_descriptor_a81152b852d6864fb01266e368cd6eee6}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\doxysubsubsection{\texorpdfstring{FGameplayTabDescriptor()}{FGameplayTabDescriptor()}}
+{\footnotesize\ttfamily \label{struct_f_gameplay_tab_descriptor_a81152b852d6864fb01266e368cd6eee6} 
+FGameplay\+Tab\+Descriptor::\+\+FGameplay\+Tab\+Descriptor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{struct_f_gameplay_tab_descriptor_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_f_gameplay_tab_descriptor_ab0c77e25faceeb43cebb06631f283a15}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!operator==@{operator==}}
+\index{operator==@{operator==}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_f_gameplay_tab_descriptor_ab0c77e25faceeb43cebb06631f283a15} 
+bool FGameplay\+Tab\+Descriptor::\+operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_f_gameplay_tab_descriptor}{FGameplay\+Tab\+Descriptor}} \&}]{Other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_f_gameplay_tab_descriptor_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_f_gameplay_tab_descriptor_aad8001e8d2bccb67fdecc77fe835ca54}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!bHidden@{bHidden}}
+\index{bHidden@{bHidden}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\doxysubsubsection{\texorpdfstring{bHidden}{bHidden}}
+{\footnotesize\ttfamily \label{struct_f_gameplay_tab_descriptor_aad8001e8d2bccb67fdecc77fe835ca54} 
+uint8 FGameplay\+Tab\+Descriptor::\+b\+Hidden}
+
+
+
+Whether this tab is currently hidden from the user. 
+
+\Hypertarget{struct_f_gameplay_tab_descriptor_a725a2b6582488ccdb4c0c80cadb2ff28}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!CreatedTabContentWidget@{CreatedTabContentWidget}}
+\index{CreatedTabContentWidget@{CreatedTabContentWidget}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\doxysubsubsection{\texorpdfstring{CreatedTabContentWidget}{CreatedTabContentWidget}}
+{\footnotesize\ttfamily \label{struct_f_gameplay_tab_descriptor_a725a2b6582488ccdb4c0c80cadb2ff28} 
+TObject\+Ptr$<$UWidget$>$ FGameplay\+Tab\+Descriptor::\+\+Created\+Tab\+Content\+Widget}
+
+
+
+Reference to the content widget instance (if already created). 
+
+\Hypertarget{struct_f_gameplay_tab_descriptor_aeb98d159050be1a9e5d82be7e536109d}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!TabAssetTags@{TabAssetTags}}
+\index{TabAssetTags@{TabAssetTags}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\doxysubsubsection{\texorpdfstring{TabAssetTags}{TabAssetTags}}
+{\footnotesize\ttfamily \label{struct_f_gameplay_tab_descriptor_aeb98d159050be1a9e5d82be7e536109d} 
+FGameplay\+Tag\+Container FGameplay\+Tab\+Descriptor::\+\+Tab\+Asset\+Tags}
+
+
+
+Metadata tags associated with the tab (useful for filtering or appearance mapping). 
+
+\Hypertarget{struct_f_gameplay_tab_descriptor_a6329b8ad700023321cad01156bfc8cb3}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!TabButtonType@{TabButtonType}}
+\index{TabButtonType@{TabButtonType}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\doxysubsubsection{\texorpdfstring{TabButtonType}{TabButtonType}}
+{\footnotesize\ttfamily \label{struct_f_gameplay_tab_descriptor_a6329b8ad700023321cad01156bfc8cb3} 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$UCommon\+Button\+Base$>$ FGameplay\+Tab\+Descriptor::\+\+Tab\+Button\+Type}
+
+
+
+The class of the button to use for this tab in the tab list. 
+
+\Hypertarget{struct_f_gameplay_tab_descriptor_a9556bf73ce3275b4993d7619fe84cea6}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!TabContentType@{TabContentType}}
+\index{TabContentType@{TabContentType}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\doxysubsubsection{\texorpdfstring{TabContentType}{TabContentType}}
+{\footnotesize\ttfamily \label{struct_f_gameplay_tab_descriptor_a9556bf73ce3275b4993d7619fe84cea6} 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$UCommon\+User\+Widget$>$ FGameplay\+Tab\+Descriptor::\+\+Tab\+Content\+Type}
+
+
+
+The class of the content widget to display when this tab is active. 
+
+\Hypertarget{struct_f_gameplay_tab_descriptor_a8d55e8488d8ded93e24a738ab391ec76}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!TabDisplayName@{TabDisplayName}}
+\index{TabDisplayName@{TabDisplayName}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\doxysubsubsection{\texorpdfstring{TabDisplayName}{TabDisplayName}}
+{\footnotesize\ttfamily \label{struct_f_gameplay_tab_descriptor_a8d55e8488d8ded93e24a738ab391ec76} 
+FText FGameplay\+Tab\+Descriptor::\+\+Tab\+Display\+Name}
+
+
+
+Localized name shown on the tab button. 
+
+\Hypertarget{struct_f_gameplay_tab_descriptor_aca6408b2a920c22921ba5ddca4a0354e}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!TabIcon@{TabIcon}}
+\index{TabIcon@{TabIcon}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\doxysubsubsection{\texorpdfstring{TabIcon}{TabIcon}}
+{\footnotesize\ttfamily \label{struct_f_gameplay_tab_descriptor_aca6408b2a920c22921ba5ddca4a0354e} 
+FSlate\+Brush FGameplay\+Tab\+Descriptor::\+\+Tab\+Icon}
+
+
+
+Visual icon for the tab. 
+
+\Hypertarget{struct_f_gameplay_tab_descriptor_ae06b4918c3633b64406144c570bb010e}\index{FGameplayTabDescriptor@{FGameplayTabDescriptor}!TabId@{TabId}}
+\index{TabId@{TabId}!FGameplayTabDescriptor@{FGameplayTabDescriptor}}
+\doxysubsubsection{\texorpdfstring{TabId}{TabId}}
+{\footnotesize\ttfamily \label{struct_f_gameplay_tab_descriptor_ae06b4918c3633b64406144c570bb010e} 
+FName FGameplay\+Tab\+Descriptor::\+\+Tab\+Id}
+
+
+
+Internal unique identifier for the tab. 
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_types_8h}{Gameplay\+Common\+Types.\+h}}\end{DoxyCompactItemize}

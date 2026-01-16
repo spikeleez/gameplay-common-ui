@@ -1,0 +1,147 @@
+\doxysection{UGameplay\+Responsive\+Panel Class Reference}
+\hypertarget{class_u_gameplay_responsive_panel}{}\label{class_u_gameplay_responsive_panel}\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+
+
+A container widget that allows child widgets to flow horizontally and wrap vertically.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Responsive\+Panel.\+h$>$}
+
+Inheritance diagram for UGameplay\+Responsive\+Panel:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_responsive_panel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_responsive_panel_a5e4a0ab00aff45cc0bd7098d32d33f9e}{UGameplay\+Responsive\+Panel}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_a413b07c494ddf061f1d1e22f79edf209}{Release\+Slate\+Resources}} (bool b\+Release\+Children) override
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_responsive_panel_slot}{UGameplay\+Responsive\+Panel\+Slot}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_a15bdf39d3a62501abdab2ce28fcc768c}{Add\+Child\+To\+Game\+Responsive\+Panel}} (UWidget \texorpdfstring{$\ast$}{*}Content)
+\begin{DoxyCompactList}\small\item\em Adds a child widget to this responsive panel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_a49f378974f0d6efd24ffc0e9c172ff3b}{b\+Can\+Stack\+Vertically}} = true
+\begin{DoxyCompactList}\small\item\em Whether children are allowed to stack vertically when they run out of horizontal space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual UClass \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_ae789a9e8d0963a111eefe170c17e528b}{Get\+Slot\+Class}} () const override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_a827dcd4de8fbf72574cb6075ba74bdb3}{On\+Slot\+Added}} (UPanel\+Slot \texorpdfstring{$\ast$}{*}In\+Slot) override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_a829abf9a549f4ab9382afc445d07b866}{On\+Slot\+Removed}} (UPanel\+Slot \texorpdfstring{$\ast$}{*}In\+Slot) override
+\item 
+virtual TShared\+Ref$<$ SWidget $>$ \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_ae2c98429b5f795b186ad64b3cf3eb7bb}{Rebuild\+Widget}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TShared\+Ptr$<$ \doxymbox{\hyperlink{class_s_gameplay_responsive_panel}{SGameplay\+Responsive\+Panel}} $>$ \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_a7da5c1b3e9b93773fe099c6ffa52251a}{My\+Game\+Responsive\+Panel}}
+\begin{DoxyCompactList}\small\item\em The underlying Slate implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A container widget that allows child widgets to flow horizontally and wrap vertically. 
+
+\doxylink{class_u_gameplay_responsive_panel}{UGameplay\+Responsive\+Panel} is ideal for settings screens where some categories might need to stack on smaller screens or mobile devices while staying horizontal on desktop/\+widescreen displays. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_responsive_panel_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_responsive_panel_a5e4a0ab00aff45cc0bd7098d32d33f9e}\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}!UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}!UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{UGameplayResponsivePanel()}{UGameplayResponsivePanel()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_responsive_panel_a5e4a0ab00aff45cc0bd7098d32d33f9e} 
+UGameplay\+Responsive\+Panel::\+\+UGameplay\+Responsive\+Panel (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_responsive_panel_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_responsive_panel_a15bdf39d3a62501abdab2ce28fcc768c}\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}!AddChildToGameResponsivePanel@{AddChildToGameResponsivePanel}}
+\index{AddChildToGameResponsivePanel@{AddChildToGameResponsivePanel}!UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{AddChildToGameResponsivePanel()}{AddChildToGameResponsivePanel()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_responsive_panel_a15bdf39d3a62501abdab2ce28fcc768c} 
+\doxymbox{\hyperlink{class_u_gameplay_responsive_panel_slot}{UGameplay\+Responsive\+Panel\+Slot}} \texorpdfstring{$\ast$}{*} UGameplay\+Responsive\+Panel::\+\+Add\+Child\+To\+Game\+Responsive\+Panel (\begin{DoxyParamCaption}\item[{UWidget \texorpdfstring{$\ast$}{*}}]{Content}{}\end{DoxyParamCaption})}
+
+
+
+Adds a child widget to this responsive panel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Content} & The widget to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The slot created for the added child 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_responsive_panel_ae789a9e8d0963a111eefe170c17e528b}\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}!GetSlotClass@{GetSlotClass}}
+\index{GetSlotClass@{GetSlotClass}!UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{GetSlotClass()}{GetSlotClass()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_responsive_panel_ae789a9e8d0963a111eefe170c17e528b} 
+UClass \texorpdfstring{$\ast$}{*} UGameplay\+Responsive\+Panel::\+\+Get\+Slot\+Class (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_responsive_panel_a827dcd4de8fbf72574cb6075ba74bdb3}\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}!OnSlotAdded@{OnSlotAdded}}
+\index{OnSlotAdded@{OnSlotAdded}!UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{OnSlotAdded()}{OnSlotAdded()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_responsive_panel_a827dcd4de8fbf72574cb6075ba74bdb3} 
+void UGameplay\+Responsive\+Panel::\+\+On\+Slot\+Added (\begin{DoxyParamCaption}\item[{UPanel\+Slot \texorpdfstring{$\ast$}{*}}]{In\+Slot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_responsive_panel_a829abf9a549f4ab9382afc445d07b866}\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}!OnSlotRemoved@{OnSlotRemoved}}
+\index{OnSlotRemoved@{OnSlotRemoved}!UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{OnSlotRemoved()}{OnSlotRemoved()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_responsive_panel_a829abf9a549f4ab9382afc445d07b866} 
+void UGameplay\+Responsive\+Panel::\+\+On\+Slot\+Removed (\begin{DoxyParamCaption}\item[{UPanel\+Slot \texorpdfstring{$\ast$}{*}}]{In\+Slot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_responsive_panel_ae2c98429b5f795b186ad64b3cf3eb7bb}\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}!RebuildWidget@{RebuildWidget}}
+\index{RebuildWidget@{RebuildWidget}!UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{RebuildWidget()}{RebuildWidget()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_responsive_panel_ae2c98429b5f795b186ad64b3cf3eb7bb} 
+TShared\+Ref$<$ SWidget $>$ UGameplay\+Responsive\+Panel::\+\+Rebuild\+Widget (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_responsive_panel_a413b07c494ddf061f1d1e22f79edf209}\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}!ReleaseSlateResources@{ReleaseSlateResources}}
+\index{ReleaseSlateResources@{ReleaseSlateResources}!UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{ReleaseSlateResources()}{ReleaseSlateResources()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_responsive_panel_a413b07c494ddf061f1d1e22f79edf209} 
+void UGameplay\+Responsive\+Panel::\+\+Release\+Slate\+Resources (\begin{DoxyParamCaption}\item[{bool}]{b\+Release\+Children}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_responsive_panel_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_responsive_panel_a49f378974f0d6efd24ffc0e9c172ff3b}\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}!bCanStackVertically@{bCanStackVertically}}
+\index{bCanStackVertically@{bCanStackVertically}!UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{bCanStackVertically}{bCanStackVertically}}
+{\footnotesize\ttfamily \label{class_u_gameplay_responsive_panel_a49f378974f0d6efd24ffc0e9c172ff3b} 
+bool UGameplay\+Responsive\+Panel::\+b\+Can\+Stack\+Vertically = true}
+
+
+
+Whether children are allowed to stack vertically when they run out of horizontal space. 
+
+\Hypertarget{class_u_gameplay_responsive_panel_a7da5c1b3e9b93773fe099c6ffa52251a}\index{UGameplayResponsivePanel@{UGameplayResponsivePanel}!MyGameResponsivePanel@{MyGameResponsivePanel}}
+\index{MyGameResponsivePanel@{MyGameResponsivePanel}!UGameplayResponsivePanel@{UGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{MyGameResponsivePanel}{MyGameResponsivePanel}}
+{\footnotesize\ttfamily \label{class_u_gameplay_responsive_panel_a7da5c1b3e9b93773fe099c6ffa52251a} 
+TShared\+Ptr$<$\doxymbox{\hyperlink{class_s_gameplay_responsive_panel}{SGameplay\+Responsive\+Panel}}$>$ UGameplay\+Responsive\+Panel::\+\+My\+Game\+Responsive\+Panel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The underlying Slate implementation. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_responsive_panel_8h}{Gameplay\+Responsive\+Panel.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_responsive_panel_8cpp}{Gameplay\+Responsive\+Panel.\+cpp}}\end{DoxyCompactItemize}

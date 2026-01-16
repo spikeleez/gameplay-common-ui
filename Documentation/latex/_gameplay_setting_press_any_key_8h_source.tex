@@ -1,0 +1,44 @@
+\doxysection{Gameplay\+Setting\+Press\+Any\+Key.\+h}
+\hypertarget{_gameplay_setting_press_any_key_8h_source}{}\label{_gameplay_setting_press_any_key_8h_source}\index{GameplaySettingPressAnyKey.h@{GameplaySettingPressAnyKey.h}}
+\doxymbox{\hyperlink{_gameplay_setting_press_any_key_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CommonActivatableWidget.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplaySettingPressAnyKey.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ UCLASS(Abstract,\ BlueprintType,\ Blueprintable,\ meta=(DisableNativeTick))}
+\DoxyCodeLine{00016\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a89b3dfd4971c93709f42e99b26c319c7}{UGameplaySettingPressAnyKey}}\ :\ public\ UCommonActivatableWidget}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a89b3dfd4971c93709f42e99b26c319c7}{UGameplaySettingPressAnyKey}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_ab01af6c82b38a95a5ce587de3017f995}{DECLARE\_EVENT\_OneParam}}(\doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a89b3dfd4971c93709f42e99b26c319c7}{UGameplaySettingPressAnyKey}},\ FOnKeySelected,\ FKey);}
+\DoxyCodeLine{00025\ \ \ \ \ FOnKeySelected\ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a92d46a320727113de99d232335d100d0}{OnKeySelected}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_ac85e74929a722b13a2c0efa7b160fa91}{DECLARE\_EVENT}}(\doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a89b3dfd4971c93709f42e99b26c319c7}{UGameplaySettingPressAnyKey}},\ FOnKeySelectionCancelled);}
+\DoxyCodeLine{00029\ \ \ \ \ FOnKeySelectionCancelled\ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_ad53cbe868aba544561dc936e5c0f8882}{OnKeySelectionCancelled}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UCommonActivatableWidget\ interface}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_af915cfd11e47b16439dcef10be03fa53}{NativeOnActivated}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_aa2d157cf18a58c05bacfaffb2159bdb8}{NativeOnDeactivated}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UCommonActivatableWidget\ interface}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a3c213ea4f84976f854e042e58deca70c}{HandleKeySelected}}(FKey\ InKey);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a8fbad025469315106b4496221466c731}{HandleKeySelectionCancelled}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_ad78c9247c12bba43d0a047706af1986f}{Dismiss}}(TFunction<\textcolor{keywordtype}{void}()>\ PostDismissCallback);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a7217ab9cb7d1417777128e32fec957c5}{bKeySelected}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ TSharedPtr<class\ FGameplayPressAnyKeyInputPreProcessor>\ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_aacb0125c007c1f0559ccf1920a983368}{InputProcessor}};}
+\DoxyCodeLine{00052\ \};}
+
+\end{DoxyCode}

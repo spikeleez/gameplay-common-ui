@@ -1,0 +1,195 @@
+\doxysection{UGameplay\+Common\+Local\+Player\+Subsystem Class Reference}
+\hypertarget{class_u_gameplay_common_local_player_subsystem}{}\label{class_u_gameplay_common_local_player_subsystem}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+
+
+Subsystem managing UI-\/related state for a specific local player.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Common\+Local\+Player\+Subsystem.\+h$>$}
+
+Inheritance diagram for UGameplay\+Common\+Local\+Player\+Subsystem:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_common_local_player_subsystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_ae42f9dbe012d4e7613163acdce581440}{Initialize}} (FSubsystem\+Collection\+Base \&Collection) override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_a1e320fecbfcb0594a41d49fb37362de7}{Deinitialize}} () override
+\item 
+virtual bool \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_a019e507cbac5aa30e6d050552aa11ff5}{Should\+Create\+Subsystem}} (UObject \texorpdfstring{$\ast$}{*}Outer) const override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_aa4ad04a3586271c9268977895292f5ef}{Player\+Controller\+Changed}} (APlayer\+Controller \texorpdfstring{$\ast$}{*}New\+Player\+Controller) override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_a59640175db39bb580a397e3c31faa912}{Show\+Confirmation}} (\doxymbox{\hyperlink{class_u_gameplay_confirmation_descriptor}{UGameplay\+Confirmation\+Descriptor}} \texorpdfstring{$\ast$}{*}Descriptor, FGameplay\+Confirmation\+Dialog\+Result\+Signature Result\+Callback=FGameplay\+Confirmation\+Dialog\+Result\+Signature())
+\begin{DoxyCompactList}\small\item\em Displays a standard confirmation dialog. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_a1b6636fb99c394365471c617cd63d127}{Show\+Error}} (\doxymbox{\hyperlink{class_u_gameplay_confirmation_descriptor}{UGameplay\+Confirmation\+Descriptor}} \texorpdfstring{$\ast$}{*}Descriptor, FGameplay\+Confirmation\+Dialog\+Result\+Signature Result\+Callback=FGameplay\+Confirmation\+Dialog\+Result\+Signature())
+\begin{DoxyCompactList}\small\item\em Displays an error-\/specific confirmation dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+FGameplay\+Local\+Player\+Pawn\+Set\+Signature \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_abf82f1ca73a4ceafb0daacd907374ab7}{On\+Local\+Player\+Pawn\+Set}}
+\begin{DoxyCompactList}\small\item\em Native event for when the pawn changes. \end{DoxyCompactList}\item 
+FGameplay\+Local\+Player\+State\+Set\+Signature \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_a6f2601ac6b1ca6ec826be7f617ef3a8a}{On\+Local\+Player\+State\+Set}}
+\begin{DoxyCompactList}\small\item\em Native event for when the player state becomes valid/\+changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_a643617207828961af6fc80f68bb6ad75}{Handle\+Pawn\+Changed}} (APawn \texorpdfstring{$\ast$}{*}New\+Pawn)
+\begin{DoxyCompactList}\small\item\em Internal handler for pawn change notifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_a772e718200e84eadf808a51a5b9036ec}{Check\+Player\+State\+Validity}} ()
+\begin{DoxyCompactList}\small\item\em Polls or checks for player state validity if it\textquotesingle{}s not immediately available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FTimer\+Handle \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_a792f44b0460df4cdac969140468df613}{Timer\+Handle\+\_\+\+Check\+Player\+State}}
+\begin{DoxyCompactList}\small\item\em Handle for the player state validity polling timer. \end{DoxyCompactList}\item 
+TWeak\+Object\+Ptr$<$ APlayer\+Controller $>$ \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem_a920782b5162345aa13a03689b54771c2}{Weak\+Player\+Controller}}
+\begin{DoxyCompactList}\small\item\em Cached reference to the player controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subsystem managing UI-\/related state for a specific local player. 
+
+This subsystem handles player-\/specific UI logic, such as showing confirmation or error dialogs, and tracking changes to the player\textquotesingle{}s pawn and player state for UI updates. 
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_a772e718200e84eadf808a51a5b9036ec}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!CheckPlayerStateValidity@{CheckPlayerStateValidity}}
+\index{CheckPlayerStateValidity@{CheckPlayerStateValidity}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{CheckPlayerStateValidity()}{CheckPlayerStateValidity()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_a772e718200e84eadf808a51a5b9036ec} 
+void UGameplay\+Common\+Local\+Player\+Subsystem::\+\+Check\+Player\+State\+Validity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Polls or checks for player state validity if it\textquotesingle{}s not immediately available. 
+
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_a1e320fecbfcb0594a41d49fb37362de7}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!Deinitialize@{Deinitialize}}
+\index{Deinitialize@{Deinitialize}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{Deinitialize()}{Deinitialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_a1e320fecbfcb0594a41d49fb37362de7} 
+void UGameplay\+Common\+Local\+Player\+Subsystem::\+\+Deinitialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_a643617207828961af6fc80f68bb6ad75}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!HandlePawnChanged@{HandlePawnChanged}}
+\index{HandlePawnChanged@{HandlePawnChanged}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{HandlePawnChanged()}{HandlePawnChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_a643617207828961af6fc80f68bb6ad75} 
+void UGameplay\+Common\+Local\+Player\+Subsystem::\+\+Handle\+Pawn\+Changed (\begin{DoxyParamCaption}\item[{APawn \texorpdfstring{$\ast$}{*}}]{New\+Pawn}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Internal handler for pawn change notifications. 
+
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_ae42f9dbe012d4e7613163acdce581440}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_ae42f9dbe012d4e7613163acdce581440} 
+void UGameplay\+Common\+Local\+Player\+Subsystem::\+\+Initialize (\begin{DoxyParamCaption}\item[{FSubsystem\+Collection\+Base \&}]{Collection}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_aa4ad04a3586271c9268977895292f5ef}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!PlayerControllerChanged@{PlayerControllerChanged}}
+\index{PlayerControllerChanged@{PlayerControllerChanged}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{PlayerControllerChanged()}{PlayerControllerChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_aa4ad04a3586271c9268977895292f5ef} 
+void UGameplay\+Common\+Local\+Player\+Subsystem::\+\+Player\+Controller\+Changed (\begin{DoxyParamCaption}\item[{APlayer\+Controller \texorpdfstring{$\ast$}{*}}]{New\+Player\+Controller}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_a019e507cbac5aa30e6d050552aa11ff5}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!ShouldCreateSubsystem@{ShouldCreateSubsystem}}
+\index{ShouldCreateSubsystem@{ShouldCreateSubsystem}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{ShouldCreateSubsystem()}{ShouldCreateSubsystem()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_a019e507cbac5aa30e6d050552aa11ff5} 
+bool UGameplay\+Common\+Local\+Player\+Subsystem::\+\+Should\+Create\+Subsystem (\begin{DoxyParamCaption}\item[{UObject \texorpdfstring{$\ast$}{*}}]{Outer}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_a59640175db39bb580a397e3c31faa912}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!ShowConfirmation@{ShowConfirmation}}
+\index{ShowConfirmation@{ShowConfirmation}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{ShowConfirmation()}{ShowConfirmation()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_a59640175db39bb580a397e3c31faa912} 
+void UGameplay\+Common\+Local\+Player\+Subsystem::\+\+Show\+Confirmation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_confirmation_descriptor}{UGameplay\+Confirmation\+Descriptor}} \texorpdfstring{$\ast$}{*}}]{Descriptor}{, }\item[{FGameplay\+Confirmation\+Dialog\+Result\+Signature}]{Result\+Callback}{ = {\ttfamily FGameplayConfirmationDialogResultSignature()}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Displays a standard confirmation dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Descriptor} & Visual configuration for the dialog \\
+\hline
+{\em Result\+Callback} & Callback to execute when the dialog is closed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_a1b6636fb99c394365471c617cd63d127}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!ShowError@{ShowError}}
+\index{ShowError@{ShowError}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{ShowError()}{ShowError()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_a1b6636fb99c394365471c617cd63d127} 
+void UGameplay\+Common\+Local\+Player\+Subsystem::\+\+Show\+Error (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_confirmation_descriptor}{UGameplay\+Confirmation\+Descriptor}} \texorpdfstring{$\ast$}{*}}]{Descriptor}{, }\item[{FGameplay\+Confirmation\+Dialog\+Result\+Signature}]{Result\+Callback}{ = {\ttfamily FGameplayConfirmationDialogResultSignature()}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Displays an error-\/specific confirmation dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Descriptor} & Visual configuration for the dialog \\
+\hline
+{\em Result\+Callback} & Callback to execute when the dialog is closed \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_abf82f1ca73a4ceafb0daacd907374ab7}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!OnLocalPlayerPawnSet@{OnLocalPlayerPawnSet}}
+\index{OnLocalPlayerPawnSet@{OnLocalPlayerPawnSet}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{OnLocalPlayerPawnSet}{OnLocalPlayerPawnSet}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_abf82f1ca73a4ceafb0daacd907374ab7} 
+FGameplay\+Local\+Player\+Pawn\+Set\+Signature UGameplay\+Common\+Local\+Player\+Subsystem::\+\+On\+Local\+Player\+Pawn\+Set}
+
+
+
+Native event for when the pawn changes. 
+
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_a6f2601ac6b1ca6ec826be7f617ef3a8a}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!OnLocalPlayerStateSet@{OnLocalPlayerStateSet}}
+\index{OnLocalPlayerStateSet@{OnLocalPlayerStateSet}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{OnLocalPlayerStateSet}{OnLocalPlayerStateSet}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_a6f2601ac6b1ca6ec826be7f617ef3a8a} 
+FGameplay\+Local\+Player\+State\+Set\+Signature UGameplay\+Common\+Local\+Player\+Subsystem::\+\+On\+Local\+Player\+State\+Set}
+
+
+
+Native event for when the player state becomes valid/\+changes. 
+
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_a792f44b0460df4cdac969140468df613}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!TimerHandle\_CheckPlayerState@{TimerHandle\_CheckPlayerState}}
+\index{TimerHandle\_CheckPlayerState@{TimerHandle\_CheckPlayerState}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{TimerHandle\_CheckPlayerState}{TimerHandle\_CheckPlayerState}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_a792f44b0460df4cdac969140468df613} 
+FTimer\+Handle UGameplay\+Common\+Local\+Player\+Subsystem::\+\+Timer\+Handle\+\_\+\+Check\+Player\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handle for the player state validity polling timer. 
+
+\Hypertarget{class_u_gameplay_common_local_player_subsystem_a920782b5162345aa13a03689b54771c2}\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!WeakPlayerController@{WeakPlayerController}}
+\index{WeakPlayerController@{WeakPlayerController}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\doxysubsubsection{\texorpdfstring{WeakPlayerController}{WeakPlayerController}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_local_player_subsystem_a920782b5162345aa13a03689b54771c2} 
+TWeak\+Object\+Ptr$<$APlayer\+Controller$>$ UGameplay\+Common\+Local\+Player\+Subsystem::\+\+Weak\+Player\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cached reference to the player controller. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_local_player_subsystem_8h}{Gameplay\+Common\+Local\+Player\+Subsystem.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_common_local_player_subsystem_8cpp}{Gameplay\+Common\+Local\+Player\+Subsystem.\+cpp}}\end{DoxyCompactItemize}

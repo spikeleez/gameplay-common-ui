@@ -1,0 +1,51 @@
+\doxysection{IGameplay\+Setting\+Action\+Interface Class Reference}
+\hypertarget{class_i_gameplay_setting_action_interface}{}\label{class_i_gameplay_setting_action_interface}\index{IGameplaySettingActionInterface@{IGameplaySettingActionInterface}}
+
+
+Interface for objects that can perform actions on settings.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+Action\+Interface.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_i_gameplay_setting_action_interface_a2e728ae5ad445ab4ac7088b705ad61f6}{Execute\+Action\+For\+Setting}} (FGameplay\+Tag Action\+Tag, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting)
+\begin{DoxyCompactList}\small\item\em Executes an action identified by a tag on the provided setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for objects that can perform actions on settings. 
+
+Allows widgets or other external controllers to trigger specific logic tied to a setting using Gameplay\+Tags as identifiers for the action. 
+
+\label{doc-func-members}
+\Hypertarget{class_i_gameplay_setting_action_interface_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_gameplay_setting_action_interface_a2e728ae5ad445ab4ac7088b705ad61f6}\index{IGameplaySettingActionInterface@{IGameplaySettingActionInterface}!ExecuteActionForSetting@{ExecuteActionForSetting}}
+\index{ExecuteActionForSetting@{ExecuteActionForSetting}!IGameplaySettingActionInterface@{IGameplaySettingActionInterface}}
+\doxysubsubsection{\texorpdfstring{ExecuteActionForSetting()}{ExecuteActionForSetting()}}
+{\footnotesize\ttfamily \label{class_i_gameplay_setting_action_interface_a2e728ae5ad445ab4ac7088b705ad61f6} 
+bool IGameplay\+Setting\+Action\+Interface::\+\+Execute\+Action\+For\+Setting (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{Action\+Tag}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}}]{In\+Setting}{}\end{DoxyParamCaption})}
+
+
+
+Executes an action identified by a tag on the provided setting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Action\+Tag} & The tag identifying the action to perform \\
+\hline
+{\em In\+Setting} & The setting to act upon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the action was handled 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_action_interface_8h}{Gameplay\+Setting\+Action\+Interface.\+h}}\end{DoxyCompactItemize}

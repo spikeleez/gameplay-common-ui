@@ -1,0 +1,340 @@
+\doxysection{UGameplay\+Common\+UIPolicy Class Reference}
+\hypertarget{class_u_gameplay_common_u_i_policy}{}\label{class_u_gameplay_common_u_i_policy}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+
+
+Policy class that manages the UI lifecycle and primary layout.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Common\+UIPolicy.\+h$>$}
+
+Inheritance diagram for UGameplay\+Common\+UIPolicy:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_common_u_i_policy}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a3ff72fee14f0f50a7337b773915de63a}{UGameplay\+Common\+UIPolicy}} (const FObject\+Initializer \&Object\+Initializer=FObject\+Initializer::\+\+Get())
+\item 
+virtual UWorld \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_ae09996a0b1ade9d3b534826ae83e9bab}{Get\+World}} () const override
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a29fc42fdd8d0003a97aeb89f8f31c858}{Add\+Primary\+Layout\+To\+Viewport}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player, \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}Layout)
+\begin{DoxyCompactList}\small\item\em Adds a primary layout to a local player\textquotesingle{}s viewport. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_ab869d12d3d8b7af3870d6321a368eb33}{Remove\+Primary\+Layout\+From\+Viewport}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player, \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}Layout)
+\begin{DoxyCompactList}\small\item\em Removes a primary layout from a local player\textquotesingle{}s viewport. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_af7844484785e4ed8649ed99a60fddcb5}{Notify\+Pawn\+Changed}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player, APawn \texorpdfstring{$\ast$}{*}New\+Pawn)
+\begin{DoxyCompactList}\small\item\em Internal notification for when a player\textquotesingle{}s pawn changes, allowing UI to react (e.\+g., HUD updates). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem}{UGameplay\+Common\+UISubsystem}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a80c278a1170a8890b2302b4f3281d400}{Get\+Owning\+Subsystem}} () const
+\begin{DoxyCompactList}\small\item\em Gets the subsystem that owns this policy. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a827eb02a1d9728f853b7194e7ae27d8b}{Get\+Primary\+Layout\+From\+Local\+Player}} (const ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player) const
+\begin{DoxyCompactList}\small\item\em Gets the primary layout associated with a specific local player. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} $>$ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a07dd12130581b0290ecda3e140fe307a}{Get\+Primary\+Layout\+Class}} ()
+\begin{DoxyCompactList}\small\item\em Gets the class of the primary layout to be created. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a1dc10e92ee01cb97ee5b3b75bc5c8c13}{Get\+Primary\+Layout}} () const
+\begin{DoxyCompactList}\small\item\em Gets the default primary layout (useful for single-\/player or shared UI). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Policy\+Class = UGameplay\+Common\+UIPolicy$>$ }\\static Policy\+Class \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a5ddb917894fbb412fd95579e8c575954}{Get\+UIPolicy\+As}} (const UObject \texorpdfstring{$\ast$}{*}World\+Context\+Object)
+\begin{DoxyCompactList}\small\item\em Helper to get the UI policy cast to a specific class. \end{DoxyCompactList}\item 
+static const \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy}{UGameplay\+Common\+UIPolicy}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_ad103433f516b78364d50f8c432d05ff8}{Get\+UIPolicy}} (const UObject \texorpdfstring{$\ast$}{*}World\+Context\+Object)
+\begin{DoxyCompactList}\small\item\em Gets the active UI policy for the current world context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a3aa26befb4ead0ff937b7fab0360c780}{On\+Primary\+Layout\+Added\+To\+Viewport}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player, \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}Layout)
+\begin{DoxyCompactList}\small\item\em Hook for when a primary layout is added to a viewport. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_ac42cbcae26dae5f6d0cc070681d61460}{On\+Primary\+Layout\+Removed\+From\+Viewport}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player, \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}Layout)
+\begin{DoxyCompactList}\small\item\em Hook for when a primary layout is removed from a viewport. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a6e21760fd0dac11e305de0cd6b710761}{On\+Primary\+Layout\+Released}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player, \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}Layout)
+\begin{DoxyCompactList}\small\item\em Hook for when a primary layout widget is actually being destroyed/\+released. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a23c39f07f00d11ddbe6d2f059813ae50}{Create\+Primary\+Layout}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Factory method to create a primary layout for a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a359c3b7194ade5b414da5113e69892f0}{Notify\+Player\+Added}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Internal callback for player connection. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a315bfab16946914d1fcb1feabe35a80f}{Notify\+Player\+Removed}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Internal callback for player disconnection. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_ae6be576edf7c6f80b97590aa1dcb2fab}{Notify\+Player\+Destroyed}} (ULocal\+Player \texorpdfstring{$\ast$}{*}Local\+Player)
+\begin{DoxyCompactList}\small\item\em Internal callback for subsystem destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} $>$ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a4b955043ef326a8abb31cffe4bf1daca}{Primary\+Layout\+Class}}
+\begin{DoxyCompactList}\small\item\em The class of the widget used as the root layout. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} $>$ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a2a6b52c8fd24107f791b9475e7ac99e6}{Primary\+Layout}}
+\begin{DoxyCompactList}\small\item\em Reference to the primary layout instance. \end{DoxyCompactList}\item 
+TArray$<$ \doxymbox{\hyperlink{struct_f_gameplay_primary_layout_viewport}{FGameplay\+Primary\+Layout\+Viewport}} $>$ \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_af1ad8b32114471e2e9208315a489af2b}{Primary\+Viewport\+Layouts}}
+\begin{DoxyCompactList}\small\item\em Tracks layouts across different viewports (for split-\/screen). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_afed79cd38f86323c521553a3b1f9bf18}{UGameplay\+Common\+UISubsystem}}
+\item 
+class \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy_a58aaabbcfd45878e45e1fd8225852c07}{UGameplay\+Common\+Local\+Player\+Subsystem}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Policy class that manages the UI lifecycle and primary layout. 
+
+The UI Policy is responsible for determining which primary layout class to use, creating it for local players, and managing its addition/\+removal from the viewport. It acts as the bridge between the Gameplay\+Common\+UISubsystem and the actual widget instances. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_common_u_i_policy_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_common_u_i_policy_a3ff72fee14f0f50a7337b773915de63a}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{UGameplayCommonUIPolicy()}{UGameplayCommonUIPolicy()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a3ff72fee14f0f50a7337b773915de63a} 
+UGameplay\+Common\+UIPolicy::\+\+UGameplay\+Common\+UIPolicy (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{ = {\ttfamily FObjectInitializer:\+:\+Get()}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_common_u_i_policy_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_common_u_i_policy_a29fc42fdd8d0003a97aeb89f8f31c858}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!AddPrimaryLayoutToViewport@{AddPrimaryLayoutToViewport}}
+\index{AddPrimaryLayoutToViewport@{AddPrimaryLayoutToViewport}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{AddPrimaryLayoutToViewport()}{AddPrimaryLayoutToViewport()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a29fc42fdd8d0003a97aeb89f8f31c858} 
+void UGameplay\+Common\+UIPolicy::\+\+Add\+Primary\+Layout\+To\+Viewport (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}}]{Layout}{}\end{DoxyParamCaption})}
+
+
+
+Adds a primary layout to a local player\textquotesingle{}s viewport. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a23c39f07f00d11ddbe6d2f059813ae50}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!CreatePrimaryLayout@{CreatePrimaryLayout}}
+\index{CreatePrimaryLayout@{CreatePrimaryLayout}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{CreatePrimaryLayout()}{CreatePrimaryLayout()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a23c39f07f00d11ddbe6d2f059813ae50} 
+void UGameplay\+Common\+UIPolicy::\+\+Create\+Primary\+Layout (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Factory method to create a primary layout for a player. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a80c278a1170a8890b2302b4f3281d400}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!GetOwningSubsystem@{GetOwningSubsystem}}
+\index{GetOwningSubsystem@{GetOwningSubsystem}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{GetOwningSubsystem()}{GetOwningSubsystem()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a80c278a1170a8890b2302b4f3281d400} 
+\doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem}{UGameplay\+Common\+UISubsystem}} \texorpdfstring{$\ast$}{*} UGameplay\+Common\+UIPolicy::\+\+Get\+Owning\+Subsystem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the subsystem that owns this policy. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a1dc10e92ee01cb97ee5b3b75bc5c8c13}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!GetPrimaryLayout@{GetPrimaryLayout}}
+\index{GetPrimaryLayout@{GetPrimaryLayout}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{GetPrimaryLayout()}{GetPrimaryLayout()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a1dc10e92ee01cb97ee5b3b75bc5c8c13} 
+\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*} UGameplay\+Common\+UIPolicy::\+\+Get\+Primary\+Layout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the default primary layout (useful for single-\/player or shared UI). 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a07dd12130581b0290ecda3e140fe307a}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!GetPrimaryLayoutClass@{GetPrimaryLayoutClass}}
+\index{GetPrimaryLayoutClass@{GetPrimaryLayoutClass}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{GetPrimaryLayoutClass()}{GetPrimaryLayoutClass()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a07dd12130581b0290ecda3e140fe307a} 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$ \doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} $>$ UGameplay\+Common\+UIPolicy::\+\+Get\+Primary\+Layout\+Class (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the class of the primary layout to be created. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a827eb02a1d9728f853b7194e7ae27d8b}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!GetPrimaryLayoutFromLocalPlayer@{GetPrimaryLayoutFromLocalPlayer}}
+\index{GetPrimaryLayoutFromLocalPlayer@{GetPrimaryLayoutFromLocalPlayer}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{GetPrimaryLayoutFromLocalPlayer()}{GetPrimaryLayoutFromLocalPlayer()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a827eb02a1d9728f853b7194e7ae27d8b} 
+\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*} UGameplay\+Common\+UIPolicy::\+\+Get\+Primary\+Layout\+From\+Local\+Player (\begin{DoxyParamCaption}\item[{const ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the primary layout associated with a specific local player. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_ad103433f516b78364d50f8c432d05ff8}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!GetUIPolicy@{GetUIPolicy}}
+\index{GetUIPolicy@{GetUIPolicy}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{GetUIPolicy()}{GetUIPolicy()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_ad103433f516b78364d50f8c432d05ff8} 
+const \doxymbox{\hyperlink{class_u_gameplay_common_u_i_policy}{UGameplay\+Common\+UIPolicy}} \texorpdfstring{$\ast$}{*} UGameplay\+Common\+UIPolicy::\+\+Get\+UIPolicy (\begin{DoxyParamCaption}\item[{const UObject \texorpdfstring{$\ast$}{*}}]{World\+Context\+Object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the active UI policy for the current world context. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a5ddb917894fbb412fd95579e8c575954}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!GetUIPolicyAs@{GetUIPolicyAs}}
+\index{GetUIPolicyAs@{GetUIPolicyAs}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{GetUIPolicyAs()}{GetUIPolicyAs()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a5ddb917894fbb412fd95579e8c575954} 
+template$<$typename Policy\+Class = UGameplay\+Common\+UIPolicy$>$ \\
+Policy\+Class \texorpdfstring{$\ast$}{*} UGameplay\+Common\+UIPolicy::\+\+Get\+UIPolicy\+As (\begin{DoxyParamCaption}\item[{const UObject \texorpdfstring{$\ast$}{*}}]{World\+Context\+Object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Helper to get the UI policy cast to a specific class. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Policy\+Class} & The class to cast to \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em World\+Context\+Object} & Context to find the subsystem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The policy instance or null 
+\end{DoxyReturn}
+\Hypertarget{class_u_gameplay_common_u_i_policy_ae09996a0b1ade9d3b534826ae83e9bab}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!GetWorld@{GetWorld}}
+\index{GetWorld@{GetWorld}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{GetWorld()}{GetWorld()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_ae09996a0b1ade9d3b534826ae83e9bab} 
+UWorld \texorpdfstring{$\ast$}{*} UGameplay\+Common\+UIPolicy::\+\+Get\+World (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_af7844484785e4ed8649ed99a60fddcb5}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!NotifyPawnChanged@{NotifyPawnChanged}}
+\index{NotifyPawnChanged@{NotifyPawnChanged}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{NotifyPawnChanged()}{NotifyPawnChanged()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_af7844484785e4ed8649ed99a60fddcb5} 
+void UGameplay\+Common\+UIPolicy::\+\+Notify\+Pawn\+Changed (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{, }\item[{APawn \texorpdfstring{$\ast$}{*}}]{New\+Pawn}{}\end{DoxyParamCaption})}
+
+
+
+Internal notification for when a player\textquotesingle{}s pawn changes, allowing UI to react (e.\+g., HUD updates). 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a359c3b7194ade5b414da5113e69892f0}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!NotifyPlayerAdded@{NotifyPlayerAdded}}
+\index{NotifyPlayerAdded@{NotifyPlayerAdded}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{NotifyPlayerAdded()}{NotifyPlayerAdded()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a359c3b7194ade5b414da5113e69892f0} 
+void UGameplay\+Common\+UIPolicy::\+\+Notify\+Player\+Added (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal callback for player connection. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_ae6be576edf7c6f80b97590aa1dcb2fab}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!NotifyPlayerDestroyed@{NotifyPlayerDestroyed}}
+\index{NotifyPlayerDestroyed@{NotifyPlayerDestroyed}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{NotifyPlayerDestroyed()}{NotifyPlayerDestroyed()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_ae6be576edf7c6f80b97590aa1dcb2fab} 
+void UGameplay\+Common\+UIPolicy::\+\+Notify\+Player\+Destroyed (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal callback for subsystem destruction. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a315bfab16946914d1fcb1feabe35a80f}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!NotifyPlayerRemoved@{NotifyPlayerRemoved}}
+\index{NotifyPlayerRemoved@{NotifyPlayerRemoved}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{NotifyPlayerRemoved()}{NotifyPlayerRemoved()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a315bfab16946914d1fcb1feabe35a80f} 
+void UGameplay\+Common\+UIPolicy::\+\+Notify\+Player\+Removed (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal callback for player disconnection. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a3aa26befb4ead0ff937b7fab0360c780}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!OnPrimaryLayoutAddedToViewport@{OnPrimaryLayoutAddedToViewport}}
+\index{OnPrimaryLayoutAddedToViewport@{OnPrimaryLayoutAddedToViewport}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{OnPrimaryLayoutAddedToViewport()}{OnPrimaryLayoutAddedToViewport()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a3aa26befb4ead0ff937b7fab0360c780} 
+void UGameplay\+Common\+UIPolicy::\+\+On\+Primary\+Layout\+Added\+To\+Viewport (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}}]{Layout}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Hook for when a primary layout is added to a viewport. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a6e21760fd0dac11e305de0cd6b710761}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!OnPrimaryLayoutReleased@{OnPrimaryLayoutReleased}}
+\index{OnPrimaryLayoutReleased@{OnPrimaryLayoutReleased}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{OnPrimaryLayoutReleased()}{OnPrimaryLayoutReleased()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a6e21760fd0dac11e305de0cd6b710761} 
+void UGameplay\+Common\+UIPolicy::\+\+On\+Primary\+Layout\+Released (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}}]{Layout}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Hook for when a primary layout widget is actually being destroyed/\+released. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_ac42cbcae26dae5f6d0cc070681d61460}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!OnPrimaryLayoutRemovedFromViewport@{OnPrimaryLayoutRemovedFromViewport}}
+\index{OnPrimaryLayoutRemovedFromViewport@{OnPrimaryLayoutRemovedFromViewport}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{OnPrimaryLayoutRemovedFromViewport()}{OnPrimaryLayoutRemovedFromViewport()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_ac42cbcae26dae5f6d0cc070681d61460} 
+void UGameplay\+Common\+UIPolicy::\+\+On\+Primary\+Layout\+Removed\+From\+Viewport (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}}]{Layout}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Hook for when a primary layout is removed from a viewport. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_ab869d12d3d8b7af3870d6321a368eb33}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!RemovePrimaryLayoutFromViewport@{RemovePrimaryLayoutFromViewport}}
+\index{RemovePrimaryLayoutFromViewport@{RemovePrimaryLayoutFromViewport}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{RemovePrimaryLayoutFromViewport()}{RemovePrimaryLayoutFromViewport()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_ab869d12d3d8b7af3870d6321a368eb33} 
+void UGameplay\+Common\+UIPolicy::\+\+Remove\+Primary\+Layout\+From\+Viewport (\begin{DoxyParamCaption}\item[{ULocal\+Player \texorpdfstring{$\ast$}{*}}]{Local\+Player}{, }\item[{\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}} \texorpdfstring{$\ast$}{*}}]{Layout}{}\end{DoxyParamCaption})}
+
+
+
+Removes a primary layout from a local player\textquotesingle{}s viewport. 
+
+
+
+\label{doc-related-members}
+\Hypertarget{class_u_gameplay_common_u_i_policy_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_u_gameplay_common_u_i_policy_a58aaabbcfd45878e45e1fd8225852c07}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}}
+\index{UGameplayCommonLocalPlayerSubsystem@{UGameplayCommonLocalPlayerSubsystem}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{UGameplayCommonLocalPlayerSubsystem}{UGameplayCommonLocalPlayerSubsystem}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a58aaabbcfd45878e45e1fd8225852c07} 
+friend class \doxymbox{\hyperlink{class_u_gameplay_common_local_player_subsystem}{UGameplay\+Common\+Local\+Player\+Subsystem}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_afed79cd38f86323c521553a3b1f9bf18}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}}
+\index{UGameplayCommonUISubsystem@{UGameplayCommonUISubsystem}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{UGameplayCommonUISubsystem}{UGameplayCommonUISubsystem}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_afed79cd38f86323c521553a3b1f9bf18} 
+friend class \doxymbox{\hyperlink{class_u_gameplay_common_u_i_subsystem}{UGameplay\+Common\+UISubsystem}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_common_u_i_policy_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_common_u_i_policy_a2a6b52c8fd24107f791b9475e7ac99e6}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!PrimaryLayout@{PrimaryLayout}}
+\index{PrimaryLayout@{PrimaryLayout}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{PrimaryLayout}{PrimaryLayout}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a2a6b52c8fd24107f791b9475e7ac99e6} 
+TObject\+Ptr$<$\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}}$>$ UGameplay\+Common\+UIPolicy::\+\+Primary\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the primary layout instance. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_a4b955043ef326a8abb31cffe4bf1daca}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!PrimaryLayoutClass@{PrimaryLayoutClass}}
+\index{PrimaryLayoutClass@{PrimaryLayoutClass}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{PrimaryLayoutClass}{PrimaryLayoutClass}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_a4b955043ef326a8abb31cffe4bf1daca} 
+\doxymbox{\hyperlink{class_t_subclass_of}{TSubclass\+Of}}$<$\doxymbox{\hyperlink{class_u_gameplay_primary_layout}{UGameplay\+Primary\+Layout}}$>$ UGameplay\+Common\+UIPolicy::\+\+Primary\+Layout\+Class\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The class of the widget used as the root layout. 
+
+\Hypertarget{class_u_gameplay_common_u_i_policy_af1ad8b32114471e2e9208315a489af2b}\index{UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}!PrimaryViewportLayouts@{PrimaryViewportLayouts}}
+\index{PrimaryViewportLayouts@{PrimaryViewportLayouts}!UGameplayCommonUIPolicy@{UGameplayCommonUIPolicy}}
+\doxysubsubsection{\texorpdfstring{PrimaryViewportLayouts}{PrimaryViewportLayouts}}
+{\footnotesize\ttfamily \label{class_u_gameplay_common_u_i_policy_af1ad8b32114471e2e9208315a489af2b} 
+TArray$<$\doxymbox{\hyperlink{struct_f_gameplay_primary_layout_viewport}{FGameplay\+Primary\+Layout\+Viewport}}$>$ UGameplay\+Common\+UIPolicy::\+\+Primary\+Viewport\+Layouts\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tracks layouts across different viewports (for split-\/screen). 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_common_u_i_policy_8h}{Gameplay\+Common\+UIPolicy.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_common_u_i_policy_8cpp}{Gameplay\+Common\+UIPolicy.\+cpp}}\end{DoxyCompactItemize}

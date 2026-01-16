@@ -1,0 +1,136 @@
+\doxysection{UGameplay\+Perf\+Stat\+Graph Class Reference}
+\hypertarget{class_u_gameplay_perf_stat_graph}{}\label{class_u_gameplay_perf_stat_graph}\index{UGameplayPerfStatGraph@{UGameplayPerfStatGraph}}
+
+
+UMG Wrapper for \doxylink{class_s_gameplay_latency_graph}{SGameplay\+Latency\+Graph}.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Perf\+Stat\+Widget\+Base.\+h$>$}
+
+Inheritance diagram for UGameplay\+Perf\+Stat\+Graph:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_perf_stat_graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_a2a1edf419b72ad50e51c74bc2ce40513}{UGameplay\+Perf\+Stat\+Graph}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_a0d649c9fc321443a5efcb2957e85e729}{Set\+Line\+Color}} (const FColor \&In\+Color)
+\begin{DoxyCompactList}\small\item\em Proxy to \doxylink{class_s_gameplay_latency_graph_a47756689e60c811f3173be83931ac1dc}{SGameplay\+Latency\+Graph::\+\+Set\+Line\+Color}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_ae6f58cf24c5c1c0cf535f5e2b6cadc21}{Set\+Max\+YValue}} (const float In\+Value)
+\begin{DoxyCompactList}\small\item\em Proxy to \doxylink{class_s_gameplay_latency_graph_a60ff88d01746407e398c70f59f7d3b1a}{SGameplay\+Latency\+Graph::\+\+Set\+Max\+YValue}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_abc91d85c50c9d1a9002aaedb61eb4664}{Set\+Background\+Color}} (const FColor \&In\+Value)
+\begin{DoxyCompactList}\small\item\em Proxy to \doxylink{class_s_gameplay_latency_graph_a552a8638cf2682cf21b0be83b4245e54}{SGameplay\+Latency\+Graph::\+\+Set\+Background\+Color}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_a9f529ea3cffd015e1aede0f865fd43a5}{Update\+Graph\+Data}} (const \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplay\+Sampled\+Stat\+Cache}} \texorpdfstring{$\ast$}{*}Stat\+Data, const float Scale\+Factor)
+\begin{DoxyCompactList}\small\item\em Proxy to \doxylink{class_s_gameplay_latency_graph_a7c1644101486786892f9bf751e985963}{SGameplay\+Latency\+Graph::\+\+Update\+Graph\+Data}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual TShared\+Ref$<$ SWidget $>$ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_a55c6aed2d5e1b1a59e91aa3a70226085}{Rebuild\+Widget}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_aab008bc81770c31143f6e784cc868f03}{Release\+Slate\+Resources}} (bool b\+Release\+Children) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TShared\+Ptr$<$ \doxymbox{\hyperlink{class_s_gameplay_latency_graph}{SGameplay\+Latency\+Graph}} $>$ \doxymbox{\hyperlink{class_u_gameplay_perf_stat_graph_af60c852f60e23047e70cbe5d423d0598}{Slate\+Latency\+Graph}}
+\begin{DoxyCompactList}\small\item\em The actual Slate handle managed by this UWidget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+UMG Wrapper for \doxylink{class_s_gameplay_latency_graph}{SGameplay\+Latency\+Graph}. 
+
+This class exposes the low-\/level Slate graph widget to UMG, making it usable within the Unreal Editor Designer. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_perf_stat_graph_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_perf_stat_graph_a2a1edf419b72ad50e51c74bc2ce40513}\index{UGameplayPerfStatGraph@{UGameplayPerfStatGraph}!UGameplayPerfStatGraph@{UGameplayPerfStatGraph}}
+\index{UGameplayPerfStatGraph@{UGameplayPerfStatGraph}!UGameplayPerfStatGraph@{UGameplayPerfStatGraph}}
+\doxysubsubsection{\texorpdfstring{UGameplayPerfStatGraph()}{UGameplayPerfStatGraph()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_graph_a2a1edf419b72ad50e51c74bc2ce40513} 
+UGameplay\+Perf\+Stat\+Graph::\+\+UGameplay\+Perf\+Stat\+Graph (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_perf_stat_graph_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_perf_stat_graph_a55c6aed2d5e1b1a59e91aa3a70226085}\index{UGameplayPerfStatGraph@{UGameplayPerfStatGraph}!RebuildWidget@{RebuildWidget}}
+\index{RebuildWidget@{RebuildWidget}!UGameplayPerfStatGraph@{UGameplayPerfStatGraph}}
+\doxysubsubsection{\texorpdfstring{RebuildWidget()}{RebuildWidget()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_graph_a55c6aed2d5e1b1a59e91aa3a70226085} 
+TShared\+Ref$<$ SWidget $>$ UGameplay\+Perf\+Stat\+Graph::\+\+Rebuild\+Widget (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_perf_stat_graph_aab008bc81770c31143f6e784cc868f03}\index{UGameplayPerfStatGraph@{UGameplayPerfStatGraph}!ReleaseSlateResources@{ReleaseSlateResources}}
+\index{ReleaseSlateResources@{ReleaseSlateResources}!UGameplayPerfStatGraph@{UGameplayPerfStatGraph}}
+\doxysubsubsection{\texorpdfstring{ReleaseSlateResources()}{ReleaseSlateResources()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_graph_aab008bc81770c31143f6e784cc868f03} 
+void UGameplay\+Perf\+Stat\+Graph::\+\+Release\+Slate\+Resources (\begin{DoxyParamCaption}\item[{bool}]{b\+Release\+Children}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_perf_stat_graph_abc91d85c50c9d1a9002aaedb61eb4664}\index{UGameplayPerfStatGraph@{UGameplayPerfStatGraph}!SetBackgroundColor@{SetBackgroundColor}}
+\index{SetBackgroundColor@{SetBackgroundColor}!UGameplayPerfStatGraph@{UGameplayPerfStatGraph}}
+\doxysubsubsection{\texorpdfstring{SetBackgroundColor()}{SetBackgroundColor()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_graph_abc91d85c50c9d1a9002aaedb61eb4664} 
+void UGameplay\+Perf\+Stat\+Graph::\+\+Set\+Background\+Color (\begin{DoxyParamCaption}\item[{const FColor \&}]{In\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Proxy to \doxylink{class_s_gameplay_latency_graph_a552a8638cf2682cf21b0be83b4245e54}{SGameplay\+Latency\+Graph::\+\+Set\+Background\+Color}. 
+
+\Hypertarget{class_u_gameplay_perf_stat_graph_a0d649c9fc321443a5efcb2957e85e729}\index{UGameplayPerfStatGraph@{UGameplayPerfStatGraph}!SetLineColor@{SetLineColor}}
+\index{SetLineColor@{SetLineColor}!UGameplayPerfStatGraph@{UGameplayPerfStatGraph}}
+\doxysubsubsection{\texorpdfstring{SetLineColor()}{SetLineColor()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_graph_a0d649c9fc321443a5efcb2957e85e729} 
+void UGameplay\+Perf\+Stat\+Graph::\+\+Set\+Line\+Color (\begin{DoxyParamCaption}\item[{const FColor \&}]{In\+Color}{}\end{DoxyParamCaption})}
+
+
+
+Proxy to \doxylink{class_s_gameplay_latency_graph_a47756689e60c811f3173be83931ac1dc}{SGameplay\+Latency\+Graph::\+\+Set\+Line\+Color}. 
+
+\Hypertarget{class_u_gameplay_perf_stat_graph_ae6f58cf24c5c1c0cf535f5e2b6cadc21}\index{UGameplayPerfStatGraph@{UGameplayPerfStatGraph}!SetMaxYValue@{SetMaxYValue}}
+\index{SetMaxYValue@{SetMaxYValue}!UGameplayPerfStatGraph@{UGameplayPerfStatGraph}}
+\doxysubsubsection{\texorpdfstring{SetMaxYValue()}{SetMaxYValue()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_graph_ae6f58cf24c5c1c0cf535f5e2b6cadc21} 
+void UGameplay\+Perf\+Stat\+Graph::\+\+Set\+Max\+YValue (\begin{DoxyParamCaption}\item[{const float}]{In\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Proxy to \doxylink{class_s_gameplay_latency_graph_a60ff88d01746407e398c70f59f7d3b1a}{SGameplay\+Latency\+Graph::\+\+Set\+Max\+YValue}. 
+
+\Hypertarget{class_u_gameplay_perf_stat_graph_a9f529ea3cffd015e1aede0f865fd43a5}\index{UGameplayPerfStatGraph@{UGameplayPerfStatGraph}!UpdateGraphData@{UpdateGraphData}}
+\index{UpdateGraphData@{UpdateGraphData}!UGameplayPerfStatGraph@{UGameplayPerfStatGraph}}
+\doxysubsubsection{\texorpdfstring{UpdateGraphData()}{UpdateGraphData()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_graph_a9f529ea3cffd015e1aede0f865fd43a5} 
+void UGameplay\+Perf\+Stat\+Graph::\+\+Update\+Graph\+Data (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplay\+Sampled\+Stat\+Cache}} \texorpdfstring{$\ast$}{*}}]{Stat\+Data}{, }\item[{const float}]{Scale\+Factor}{}\end{DoxyParamCaption})}
+
+
+
+Proxy to \doxylink{class_s_gameplay_latency_graph_a7c1644101486786892f9bf751e985963}{SGameplay\+Latency\+Graph::\+\+Update\+Graph\+Data}. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_perf_stat_graph_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_perf_stat_graph_af60c852f60e23047e70cbe5d423d0598}\index{UGameplayPerfStatGraph@{UGameplayPerfStatGraph}!SlateLatencyGraph@{SlateLatencyGraph}}
+\index{SlateLatencyGraph@{SlateLatencyGraph}!UGameplayPerfStatGraph@{UGameplayPerfStatGraph}}
+\doxysubsubsection{\texorpdfstring{SlateLatencyGraph}{SlateLatencyGraph}}
+{\footnotesize\ttfamily \label{class_u_gameplay_perf_stat_graph_af60c852f60e23047e70cbe5d423d0598} 
+TShared\+Ptr$<$\doxymbox{\hyperlink{class_s_gameplay_latency_graph}{SGameplay\+Latency\+Graph}}$>$ UGameplay\+Perf\+Stat\+Graph::\+\+Slate\+Latency\+Graph\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The actual Slate handle managed by this UWidget. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_perf_stat_widget_base_8h}{Gameplay\+Perf\+Stat\+Widget\+Base.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_perf_stat_widget_base_8cpp}{Gameplay\+Perf\+Stat\+Widget\+Base.\+cpp}}\end{DoxyCompactItemize}

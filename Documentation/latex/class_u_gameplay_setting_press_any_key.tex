@@ -1,0 +1,179 @@
+\doxysection{UGameplay\+Setting\+Press\+Any\+Key Class Reference}
+\hypertarget{class_u_gameplay_setting_press_any_key}{}\label{class_u_gameplay_setting_press_any_key}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+
+
+An overlay widget that waits for the user to press any key or button.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+Press\+Any\+Key.\+h$>$}
+
+Inheritance diagram for UGameplay\+Setting\+Press\+Any\+Key:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_gameplay_setting_press_any_key}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a89b3dfd4971c93709f42e99b26c319c7}{UGameplay\+Setting\+Press\+Any\+Key}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_ab01af6c82b38a95a5ce587de3017f995}{DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param}} (\doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key}{UGameplay\+Setting\+Press\+Any\+Key}}, FOn\+Key\+Selected, FKey)
+\begin{DoxyCompactList}\small\item\em Event fired when the user successfully presses a valid key. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_ac85e74929a722b13a2c0efa7b160fa91}{DECLARE\+\_\+\+EVENT}} (\doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key}{UGameplay\+Setting\+Press\+Any\+Key}}, FOn\+Key\+Selection\+Cancelled)
+\begin{DoxyCompactList}\small\item\em Event fired when the user cancels the key selection (e.\+g., via ESC or back button). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+FOn\+Key\+Selected \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a92d46a320727113de99d232335d100d0}{On\+Key\+Selected}}
+\item 
+FOn\+Key\+Selection\+Cancelled \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_ad53cbe868aba544561dc936e5c0f8882}{On\+Key\+Selection\+Cancelled}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_af915cfd11e47b16439dcef10be03fa53}{Native\+On\+Activated}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_aa2d157cf18a58c05bacfaffb2159bdb8}{Native\+On\+Deactivated}} () override
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a3c213ea4f84976f854e042e58deca70c}{Handle\+Key\+Selected}} (FKey In\+Key)
+\begin{DoxyCompactList}\small\item\em Internal handler when the input pre-\/processor detects a key press. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a8fbad025469315106b4496221466c731}{Handle\+Key\+Selection\+Cancelled}} ()
+\begin{DoxyCompactList}\small\item\em Internal handler when the input pre-\/processor detects a cancellation. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_ad78c9247c12bba43d0a047706af1986f}{Dismiss}} (TFunction$<$ void()$>$ Post\+Dismiss\+Callback)
+\begin{DoxyCompactList}\small\item\em Plays dismissal animations and executes a callback when finished. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_a7217ab9cb7d1417777128e32fec957c5}{b\+Key\+Selected}} = false
+\begin{DoxyCompactList}\small\item\em Flag to prevent multiple selections during dismissal. \end{DoxyCompactList}\item 
+TShared\+Ptr$<$ class \doxymbox{\hyperlink{class_f_gameplay_press_any_key_input_pre_processor}{FGameplay\+Press\+Any\+Key\+Input\+Pre\+Processor}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key_aacb0125c007c1f0559ccf1920a983368}{Input\+Processor}}
+\begin{DoxyCompactList}\small\item\em The transient input processor used to capture \textquotesingle{}any\textquotesingle{} key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An overlay widget that waits for the user to press any key or button. 
+
+Commonly used for keybinding screens where the user needs to select a new input for an action. It uses an input pre-\/processor to catch any input before it reaches other widgets. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_setting_press_any_key_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_setting_press_any_key_a89b3dfd4971c93709f42e99b26c319c7}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{UGameplaySettingPressAnyKey()}{UGameplaySettingPressAnyKey()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_a89b3dfd4971c93709f42e99b26c319c7} 
+UGameplay\+Setting\+Press\+Any\+Key::\+\+UGameplay\+Setting\+Press\+Any\+Key (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_setting_press_any_key_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_setting_press_any_key_ac85e74929a722b13a2c0efa7b160fa91}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!DECLARE\_EVENT@{DECLARE\_EVENT}}
+\index{DECLARE\_EVENT@{DECLARE\_EVENT}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_EVENT()}{DECLARE\_EVENT()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_ac85e74929a722b13a2c0efa7b160fa91} 
+UGameplay\+Setting\+Press\+Any\+Key::\+\+DECLARE\+\_\+\+EVENT (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key}{UGameplay\+Setting\+Press\+Any\+Key}}}]{}{, }\item[{FOn\+Key\+Selection\+Cancelled}]{}{}\end{DoxyParamCaption})}
+
+
+
+Event fired when the user cancels the key selection (e.\+g., via ESC or back button). 
+
+\Hypertarget{class_u_gameplay_setting_press_any_key_ab01af6c82b38a95a5ce587de3017f995}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!DECLARE\_EVENT\_OneParam@{DECLARE\_EVENT\_OneParam}}
+\index{DECLARE\_EVENT\_OneParam@{DECLARE\_EVENT\_OneParam}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_EVENT\_OneParam()}{DECLARE\_EVENT\_OneParam()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_ab01af6c82b38a95a5ce587de3017f995} 
+UGameplay\+Setting\+Press\+Any\+Key::\+\+DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_u_gameplay_setting_press_any_key}{UGameplay\+Setting\+Press\+Any\+Key}}}]{}{, }\item[{FOn\+Key\+Selected}]{}{, }\item[{FKey}]{}{}\end{DoxyParamCaption})}
+
+
+
+Event fired when the user successfully presses a valid key. 
+
+\Hypertarget{class_u_gameplay_setting_press_any_key_ad78c9247c12bba43d0a047706af1986f}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!Dismiss@{Dismiss}}
+\index{Dismiss@{Dismiss}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{Dismiss()}{Dismiss()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_ad78c9247c12bba43d0a047706af1986f} 
+void UGameplay\+Setting\+Press\+Any\+Key::\+\+Dismiss (\begin{DoxyParamCaption}\item[{TFunction$<$ void()$>$}]{Post\+Dismiss\+Callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Plays dismissal animations and executes a callback when finished. 
+
+\Hypertarget{class_u_gameplay_setting_press_any_key_a3c213ea4f84976f854e042e58deca70c}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!HandleKeySelected@{HandleKeySelected}}
+\index{HandleKeySelected@{HandleKeySelected}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{HandleKeySelected()}{HandleKeySelected()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_a3c213ea4f84976f854e042e58deca70c} 
+void UGameplay\+Setting\+Press\+Any\+Key::\+\+Handle\+Key\+Selected (\begin{DoxyParamCaption}\item[{FKey}]{In\+Key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal handler when the input pre-\/processor detects a key press. 
+
+\Hypertarget{class_u_gameplay_setting_press_any_key_a8fbad025469315106b4496221466c731}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!HandleKeySelectionCancelled@{HandleKeySelectionCancelled}}
+\index{HandleKeySelectionCancelled@{HandleKeySelectionCancelled}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{HandleKeySelectionCancelled()}{HandleKeySelectionCancelled()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_a8fbad025469315106b4496221466c731} 
+void UGameplay\+Setting\+Press\+Any\+Key::\+\+Handle\+Key\+Selection\+Cancelled (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal handler when the input pre-\/processor detects a cancellation. 
+
+\Hypertarget{class_u_gameplay_setting_press_any_key_af915cfd11e47b16439dcef10be03fa53}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!NativeOnActivated@{NativeOnActivated}}
+\index{NativeOnActivated@{NativeOnActivated}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{NativeOnActivated()}{NativeOnActivated()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_af915cfd11e47b16439dcef10be03fa53} 
+void UGameplay\+Setting\+Press\+Any\+Key::\+\+Native\+On\+Activated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_setting_press_any_key_aa2d157cf18a58c05bacfaffb2159bdb8}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!NativeOnDeactivated@{NativeOnDeactivated}}
+\index{NativeOnDeactivated@{NativeOnDeactivated}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{NativeOnDeactivated()}{NativeOnDeactivated()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_aa2d157cf18a58c05bacfaffb2159bdb8} 
+void UGameplay\+Setting\+Press\+Any\+Key::\+\+Native\+On\+Deactivated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_setting_press_any_key_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_setting_press_any_key_a7217ab9cb7d1417777128e32fec957c5}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!bKeySelected@{bKeySelected}}
+\index{bKeySelected@{bKeySelected}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{bKeySelected}{bKeySelected}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_a7217ab9cb7d1417777128e32fec957c5} 
+bool UGameplay\+Setting\+Press\+Any\+Key::\+b\+Key\+Selected = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag to prevent multiple selections during dismissal. 
+
+\Hypertarget{class_u_gameplay_setting_press_any_key_aacb0125c007c1f0559ccf1920a983368}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!InputProcessor@{InputProcessor}}
+\index{InputProcessor@{InputProcessor}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{InputProcessor}{InputProcessor}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_aacb0125c007c1f0559ccf1920a983368} 
+TShared\+Ptr$<$class \doxymbox{\hyperlink{class_f_gameplay_press_any_key_input_pre_processor}{FGameplay\+Press\+Any\+Key\+Input\+Pre\+Processor}}$>$ UGameplay\+Setting\+Press\+Any\+Key::\+\+Input\+Processor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The transient input processor used to capture \textquotesingle{}any\textquotesingle{} key. 
+
+\Hypertarget{class_u_gameplay_setting_press_any_key_a92d46a320727113de99d232335d100d0}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!OnKeySelected@{OnKeySelected}}
+\index{OnKeySelected@{OnKeySelected}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{OnKeySelected}{OnKeySelected}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_a92d46a320727113de99d232335d100d0} 
+FOn\+Key\+Selected UGameplay\+Setting\+Press\+Any\+Key::\+\+On\+Key\+Selected}
+
+\Hypertarget{class_u_gameplay_setting_press_any_key_ad53cbe868aba544561dc936e5c0f8882}\index{UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}!OnKeySelectionCancelled@{OnKeySelectionCancelled}}
+\index{OnKeySelectionCancelled@{OnKeySelectionCancelled}!UGameplaySettingPressAnyKey@{UGameplaySettingPressAnyKey}}
+\doxysubsubsection{\texorpdfstring{OnKeySelectionCancelled}{OnKeySelectionCancelled}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_press_any_key_ad53cbe868aba544561dc936e5c0f8882} 
+FOn\+Key\+Selection\+Cancelled UGameplay\+Setting\+Press\+Any\+Key::\+\+On\+Key\+Selection\+Cancelled}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_press_any_key_8h}{Gameplay\+Setting\+Press\+Any\+Key.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_setting_press_any_key_8cpp}{Gameplay\+Setting\+Press\+Any\+Key.\+cpp}}\end{DoxyCompactItemize}

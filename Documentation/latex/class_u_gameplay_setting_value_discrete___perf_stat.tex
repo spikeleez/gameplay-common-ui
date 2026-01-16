@@ -1,0 +1,387 @@
+\doxysection{UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat Class Reference}
+\hypertarget{class_u_gameplay_setting_value_discrete___perf_stat}{}\label{class_u_gameplay_setting_value_discrete___perf_stat}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+
+
+Specialization for performance statistic display settings.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+Value\+Discrete.\+h$>$}
+
+Inheritance diagram for UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_u_gameplay_setting_value_discrete___perf_stat}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_a1eb4c18d3c016e55d81eebd4070fd158}{UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat}} ()
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_a218676d493f6c76b94744393c33674e2}{Set\+Stat}} (\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplay\+Displayable\+Performance\+Stat}} In\+Stat)
+\begin{DoxyCompactList}\small\item\em Sets which performance stat this setting controls. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_abcbac430e5b3f97781af507304b973dc}{Store\+Initial}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_aa3fdd49494dbce06888a5d886f51ae81}{Reset\+To\+Default}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_ad8b33e64c5c8391954e854106a8dd604}{Restore\+To\+Initial}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_a48ad696e6303a860466db892c784d66e}{On\+Initialized}} () override
+\begin{DoxyCompactList}\small\item\em Stores the current value as the initial value. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_ae515adf7819efee1d80e6118977e0fba}{Set\+Discrete\+Option\+By\+Index}} (int32 Index) override
+\item 
+virtual int32 \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_a5d6ae3c4e8389b232b2ed15f16f29f2c}{Get\+Discrete\+Option\+Index}} () const override
+\item 
+virtual TArray$<$ FText $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_a06af5484721edda58472235f701d1672}{Get\+Discrete\+Options}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete}{UGameplay\+Setting\+Value\+Discrete}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_a2f9481e77b7d274453cd687a369beeca}{UGameplay\+Setting\+Value\+Discrete}} (const FObject\+Initializer \&Object\+Initializer=FObject\+Initializer::\+\+Get())
+\item 
+virtual FString \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_a0e64b21d42fef238e494cb0429839bb0}{Get\+Analytics\+Value}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the string value for analytics reporting. \end{DoxyCompactList}\item 
+virtual int32 \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_a3663381e442b8b5f0d43a8ef0513b60c}{Get\+Discrete\+Option\+Default\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Gets the index of the default option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_gameplay_setting_value}{UGameplay\+Setting\+Value}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_value_a1e289661bfbd486c37c46d9320684eef}{UGameplay\+Setting\+Value}} (const FObject\+Initializer \&Object\+Initializer=FObject\+Initializer::\+\+Get())
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_a62b8a4a9ab6db2dd9396fbd8b74c54ed}{DECLARE\+\_\+\+EVENT\+\_\+\+Two\+Params}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}, FGameplay\+On\+Setting\+Changed, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}})
+\begin{DoxyCompactList}\small\item\em Event broadcasted when this setting\textquotesingle{}s value changes. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_ace1e9f7239a628dd8b20a068fe1e8d24}{DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}, FGameplay\+On\+Setting\+Applied, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Event broadcasted when this setting is applied. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_ac25e7b87d12377ee5fbbf7e51928ec97}{DECLARE\+\_\+\+EVENT\+\_\+\+One\+Param}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}, FGameplay\+On\+Setting\+Edit\+Condition\+Changed, \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Event broadcasted when this setting\textquotesingle{}s edit conditions change. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting_aefedabdb40d9b756740d6b5ddae7b5ae}{UGameplay\+Setting}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+virtual UWorld \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_aa993d44abb852da11e984d9a7a1ebfb0}{Get\+World}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the current world from the associated local player. \end{DoxyCompactList}\item 
+FName \doxymbox{\hyperlink{class_u_gameplay_setting_a5f9246788f18655e0dcc6004bfb848db}{Get\+Dev\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the non-\/localized developer name for this setting. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_ac7dd1e3466e50cd8d710dd54f3c4bba3}{Set\+Dev\+Name}} (const FName \&Value)
+\begin{DoxyCompactList}\small\item\em Sets the non-\/localized developer name for this setting. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_setting_a2725707ca9fbb9798eb8cd12f2aca23d}{Get\+Adjust\+List\+View\+Post\+Refresh}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the list view should be scrolled/\+adjusted after a refresh involving this setting. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a896a8600c670e1c8a7f12a1e891df99f}{Set\+Adjust\+List\+View\+Post\+Refresh}} (const bool Value)
+\begin{DoxyCompactList}\small\item\em Sets whether the list view should adjust its position post-\/refresh. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_setting_ac4ec45b0d20a8b559a90e7e3185d6e03}{Get\+Display\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the localized display name for the UI. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_ab2cec6e5a4d4c88b0711a15e824b6261}{Set\+Display\+Name}} (const FText \&Value)
+\begin{DoxyCompactList}\small\item\em Sets the localized display name for the UI. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a3194e002e3d828c665186853cddd39a6}{Set\+Display\+Name}} (const FString \&Value)
+\begin{DoxyCompactList}\small\item\em Sets a non-\/localized display name (Development/\+\+Cheats only). \end{DoxyCompactList}\item 
+ESlate\+Visibility \doxymbox{\hyperlink{class_u_gameplay_setting_a42e231a2cea757a33e682919e7b079d7}{Get\+Display\+Name\+Visibility}} () const
+\begin{DoxyCompactList}\small\item\em Gets whether the display name should be visible in the UI. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a89ce1acf91c1ee5c4e940d1877e87a28}{Set\+Display\+Name\+Visibility}} (ESlate\+Visibility In\+Visibility)
+\begin{DoxyCompactList}\small\item\em Sets visibility for the display name label. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_setting_a419f6cca0e5ea056063c30980fd02227}{Get\+Description\+Rich\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Gets the rich text description for tooltips/\+detail panels. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a7796ffcf55af63be893edf91dfe2b2c1}{Set\+Description\+Rich\+Text}} (const FText \&Value)
+\begin{DoxyCompactList}\small\item\em Sets the rich text description for tooltips/\+detail panels. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_ab8714b0d8a1ff40a9b43764ba2994267}{Set\+Description\+Rich\+Text}} (const FString \&Value)
+\begin{DoxyCompactList}\small\item\em Sets a non-\/localized description (Development/\+\+Cheats only). \end{DoxyCompactList}\item 
+const FGameplay\+Tag\+Container \& \doxymbox{\hyperlink{class_u_gameplay_setting_a183a807c04128d0c303c4399d5ec061d}{Get\+Tags}} () const
+\begin{DoxyCompactList}\small\item\em Gets the tags associated with this setting for filtering/\+logic. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a3653388ff996de251ce932f731066786}{Add\+Tag}} (const FGameplay\+Tag \&Tag\+To\+Add)
+\begin{DoxyCompactList}\small\item\em Adds a single gameplay tag to this setting. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a47fca99b8dd0add750e9a31c3f83b105}{Add\+Tags}} (const FGameplay\+Tag\+Container \&Tags\+To\+Add)
+\begin{DoxyCompactList}\small\item\em Appends multiple gameplay tags to this setting. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a67f407305d2d4667ed0bc850bae349f7}{Set\+Registry}} (\doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}} \texorpdfstring{$\ast$}{*}In\+Owning\+Registry)
+\begin{DoxyCompactList}\small\item\em Assigns the registry that owns this setting. \end{DoxyCompactList}\item 
+const FString \& \doxymbox{\hyperlink{class_u_gameplay_setting_ab3d062f5afed1993a1d1c3833b63c180}{Get\+Description\+Plain\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Gets the searchable plain text version of the description. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a2d0d13b4ac5191f2d45ddd433f575bd4}{Initialize}} (ULocal\+Player \texorpdfstring{$\ast$}{*}In\+Local\+Player)
+\begin{DoxyCompactList}\small\item\em Initializes the setting with the owning local player. \end{DoxyCompactList}\item 
+ULocal\+Player \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_aa552eb31b7f67205a26ff3f900dd660a}{Get\+Owning\+Local\+Player}} () const
+\begin{DoxyCompactList}\small\item\em Gets the owning local player for this setting. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a5c927ee14df02b05692421d12fbd6527}{Set\+Dynamic\+Details}} (const FGameplay\+Get\+Game\+Settings\+Details \&In\+Dynamic\+Details)
+\begin{DoxyCompactList}\small\item\em Sets a callback for providing dynamic, per-\/frame detail text. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_setting_a480d72ade936efc5a4fae19fecb503d0}{Get\+Dynamic\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Gets the dynamic details about this setting. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_setting_a014c635659ed4cc50e343c9e0bc1e58c}{Get\+Warning\+Rich\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Gets any warning text (e.\+g., "{}\+Requires Restart"{}) associated with this setting. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a018db64686a73c1b8342d6c8aceae805}{Set\+Warning\+Rich\+Text}} (const FText \&Value)
+\begin{DoxyCompactList}\small\item\em Sets warning text for this setting. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a44c1bda7f4bc0bcfb2a5e676cfb3e578}{Set\+Warning\+Rich\+Text}} (const FString \&Value)
+\begin{DoxyCompactList}\small\item\em Sets non-\/localized warning text (Development/\+\+Cheats only). \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \& \doxymbox{\hyperlink{class_u_gameplay_setting_a7d9836262864b9e6b55f1876c6f4a4d4}{Get\+Edit\+State}} () const
+\begin{DoxyCompactList}\small\item\em Gets the cached edit state (visible/\+editable/\+disabled) for this setting. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a2a70073fab81d36e531f51c090aefa38}{Add\+Edit\+Condition}} (const TShared\+Ref$<$ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition}{FGameplay\+Setting\+Edit\+Condition}} $>$ \&In\+Edit\+Condition)
+\begin{DoxyCompactList}\small\item\em Adds an edit condition to control the visibility and edit-\/ability of this setting. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a5e2616f55e069127b08eb7216fd8f77a}{Add\+Edit\+Dependency}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Dependency\+Setting)
+\begin{DoxyCompactList}\small\item\em Adds a dependency on another setting; if the dependency changes, this setting re-\/evaluates its state. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_ac565d2e871653d007c0e253f13cd2432}{Set\+Setting\+Parent}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}In\+Setting\+Parent)
+\begin{DoxyCompactList}\small\item\em Sets the parent object (usually a Collection) that owns this setting. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_setting_a08b6fe1dd0331df2e3e69dfe87355e9f}{Get\+Setting\+Parent}} () const
+\begin{DoxyCompactList}\small\item\em Gets the parent object that owns this setting. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_setting_abb61b3bea004c3e5b487d1e54a24220d}{Get\+Is\+Reported\+To\+Analytics}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this setting should be reported for analytics. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a3955b360ecb8953d170a7000568df05f}{Set\+Is\+Reported\+To\+Analytics}} (bool b\+Report)
+\begin{DoxyCompactList}\small\item\em Sets whether this setting captures and reports analytics data. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_setting_a130f530939b65ea7a2e446559ac57c76}{Is\+Ready}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the setting has finished any internal async initialization. \end{DoxyCompactList}\item 
+virtual TArray$<$ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_a16f7cb7f52baca57edec4889b41294b4}{Get\+Child\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Returns any child settings owned by this object (e.\+g. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a923902eb0172adb0953692828652dab9}{Refresh\+Editable\+State}} (bool b\+Notify\+Edit\+Conditions\+Changed=true)
+\begin{DoxyCompactList}\small\item\em Refreshes the cached editable state and optionally broadcasts notifications. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a36d55a34c05eaeb52305272c6f3b78a3}{Apply}} ()
+\begin{DoxyCompactList}\small\item\em Finalizes and applies any pending changes for this setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_a988f2bfa4e8b4a36d934902f8999091a}{Add\+Mode}} (FText \&\&Label, \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplay\+Performance\+Stat\+Display\+Mode}} Mode)
+\begin{DoxyCompactList}\small\item\em Internal helper to add a display mode option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_a25796a8b5500309464c5b7bb980c3d71}{Startup}} ()
+\begin{DoxyCompactList}\small\item\em Called during initialization to allow one-\/time setup. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a79aaa20e512c447efbba17c16b7f9650}{Startup\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Marks the setting as ready for usage. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_ae44f2de7f8435c657e71d762f0d3c53c}{On\+Apply}} ()
+\begin{DoxyCompactList}\small\item\em Internal implementation of \doxylink{class_u_gameplay_setting_a36d55a34c05eaeb52305272c6f3b78a3}{Apply()}. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_ac6fbb445d67b180379aaf4c07cba1687}{On\+Gather\+Edit\+State}} (\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \&In\+Out\+Edit\+State) const
+\begin{DoxyCompactList}\small\item\em Internal implementation of editable state collection. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_a2566710841ab245d5df912cdaa8ce170}{On\+Dependency\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when a registered dependency setting changes value. \end{DoxyCompactList}\item 
+virtual FText \doxymbox{\hyperlink{class_u_gameplay_setting_ad1ed6d34e3d69ab2c1ed4389441c7315}{Get\+Dynamic\+Details\+Internal}} () const
+\begin{DoxyCompactList}\small\item\em Internal implementation for generating dynamic details. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_ab3c759369b34a434d90c6cc0ea7410ef}{Handle\+Edit\+Dependency\+Changed}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}Dependency\+Setting, \doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}} Reason)
+\begin{DoxyCompactList}\small\item\em Handler for dependency change events. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a90d5b3ffda2df07d04375bb9123c91a9}{Handle\+Edit\+Dependency\+Changed}} (\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} \texorpdfstring{$\ast$}{*}Dependency\+Setting)
+\begin{DoxyCompactList}\small\item\em Handler for dependency change events (simplified). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a478c43f35b3016e0f87bbaf5d295d09e}{Refresh\+Plain\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Regenerates the plain searchable text cache. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_aafe0328dc5bdcb6687a5f7c804e3b91d}{Invalidate\+Searchable\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Marks the searchable text cache as dirty. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_a3e555acddf62f4697c5fb779a5ad4a0d}{Notify\+Setting\+Changed}} (\doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}} Reason)
+\begin{DoxyCompactList}\small\item\em Broadcasts the value change event. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_a7eef0a5e610cda4890376e9af415a86e}{On\+Setting\+Changed}} (\doxymbox{\hyperlink{_gameplay_setting_8h_a77fcc92cabdf4f7c663e5cdee50c9edb}{EGameplay\+Setting\+Changed\+Reason}} Reason)
+\begin{DoxyCompactList}\small\item\em Internal callback for value change events. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_u_gameplay_setting_af1a430bc32de89055c992111c47625c4}{Notify\+Edit\+Conditions\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Broadcasts the edit condition change event. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_gameplay_setting_a6ed59e990e3272b5018d70dc7a3d3de1}{On\+Edit\+Conditions\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Internal callback for edit condition change events. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_f_gameplay_setting_editable_state}{FGameplay\+Setting\+Editable\+State}} \doxymbox{\hyperlink{class_u_gameplay_setting_a80ac9bcf84f8fde85d50ec78bbb7798f}{Compute\+Editable\+State}} () const
+\begin{DoxyCompactList}\small\item\em Re-\/processes all edit conditions to determine current edit state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ FText $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_a7b3ee900ef6b40c17d802571ed749253}{Options}}
+\begin{DoxyCompactList}\small\item\em The list of localized display mode names. \end{DoxyCompactList}\item 
+TArray$<$ \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplay\+Performance\+Stat\+Display\+Mode}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_ada004b5cb02aa27cdf82749c189e8cd0}{Display\+Modes}}
+\begin{DoxyCompactList}\small\item\em The corresponding display mode enums. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplay\+Displayable\+Performance\+Stat}} \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_ab951b13160826726668433c7e24cda09}{Stat\+To\+Display}}
+\begin{DoxyCompactList}\small\item\em The stat currently being controlled. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplay\+Performance\+Stat\+Display\+Mode}} \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete___perf_stat_a23464c5aec885eed776a652f1a6985c4}{Initial\+Mode}}
+\begin{DoxyCompactList}\small\item\em The initial display mode for restoration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ ULocal\+Player $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_a2e72dd20eba001b042427b5a78cd79b1}{Local\+Player}}
+\begin{DoxyCompactList}\small\item\em Associated local player. \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_a80cccd52a520428b3f46e3451c717701}{Setting\+Parent}}
+\begin{DoxyCompactList}\small\item\em Parent setting (e.\+g., a collection). \end{DoxyCompactList}\item 
+TObject\+Ptr$<$ \doxymbox{\hyperlink{class_u_gameplay_setting_registry}{UGameplay\+Setting\+Registry}} $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_ad6bce247157d681f4465a342fedb79f6}{Owning\+Registry}}
+\begin{DoxyCompactList}\small\item\em The registry this setting belongs to. \end{DoxyCompactList}\item 
+FName \doxymbox{\hyperlink{class_u_gameplay_setting_ae765600a1958dca5def14e6b2eec53bc}{Dev\+Name}}
+\begin{DoxyCompactList}\small\item\em Internal unique name. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_setting_a2175e84b2e10debb791309cc781e988b}{Display\+Name}}
+\begin{DoxyCompactList}\small\item\em Displayed localized name. \end{DoxyCompactList}\item 
+ESlate\+Visibility \doxymbox{\hyperlink{class_u_gameplay_setting_a9aa2b23fa26d582ed50777400fe462c9}{Display\+Name\+Visibility}}
+\begin{DoxyCompactList}\small\item\em Visibility of the display name label. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_setting_a60ae2dd683930fe1934ec5b2f4623275}{Description\+Rich\+Text}}
+\begin{DoxyCompactList}\small\item\em Detailed rich text description. \end{DoxyCompactList}\item 
+FText \doxymbox{\hyperlink{class_u_gameplay_setting_ac0491a59fdbe1c3208be4b613f55e900}{Warning\+Rich\+Text}}
+\begin{DoxyCompactList}\small\item\em Immediate warning/\+note text. \end{DoxyCompactList}\item 
+FGameplay\+Tag\+Container \doxymbox{\hyperlink{class_u_gameplay_setting_a62708be37f44b550b20865ad23308598}{Tags}}
+\begin{DoxyCompactList}\small\item\em Categorization tags. \end{DoxyCompactList}\item 
+FGameplay\+Get\+Game\+Settings\+Details \doxymbox{\hyperlink{class_u_gameplay_setting_aba694fe1a78757285025a632b5574dd5}{Dynamic\+Details}}
+\begin{DoxyCompactList}\small\item\em Callback for dynamic detail generation. \end{DoxyCompactList}\item 
+TArray$<$ TShared\+Ref$<$ \doxymbox{\hyperlink{class_f_gameplay_setting_edit_condition}{FGameplay\+Setting\+Edit\+Condition}} $>$ $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_a7c3739ecd8b2076137e4037dea978a59}{Edit\+Conditions}}
+\begin{DoxyCompactList}\small\item\em List of conditions controlling visibility and editability. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_setting_a0c9ea40f4a5c3e63dc416cbc2db93d2f}{b\+Refresh\+Plain\+Searchable\+Text}}
+\begin{DoxyCompactList}\small\item\em Dirty flag for search index. \end{DoxyCompactList}\item 
+FString \doxymbox{\hyperlink{class_u_gameplay_setting_a22e81d338924f0ce0c16ee516530021c}{Auto\+Generated\+\_\+\+Description\+Plain\+Text}}
+\begin{DoxyCompactList}\small\item\em Plain text cache of the description for searching. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_setting_a01a3543c89763bfff5f8b51b7a94b500}{b\+Report\+Analytics}}
+\begin{DoxyCompactList}\small\item\em Analytics opt-\/in flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Data Fields inherited from \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete}{UGameplay\+Setting\+Value\+Discrete}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void virtual Set\+Discrete\+Option\+By\+Index(int32 Index) PURE\+\_\+\+VIRTUAL(\doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete}{UGameplay\+Setting\+Value\+Discrete}} int32 \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_aa09957ae38d1352ea3fd6b159a8b5198}{Get\+Discrete\+Option\+Index}} () const PURE\+\_\+\+VIRTUAL(\doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete}{UGameplay\+Setting\+Value\+Discrete}}
+\begin{DoxyCompactList}\small\item\em Sets the current value by its index in the options list. \end{DoxyCompactList}\item 
+virtual TArray$<$ FText $>$ \doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete_a29b3441ad411922ab79fb99c54c6b973}{Get\+Discrete\+Options}} () const PURE\+\_\+\+VIRTUAL(\doxymbox{\hyperlink{class_u_gameplay_setting_value_discrete}{UGameplay\+Setting\+Value\+Discrete}}
+\begin{DoxyCompactList}\small\item\em Gets the list of available text descriptions for all options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplay\+Setting}}}
+\begin{DoxyCompactItemize}
+\item 
+FGameplay\+On\+Setting\+Changed \doxymbox{\hyperlink{class_u_gameplay_setting_a6386671f1a73b73cbc4d29d80734505c}{On\+Setting\+Changed\+Event}}
+\begin{DoxyCompactList}\small\item\em Event triggered when the setting\textquotesingle{}s value is modified. \end{DoxyCompactList}\item 
+FGameplay\+On\+Setting\+Applied \doxymbox{\hyperlink{class_u_gameplay_setting_a3ef55264009b97fef7fd60df06ccc2e3}{On\+Setting\+Applied\+Event}}
+\begin{DoxyCompactList}\small\item\em Event triggered when \doxylink{class_u_gameplay_setting_a36d55a34c05eaeb52305272c6f3b78a3}{Apply()} is called on the setting. \end{DoxyCompactList}\item 
+FGameplay\+On\+Setting\+Edit\+Condition\+Changed \doxymbox{\hyperlink{class_u_gameplay_setting_aed791420435abe1cd0da5025cb5dfc7a}{On\+Setting\+Edit\+Condition\+Changed\+Event}}
+\begin{DoxyCompactList}\small\item\em Event triggered when visibility or editability state is updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specialization for performance statistic display settings. 
+
+Allows users to choose how individual performance stats are displayed (Hidden, Text, Graph, etc.). 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_a1eb4c18d3c016e55d81eebd4070fd158}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{UGameplaySettingValueDiscrete\_PerfStat()}{UGameplaySettingValueDiscrete\_PerfStat()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_a1eb4c18d3c016e55d81eebd4070fd158} 
+UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_a988f2bfa4e8b4a36d934902f8999091a}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!AddMode@{AddMode}}
+\index{AddMode@{AddMode}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{AddMode()}{AddMode()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_a988f2bfa4e8b4a36d934902f8999091a} 
+void UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Add\+Mode (\begin{DoxyParamCaption}\item[{FText \&\&}]{Label}{, }\item[{\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplay\+Performance\+Stat\+Display\+Mode}}}]{Mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal helper to add a display mode option. 
+
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_a5d6ae3c4e8389b232b2ed15f16f29f2c}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!GetDiscreteOptionIndex@{GetDiscreteOptionIndex}}
+\index{GetDiscreteOptionIndex@{GetDiscreteOptionIndex}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{GetDiscreteOptionIndex()}{GetDiscreteOptionIndex()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_a5d6ae3c4e8389b232b2ed15f16f29f2c} 
+int32 UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Get\+Discrete\+Option\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_a06af5484721edda58472235f701d1672}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!GetDiscreteOptions@{GetDiscreteOptions}}
+\index{GetDiscreteOptions@{GetDiscreteOptions}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{GetDiscreteOptions()}{GetDiscreteOptions()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_a06af5484721edda58472235f701d1672} 
+TArray$<$ FText $>$ UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Get\+Discrete\+Options (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_a48ad696e6303a860466db892c784d66e}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!OnInitialized@{OnInitialized}}
+\index{OnInitialized@{OnInitialized}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{OnInitialized()}{OnInitialized()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_a48ad696e6303a860466db892c784d66e} 
+void UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+On\+Initialized (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stores the current value as the initial value. 
+
+This is called during initialization and should also be called when applying settings. The initial value serves as the restore point when the user wants to discard changes.
+
+Resets the setting to its default value
+
+Restores the setting to the factory default value. This is typically used when the user wants to reset all settings to their original state.
+
+Restores the setting to its initial value
+
+Reverts the setting to the value it had when the settings screen was opened. This allows users to discard changes without applying them. 
+
+Reimplemented from \doxymbox{\hyperlink{class_u_gameplay_setting_value_a9809c5e2419fa786c03b3a251025a5e2}{UGameplay\+Setting\+Value}}.
+
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_aa3fdd49494dbce06888a5d886f51ae81}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!ResetToDefault@{ResetToDefault}}
+\index{ResetToDefault@{ResetToDefault}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{ResetToDefault()}{ResetToDefault()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_aa3fdd49494dbce06888a5d886f51ae81} 
+void UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Reset\+To\+Default (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_ad8b33e64c5c8391954e854106a8dd604}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!RestoreToInitial@{RestoreToInitial}}
+\index{RestoreToInitial@{RestoreToInitial}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{RestoreToInitial()}{RestoreToInitial()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_ad8b33e64c5c8391954e854106a8dd604} 
+void UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Restore\+To\+Initial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_ae515adf7819efee1d80e6118977e0fba}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!SetDiscreteOptionByIndex@{SetDiscreteOptionByIndex}}
+\index{SetDiscreteOptionByIndex@{SetDiscreteOptionByIndex}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{SetDiscreteOptionByIndex()}{SetDiscreteOptionByIndex()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_ae515adf7819efee1d80e6118977e0fba} 
+void UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Set\+Discrete\+Option\+By\+Index (\begin{DoxyParamCaption}\item[{int32}]{Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_a218676d493f6c76b94744393c33674e2}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!SetStat@{SetStat}}
+\index{SetStat@{SetStat}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{SetStat()}{SetStat()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_a218676d493f6c76b94744393c33674e2} 
+void UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Set\+Stat (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplay\+Displayable\+Performance\+Stat}}}]{In\+Stat}{}\end{DoxyParamCaption})}
+
+
+
+Sets which performance stat this setting controls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Stat} & The performance stat to associate with this setting \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_abcbac430e5b3f97781af507304b973dc}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!StoreInitial@{StoreInitial}}
+\index{StoreInitial@{StoreInitial}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{StoreInitial()}{StoreInitial()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_abcbac430e5b3f97781af507304b973dc} 
+void UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Store\+Initial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_ada004b5cb02aa27cdf82749c189e8cd0}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!DisplayModes@{DisplayModes}}
+\index{DisplayModes@{DisplayModes}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{DisplayModes}{DisplayModes}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_ada004b5cb02aa27cdf82749c189e8cd0} 
+TArray$<$\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplay\+Performance\+Stat\+Display\+Mode}}$>$ UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Display\+Modes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The corresponding display mode enums. 
+
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_a23464c5aec885eed776a652f1a6985c4}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!InitialMode@{InitialMode}}
+\index{InitialMode@{InitialMode}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{InitialMode}{InitialMode}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_a23464c5aec885eed776a652f1a6985c4} 
+\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92}{EGameplay\+Performance\+Stat\+Display\+Mode}} UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Initial\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The initial display mode for restoration. 
+
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_a7b3ee900ef6b40c17d802571ed749253}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!Options@{Options}}
+\index{Options@{Options}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{Options}{Options}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_a7b3ee900ef6b40c17d802571ed749253} 
+TArray$<$FText$>$ UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Options\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The list of localized display mode names. 
+
+\Hypertarget{class_u_gameplay_setting_value_discrete___perf_stat_ab951b13160826726668433c7e24cda09}\index{UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}!StatToDisplay@{StatToDisplay}}
+\index{StatToDisplay@{StatToDisplay}!UGameplaySettingValueDiscrete\_PerfStat@{UGameplaySettingValueDiscrete\_PerfStat}}
+\doxysubsubsection{\texorpdfstring{StatToDisplay}{StatToDisplay}}
+{\footnotesize\ttfamily \label{class_u_gameplay_setting_value_discrete___perf_stat_ab951b13160826726668433c7e24cda09} 
+\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_a42662a14f4fdfecc5161597289f2cb8c}{EGameplay\+Displayable\+Performance\+Stat}} UGameplay\+Setting\+Value\+Discrete\+\_\+\+Perf\+Stat::\+\+Stat\+To\+Display\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The stat currently being controlled. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_value_discrete_8h}{Gameplay\+Setting\+Value\+Discrete.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_setting_value_discrete_8cpp}{Gameplay\+Setting\+Value\+Discrete.\+cpp}}\end{DoxyCompactItemize}

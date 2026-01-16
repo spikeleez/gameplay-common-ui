@@ -1,0 +1,35 @@
+\doxysection{Gameplay\+Responsive\+Panel\+Slot.\+h}
+\hypertarget{_gameplay_responsive_panel_slot_8h_source}{}\label{_gameplay_responsive_panel_slot_8h_source}\index{GameplayResponsivePanelSlot.h@{GameplayResponsivePanelSlot.h}}
+\doxymbox{\hyperlink{_gameplay_responsive_panel_slot_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_responsive_panel_8h}{GameplayResponsivePanel.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Components/PanelSlot.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameplayResponsivePanelSlot.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ UCLASS(Abstract,\ BlueprintType,\ Blueprintable,\ meta=(DisableNativeTick))}
+\DoxyCodeLine{00013\ class\ \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_slot_a9da6e0cfa1724d33d3879c34acd15942}{UGameplayResponsivePanelSlot}}\ :\ public\ UPanelSlot}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_slot_a9da6e0cfa1724d33d3879c34acd15942}{UGameplayResponsivePanelSlot}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer);}
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_slot_ac435a35a3f5c76db2c6fcbfb45133507}{BuildSlot}}(\textcolor{keyword}{const}\ TSharedRef<SGameplayResponsivePanel>\&\ GameResponsivePanel);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UPanelSlot\ interface}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_slot_ab17dffa85bd8e27746dc7330bd0e5251}{SynchronizeProperties}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UPanelSlot\ interface}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UWidget\ interface}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_slot_a5b02d5e8f6c885fe22fe9aa8b715001e}{ReleaseSlateResources}}(\textcolor{keywordtype}{bool}\ bReleaseChildren)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UWidget\ interface}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a735c8621ab4764c414c465948544a2d3}{SGameplayResponsivePanel::FSlot}}*\ \doxymbox{\hyperlink{class_u_gameplay_responsive_panel_slot_a01176883e8ba587fee5702737f616bf0}{Slot}};}
+\DoxyCodeLine{00034\ \};}
+
+\end{DoxyCode}

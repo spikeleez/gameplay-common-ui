@@ -1,0 +1,44 @@
+\doxysection{Gameplay\+Subtitle\+Display\+Options.\+h}
+\hypertarget{_gameplay_subtitle_display_options_8h_source}{}\label{_gameplay_subtitle_display_options_8h_source}\index{GameplaySubtitleDisplayOptions.h@{GameplaySubtitleDisplayOptions.h}}
+\doxymbox{\hyperlink{_gameplay_subtitle_display_options_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_subtitles_types_8h}{Misc/GameplaySubtitlesTypes.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Engine/DataAsset.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Fonts/SlateFontInfo.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Styling/SlateBrush.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}GameplaySubtitleDisplayOptions.generated.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ UCLASS(Blueprintable,\ BlueprintType,\ Const,\ meta=(DisplayName=\textcolor{stringliteral}{"{}Gameplay\ Subtitle\ Display\ Options"{}}))}
+\DoxyCodeLine{00019\ class\ GAMEPLAYCOMMONUI\_API\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options_a06b2c9d7eb31c1e95cafd8b834b99824}{UGameplaySubtitleDisplayOptions}}\ :\ public\ UPrimaryDataAsset}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options_a06b2c9d7eb31c1e95cafd8b834b99824}{UGameplaySubtitleDisplayOptions}}();}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00029\ \ \ \ \ FSlateFontInfo\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options_ab217aab20162ec754963b6d4bda629c4}{SubtitleFont}};}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00033\ \ \ \ \ int32\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options_abd79cdeced6081f936f8a5820223f50b}{SubtitleTextSizes}}[(int32)\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aabf3837ffb08ea153e56670d86bd9ca8}{EGameplaySubtitleDisplayTextSize}}::\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92a26a4b44a837bf97b972628509912b4a5}{MAX}}];}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00037\ \ \ \ \ FLinearColor\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options_a909aa3cd2cb4d5bb2b1266c7c7d0d7a0}{SubtitleTextColors}}[(int32)\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_aff2262eed2503cc41482e3a4d2e4dd7b}{EGameplaySubtitleDisplayTextColor}}::\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92a26a4b44a837bf97b972628509912b4a5}{MAX}}];}
+\DoxyCodeLine{00038\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options_ae86c6d14af82a3c2fc4b72a984ff8f1c}{SubtitleBorderSizes}}[(int32)\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_ad4ebe4965e93d81fa113df587dab6085}{EGameplaySubtitleDisplayTextBorder}}::\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92a26a4b44a837bf97b972628509912b4a5}{MAX}}];}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options_a2b924b5ab94c70a07ae2fcc9c1f746ea}{SubtitleBackgroundOpacities}}[(int32)\doxymbox{\hyperlink{_gameplay_subtitles_types_8h_a5d3aaf9a59cf99861d47de38b0605a96}{EGameplaySubtitleDisplayBackgroundOpacity}}::\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_aa9cba27f15a7b2b1e777b4b873731d92a26a4b44a837bf97b972628509912b4a5}{MAX}}];}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Display"{}})}
+\DoxyCodeLine{00049\ \ \ \ \ FSlateBrush\ \doxymbox{\hyperlink{class_u_gameplay_subtitle_display_options_ad2a30f91fb4f6d5d850886b68b17dca4}{SubtitleBackgroundBrush}};}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+
+\end{DoxyCode}

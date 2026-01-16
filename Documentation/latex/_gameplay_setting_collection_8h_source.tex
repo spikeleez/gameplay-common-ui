@@ -1,0 +1,74 @@
+\doxysection{Gameplay\+Setting\+Collection.\+h}
+\hypertarget{_gameplay_setting_collection_8h_source}{}\label{_gameplay_setting_collection_8h_source}\index{GameplaySettingCollection.h@{GameplaySettingCollection.h}}
+\doxymbox{\hyperlink{_gameplay_setting_collection_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_gameplay_setting_8h}{GameplaySetting.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplaySettingCollection.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state}{FGameplaySettingFilterState}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00023\ UCLASS()}
+\DoxyCodeLine{00024\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_ae6649b00828494bca57d6cb74fa0e88c}{UGameplaySettingCollection}}\ :\ public\ \doxymbox{\hyperlink{class_u_gameplay_setting_aefedabdb40d9b756740d6b5ddae7b5ae}{UGameplaySetting}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_ae6649b00828494bca57d6cb74fa0e88c}{UGameplaySettingCollection}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer\ =\ FObjectInitializer::Get());}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ TArray<UGameplaySetting*>\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_a9ed7923e89270d81113c584c14291254}{GetChildSettings}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_ab2548aa24523b6f410f6420482c8c029}{Settings}};\ \}}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ TArray<UGameplaySettingCollection*>\ GetChildCollection()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ AddSetting(\doxymbox{\hyperlink{class_u_gameplay_setting}{UGameplaySetting}}*\ InSetting);}
+\DoxyCodeLine{00048\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ GetSettingsForFilter(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state}{FGameplaySettingFilterState}}\&\ InFilterState,\ TArray<UGameplaySetting*>\&\ InOutSettings)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_a5cb87ada3b44f9ba61dcb3f0869f1dbb}{IsSelectable}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00064\ \ \ \ \ UPROPERTY(Transient)}
+\DoxyCodeLine{00065\ \ \ \ \ TArray<TObjectPtr<\doxymbox{\hyperlink{class_u_gameplay_setting_aefedabdb40d9b756740d6b5ddae7b5ae}{UGameplaySetting}}>>\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_ab2548aa24523b6f410f6420482c8c029}{Settings}};}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00080\ UCLASS()}
+\DoxyCodeLine{00081\ class\ GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_a28ef150f2f6b039639b943e2e77113a5}{UGameplaySettingCollectionPage}}\ :\ public\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_ae6649b00828494bca57d6cb74fa0e88c}{UGameplaySettingCollection}}}
+\DoxyCodeLine{00082\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_a164f566f23b902b9d1f79edf0119cd88}{DECLARE\_EVENT\_OneParam}}(\doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_a28ef150f2f6b039639b943e2e77113a5}{UGameplaySettingCollectionPage}},\ FGameplayOnExecuteNavigation,\ \doxymbox{\hyperlink{class_u_gameplay_setting_aefedabdb40d9b756740d6b5ddae7b5ae}{UGameplaySetting}}*\ );}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00090\ \ \ \ \ FGameplayOnExecuteNavigation\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_a49858885b4646a7f9019ef699f2e3620}{OnExecuteNavigationEvent}};}
+\DoxyCodeLine{00091\ \ \ \ \ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00093\ \ \ \ \ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_a28ef150f2f6b039639b943e2e77113a5}{UGameplaySettingCollectionPage}}(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer\ =\ FObjectInitializer::Get());}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ FText\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_a7c72df7d43a969b9ded48f65fcfbb1c7}{GetNavigationText}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_ad5c69d131f658fec6460c3ed3e4dd592}{NavigationText}};\ \}}
+\DoxyCodeLine{00100\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_a55b1d2bb1c6f446ece2d72e9880cb2dc}{SetNavigationText}}(\textcolor{keyword}{const}\ FText\&\ Value)\ \{\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_ad5c69d131f658fec6460c3ed3e4dd592}{NavigationText}}\ =\ Value;\ \}}
+\DoxyCodeLine{00106\ \ \ \ \ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_a17da6d3704533606d71ecf48098f4ed4}{SetNavigationText}}(\textcolor{keyword}{const}\ FString\&\ Value)\ \{\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_a17da6d3704533606d71ecf48098f4ed4}{SetNavigationText}}(FText::FromString(Value));\ \}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameplaySetting\ interface}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ OnInitialized()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameplaySetting\ interface}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//\ \string~Begin\ UGameplaySettingCollection\ interface}}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ GetSettingsForFilter(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_f_gameplay_setting_filter_state}{FGameplaySettingFilterState}}\&\ InFilterState,\ TArray<UGameplaySetting*>\&\ InOutSettings)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00121\ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_a6a3dd9480782bfe96489d2c0c8282969}{IsSelectable}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//\ \string~End\ of\ UGameplaySettingCollection\ interface}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ ExecuteNavigation();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00136\ \ \ \ \ FText\ \doxymbox{\hyperlink{class_u_gameplay_setting_collection_page_ad5c69d131f658fec6460c3ed3e4dd592}{NavigationText}};}
+\DoxyCodeLine{00137\ \};}
+
+\end{DoxyCode}

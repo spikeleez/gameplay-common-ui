@@ -1,0 +1,79 @@
+\doxysection{Gameplay\+Setting\+Editable\+State.\+h}
+\hypertarget{_gameplay_setting_editable_state_8h_source}{}\label{_gameplay_setting_editable_state_8h_source}\index{GameplaySettingEditableState.h@{GameplaySettingEditableState.h}}
+\doxymbox{\hyperlink{_gameplay_setting_editable_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Spike\ Plugins\ 2026.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }GAMEPLAYCOMMONSETTINGS\_API\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a784dfef2290f3f8c0398241db5f113bc}{FGameplaySettingEditableState}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a784dfef2290f3f8c0398241db5f113bc}{FGameplaySettingEditableState}}()}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a91cc6aed5a518b7ed4b88a65f7b2a703}{bVisible}}(true)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a0b46e9a6d4dec9aab120a27bbef61e34}{bEnabled}}(true)}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_aa9fdba26b859458b340b7addfed41789}{bResetable}}(true)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a37381130e95c2b42fdd5e050dc9f81d8}{bHideFromAnalytics}}(false)}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a89e72fd1ee4a22cbe9d764dcd4aa5649}{IsVisible}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a91cc6aed5a518b7ed4b88a65f7b2a703}{bVisible}};\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a07c61f9e1b7ba5d0901a5c0cd77e8077}{IsEnabled}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a0b46e9a6d4dec9aab120a27bbef61e34}{bEnabled}};\ \}}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a866c14bcb316c3d1af1a0b68d09bb10f}{IsResetable}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_aa9fdba26b859458b340b7addfed41789}{bResetable}};\ \}}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a7b4f296c4ccc31c615c0759bf093f4ed}{IsHiddenFromAnalytics}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a37381130e95c2b42fdd5e050dc9f81d8}{bHideFromAnalytics}};\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{const}\ TArray<FText>\&\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a563f13c2e0232f03d37a982675f5ec87}{GetDisabledReasons}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a499bc4fd916f275331d46d374dae4d94}{DisabledReasons}};\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{const}\ TArray<FString>\&\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_af2fbe57b37bcc66189d1402c0ec03481}{GetHiddenReasons}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a7a5468f9eec082453e03d98203c25640}{HiddenReasons}};\ \}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{const}\ TArray<FString>\&\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_aa8b4e96309731c3e619f24984f69ba20}{GetDisabledOptions}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_ac5969aa522627bd52e2417a292fc782e}{DisabledOptions}};\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ Hide(\textcolor{keyword}{const}\ FString\&\ Reason);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ Disable(\textcolor{keyword}{const}\ FText\&\ Reason);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ DisableOption(\textcolor{keyword}{const}\ FString\&\ Option);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EnumType>}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a90826e8f0a4c9b85606f762c84ff364c}{DisableEnumOption}}(EnumType\ InEnumValue)}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_acf5ed93144935912de47c7c135fd550f}{DisableOption}}(StaticEnum<EnumType>()-\/>GetNameStringByValue((int64)InEnumValue));}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ UnableToReset();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_aa75f4c42bfd4b9840b17c200f8a653a7}{HideFromAnalytics}}()\ \{\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a37381130e95c2b42fdd5e050dc9f81d8}{bHideFromAnalytics}}\ =\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_ac147514f03de4eb696fc0be41fec7eb3}{Kill}}(\textcolor{keyword}{const}\ FString\&\ Reason)}
+\DoxyCodeLine{00098\ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_ac4a9ea355dec144693431e2768686162}{Hide}}(Reason);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_aa75f4c42bfd4b9840b17c200f8a653a7}{HideFromAnalytics}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a8c3d985a8e438c07741aa926a2d17f2a}{UnableToReset}}();}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00106\ \ \ \ \ uint8\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a91cc6aed5a518b7ed4b88a65f7b2a703}{bVisible}}:1;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00109\ \ \ \ \ uint8\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a0b46e9a6d4dec9aab120a27bbef61e34}{bEnabled}}:1;}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00112\ \ \ \ \ uint8\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_aa9fdba26b859458b340b7addfed41789}{bResetable}}:1;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00115\ \ \ \ \ uint8\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a37381130e95c2b42fdd5e050dc9f81d8}{bHideFromAnalytics}}:1;}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00118\ \ \ \ \ TArray<FString>\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_ac5969aa522627bd52e2417a292fc782e}{DisabledOptions}};}
+\DoxyCodeLine{00119\ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ TArray<FText>\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a499bc4fd916f275331d46d374dae4d94}{DisabledReasons}};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00125\ \ \ \ \ TArray<FString>\ \doxymbox{\hyperlink{class_f_gameplay_setting_editable_state_a7a5468f9eec082453e03d98203c25640}{HiddenReasons}};}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00127\ \};}
+
+\end{DoxyCode}

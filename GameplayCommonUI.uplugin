@@ -1,0 +1,50 @@
+﻿{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Gameplay Common UI",
+	"Description": "A Common UI Starter Kit.",
+	"Category": "Gameplay",
+	"CreatedBy": "Spike Plugins",
+	"CreatedByURL": "https://github.com/spikeleez",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "GameplayCommonUI",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "GameplayCommonUIEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		},
+		{
+			"Name": "GameplayCommonSettings",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "GameplayCommonSettingsEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "CommonUI",
+			"Enabled": true,
+			"Activate": true
+		},
+		{
+			"Name": "AudioModulation",
+			"Enabled": true,
+			"Activate": true
+		}
+	]
+}

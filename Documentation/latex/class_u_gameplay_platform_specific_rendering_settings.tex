@@ -1,0 +1,145 @@
+\doxysection{UGameplay\+Platform\+Specific\+Rendering\+Settings Class Reference}
+\hypertarget{class_u_gameplay_platform_specific_rendering_settings}{}\label{class_u_gameplay_platform_specific_rendering_settings}\index{UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}}
+
+
+Platform-\/specific rendering and performance settings.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Setting\+Performance\+Settings.\+h$>$}
+
+Inheritance diagram for UGameplay\+Platform\+Specific\+Rendering\+Settings:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_gameplay_platform_specific_rendering_settings}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_a22414c6c17a0682f72038a092ca0b0c1}{UGameplay\+Platform\+Specific\+Rendering\+Settings}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings}{UGameplay\+Platform\+Specific\+Rendering\+Settings}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_aec29b23110cbc30379874cb5fa42c309}{Get}} ()
+\begin{DoxyCompactList}\small\item\em Helper method to get the performance settings object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+FString \doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_a91d4be483e076bfdf27bddca5223a83b}{Default\+Device\+Profile\+Suffix}}
+\begin{DoxyCompactList}\small\item\em The default variant suffix to append to the device profile. \end{DoxyCompactList}\item 
+TArray$<$ \doxymbox{\hyperlink{struct_f_gameplay_quality_device_profile_variant}{FGameplay\+Quality\+Device\+Profile\+Variant}} $>$ \doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_ad0e392490328304793778cbfbd598653}{User\+Facing\+Device\+Profile\+Options}}
+\begin{DoxyCompactList}\small\item\em The list of device profile variations to allow users to choose from. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_a1b8737b3295bbea1ef2b7c99a54b0624}{b\+Supports\+Granular\+Video\+Quality\+Settings}} = true
+\begin{DoxyCompactList}\small\item\em Does the platform support granular video quality settings? \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_ab02d813e5d184c81773d2a3185a15189}{b\+Supports\+Automatic\+Video\+Quality\+Benchmark}} = true
+\begin{DoxyCompactList}\small\item\em Does the platform support running the automatic quality benchmark? \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_ad06fb1209e628be6f9505f99fa83f00d}{EGameplay\+Frame\+Pacing\+Mode}} \doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_a3d2b64f043c3b64648e834b070f63fdf}{Frame\+Pacing\+Mode}} = \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_ad06fb1209e628be6f9505f99fa83f00dab3e9aaeacffc08e4718b0cf7df63a195}{EGameplay\+Frame\+Pacing\+Mode::\+\+Desktop\+Style}}
+\begin{DoxyCompactList}\small\item\em Specifies how frame pacing is controlled on this platform. \end{DoxyCompactList}\item 
+TArray$<$ int32 $>$ \doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings_aa3bd60f96386fb3c6ddfd999932e8211}{Mobile\+Frame\+Rate\+Limits}}
+\begin{DoxyCompactList}\small\item\em Potential frame rates to display for mobile platforms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Platform-\/specific rendering and performance settings. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_gameplay_platform_specific_rendering_settings_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_gameplay_platform_specific_rendering_settings_a22414c6c17a0682f72038a092ca0b0c1}\index{UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}!UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}}
+\index{UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}!UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}}
+\doxysubsubsection{\texorpdfstring{UGameplayPlatformSpecificRenderingSettings()}{UGameplayPlatformSpecificRenderingSettings()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_platform_specific_rendering_settings_a22414c6c17a0682f72038a092ca0b0c1} 
+UGameplay\+Platform\+Specific\+Rendering\+Settings::\+\+UGameplay\+Platform\+Specific\+Rendering\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_gameplay_platform_specific_rendering_settings_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_gameplay_platform_specific_rendering_settings_aec29b23110cbc30379874cb5fa42c309}\index{UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}!Get@{Get}}
+\index{Get@{Get}!UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_u_gameplay_platform_specific_rendering_settings_aec29b23110cbc30379874cb5fa42c309} 
+const \doxymbox{\hyperlink{class_u_gameplay_platform_specific_rendering_settings}{UGameplay\+Platform\+Specific\+Rendering\+Settings}} \texorpdfstring{$\ast$}{*} UGameplay\+Platform\+Specific\+Rendering\+Settings::\+\+Get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper method to get the performance settings object. 
+
+\begin{DoxyReturn}{Returns}
+The singleton instance of the settings 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_gameplay_platform_specific_rendering_settings_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_u_gameplay_platform_specific_rendering_settings_ab02d813e5d184c81773d2a3185a15189}\index{UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}!bSupportsAutomaticVideoQualityBenchmark@{bSupportsAutomaticVideoQualityBenchmark}}
+\index{bSupportsAutomaticVideoQualityBenchmark@{bSupportsAutomaticVideoQualityBenchmark}!UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}}
+\doxysubsubsection{\texorpdfstring{bSupportsAutomaticVideoQualityBenchmark}{bSupportsAutomaticVideoQualityBenchmark}}
+{\footnotesize\ttfamily \label{class_u_gameplay_platform_specific_rendering_settings_ab02d813e5d184c81773d2a3185a15189} 
+bool UGameplay\+Platform\+Specific\+Rendering\+Settings::\+b\+Supports\+Automatic\+Video\+Quality\+Benchmark = true}
+
+
+
+Does the platform support running the automatic quality benchmark? 
+
+\Hypertarget{class_u_gameplay_platform_specific_rendering_settings_a1b8737b3295bbea1ef2b7c99a54b0624}\index{UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}!bSupportsGranularVideoQualitySettings@{bSupportsGranularVideoQualitySettings}}
+\index{bSupportsGranularVideoQualitySettings@{bSupportsGranularVideoQualitySettings}!UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}}
+\doxysubsubsection{\texorpdfstring{bSupportsGranularVideoQualitySettings}{bSupportsGranularVideoQualitySettings}}
+{\footnotesize\ttfamily \label{class_u_gameplay_platform_specific_rendering_settings_a1b8737b3295bbea1ef2b7c99a54b0624} 
+bool UGameplay\+Platform\+Specific\+Rendering\+Settings::\+b\+Supports\+Granular\+Video\+Quality\+Settings = true}
+
+
+
+Does the platform support granular video quality settings? 
+
+\Hypertarget{class_u_gameplay_platform_specific_rendering_settings_a91d4be483e076bfdf27bddca5223a83b}\index{UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}!DefaultDeviceProfileSuffix@{DefaultDeviceProfileSuffix}}
+\index{DefaultDeviceProfileSuffix@{DefaultDeviceProfileSuffix}!UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}}
+\doxysubsubsection{\texorpdfstring{DefaultDeviceProfileSuffix}{DefaultDeviceProfileSuffix}}
+{\footnotesize\ttfamily \label{class_u_gameplay_platform_specific_rendering_settings_a91d4be483e076bfdf27bddca5223a83b} 
+FString UGameplay\+Platform\+Specific\+Rendering\+Settings::\+\+Default\+Device\+Profile\+Suffix}
+
+
+
+The default variant suffix to append to the device profile. 
+
+Should typically be a member of User\+Facing\+Device\+Profile\+Options. \Hypertarget{class_u_gameplay_platform_specific_rendering_settings_a3d2b64f043c3b64648e834b070f63fdf}\index{UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}!FramePacingMode@{FramePacingMode}}
+\index{FramePacingMode@{FramePacingMode}!UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}}
+\doxysubsubsection{\texorpdfstring{FramePacingMode}{FramePacingMode}}
+{\footnotesize\ttfamily \label{class_u_gameplay_platform_specific_rendering_settings_a3d2b64f043c3b64648e834b070f63fdf} 
+\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_ad06fb1209e628be6f9505f99fa83f00d}{EGameplay\+Frame\+Pacing\+Mode}} UGameplay\+Platform\+Specific\+Rendering\+Settings::\+\+Frame\+Pacing\+Mode = \doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h_ad06fb1209e628be6f9505f99fa83f00dab3e9aaeacffc08e4718b0cf7df63a195}{EGameplay\+Frame\+Pacing\+Mode::\+\+Desktop\+Style}}}
+
+
+
+Specifies how frame pacing is controlled on this platform. 
+
+\Hypertarget{class_u_gameplay_platform_specific_rendering_settings_aa3bd60f96386fb3c6ddfd999932e8211}\index{UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}!MobileFrameRateLimits@{MobileFrameRateLimits}}
+\index{MobileFrameRateLimits@{MobileFrameRateLimits}!UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}}
+\doxysubsubsection{\texorpdfstring{MobileFrameRateLimits}{MobileFrameRateLimits}}
+{\footnotesize\ttfamily \label{class_u_gameplay_platform_specific_rendering_settings_aa3bd60f96386fb3c6ddfd999932e8211} 
+TArray$<$int32$>$ UGameplay\+Platform\+Specific\+Rendering\+Settings::\+\+Mobile\+Frame\+Rate\+Limits}
+
+
+
+Potential frame rates to display for mobile platforms. 
+
+\Hypertarget{class_u_gameplay_platform_specific_rendering_settings_ad0e392490328304793778cbfbd598653}\index{UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}!UserFacingDeviceProfileOptions@{UserFacingDeviceProfileOptions}}
+\index{UserFacingDeviceProfileOptions@{UserFacingDeviceProfileOptions}!UGameplayPlatformSpecificRenderingSettings@{UGameplayPlatformSpecificRenderingSettings}}
+\doxysubsubsection{\texorpdfstring{UserFacingDeviceProfileOptions}{UserFacingDeviceProfileOptions}}
+{\footnotesize\ttfamily \label{class_u_gameplay_platform_specific_rendering_settings_ad0e392490328304793778cbfbd598653} 
+TArray$<$\doxymbox{\hyperlink{struct_f_gameplay_quality_device_profile_variant}{FGameplay\+Quality\+Device\+Profile\+Variant}}$>$ UGameplay\+Platform\+Specific\+Rendering\+Settings::\+\+User\+Facing\+Device\+Profile\+Options}
+
+
+
+The list of device profile variations to allow users to choose from. 
+
+These should be sorted from slowest to fastest by target frame rate. 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8h}{Gameplay\+Setting\+Performance\+Settings.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_setting_performance_settings_8cpp}{Gameplay\+Setting\+Performance\+Settings.\+cpp}}\end{DoxyCompactItemize}

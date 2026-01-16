@@ -1,0 +1,288 @@
+\doxysection{SGameplay\+Responsive\+Panel Class Reference}
+\hypertarget{class_s_gameplay_responsive_panel}{}\label{class_s_gameplay_responsive_panel}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+
+
+Slate implementation of a panel that can wrap its content based on available space.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Responsive\+Panel.\+h$>$}
+
+Inheritance diagram for SGameplay\+Responsive\+Panel:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_gameplay_responsive_panel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef SGrid\+Panel::\+\+FSlot \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a735c8621ab4764c414c465948544a2d3}{FSlot}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_s_gameplay_responsive_panel_adc566d8b804250d59aeb3c4e8b88544b}{SLATE\+\_\+\+BEGIN\+\_\+\+ARGS}} (\doxymbox{\hyperlink{class_s_gameplay_responsive_panel}{SGameplay\+Responsive\+Panel}})
+\item 
+\doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a38f8046b931b1f23754ee788458b878c}{SGameplay\+Responsive\+Panel}} ()
+\item 
+void \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a03c74aff88c5004ef660b4e1e394aa83}{Construct}} (const FArguments \&In\+Args)
+\begin{DoxyCompactList}\small\item\em Construct this widget. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a735c8621ab4764c414c465948544a2d3}{FSlot}} \& \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a57712a6551281a4a0f9ab26d15c0f4d4}{Add\+Slot}} ()
+\begin{DoxyCompactList}\small\item\em Adds a content slot to the inner grid. \end{DoxyCompactList}\item 
+int32 \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a389b321aa3251bcb8001bae6ef1b36df}{Remove\+Slot}} (const TShared\+Ref$<$ SWidget $>$ \&Slot\+Widget)
+\begin{DoxyCompactList}\small\item\em Removes a particular content slot. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a913d77441e44784ca78240cff8758736}{Clear\+Children}} ()
+\begin{DoxyCompactList}\small\item\em Removes all slots from the panel. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a9fbc72ffe8bf1e39960aab953a4fe97b}{Enable\+Vertical\+Stacking}} (const bool b\+Can\+Vertically\+Wrap)
+\begin{DoxyCompactList}\small\item\em Sets whether the panel is allowed to wrap children vertically. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a63244df1798ce77d4b9fbff84a4c606d}{Custom\+Prepass}} (float Layout\+Scale\+Multiplier) override
+\item 
+virtual FVector2D \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a325b46b4515751c487fa64ca81f61721}{Compute\+Desired\+Size}} (float) const override
+\item 
+virtual float \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a6561f3e42b067db968660af28e186824}{Get\+Relative\+Layout\+Scale}} (int32 Child\+Index, float Layout\+Scale\+Multiplier) const override
+\item 
+virtual void \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a3fbb5fc809f595e9180c7aff4537bb4f}{On\+Arrange\+Children}} (const FGeometry \&Allotted\+Geometry, FArranged\+Children \&Arranged\+Children) const override
+\item 
+bool \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_ad634a998f2938650c9b31e6c7aa4027b}{Should\+Wrap}} () const
+\begin{DoxyCompactList}\small\item\em Logic to determine if layout should wrap. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a40fb50d52005fcd3672fb4632c4b30ff}{Refresh\+Responsiveness}} ()
+\begin{DoxyCompactList}\small\item\em Updates internal measurement for screen responsiveness. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a0c46f3b62567b09ef999f4d087dca319}{Refresh\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Rebuilds the grid layout based on current wrapping state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TShared\+Ref$<$ SGrid\+Panel $>$ \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_ab4639154f0af47bc6de3482a06d2caa4}{Inner\+Grid}}
+\begin{DoxyCompactList}\small\item\em Internal grid managing child layout. \end{DoxyCompactList}\item 
+TArray$<$ SGrid\+Panel::\+\+FSlot \texorpdfstring{$\ast$}{*} $>$ \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a3dfe48681cef3860e359061fab0006e3}{Inner\+Slots}}
+\begin{DoxyCompactList}\small\item\em Direct references to slots within the inner grid. \end{DoxyCompactList}\item 
+FVector2D \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a549e3c505996dcb722c72e869917c8ae}{Physical\+Screen\+Size}} = FVector2D(0, 0)
+\begin{DoxyCompactList}\small\item\em Current detected physical screen size for scaling logic. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a9173c05cfb67e8485a2adce3b9a1af4b}{Scale}} = 1
+\begin{DoxyCompactList}\small\item\em Current layout scale factor. \end{DoxyCompactList}\item 
+uint8 \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a7ee452d93eb93f0a2262ab349947fb16}{b\+Can\+Wrap\+Vertically}}:\+ 1
+\begin{DoxyCompactList}\small\item\em If true, widgets can stack vertically when horizontal space is low. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Slate implementation of a panel that can wrap its content based on available space. 
+
+\doxylink{class_s_gameplay_responsive_panel}{SGameplay\+Responsive\+Panel} acts as a wrapper around an SGrid\+Panel, dynamically shifting child widgets between rows and columns depending on the screen size and configuration. 
+
+\label{doc-typedef-members}
+\Hypertarget{class_s_gameplay_responsive_panel_doc-typedef-members}
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_s_gameplay_responsive_panel_a735c8621ab4764c414c465948544a2d3}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!FSlot@{FSlot}}
+\index{FSlot@{FSlot}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{FSlot}{FSlot}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a735c8621ab4764c414c465948544a2d3} 
+typedef SGrid\+Panel::\+\+FSlot \doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a735c8621ab4764c414c465948544a2d3}{SGameplay\+Responsive\+Panel::\+\+FSlot}}}
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_s_gameplay_responsive_panel_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_gameplay_responsive_panel_a38f8046b931b1f23754ee788458b878c}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{SGameplayResponsivePanel()}{SGameplayResponsivePanel()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a38f8046b931b1f23754ee788458b878c} 
+SGameplay\+Responsive\+Panel::\+\+SGameplay\+Responsive\+Panel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_s_gameplay_responsive_panel_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_gameplay_responsive_panel_a57712a6551281a4a0f9ab26d15c0f4d4}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!AddSlot@{AddSlot}}
+\index{AddSlot@{AddSlot}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{AddSlot()}{AddSlot()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a57712a6551281a4a0f9ab26d15c0f4d4} 
+\doxymbox{\hyperlink{class_s_gameplay_responsive_panel_a735c8621ab4764c414c465948544a2d3}{SGameplay\+Responsive\+Panel::\+\+FSlot}} \& SGameplay\+Responsive\+Panel::\+\+Add\+Slot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Adds a content slot to the inner grid. 
+
+\begin{DoxyReturn}{Returns}
+The added slot. 
+\end{DoxyReturn}
+\Hypertarget{class_s_gameplay_responsive_panel_a913d77441e44784ca78240cff8758736}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!ClearChildren@{ClearChildren}}
+\index{ClearChildren@{ClearChildren}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{ClearChildren()}{ClearChildren()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a913d77441e44784ca78240cff8758736} 
+void SGameplay\+Responsive\+Panel::\+\+Clear\+Children (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Removes all slots from the panel. 
+
+\Hypertarget{class_s_gameplay_responsive_panel_a325b46b4515751c487fa64ca81f61721}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!ComputeDesiredSize@{ComputeDesiredSize}}
+\index{ComputeDesiredSize@{ComputeDesiredSize}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{ComputeDesiredSize()}{ComputeDesiredSize()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a325b46b4515751c487fa64ca81f61721} 
+FVector2D SGameplay\+Responsive\+Panel::\+\+Compute\+Desired\+Size (\begin{DoxyParamCaption}\item[{float}]{In\+Layout\+Scale}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_s_gameplay_responsive_panel_a03c74aff88c5004ef660b4e1e394aa83}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!Construct@{Construct}}
+\index{Construct@{Construct}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a03c74aff88c5004ef660b4e1e394aa83} 
+void SGameplay\+Responsive\+Panel::\+\+Construct (\begin{DoxyParamCaption}\item[{const FArguments \&}]{In\+Args}{}\end{DoxyParamCaption})}
+
+
+
+Construct this widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Args} & The declaration data for this widget \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_gameplay_responsive_panel_a63244df1798ce77d4b9fbff84a4c606d}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!CustomPrepass@{CustomPrepass}}
+\index{CustomPrepass@{CustomPrepass}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{CustomPrepass()}{CustomPrepass()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a63244df1798ce77d4b9fbff84a4c606d} 
+bool SGameplay\+Responsive\+Panel::\+\+Custom\+Prepass (\begin{DoxyParamCaption}\item[{float}]{Layout\+Scale\+Multiplier}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_s_gameplay_responsive_panel_a9fbc72ffe8bf1e39960aab953a4fe97b}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!EnableVerticalStacking@{EnableVerticalStacking}}
+\index{EnableVerticalStacking@{EnableVerticalStacking}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{EnableVerticalStacking()}{EnableVerticalStacking()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a9fbc72ffe8bf1e39960aab953a4fe97b} 
+void SGameplay\+Responsive\+Panel::\+\+Enable\+Vertical\+Stacking (\begin{DoxyParamCaption}\item[{const bool}]{b\+Can\+Vertically\+Wrap}{}\end{DoxyParamCaption})}
+
+
+
+Sets whether the panel is allowed to wrap children vertically. 
+
+\Hypertarget{class_s_gameplay_responsive_panel_a6561f3e42b067db968660af28e186824}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!GetRelativeLayoutScale@{GetRelativeLayoutScale}}
+\index{GetRelativeLayoutScale@{GetRelativeLayoutScale}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{GetRelativeLayoutScale()}{GetRelativeLayoutScale()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a6561f3e42b067db968660af28e186824} 
+float SGameplay\+Responsive\+Panel::\+\+Get\+Relative\+Layout\+Scale (\begin{DoxyParamCaption}\item[{int32}]{Child\+Index}{, }\item[{float}]{Layout\+Scale\+Multiplier}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_s_gameplay_responsive_panel_a3fbb5fc809f595e9180c7aff4537bb4f}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!OnArrangeChildren@{OnArrangeChildren}}
+\index{OnArrangeChildren@{OnArrangeChildren}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{OnArrangeChildren()}{OnArrangeChildren()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a3fbb5fc809f595e9180c7aff4537bb4f} 
+void SGameplay\+Responsive\+Panel::\+\+On\+Arrange\+Children (\begin{DoxyParamCaption}\item[{const FGeometry \&}]{Allotted\+Geometry}{, }\item[{FArranged\+Children \&}]{Arranged\+Children}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_s_gameplay_responsive_panel_a0c46f3b62567b09ef999f4d087dca319}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!RefreshLayout@{RefreshLayout}}
+\index{RefreshLayout@{RefreshLayout}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{RefreshLayout()}{RefreshLayout()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a0c46f3b62567b09ef999f4d087dca319} 
+void SGameplay\+Responsive\+Panel::\+\+Refresh\+Layout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Rebuilds the grid layout based on current wrapping state. 
+
+\Hypertarget{class_s_gameplay_responsive_panel_a40fb50d52005fcd3672fb4632c4b30ff}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!RefreshResponsiveness@{RefreshResponsiveness}}
+\index{RefreshResponsiveness@{RefreshResponsiveness}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{RefreshResponsiveness()}{RefreshResponsiveness()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a40fb50d52005fcd3672fb4632c4b30ff} 
+void SGameplay\+Responsive\+Panel::\+\+Refresh\+Responsiveness (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Updates internal measurement for screen responsiveness. 
+
+\Hypertarget{class_s_gameplay_responsive_panel_a389b321aa3251bcb8001bae6ef1b36df}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!RemoveSlot@{RemoveSlot}}
+\index{RemoveSlot@{RemoveSlot}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{RemoveSlot()}{RemoveSlot()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a389b321aa3251bcb8001bae6ef1b36df} 
+int32 SGameplay\+Responsive\+Panel::\+\+Remove\+Slot (\begin{DoxyParamCaption}\item[{const TShared\+Ref$<$ SWidget $>$ \&}]{Slot\+Widget}{}\end{DoxyParamCaption})}
+
+
+
+Removes a particular content slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Slot\+Widget} & The widget in the slot to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the removed slot 
+\end{DoxyReturn}
+\Hypertarget{class_s_gameplay_responsive_panel_ad634a998f2938650c9b31e6c7aa4027b}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!ShouldWrap@{ShouldWrap}}
+\index{ShouldWrap@{ShouldWrap}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{ShouldWrap()}{ShouldWrap()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_ad634a998f2938650c9b31e6c7aa4027b} 
+bool SGameplay\+Responsive\+Panel::\+\+Should\+Wrap (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Logic to determine if layout should wrap. 
+
+\Hypertarget{class_s_gameplay_responsive_panel_adc566d8b804250d59aeb3c4e8b88544b}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!SLATE\_BEGIN\_ARGS@{SLATE\_BEGIN\_ARGS}}
+\index{SLATE\_BEGIN\_ARGS@{SLATE\_BEGIN\_ARGS}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{SLATE\_BEGIN\_ARGS()}{SLATE\_BEGIN\_ARGS()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_adc566d8b804250d59aeb3c4e8b88544b} 
+SGameplay\+Responsive\+Panel::\+\+SLATE\+\_\+\+BEGIN\+\_\+\+ARGS (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_s_gameplay_responsive_panel}{SGameplay\+Responsive\+Panel}}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_s_gameplay_responsive_panel_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_s_gameplay_responsive_panel_a7ee452d93eb93f0a2262ab349947fb16}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!bCanWrapVertically@{bCanWrapVertically}}
+\index{bCanWrapVertically@{bCanWrapVertically}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{bCanWrapVertically}{bCanWrapVertically}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a7ee452d93eb93f0a2262ab349947fb16} 
+uint8 SGameplay\+Responsive\+Panel::\+b\+Can\+Wrap\+Vertically\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+If true, widgets can stack vertically when horizontal space is low. 
+
+\Hypertarget{class_s_gameplay_responsive_panel_ab4639154f0af47bc6de3482a06d2caa4}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!InnerGrid@{InnerGrid}}
+\index{InnerGrid@{InnerGrid}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{InnerGrid}{InnerGrid}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_ab4639154f0af47bc6de3482a06d2caa4} 
+TShared\+Ref$<$SGrid\+Panel$>$ SGameplay\+Responsive\+Panel::\+\+Inner\+Grid\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal grid managing child layout. 
+
+\Hypertarget{class_s_gameplay_responsive_panel_a3dfe48681cef3860e359061fab0006e3}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!InnerSlots@{InnerSlots}}
+\index{InnerSlots@{InnerSlots}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{InnerSlots}{InnerSlots}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a3dfe48681cef3860e359061fab0006e3} 
+TArray$<$SGrid\+Panel::\+\+FSlot\texorpdfstring{$\ast$}{*}$>$ SGameplay\+Responsive\+Panel::\+\+Inner\+Slots\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Direct references to slots within the inner grid. 
+
+\Hypertarget{class_s_gameplay_responsive_panel_a549e3c505996dcb722c72e869917c8ae}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!PhysicalScreenSize@{PhysicalScreenSize}}
+\index{PhysicalScreenSize@{PhysicalScreenSize}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{PhysicalScreenSize}{PhysicalScreenSize}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a549e3c505996dcb722c72e869917c8ae} 
+FVector2D SGameplay\+Responsive\+Panel::\+\+Physical\+Screen\+Size = FVector2D(0, 0)\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Current detected physical screen size for scaling logic. 
+
+\Hypertarget{class_s_gameplay_responsive_panel_a9173c05cfb67e8485a2adce3b9a1af4b}\index{SGameplayResponsivePanel@{SGameplayResponsivePanel}!Scale@{Scale}}
+\index{Scale@{Scale}!SGameplayResponsivePanel@{SGameplayResponsivePanel}}
+\doxysubsubsection{\texorpdfstring{Scale}{Scale}}
+{\footnotesize\ttfamily \label{class_s_gameplay_responsive_panel_a9173c05cfb67e8485a2adce3b9a1af4b} 
+float SGameplay\+Responsive\+Panel::\+\+Scale = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Current layout scale factor. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_responsive_panel_8h}{Gameplay\+Responsive\+Panel.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_responsive_panel_8cpp}{Gameplay\+Responsive\+Panel.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,245 @@
+\doxysection{SGameplay\+Latency\+Graph Class Reference}
+\hypertarget{class_s_gameplay_latency_graph}{}\label{class_s_gameplay_latency_graph}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+
+
+Slate widget for rendering a latency/\+performance graph.  
+
+
+
+
+{\ttfamily \+\#include $<$Gameplay\+Perf\+Stat\+Widget\+Base.\+h$>$}
+
+Inheritance diagram for SGameplay\+Latency\+Graph:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_gameplay_latency_graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_s_gameplay_latency_graph_afd14cb72b6d75326c8a31b888f946b90}{SLATE\+\_\+\+BEGIN\+\_\+\+ARGS}} (\doxymbox{\hyperlink{class_s_gameplay_latency_graph}{SGameplay\+Latency\+Graph}})
+\begin{DoxyCompactList}\small\item\em Begin the arguments for this slate widget. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a90b480c3bf7629ecabb0886d48094ec6}{Construct}} (const FArguments \&In\+Args)
+\begin{DoxyCompactList}\small\item\em The expected size of the graph. \end{DoxyCompactList}\item 
+virtual int32 \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ac1b9e76c01aef73d160d56ad37543887}{On\+Paint}} (const FPaint\+Args \&Args, const FGeometry \&Allotted\+Geometry, const FSlate\+Rect \&My\+Clipping\+Rect, FSlate\+Window\+Element\+List \&Out\+Draw\+Elements, int32 Layer\+Id, const FWidget\+Style \&In\+Widget\+Style, bool b\+Parent\+Enabled) const override
+\begin{DoxyCompactList}\small\item\em Called with the elements to be drawn. \end{DoxyCompactList}\item 
+virtual bool \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a19b86a4047d11d3cdffa4d8b88275ba1}{Compute\+Volatility}} () const override
+\begin{DoxyCompactList}\small\item\em Graphs are volatile because they update every frame. \end{DoxyCompactList}\item 
+virtual FVector2D \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a0b5c2894c72d8faa864fa1ed7c9b0ac1}{Compute\+Desired\+Size}} (float Layout\+Scale\+Multiplier) const override
+\begin{DoxyCompactList}\small\item\em Returns Desired\+Size. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a47756689e60c811f3173be83931ac1dc}{Set\+Line\+Color}} (const FColor \&In\+Color)
+\begin{DoxyCompactList}\small\item\em Updates the line color. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a60ff88d01746407e398c70f59f7d3b1a}{Set\+Max\+YValue}} (const double In\+Value)
+\begin{DoxyCompactList}\small\item\em Updates the Y-\/axis maximum scale. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a552a8638cf2682cf21b0be83b4245e54}{Set\+Background\+Color}} (const FColor \&In\+Color)
+\begin{DoxyCompactList}\small\item\em Updates the background color. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a7c1644101486786892f9bf751e985963}{Update\+Graph\+Data}} (const \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplay\+Sampled\+Stat\+Cache}} \texorpdfstring{$\ast$}{*}Stat\+Data, const float In\+Scale\+Factor)
+\begin{DoxyCompactList}\small\item\em Supplies the data cache to be rendered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a9646bcaed97347f075fa51f593f458ce}{Draw\+Total\+Latency}} (const FGeometry \&Allotted\+Geometry, FSlate\+Window\+Element\+List \&Out\+Draw\+Elements, int32 Layer\+Id) const
+\begin{DoxyCompactList}\small\item\em Internal render helper for graph line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FVector2D \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ab41f136f3210b2d5c5e82e9f56431a2c}{Desired\+Size}} = \{ 150.\+0, 50.\+0 \}
+\begin{DoxyCompactList}\small\item\em The size of the graph to draw. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_s_gameplay_latency_graph_a99f40da9728c3b6b61e8e6bf35fbfe90}{Max\+YAxis\+Of\+Graph}} = 33.\+0
+\begin{DoxyCompactList}\small\item\em Max Y value of the graph. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ab72c28afc8104111e0ac8767c3f87878}{Scale\+Factor}} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em Multiplier applied to stat values (e.\+g., to convert units). \end{DoxyCompactList}\item 
+FColor \doxymbox{\hyperlink{class_s_gameplay_latency_graph_aae96d375fe8224db4a6ef8db4ea2fe82}{Line\+Color}} = FColor(255, 255, 255, 255)
+\begin{DoxyCompactList}\small\item\em Color of the line to draw on the graph. \end{DoxyCompactList}\item 
+FColor \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ae76616443cc5bd9303e9751324297789}{Background\+Color}} = FColor(0, 0, 0, 128)
+\begin{DoxyCompactList}\small\item\em The background color to draw when drawing the graph. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplay\+Sampled\+Stat\+Cache}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_s_gameplay_latency_graph_ad228cde0fef35aeb748dab0f2d6e1e97}{Graph\+Data}} = nullptr
+\begin{DoxyCompactList}\small\item\em The cache of data that this graph widget needs to draw. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Slate widget for rendering a latency/\+performance graph. 
+
+\doxylink{class_s_gameplay_latency_graph}{SGameplay\+Latency\+Graph} is a low-\/level Slate widget designed to efficiently render a line graph of performance data (like frame times) using the engine\textquotesingle{}s rendering context. It supports background color and line color customization. 
+
+\label{doc-func-members}
+\Hypertarget{class_s_gameplay_latency_graph_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_gameplay_latency_graph_a0b5c2894c72d8faa864fa1ed7c9b0ac1}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!ComputeDesiredSize@{ComputeDesiredSize}}
+\index{ComputeDesiredSize@{ComputeDesiredSize}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{ComputeDesiredSize()}{ComputeDesiredSize()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_a0b5c2894c72d8faa864fa1ed7c9b0ac1} 
+FVector2D SGameplay\+Latency\+Graph::\+\+Compute\+Desired\+Size (\begin{DoxyParamCaption}\item[{float}]{Layout\+Scale\+Multiplier}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns Desired\+Size. 
+
+\Hypertarget{class_s_gameplay_latency_graph_a19b86a4047d11d3cdffa4d8b88275ba1}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!ComputeVolatility@{ComputeVolatility}}
+\index{ComputeVolatility@{ComputeVolatility}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{ComputeVolatility()}{ComputeVolatility()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_a19b86a4047d11d3cdffa4d8b88275ba1} 
+virtual bool SGameplay\+Latency\+Graph::\+\+Compute\+Volatility (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Graphs are volatile because they update every frame. 
+
+\Hypertarget{class_s_gameplay_latency_graph_a90b480c3bf7629ecabb0886d48094ec6}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!Construct@{Construct}}
+\index{Construct@{Construct}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_a90b480c3bf7629ecabb0886d48094ec6} 
+void SGameplay\+Latency\+Graph::\+\+Construct (\begin{DoxyParamCaption}\item[{const FArguments \&}]{In\+Args}{}\end{DoxyParamCaption})}
+
+
+
+The expected size of the graph. 
+
+The maximum value representing the top of the Y-\/axis
+
+The color of the graph line
+
+The background color of the graph area
+
+Construct function needed for every widget \Hypertarget{class_s_gameplay_latency_graph_a9646bcaed97347f075fa51f593f458ce}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!DrawTotalLatency@{DrawTotalLatency}}
+\index{DrawTotalLatency@{DrawTotalLatency}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{DrawTotalLatency()}{DrawTotalLatency()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_a9646bcaed97347f075fa51f593f458ce} 
+void SGameplay\+Latency\+Graph::\+\+Draw\+Total\+Latency (\begin{DoxyParamCaption}\item[{const FGeometry \&}]{Allotted\+Geometry}{, }\item[{FSlate\+Window\+Element\+List \&}]{Out\+Draw\+Elements}{, }\item[{int32}]{Layer\+Id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal render helper for graph line. 
+
+\Hypertarget{class_s_gameplay_latency_graph_ac1b9e76c01aef73d160d56ad37543887}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!OnPaint@{OnPaint}}
+\index{OnPaint@{OnPaint}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{OnPaint()}{OnPaint()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_ac1b9e76c01aef73d160d56ad37543887} 
+int32 SGameplay\+Latency\+Graph::\+\+On\+Paint (\begin{DoxyParamCaption}\item[{const FPaint\+Args \&}]{Args}{, }\item[{const FGeometry \&}]{Allotted\+Geometry}{, }\item[{const FSlate\+Rect \&}]{My\+Clipping\+Rect}{, }\item[{FSlate\+Window\+Element\+List \&}]{Out\+Draw\+Elements}{, }\item[{int32}]{Layer\+Id}{, }\item[{const FWidget\+Style \&}]{In\+Widget\+Style}{, }\item[{bool}]{b\+Parent\+Enabled}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called with the elements to be drawn. 
+
+\Hypertarget{class_s_gameplay_latency_graph_a552a8638cf2682cf21b0be83b4245e54}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!SetBackgroundColor@{SetBackgroundColor}}
+\index{SetBackgroundColor@{SetBackgroundColor}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{SetBackgroundColor()}{SetBackgroundColor()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_a552a8638cf2682cf21b0be83b4245e54} 
+void SGameplay\+Latency\+Graph::\+\+Set\+Background\+Color (\begin{DoxyParamCaption}\item[{const FColor \&}]{In\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the background color. 
+
+\Hypertarget{class_s_gameplay_latency_graph_a47756689e60c811f3173be83931ac1dc}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!SetLineColor@{SetLineColor}}
+\index{SetLineColor@{SetLineColor}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{SetLineColor()}{SetLineColor()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_a47756689e60c811f3173be83931ac1dc} 
+void SGameplay\+Latency\+Graph::\+\+Set\+Line\+Color (\begin{DoxyParamCaption}\item[{const FColor \&}]{In\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the line color. 
+
+\Hypertarget{class_s_gameplay_latency_graph_a60ff88d01746407e398c70f59f7d3b1a}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!SetMaxYValue@{SetMaxYValue}}
+\index{SetMaxYValue@{SetMaxYValue}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{SetMaxYValue()}{SetMaxYValue()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_a60ff88d01746407e398c70f59f7d3b1a} 
+void SGameplay\+Latency\+Graph::\+\+Set\+Max\+YValue (\begin{DoxyParamCaption}\item[{const double}]{In\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the Y-\/axis maximum scale. 
+
+\Hypertarget{class_s_gameplay_latency_graph_afd14cb72b6d75326c8a31b888f946b90}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!SLATE\_BEGIN\_ARGS@{SLATE\_BEGIN\_ARGS}}
+\index{SLATE\_BEGIN\_ARGS@{SLATE\_BEGIN\_ARGS}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{SLATE\_BEGIN\_ARGS()}{SLATE\_BEGIN\_ARGS()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_afd14cb72b6d75326c8a31b888f946b90} 
+SGameplay\+Latency\+Graph::\+\+SLATE\+\_\+\+BEGIN\+\_\+\+ARGS (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_s_gameplay_latency_graph}{SGameplay\+Latency\+Graph}}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Begin the arguments for this slate widget. 
+
+\Hypertarget{class_s_gameplay_latency_graph_a7c1644101486786892f9bf751e985963}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!UpdateGraphData@{UpdateGraphData}}
+\index{UpdateGraphData@{UpdateGraphData}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{UpdateGraphData()}{UpdateGraphData()}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_a7c1644101486786892f9bf751e985963} 
+void SGameplay\+Latency\+Graph::\+\+Update\+Graph\+Data (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplay\+Sampled\+Stat\+Cache}} \texorpdfstring{$\ast$}{*}}]{Stat\+Data}{, }\item[{const float}]{In\+Scale\+Factor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Supplies the data cache to be rendered. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_s_gameplay_latency_graph_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_s_gameplay_latency_graph_ae76616443cc5bd9303e9751324297789}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!BackgroundColor@{BackgroundColor}}
+\index{BackgroundColor@{BackgroundColor}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{BackgroundColor}{BackgroundColor}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_ae76616443cc5bd9303e9751324297789} 
+FColor SGameplay\+Latency\+Graph::\+\+Background\+Color = FColor(0, 0, 0, 128)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The background color to draw when drawing the graph. 
+
+\Hypertarget{class_s_gameplay_latency_graph_ab41f136f3210b2d5c5e82e9f56431a2c}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!DesiredSize@{DesiredSize}}
+\index{DesiredSize@{DesiredSize}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{DesiredSize}{DesiredSize}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_ab41f136f3210b2d5c5e82e9f56431a2c} 
+FVector2D SGameplay\+Latency\+Graph::\+\+Desired\+Size = \{ 150.\+0, 50.\+0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The size of the graph to draw. 
+
+\Hypertarget{class_s_gameplay_latency_graph_ad228cde0fef35aeb748dab0f2d6e1e97}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!GraphData@{GraphData}}
+\index{GraphData@{GraphData}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{GraphData}{GraphData}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_ad228cde0fef35aeb748dab0f2d6e1e97} 
+const \doxymbox{\hyperlink{class_f_gameplay_sampled_stat_cache}{FGameplay\+Sampled\+Stat\+Cache}}\texorpdfstring{$\ast$}{*} SGameplay\+Latency\+Graph::\+\+Graph\+Data = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The cache of data that this graph widget needs to draw. 
+
+\Hypertarget{class_s_gameplay_latency_graph_aae96d375fe8224db4a6ef8db4ea2fe82}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!LineColor@{LineColor}}
+\index{LineColor@{LineColor}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{LineColor}{LineColor}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_aae96d375fe8224db4a6ef8db4ea2fe82} 
+FColor SGameplay\+Latency\+Graph::\+\+Line\+Color = FColor(255, 255, 255, 255)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Color of the line to draw on the graph. 
+
+\Hypertarget{class_s_gameplay_latency_graph_a99f40da9728c3b6b61e8e6bf35fbfe90}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!MaxYAxisOfGraph@{MaxYAxisOfGraph}}
+\index{MaxYAxisOfGraph@{MaxYAxisOfGraph}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{MaxYAxisOfGraph}{MaxYAxisOfGraph}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_a99f40da9728c3b6b61e8e6bf35fbfe90} 
+double SGameplay\+Latency\+Graph::\+\+Max\+YAxis\+Of\+Graph = 33.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Max Y value of the graph. 
+
+The values drawn will be clamped to this \Hypertarget{class_s_gameplay_latency_graph_ab72c28afc8104111e0ac8767c3f87878}\index{SGameplayLatencyGraph@{SGameplayLatencyGraph}!ScaleFactor@{ScaleFactor}}
+\index{ScaleFactor@{ScaleFactor}!SGameplayLatencyGraph@{SGameplayLatencyGraph}}
+\doxysubsubsection{\texorpdfstring{ScaleFactor}{ScaleFactor}}
+{\footnotesize\ttfamily \label{class_s_gameplay_latency_graph_ab72c28afc8104111e0ac8767c3f87878} 
+float SGameplay\+Latency\+Graph::\+\+Scale\+Factor = 1.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Multiplier applied to stat values (e.\+g., to convert units). 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_gameplay_perf_stat_widget_base_8h}{Gameplay\+Perf\+Stat\+Widget\+Base.\+h}}\item 
+\doxymbox{\hyperlink{_gameplay_perf_stat_widget_base_8cpp}{Gameplay\+Perf\+Stat\+Widget\+Base.\+cpp}}\end{DoxyCompactItemize}
