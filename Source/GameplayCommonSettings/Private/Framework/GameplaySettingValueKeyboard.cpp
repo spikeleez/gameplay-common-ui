@@ -1,4 +1,6 @@
-﻿#include "Framework/GameplaySettingValueKeyboard.h"
+﻿// Copyright Spike Plugins 2026. All Rights Reserved.
+
+#include "Framework/GameplaySettingValueKeyboard.h"
 #include "EnhancedInputSubsystems.h"
 
 class ULocalPlayer;

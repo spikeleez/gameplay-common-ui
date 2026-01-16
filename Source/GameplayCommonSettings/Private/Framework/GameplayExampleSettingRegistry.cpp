@@ -1,4 +1,6 @@
-﻿#include "Framework/GameplayExampleSettingRegistry.h"
+﻿// Copyright Spike Plugins 2026. All Rights Reserved.
+
+#include "Framework/GameplayExampleSettingRegistry.h"
 
 #include "CommonInputBaseTypes.h"
 #include "EnhancedInputSubsystems.h"

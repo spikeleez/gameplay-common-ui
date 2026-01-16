@@ -1,1 +1,3 @@
-﻿#include "Misc/GameplayCommonAudioSettings.h"
+﻿// Copyright Spike Plugins 2026. All Rights Reserved.
+
+#include "Misc/GameplayCommonAudioSettings.h"

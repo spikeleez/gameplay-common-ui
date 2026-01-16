@@ -1,4 +1,6 @@
-﻿#include "Framework/GameplaySettingsLocalPlayer.h"
+﻿// Copyright Spike Plugins 2026. All Rights Reserved.
+
+#include "Framework/GameplaySettingsLocalPlayer.h"
 #include "Framework/GameplaySettingsLocal.h"
 #include "Framework/GameplaySettingsShared.h"
 

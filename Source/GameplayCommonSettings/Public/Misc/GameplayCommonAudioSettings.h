@@ -1,4 +1,6 @@
-﻿#pragma once
+﻿// Copyright Spike Plugins 2026. All Rights Reserved.
+
+#pragma once
 
 #include "Engine/DeveloperSettings.h"
 #include "GameplayCommonAudioSettings.generated.h"

@@ -1,4 +1,6 @@
-﻿#include "Misc/GameplayCommonSettingsLibrary.h"
+﻿// Copyright Spike Plugins 2026. All Rights Reserved.
+
+#include "Misc/GameplayCommonSettingsLibrary.h"
 #include "Interfaces/GameplayCommonSettingsInterface.h"
 
 UGameplaySettingsShared* UGameplayCommonSettingsLibrary::GetSettingsShared(const ULocalPlayer* LocalPlayer)

@@ -1,8 +1,6 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
-
+﻿// Copyright Spike Plugins 2026. All Rights Reserved.
 
 #include "Subsystems/GameplayAudioMixEffectsSubsystem.h"
-
 #include "AudioMixerBlueprintLibrary.h"
 #include "AudioModulationStatics.h"
 #include "SoundControlBus.h"

@@ -1,4 +1,6 @@
-﻿using UnrealBuildTool;
+﻿// Copyright Spike Plugins 2026. All Rights Reserved.
+
+using UnrealBuildTool;
 
 public class GameplayCommonSettingsEditor : ModuleRules
 {

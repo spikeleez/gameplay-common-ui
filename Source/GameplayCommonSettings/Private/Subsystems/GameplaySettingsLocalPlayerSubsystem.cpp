@@ -1,4 +1,6 @@
-﻿#include "Subsystems/GameplaySettingsLocalPlayerSubsystem.h"
+﻿// Copyright Spike Plugins 2026. All Rights Reserved.
+
+#include "Subsystems/GameplaySettingsLocalPlayerSubsystem.h"
 #include "Framework/GameplaySettingsLocalPlayer.h"
 
 void UGameplaySettingsLocalPlayerSubsystem::Initialize(FSubsystemCollectionBase& Collection)

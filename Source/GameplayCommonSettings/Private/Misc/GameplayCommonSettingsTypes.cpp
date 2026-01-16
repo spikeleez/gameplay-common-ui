@@ -1,1 +1,3 @@
-﻿#include "Misc/GameplayCommonSettingsTypes.h"
+﻿// Copyright Spike Plugins 2026. All Rights Reserved.
+
+#include "Misc/GameplayCommonSettingsTypes.h"
