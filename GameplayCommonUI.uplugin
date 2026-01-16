@@ -17,22 +17,26 @@
 		{
 			"Name": "GameplayCommonUI",
 			"Type": "Runtime",
-			"LoadingPhase": "PreDefault"
+			"LoadingPhase": "PreDefault",
+			"PlatformAllowList": [ "Win64" ]
 		},
 		{
 			"Name": "GameplayCommonUIEditor",
 			"Type": "Editor",
-			"LoadingPhase": "PostEngineInit"
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [ "Win64" ]
 		},
 		{
 			"Name": "GameplayCommonSettings",
 			"Type": "Runtime",
-			"LoadingPhase": "PreDefault"
+			"LoadingPhase": "PreDefault",
+			"PlatformAllowList": [ "Win64" ]
 		},
 		{
 			"Name": "GameplayCommonSettingsEditor",
 			"Type": "Editor",
-			"LoadingPhase": "PostEngineInit"
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [ "Win64" ]
 		}
 	],
 	"Plugins": [
