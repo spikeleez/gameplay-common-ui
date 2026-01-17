@@ -10,7 +10,7 @@
 #include "Engine/Engine.h"
 
 static TAutoConsoleVariable<bool> CVarShowDebugGameplayCommonUI(
-	TEXT("ShowDebug.GameplayCommonUI"),
+	TEXT("ShowDebug GameplayCommonUI"),
 	false,
 	TEXT("Displays information about the active Layers and Widgets."),
 	ECVF_Default
