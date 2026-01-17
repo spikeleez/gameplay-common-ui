@@ -107,7 +107,7 @@ void UGameplayAudioMixEffectsSubsystem::PostInitialize()
 			}
 		}
 
-		if (UObject* ObjPath = LyraAudioSettings->SoundFXVolumeControlBus.TryLoad())
+		if (UObject* ObjPath = LyraAudioSettings->SoundEffectsVolumeControlBus.TryLoad())
 		{
 			if (USoundControlBus* SoundControlBus = Cast<USoundControlBus>(ObjPath))
 			{

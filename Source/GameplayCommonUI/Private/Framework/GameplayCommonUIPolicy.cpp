@@ -13,7 +13,7 @@ DEFINE_LOG_CATEGORY_STATIC(LogGameplayUIPolicy, Log, All);
 UGameplayCommonUIPolicy::UGameplayCommonUIPolicy(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
-	static ConstructorHelpers::FClassFinder<UGameplayPrimaryLayout> DefaultPrimaryLayoutClass(TEXT("/GameplayCommonUI/Widgets/Foundation/PrimaryLayout"));
+	static ConstructorHelpers::FClassFinder<UGameplayPrimaryLayout> DefaultPrimaryLayoutClass(TEXT("/GameplayCommonUI/Widgets/Foundation/GameplayPrimaryLayout"));
 	if (DefaultPrimaryLayoutClass.Succeeded())
 	{
 		PrimaryLayoutClass = DefaultPrimaryLayoutClass.Class;

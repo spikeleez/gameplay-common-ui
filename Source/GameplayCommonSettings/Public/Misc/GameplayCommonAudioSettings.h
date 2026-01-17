@@ -26,6 +26,8 @@ class UGameplayCommonAudioSettings : public UDeveloperSettings
 	GENERATED_BODY()
 	
 public:
+	UGameplayCommonAudioSettings(const FObjectInitializer& ObjectInitializer);
+	
 	/** The Default Base Control Bus Mix */
 	UPROPERTY(Config, EditAnywhere, Category = "MixSettings", meta = (AllowedClasses = "/Script/AudioModulation.SoundControlBusMix"))
 	FSoftObjectPath DefaultControlBusMix;
@@ -48,7 +50,7 @@ public:
 
 	/** Control Bus assigned to the SoundFX sound volume setting */
 	UPROPERTY(Config, EditAnywhere, Category = "UserMixSettings", meta = (AllowedClasses = "/Script/AudioModulation.SoundControlBus"))
-	FSoftObjectPath SoundFXVolumeControlBus;
+	FSoftObjectPath SoundEffectsVolumeControlBus;
 
 	/** Control Bus assigned to the Dialogue sound volume setting */
 	UPROPERTY(Config, EditAnywhere, Category = "UserMixSettings", meta = (AllowedClasses = "/Script/AudioModulation.SoundControlBus"))

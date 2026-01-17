@@ -654,7 +654,7 @@ void UGameplaySettingsLocal::LoadUserControlBusMix()
 					}
 				}
 
-				if (UObject* ObjPath = GameplayAudioSettings->SoundFXVolumeControlBus.TryLoad())
+				if (UObject* ObjPath = GameplayAudioSettings->SoundEffectsVolumeControlBus.TryLoad())
 				{
 					if (USoundControlBus* SoundControlBus = Cast<USoundControlBus>(ObjPath))
 					{

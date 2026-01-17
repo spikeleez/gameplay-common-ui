@@ -7,7 +7,14 @@
 #include "Framework/GameplayCommonUIPolicy.h"
 #include "Engine/GameInstance.h"
 #include "Engine/LocalPlayer.h"
-#include "Engine/Engine.h" // For GEngine
+#include "Engine/Engine.h"
+
+static TAutoConsoleVariable<bool> CVarShowDebugGameplayCommonUI(
+	TEXT("ShowDebug.GameplayCommonUI"),
+	false,
+	TEXT("Displays information about the active Layers and Widgets."),
+	ECVF_Default
+);
 
 UGameplayCommonUISubsystem* UGameplayCommonUISubsystem::Get(const UObject* WorldContextObject)
 {

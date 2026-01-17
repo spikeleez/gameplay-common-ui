@@ -32,19 +32,19 @@ public:
 	TSoftClassPtr<UGameplayCommonUIPolicy> GameplayUIPolicyClass;
 
 	/** A mapping of tags to activatable widget classes, allowing for decoupled widget loading by tag */
-	UPROPERTY(Config, EditAnywhere, Category="Common", meta=(ForceInlineRow, DisplayName="Registered Activatable Widgets"))
+	UPROPERTY(Config, EditAnywhere, Category="Common", meta=(ForceInlineRow, DisplayName = "Registered Activatable Widgets"))
 	TMap<FGameplayTag, TSoftClassPtr<UCommonActivatableWidget>> RegisteredActivatableWidgets;
 
 	/** The default widget class used for standard confirmation dialogs */
-	UPROPERTY(Config, EditAnywhere, Category="Confirmation Dialog", meta=(DisplayName="Confirmation Dialog Class"))
+	UPROPERTY(Config, EditAnywhere, Category="Confirmation Dialog", meta=(DisplayName = "Confirmation Dialog Class"))
 	TSoftClassPtr<UGameplayConfirmationDialog> ConfirmationDialogClass;
 
 	/** The default widget class used for error/critical confirmation dialogs */
-	UPROPERTY(Config, EditAnywhere, Category="Confirmation Dialog", meta=(DisplayName="Error Dialog Class"))
+	UPROPERTY(Config, EditAnywhere, Category="Confirmation Dialog", meta=(DisplayName = "Error Dialog Class"))
 	TSoftClassPtr<UGameplayConfirmationDialog> ErrorDialogClass;
 	
 	/** A mapping of tags to custom dialog descriptor assets, allowing for pre-configured complex dialogs */
-	UPROPERTY(Config, EditAnywhere, Category="Confirmation Dialog", meta = (ForceInlineRow, DisplayName="Registered Dialog Descriptors"))
+	UPROPERTY(Config, EditAnywhere, Category="Confirmation Dialog", meta = (ForceInlineRow, DisplayName = "Registered Dialog Descriptors"))
 	TMap<FGameplayTag, TSoftClassPtr<UGameplayConfirmationDescriptor>> RegisteredDialogDescriptors;
 };
 

@@ -10,13 +10,13 @@ UGameplayCommonUISettings::UGameplayCommonUISettings(const FObjectInitializer& O
 {
 	GameplayUIPolicyClass = UGameplayCommonUIPolicy::StaticClass();
 
-	static ConstructorHelpers::FClassFinder<UGameplayConfirmationDialog> DefaultConfirmationDialogClass(TEXT("/GameplayCommonUI/Widgets/Confirmation/WBP_GameplayConfirmationDialog"));
+	static ConstructorHelpers::FClassFinder<UGameplayConfirmationDialog> DefaultConfirmationDialogClass(TEXT("/GameplayCommonUI/Widgets/Confirmation/GameplayConfirmationDialog"));
 	if (DefaultConfirmationDialogClass.Succeeded())
 	{
 		ConfirmationDialogClass = DefaultConfirmationDialogClass.Class;
 	}
 
-	static ConstructorHelpers::FClassFinder<UGameplayConfirmationDialog> DefaultErrorDialogClass(TEXT("/GameplayCommonUI/Widgets/Confirmation/WBP_GameplayErrorDialog"));
+	static ConstructorHelpers::FClassFinder<UGameplayConfirmationDialog> DefaultErrorDialogClass(TEXT("/GameplayCommonUI/Widgets/Confirmation/GameplayErrorDialog"));
 	if (DefaultErrorDialogClass.Succeeded())
 	{
 		ErrorDialogClass = DefaultErrorDialogClass.Class;
